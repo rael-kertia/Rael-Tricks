@@ -1,13 +1,16 @@
 
 -- ==========================================
--- RAEL'S TRICKS V12
+-- RAEL'S TRICKS V13
 -- INDO KOS: BUILD & UPGRADE
 -- DELTA ANDROID
 -- AUTO CLEANER V10.3 + TP LOCATION V3
+-- + ANTI AFK
 -- ==========================================
 
 local Players = game:GetService("Players")
 local UIS = game:GetService("UserInputService")
+local VirtualUser = game:GetService("VirtualUser")
+
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
@@ -129,8 +132,7 @@ local function getNearest(root)
 
             if ready then
                 local pos = getPosition(prompt)
-                local range = isClean
-                    and RANGE_CLEAN or RANGE_TRASH
+                local range = isClean and RANGE_CLEAN or RANGE_TRASH
 
                 if pos then
                     local distance = (root.Position - pos).Magnitude
@@ -172,7 +174,6 @@ frame.Parent = gui
 
 Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
 
--- TITLE
 local title = Instance.new("TextLabel")
 title.Size = UDim2.fromOffset(102, 12)
 title.Position = UDim2.fromOffset(4, -13)
@@ -185,6 +186,7 @@ title.TextXAlignment = Enum.TextXAlignment.Left
 title.Parent = frame
 
 -- CLEANER TOGGLE
+
 local toggle = Instance.new("TextButton")
 toggle.Size = UDim2.fromOffset(102, 30)
 toggle.Position = UDim2.fromOffset(4, 4)
@@ -198,6 +200,7 @@ toggle.Parent = frame
 Instance.new("UICorner", toggle).CornerRadius = UDim.new(0, 6)
 
 -- MINIMIZE
+
 local minimize = Instance.new("TextButton")
 minimize.Size = UDim2.fromOffset(28, 30)
 minimize.Position = UDim2.fromOffset(110, 4)
@@ -304,7 +307,7 @@ end)
 
 -- ==========================================
 -- TP LOCATION TOOL
--- TP TEST V3 - CONFIRMED WORKING
+-- TP TEST V3
 -- ==========================================
 
 local backpack = player:WaitForChild("Backpack")
@@ -340,7 +343,6 @@ UIS.TouchTapInWorld:Connect(function(position, processed)
         return
     end
 
-    -- Abaikan sentuhan saat proses equip
     if os.clock() - equipTime < 0.25 then
         return
     end
@@ -348,16 +350,11 @@ UIS.TouchTapInWorld:Connect(function(position, processed)
     local camera = workspace.CurrentCamera
     if not camera then return end
 
-    local ray = camera:ViewportPointToRay(
-        position.X,
-        position.Y
-    )
+    local ray = camera:ViewportPointToRay(position.X, position.Y)
 
     local params = RaycastParams.new()
     params.FilterType = Enum.RaycastFilterType.Exclude
-    params.FilterDescendantsInstances = {
-        player.Character
-    }
+    params.FilterDescendantsInstances = {player.Character}
 
     local result = workspace:Raycast(
         ray.Origin,
@@ -436,13 +433,26 @@ task.spawn(function()
 end)
 
 -- ==========================================
+-- ANTI AFK
+-- ==========================================
+
+player.Idled:Connect(function()
+    pcall(function()
+        VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new(0, 0))
+        print("ANTI AFK: IDLE PREVENTED")
+    end)
+end)
+
+-- ==========================================
 -- FINISH
 -- ==========================================
 
 update()
 
 print("================================")
-print("RAEL'S TRICKS V12 LOADED")
+print("RAEL'S TRICKS V13 LOADED")
 print("AUTO CLEANER V10.3 READY")
 print("TP LOCATION V3 READY")
+print("ANTI AFK READY")
 print("================================")
