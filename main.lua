@@ -1,8 +1,7 @@
-
 -- ==========================================
--- RAEL'S TRICKS V1
--- BASE V1 + AUTO CONVERT + AUTO CLAIM
--- AUTO CLOSE CONVERT MACHINE
+-- RAEL'S TRICKS V18.3 FULL
+-- V18.2 + AUTO CONVERT KOTORAN 2000
+-- AUTO CLAIM GOLD FIX
 -- ==========================================
 
 local URL = "https://raw.githubusercontent.com/rael-kertia/Rael-Tricks/main/main.lua"
@@ -12,35 +11,17 @@ local ok, source = pcall(function()
 end)
 
 if not ok or type(source) ~= "string" or #source < 1000 then
-    warn("RAEL V1: GAGAL MENGAMBIL MAIN.LUA")
+    warn("RAEL V18.3: GAGAL MENGAMBIL MAIN.LUA")
     return
 end
 
 local function replaceOnce(old, new, label)
     local first, last = source:find(old, 1, true)
     if not first then
-        error("V1 GAGAL: BAGIAN TIDAK DITEMUKAN - " .. label)
+        error("V18.3 GAGAL: BAGIAN TIDAK DITEMUKAN - " .. label)
     end
     source = source:sub(1, first - 1) .. new .. source:sub(last + 1)
 end
-
-local function replaceBetween(startMarker, endMarker, newText, label)
-    local first = source:find(startMarker, 1, true)
-    if not first then
-        error("V1 GAGAL: AWAL BAGIAN TIDAK DITEMUKAN - " .. label)
-    end
-    local last = source:find(endMarker, first, true)
-    if not last then
-        error("V1 GAGAL: AKHIR BAGIAN TIDAK DITEMUKAN - " .. label)
-    end
-    source = source:sub(1, first - 1) .. newText .. "\n\n" .. source:sub(last)
-end
-
-replaceOnce(
-    "local autoFarm = false",
-    "local autoFarm = false\nlocal autoConvert = true\nlocal autoFeedEnabled = true\nlocal antiAfkEnabled = true\nlocal tpEnabled = true",
-    "FEATURE FLAGS"
-)
 
 -- ==========================================
 -- AUTO CONVERT SYSTEM
@@ -51,6 +32,7 @@ local convertCode = [==[
 -- AUTO CONVERT KOTORAN
 -- ==========================================
 
+local autoConvert = true
 local converting = false
 local CONVERT_LIMIT = 2000
 local lastConvertAttempt = 0
@@ -204,7 +186,7 @@ local function isRateRising()
     return false
 end
 
--- KLIK TOMBOL MASUK DAN KLAIM
+-- FIX KLIK MASUK DAN KLAIM
 local function clickConvertButton(button)
     if not button or not button.Parent then
         return false
@@ -227,60 +209,6 @@ local function clickConvertButton(button)
     end
 
     return fired
-end
-
--- TUTUP MESIN CONVERT / TEKAN X
-local function closeConvertMachine()
-    local ui = playerGui:FindFirstChild("ConvertUI")
-    local panel = ui and ui:FindFirstChild("PanelConvert")
-
-    if not panel then
-        return true
-    end
-
-    local closeNames = {
-        "x", "close", "closebtn",
-        "exit", "exitbtn", "tutup", "tutupbtn"
-    }
-
-    for _, obj in ipairs(panel:GetDescendants()) do
-        if obj:IsA("GuiButton") then
-            local name = obj.Name:lower()
-            local label = ""
-
-            for _, child in ipairs(obj:GetDescendants()) do
-                if child:IsA("TextLabel") then
-                    label = (child.Text or ""):lower()
-                    break
-                end
-            end
-
-            local matched = false
-
-            for _, closeName in ipairs(closeNames) do
-                if name == closeName then
-                    matched = true
-                    break
-                end
-            end
-
-            if matched
-            or name:find("close", 1, true)
-            or name:find("exit", 1, true)
-            or name:find("tutup", 1, true)
-            or label == "x" then
-
-                clickConvertButton(obj)
-                task.wait(0.5)
-
-                if not panel.Visible then
-                    return true
-                end
-            end
-        end
-    end
-
-    return not panel.Visible
 end
 
 local function getNearestConvertPrompt()
@@ -385,7 +313,6 @@ local function runAutoConvert()
         return false
     end
 
-    -- TUNGGU KURS HIJAU / NAIK
     setStatus("MENUNGGU KURS HIJAU / NAIK")
 
     start = os.clock()
@@ -409,7 +336,6 @@ local function runAutoConvert()
         return false
     end
 
-    -- MASUKKAN 2000 KOTORAN
     setStatus("MEMASUKKAN 2000 KOTORAN")
 
     local beforeGold = readGoldValue(ui)
@@ -419,7 +345,6 @@ local function runAutoConvert()
         return false
     end
 
-    -- TUNGGU PROSES KONVERSI
     start = os.clock()
     local completed = false
 
@@ -469,7 +394,6 @@ local function runAutoConvert()
         return false
     end
 
-    -- VERIFIKASI KOTORAN SUDAH KELUAR DARI SLOT
     start = os.clock()
 
     while alive() and autoFarm
@@ -479,12 +403,6 @@ local function runAutoConvert()
         local count = getManureCount()
 
         if count == nil or count < CONVERT_LIMIT then
-            setStatus("GOLD DIKLAIM - KELUAR MESIN")
-
-            closeConvertMachine()
-
-            task.wait(1)
-
             finish("CONVERT BERHASIL - FARM LANJUT")
             return true
         end
@@ -495,348 +413,30 @@ local function runAutoConvert()
 end
 ]==]
 
-local guiCode = [==[
--- MODERN GUI V1
-local oldGui = playerGui:FindFirstChild("RaelsTricksV1")
-if oldGui then oldGui:Destroy() end
-
-local gui = track(Instance.new("ScreenGui"))
-gui.Name = "RaelsTricksV1"
-gui.ResetOnSpawn = false
-gui.DisplayOrder = 999
-gui.Parent = playerGui
-
-local frame = Instance.new("Frame")
-frame.Name = "Main"
-frame.Size = UDim2.fromOffset(252, 258)
-frame.Position = UDim2.new(1, -266, 0, 95)
-frame.BackgroundColor3 = Color3.fromRGB(15, 23, 42)
-frame.BorderSizePixel = 0
-frame.Active = true
-frame.Parent = gui
-Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 12)
-
-local frameStroke = Instance.new("UIStroke")
-frameStroke.Color = Color3.fromRGB(45, 212, 191)
-frameStroke.Thickness = 1.3
-frameStroke.Transparency = 0.15
-frameStroke.Parent = frame
-
-local header = Instance.new("Frame")
-header.Name = "Header"
-header.Size = UDim2.new(1, 0, 0, 43)
-header.BackgroundColor3 = Color3.fromRGB(17, 94, 89)
-header.BorderSizePixel = 0
-header.Parent = frame
-Instance.new("UICorner", header).CornerRadius = UDim.new(0, 12)
-
-local headerCover = Instance.new("Frame")
-headerCover.Size = UDim2.new(1, 0, 0, 12)
-headerCover.Position = UDim2.new(0, 0, 1, -12)
-headerCover.BackgroundColor3 = header.BackgroundColor3
-headerCover.BorderSizePixel = 0
-headerCover.Parent = header
-
-local title = Instance.new("TextLabel")
-title.Size = UDim2.new(1, -48, 0, 21)
-title.Position = UDim2.fromOffset(12, 5)
-title.BackgroundTransparency = 1
-title.Text = "RAEL'S TRICKS"
-title.TextColor3 = Color3.fromRGB(240, 253, 250)
-title.TextSize = 14
-title.Font = Enum.Font.GothamBold
-title.TextXAlignment = Enum.TextXAlignment.Left
-title.Parent = header
-
-local subtitle = Instance.new("TextLabel")
-subtitle.Size = UDim2.new(1, -48, 0, 13)
-subtitle.Position = UDim2.fromOffset(12, 25)
-subtitle.BackgroundTransparency = 1
-subtitle.Text = "INDO KOS  •  AUTOMATION V1"
-subtitle.TextColor3 = Color3.fromRGB(153, 246, 228)
-subtitle.TextSize = 8
-subtitle.Font = Enum.Font.GothamMedium
-subtitle.TextXAlignment = Enum.TextXAlignment.Left
-subtitle.Parent = header
-
-local minimizeButton = Instance.new("TextButton")
-minimizeButton.Name = "MinimizeButton"
-minimizeButton.Size = UDim2.fromOffset(27, 25)
-minimizeButton.Position = UDim2.new(1, -35, 0, 9)
-minimizeButton.BackgroundColor3 = Color3.fromRGB(15, 118, 110)
-minimizeButton.Text = "—"
-minimizeButton.TextColor3 = Color3.new(1, 1, 1)
-minimizeButton.TextSize = 15
-minimizeButton.Font = Enum.Font.GothamBold
-minimizeButton.Parent = header
-Instance.new("UICorner", minimizeButton).CornerRadius = UDim.new(0, 7)
-
-local miniButton = Instance.new("TextButton")
-miniButton.Name = "RaelMiniButton"
-miniButton.Size = UDim2.fromOffset(46, 46)
-miniButton.Position = UDim2.new(1, -60, 0, 95)
-miniButton.BackgroundColor3 = Color3.fromRGB(13, 148, 136)
-miniButton.Text = "RT"
-miniButton.TextColor3 = Color3.new(1, 1, 1)
-miniButton.TextSize = 16
-miniButton.Font = Enum.Font.GothamBold
-miniButton.Visible = false
-miniButton.Active = true
-miniButton.Parent = gui
-Instance.new("UICorner", miniButton).CornerRadius = UDim.new(1, 0)
-local miniStroke = Instance.new("UIStroke")
-miniStroke.Color = Color3.fromRGB(153, 246, 228)
-miniStroke.Thickness = 1.5
-miniStroke.Parent = miniButton
-
-local section = Instance.new("TextLabel")
-section.Size = UDim2.new(1, -24, 0, 16)
-section.Position = UDim2.fromOffset(12, 49)
-section.BackgroundTransparency = 1
-section.Text = "FITUR OTOMATIS"
-section.TextColor3 = Color3.fromRGB(148, 163, 184)
-section.TextSize = 9
-section.Font = Enum.Font.GothamBold
-section.TextXAlignment = Enum.TextXAlignment.Left
-section.Parent = frame
-
-local function makeToggle(name, label, x, y)
-    local b = Instance.new("TextButton")
-    b.Name = name
-    b.Size = UDim2.fromOffset(110, 32)
-    b.Position = UDim2.fromOffset(x, y)
-    b.BackgroundColor3 = Color3.fromRGB(127, 29, 29)
-    b.BorderSizePixel = 0
-    b.TextColor3 = Color3.fromRGB(248, 250, 252)
-    b.TextSize = 10
-    b.Font = Enum.Font.GothamBold
-    b.Text = label .. ": OFF"
-    b.Parent = frame
-    Instance.new("UICorner", b).CornerRadius = UDim.new(0, 7)
-    return b
-end
-
-local cleanButton = makeToggle("CleanButton", "CLEANER", 12, 69)
-local farmButton = makeToggle("FarmButton", "AUTO FARM", 130, 69)
-local convertButton = makeToggle("ConvertButton", "CONVERT", 12, 108)
-local feedButton = makeToggle("FeedButton", "AUTO FEED", 130, 108)
-local afkButton = makeToggle("AfkButton", "ANTI-AFK", 12, 147)
-local tpButton = makeToggle("TpButton", "TP LOCATION", 130, 147)
-
-local statusPanel = Instance.new("Frame")
-statusPanel.Size = UDim2.new(1, -24, 0, 39)
-statusPanel.Position = UDim2.fromOffset(12, 190)
-statusPanel.BackgroundColor3 = Color3.fromRGB(30, 41, 59)
-statusPanel.BorderSizePixel = 0
-statusPanel.Parent = frame
-Instance.new("UICorner", statusPanel).CornerRadius = UDim.new(0, 7)
-
-local status = Instance.new("TextLabel")
-status.Size = UDim2.new(1, -14, 1, -8)
-status.Position = UDim2.fromOffset(7, 4)
-status.BackgroundTransparency = 1
-status.Text = "STATUS: READY"
-status.TextColor3 = Color3.fromRGB(253, 230, 138)
-status.TextSize = 9
-status.Font = Enum.Font.GothamMedium
-status.TextWrapped = true
-status.TextXAlignment = Enum.TextXAlignment.Left
-status.TextYAlignment = Enum.TextYAlignment.Center
-status.Parent = statusPanel
-
-local footer = Instance.new("TextLabel")
-footer.Size = UDim2.new(1, -24, 0, 14)
-footer.Position = UDim2.fromOffset(12, 235)
-footer.BackgroundTransparency = 1
-footer.Text = "RAEL EDITION  •  V1"
-footer.TextColor3 = Color3.fromRGB(100, 116, 139)
-footer.TextSize = 8
-footer.Font = Enum.Font.Gotham
-footer.TextXAlignment = Enum.TextXAlignment.Right
-footer.Parent = frame
-
-local function setStatus(msg)
-    if status and status.Parent then
-        status.Text = "STATUS: " .. tostring(msg)
-    end
-end
-
-local function paintToggle(button, label, state)
-    button.Text = label .. (state and ": ON" or ": OFF")
-    button.BackgroundColor3 = state
-        and Color3.fromRGB(5, 150, 105)
-        or Color3.fromRGB(127, 29, 29)
-end
-
-local function updateButtons()
-    paintToggle(cleanButton, "CLEANER", enabled)
-    paintToggle(farmButton, "AUTO FARM", autoFarm)
-    paintToggle(convertButton, "CONVERT", autoConvert)
-    paintToggle(feedButton, "AUTO FEED", autoFeedEnabled)
-    paintToggle(afkButton, "ANTI-AFK", antiAfkEnabled)
-    paintToggle(tpButton, "TP LOCATION", tpEnabled)
-end
-
-local function makeDraggable(object)
-    local dragging = false
-    local dragStart
-    local startPosition
-
-    connect(object.InputBegan, function(input)
-        if input.UserInputType == Enum.UserInputType.Touch
-        or input.UserInputType == Enum.UserInputType.MouseButton1 then
-            dragging = true
-            dragStart = input.Position
-            startPosition = object.Position
-            connect(input.Changed, function()
-                if input.UserInputState == Enum.UserInputState.End then
-                    dragging = false
-                end
-            end)
-        end
-    end)
-
-    connect(UIS.InputChanged, function(input)
-        if dragging and (
-            input.UserInputType == Enum.UserInputType.Touch
-            or input.UserInputType == Enum.UserInputType.MouseMovement
-        ) then
-            local delta = input.Position - dragStart
-            object.Position = UDim2.new(
-                startPosition.X.Scale,
-                startPosition.X.Offset + delta.X,
-                startPosition.Y.Scale,
-                startPosition.Y.Offset + delta.Y
-            )
-        end
-    end)
-end
-
-makeDraggable(frame)
-makeDraggable(miniButton)
-
-connect(minimizeButton.MouseButton1Click, function()
-    frame.Visible = false
-    miniButton.Visible = true
-end)
-
-connect(miniButton.MouseButton1Click, function()
-    miniButton.Visible = false
-    frame.Visible = true
-end)
-
-connect(cleanButton.MouseButton1Click, function()
-    if not alive() then return end
-    if autoFarm then
-        setStatus("CLEANER AKTIF SAAT AUTO FARM BERJALAN")
-        return
-    end
-    enabled = not enabled
-    updateButtons()
-    setStatus(enabled and "CLEANER AKTIF" or "CLEANER NONAKTIF")
-end)
-
-connect(farmButton.MouseButton1Click, function()
-    if not alive() then return end
-    autoFarm = not autoFarm
-    if autoFarm then
-        enabled = true
-        setStatus("AUTO FARM DIMULAI")
-    else
-        setStatus("AUTO FARM DIMATIKAN")
-    end
-    updateButtons()
-end)
-
-connect(convertButton.MouseButton1Click, function()
-    if not alive() then return end
-    autoConvert = not autoConvert
-    updateButtons()
-    setStatus(autoConvert and "AUTO CONVERT AKTIF" or "AUTO CONVERT NONAKTIF")
-end)
-
-connect(feedButton.MouseButton1Click, function()
-    if not alive() then return end
-    autoFeedEnabled = not autoFeedEnabled
-    updateButtons()
-    setStatus(autoFeedEnabled and "AUTO FEED AKTIF" or "AUTO FEED NONAKTIF")
-end)
-
-connect(afkButton.MouseButton1Click, function()
-    if not alive() then return end
-    antiAfkEnabled = not antiAfkEnabled
-    updateButtons()
-    setStatus(antiAfkEnabled and "ANTI-AFK AKTIF" or "ANTI-AFK NONAKTIF")
-end)
-
-connect(tpButton.MouseButton1Click, function()
-    if not alive() then return end
-    tpEnabled = not tpEnabled
-    updateButtons()
-    setStatus(tpEnabled and "TP LOCATION AKTIF" or "TP LOCATION NONAKTIF")
-end)
-
-updateButtons()
-
-]==]
-
-replaceBetween(
-    "-- ==========================================\n-- GUI\n-- ==========================================",
-    "-- ==========================================\n-- AUTO CLEANER TARGET",
-    guiCode,
-    "MODERN GUI"
-)
-
--- SISIPKAN AUTO CONVERT SEBELUM AUTO CLEANER LOOP
 replaceOnce(
     "-- ==========================================\n-- AUTO CLEANER LOOP",
     convertCode .. "\n\n-- ==========================================\n-- AUTO CLEANER LOOP",
     "AUTO CONVERT INSERT"
 )
 
--- CLEANER BERHENTI SEMENTARA SAAT CONVERT
 replaceOnce(
     "if not enabled or busy then",
     "if not enabled or busy or converting then",
     "CLEANER CONVERT GUARD"
 )
 
--- AUTO FARM OTOMATIS CONVERT SAAT KOTORAN PENUH
 replaceOnce(
     "if not autoFarm then\n            emptyScans = 0\n            continue\n        end",
     "if not autoFarm then\n            emptyScans = 0\n            continue\n        end\n\n        if converting then\n            continue\n        end\n\n        if autoConvert and isManureFull() then\n            runAutoConvert()\n            continue\n        end",
     "AUTO FARM CONVERT TRIGGER"
 )
 
--- TOGGLE AUTO FEED
-replaceOnce(
-    "local function feedOne()\n    local feeders = getFeeders()",
-    "local function feedOne()\n    if not autoFeedEnabled then return false end\n    local feeders = getFeeders()",
-    "AUTO FEED TOGGLE"
-)
-
--- TOGGLE ANTI-AFK
-replaceOnce(
-    "connect(player.Idled, function()\n    if not alive() then return end",
-    "connect(player.Idled, function()\n    if not alive() or not antiAfkEnabled then return end",
-    "ANTI-AFK TOGGLE"
-)
-
--- TOGGLE TP LOCATION
-replaceOnce(
-    "if not alive() or not tpEquipped or processed then",
-    "if not alive() or not tpEnabled or not tpEquipped or processed then",
-    "TP LOCATION TOGGLE"
-)
-
--- UBAH LABEL VERSI
-source = source:gsub("V18%.2", "V1")
-source = source:gsub("V18%.3", "V1")
+source = source:gsub("V18%.2", "V18.3")
 
 local compiled, compileError = loadstring(source)
 
 if not compiled then
-    error("RAEL V1 COMPILE ERROR: " .. tostring(compileError))
+    error("RAEL V18.3 COMPILE ERROR: " .. tostring(compileError))
 end
 
 compiled()
