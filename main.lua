@@ -1,8 +1,8 @@
-
 -- ==========================================
 -- RAEL'S TRICKS V1
 -- BASE V1 + AUTO CONVERT + AUTO CLAIM
 -- AUTO CLOSE CONVERT MACHINE
+-- AUTO GACHA + AUTO CLAIM
 -- ==========================================
 
 local URL = "https://raw.githubusercontent.com/rael-kertia/Rael-Tricks/main/base.lua"
@@ -12,7 +12,7 @@ local ok, source = pcall(function()
 end)
 
 if not ok or type(source) ~= "string" or #source < 1000 then
-    warn("RAEL V1: GAGAL MENGAMBIL MAIN.LUA")
+    warn("RAEL V1: GAGAL MENGAMBIL BASE.LUA")
     return
 end
 
@@ -29,10 +29,12 @@ local function replaceBetween(startMarker, endMarker, newText, label)
     if not first then
         error("V1 GAGAL: AWAL BAGIAN TIDAK DITEMUKAN - " .. label)
     end
+
     local last = source:find(endMarker, first, true)
     if not last then
         error("V1 GAGAL: AKHIR BAGIAN TIDAK DITEMUKAN - " .. label)
     end
+
     source = source:sub(1, first - 1) .. newText .. "\n\n" .. source:sub(last)
 end
 
@@ -204,7 +206,6 @@ local function isRateRising()
     return false
 end
 
--- KLIK TOMBOL MASUK DAN KLAIM
 local function clickConvertButton(button)
     if not button or not button.Parent then
         return false
@@ -229,7 +230,6 @@ local function clickConvertButton(button)
     return fired
 end
 
--- TUTUP MESIN CONVERT / TEKAN X
 local function closeConvertMachine()
     local ui = playerGui:FindFirstChild("ConvertUI")
     local panel = ui and ui:FindFirstChild("PanelConvert")
@@ -385,7 +385,6 @@ local function runAutoConvert()
         return false
     end
 
-    -- TUNGGU KURS HIJAU / NAIK
     setStatus("MENUNGGU KURS HIJAU / NAIK")
 
     start = os.clock()
@@ -409,7 +408,6 @@ local function runAutoConvert()
         return false
     end
 
-    -- MASUKKAN 2000 KOTORAN
     setStatus("MEMASUKKAN 2000 KOTORAN")
 
     local beforeGold = readGoldValue(ui)
@@ -419,7 +417,6 @@ local function runAutoConvert()
         return false
     end
 
-    -- TUNGGU PROSES KONVERSI
     start = os.clock()
     local completed = false
 
@@ -454,7 +451,6 @@ local function runAutoConvert()
         return false
     end
 
-    -- KLAIM GOLD
     ui = getConvertUI()
 
     if not ui or not ui.klaim then
@@ -469,7 +465,6 @@ local function runAutoConvert()
         return false
     end
 
-    -- VERIFIKASI KOTORAN SUDAH KELUAR DARI SLOT
     start = os.clock()
 
     while alive() and autoFarm
@@ -495,6 +490,10 @@ local function runAutoConvert()
 end
 ]==]
 
+-- ==========================================
+-- GUI V1 + AUTO GACHA
+-- ==========================================
+
 local guiCode = [==[
 -- MODERN GUI V1
 local oldGui = playerGui:FindFirstChild("RaelsTricksV1")
@@ -508,7 +507,7 @@ gui.Parent = playerGui
 
 local frame = Instance.new("Frame")
 frame.Name = "Main"
-frame.Size = UDim2.fromOffset(252, 258)
+frame.Size = UDim2.fromOffset(252, 292)
 frame.Position = UDim2.new(1, -266, 0, 95)
 frame.BackgroundColor3 = Color3.fromRGB(15, 23, 42)
 frame.BorderSizePixel = 0
@@ -584,6 +583,7 @@ miniButton.Visible = false
 miniButton.Active = true
 miniButton.Parent = gui
 Instance.new("UICorner", miniButton).CornerRadius = UDim.new(1, 0)
+
 local miniStroke = Instance.new("UIStroke")
 miniStroke.Color = Color3.fromRGB(153, 246, 228)
 miniStroke.Thickness = 1.5
@@ -623,9 +623,13 @@ local feedButton = makeToggle("FeedButton", "AUTO FEED", 130, 108)
 local afkButton = makeToggle("AfkButton", "ANTI-AFK", 12, 147)
 local tpButton = makeToggle("TpButton", "TP LOCATION", 130, 147)
 
+-- TOMBOL AUTO GACHA DI GUI UTAMA
+local gachaButton = makeToggle("GachaButton", "AUTO GACHA", 12, 186)
+gachaButton.Size = UDim2.new(1, -24, 0, 32)
+
 local statusPanel = Instance.new("Frame")
 statusPanel.Size = UDim2.new(1, -24, 0, 39)
-statusPanel.Position = UDim2.fromOffset(12, 190)
+statusPanel.Position = UDim2.fromOffset(12, 225)
 statusPanel.BackgroundColor3 = Color3.fromRGB(30, 41, 59)
 statusPanel.BorderSizePixel = 0
 statusPanel.Parent = frame
@@ -646,7 +650,7 @@ status.Parent = statusPanel
 
 local footer = Instance.new("TextLabel")
 footer.Size = UDim2.new(1, -24, 0, 14)
-footer.Position = UDim2.fromOffset(12, 235)
+footer.Position = UDim2.fromOffset(12, 270)
 footer.BackgroundTransparency = 1
 footer.Text = "RAEL EDITION  •  V1"
 footer.TextColor3 = Color3.fromRGB(100, 116, 139)
@@ -668,6 +672,185 @@ local function paintToggle(button, label, state)
         or Color3.fromRGB(127, 29, 29)
 end
 
+-- ==========================================
+-- AUTO GACHA SYSTEM
+-- ==========================================
+
+local autoGachaEnabled = false
+local gachaWorkerRunning = false
+local gachaBusy = false
+
+local Gacha
+
+local function getGachaService()
+    if Gacha then
+        return Gacha
+    end
+
+    local replicatedStorage = game:GetService("ReplicatedStorage")
+    local knitModule = replicatedStorage
+        :WaitForChild("NKSystem")
+        :WaitForChild("Packages")
+        :WaitForChild("Knit")
+
+    local Knit = require(knitModule)
+    Gacha = Knit.GetService("GachaService")
+
+    return Gacha
+end
+
+-- PCALL MENANGKAP HASIL AWAIT DENGAN BENAR
+local function callGacha(methodName)
+    local service = getGachaService()
+    local method = service[methodName]
+
+    if type(method) ~= "function" then
+        return false, "METHOD TIDAK DITEMUKAN: " .. methodName
+    end
+
+    local callOK, awaitOK, result = pcall(function()
+        return method(service):await()
+    end)
+
+    if not callOK then
+        return false, tostring(awaitOK)
+    end
+
+    if not awaitOK then
+        return false, result or "PROMISE GAGAL"
+    end
+
+    return true, result
+end
+
+local function claimGachaSingle()
+    local okClaim, claimResult = callGacha("ClaimReward")
+
+    if not okClaim then
+        setStatus("GACHA: KLAIM GAGAL")
+        return false
+    end
+
+    return true
+end
+
+local function claimGachaMulti(results)
+    local total = #results
+
+    for index = 1, total do
+        -- Tetap selesaikan klaim hadiah spin yang sudah berjalan,
+        -- meskipun tombol AUTO GACHA dimatikan.
+        local okClaim = callGacha("ClaimOneMultiReward")
+
+        if not okClaim then
+            setStatus("GACHA: KLAIM MULTI GAGAL")
+            return false
+        end
+
+        task.wait(0.25)
+    end
+
+    return true
+end
+
+local function runAutoGacha()
+    if gachaWorkerRunning then
+        return
+    end
+
+    gachaWorkerRunning = true
+
+    while autoGachaEnabled and alive() do
+        if not gachaBusy then
+            gachaBusy = true
+
+            local stateOK, state = callGacha("GetState")
+
+            if not stateOK or type(state) ~= "table" then
+                setStatus("GACHA: GAGAL MEMBACA STATE")
+                gachaBusy = false
+                task.wait(3)
+            else
+                local free = tonumber(state.free) or 0
+                local spinOK = false
+                local result = nil
+
+                if free >= 10 then
+                    setStatus("GACHA: FREE SPIN X10")
+
+                    spinOK, result = callGacha("SpinX10WithFree")
+
+                    if spinOK
+                    and type(result) == "table"
+                    and result.ok then
+
+                        local results = result.results or {}
+
+                        if #results > 0 then
+                            claimGachaMulti(results)
+                        end
+                    else
+                        spinOK = false
+                    end
+
+                elseif free > 0 then
+                    setStatus("GACHA: FREE SPIN")
+
+                    spinOK, result = callGacha("Spin")
+
+                    if spinOK
+                    and type(result) == "table"
+                    and result.ok then
+
+                        if result.granted ~= false then
+                            claimGachaSingle()
+                        end
+                    else
+                        spinOK = false
+                    end
+
+                else
+                    setStatus("GACHA: PAID SPIN")
+
+                    spinOK, result = callGacha("SpinWithMoney")
+
+                    if spinOK
+                    and type(result) == "table"
+                    and result.ok then
+
+                        claimGachaSingle()
+                    else
+                        spinOK = false
+                    end
+                end
+
+                if spinOK then
+                    setStatus("GACHA: SPIN SELESAI")
+                    task.wait(1.5)
+                else
+                    setStatus("GACHA: SPIN GAGAL / COBA LAGI")
+                    task.wait(3)
+                end
+
+                gachaBusy = false
+            end
+        end
+    end
+
+    gachaBusy = false
+    gachaWorkerRunning = false
+
+    autoGachaEnabled = false
+
+    if gachaButton and gachaButton.Parent then
+        paintToggle(gachaButton, "AUTO GACHA", false)
+    end
+
+    if alive() then
+        setStatus("AUTO GACHA NONAKTIF")
+    end
+end
+
 local function updateButtons()
     paintToggle(cleanButton, "CLEANER", enabled)
     paintToggle(farmButton, "AUTO FARM", autoFarm)
@@ -675,6 +858,7 @@ local function updateButtons()
     paintToggle(feedButton, "AUTO FEED", autoFeedEnabled)
     paintToggle(afkButton, "ANTI-AFK", antiAfkEnabled)
     paintToggle(tpButton, "TP LOCATION", tpEnabled)
+    paintToggle(gachaButton, "AUTO GACHA", autoGachaEnabled)
 end
 
 local function makeDraggable(object)
@@ -688,6 +872,7 @@ local function makeDraggable(object)
             dragging = true
             dragStart = input.Position
             startPosition = object.Position
+
             connect(input.Changed, function()
                 if input.UserInputState == Enum.UserInputState.End then
                     dragging = false
@@ -702,6 +887,7 @@ local function makeDraggable(object)
             or input.UserInputType == Enum.UserInputType.MouseMovement
         ) then
             local delta = input.Position - dragStart
+
             object.Position = UDim2.new(
                 startPosition.X.Scale,
                 startPosition.X.Offset + delta.X,
@@ -727,10 +913,12 @@ end)
 
 connect(cleanButton.MouseButton1Click, function()
     if not alive() then return end
+
     if autoFarm then
         setStatus("CLEANER AKTIF SAAT AUTO FARM BERJALAN")
         return
     end
+
     enabled = not enabled
     updateButtons()
     setStatus(enabled and "CLEANER AKTIF" or "CLEANER NONAKTIF")
@@ -738,100 +926,150 @@ end)
 
 connect(farmButton.MouseButton1Click, function()
     if not alive() then return end
+
     autoFarm = not autoFarm
+
     if autoFarm then
         enabled = true
         setStatus("AUTO FARM DIMULAI")
     else
         setStatus("AUTO FARM DIMATIKAN")
     end
+
     updateButtons()
 end)
 
 connect(convertButton.MouseButton1Click, function()
     if not alive() then return end
+
     autoConvert = not autoConvert
     updateButtons()
+
     setStatus(autoConvert and "AUTO CONVERT AKTIF" or "AUTO CONVERT NONAKTIF")
 end)
 
 connect(feedButton.MouseButton1Click, function()
     if not alive() then return end
+
     autoFeedEnabled = not autoFeedEnabled
     updateButtons()
+
     setStatus(autoFeedEnabled and "AUTO FEED AKTIF" or "AUTO FEED NONAKTIF")
 end)
 
 connect(afkButton.MouseButton1Click, function()
     if not alive() then return end
+
     antiAfkEnabled = not antiAfkEnabled
     updateButtons()
+
     setStatus(antiAfkEnabled and "ANTI-AFK AKTIF" or "ANTI-AFK NONAKTIF")
 end)
 
 connect(tpButton.MouseButton1Click, function()
     if not alive() then return end
+
     tpEnabled = not tpEnabled
     updateButtons()
+
     setStatus(tpEnabled and "TP LOCATION AKTIF" or "TP LOCATION NONAKTIF")
 end)
 
-updateButtons()
+-- TOGGLE AUTO GACHA
+connect(gachaButton.MouseButton1Click, function()
+    if not alive() then return end
 
+    autoGachaEnabled = not autoGachaEnabled
+    updateButtons()
+
+    if autoGachaEnabled then
+        setStatus("AUTO GACHA DIMULAI")
+        task.spawn(runAutoGacha)
+    else
+        setStatus("AUTO GACHA DIMATIKAN")
+    end
+end)
+
+updateButtons()
 ]==]
 
 replaceBetween(
     "-- ==========================================\n-- GUI\n-- ==========================================",
     "-- ==========================================\n-- AUTO CLEANER TARGET",
     guiCode,
-    "MODERN GUI"
+    "MODERN GUI + AUTO GACHA"
 )
 
--- SISIPKAN AUTO CONVERT SEBELUM AUTO CLEANER LOOP
+-- ==========================================
+-- SISIPKAN AUTO CONVERT
+-- ==========================================
+
 replaceOnce(
     "-- ==========================================\n-- AUTO CLEANER LOOP",
     convertCode .. "\n\n-- ==========================================\n-- AUTO CLEANER LOOP",
     "AUTO CONVERT INSERT"
 )
 
+-- ==========================================
 -- CLEANER BERHENTI SEMENTARA SAAT CONVERT
+-- ==========================================
+
 replaceOnce(
     "if not enabled or busy then",
     "if not enabled or busy or converting then",
     "CLEANER CONVERT GUARD"
 )
 
--- AUTO FARM OTOMATIS CONVERT SAAT KOTORAN PENUH
+-- ==========================================
+-- AUTO FARM CONVERT SAAT KOTORAN PENUH
+-- ==========================================
+
 replaceOnce(
     "if not autoFarm then\n            emptyScans = 0\n            continue\n        end",
     "if not autoFarm then\n            emptyScans = 0\n            continue\n        end\n\n        if converting then\n            continue\n        end\n\n        if autoConvert and isManureFull() then\n            runAutoConvert()\n            continue\n        end",
     "AUTO FARM CONVERT TRIGGER"
 )
 
+-- ==========================================
 -- TOGGLE AUTO FEED
+-- ==========================================
+
 replaceOnce(
     "local function feedOne()\n    local feeders = getFeeders()",
     "local function feedOne()\n    if not autoFeedEnabled then return false end\n    local feeders = getFeeders()",
     "AUTO FEED TOGGLE"
 )
 
+-- ==========================================
 -- TOGGLE ANTI-AFK
+-- ==========================================
+
 replaceOnce(
     "connect(player.Idled, function()\n    if not alive() then return end",
     "connect(player.Idled, function()\n    if not alive() or not antiAfkEnabled then return end",
     "ANTI-AFK TOGGLE"
 )
 
+-- ==========================================
 -- TOGGLE TP LOCATION
+-- ==========================================
+
 replaceOnce(
     "if not alive() or not tpEquipped or processed then",
     "if not alive() or not tpEnabled or not tpEquipped or processed then",
     "TP LOCATION TOGGLE"
 )
 
+-- ==========================================
 -- UBAH LABEL VERSI
+-- ==========================================
+
 source = source:gsub("V18%.2", "V1")
 source = source:gsub("V18%.3", "V1")
+
+-- ==========================================
+-- COMPILE DAN JALANKAN
+-- ==========================================
 
 local compiled, compileError = loadstring(source)
 
