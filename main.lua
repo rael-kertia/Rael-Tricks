@@ -618,12 +618,12 @@ local tpButton = makeToggle("TpButton", "TP LOCATION", 130, 147)
 local gachaButton = makeToggle("GachaButton", "AUTO GACHA", 12, 186)
 gachaButton.Size = UDim2.new(1, -24, 0, 32)
 
-local homeworkButton = makeToggle("HomeworkButton", "HOMEWORK", 130, 186)
+local homeworkButton = makeToggle("HomeworkButton", "HOMEWORK", 12, 225)
 homeworkButton.Size = UDim2.new(1, -24, 0, 32)
 
 local statusPanel = Instance.new("Frame")
 statusPanel.Size = UDim2.new(1, -24, 0, 39)
-statusPanel.Position = UDim2.fromOffset(12, 225)
+statusPanel.Position = UDim2.fromOffset(12, 264)
 statusPanel.BackgroundColor3 = Color3.fromRGB(30, 41, 59)
 statusPanel.BorderSizePixel = 0
 statusPanel.Parent = frame
