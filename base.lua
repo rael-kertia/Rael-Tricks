@@ -1,13 +1,8 @@
-
 -- ==========================================
 -- RAEL'S TRICKS V18.2 + HOMEWORK
--- AUTO CLEANER + AUTO FARM
--- HOMEWORK PRIORITY
--- DROPPINGS PRIORITY
--- AUTO FEED WHEN DROPPING FOLDER MISSING
--- FEED ONLY AT 0/100
--- MINIMIZE + REOPEN GUI
--- NO STOP ALL
+-- AUTO CLEANER + AUTO FARM + HOMEWORK
+-- HOMEWORK TERPISAH DARI AUTO CLEAN
+-- HOMEWORK PRIORITY OVER AUTO FARM
 -- ==========================================
 
 local Players = game:GetService("Players")
@@ -18,17 +13,14 @@ local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 local backpack = player:WaitForChild("Backpack")
 local env = getgenv()
+local W = workspace
 
--- ==========================================
 -- CLEAN PREVIOUS VERSION
--- ==========================================
-
 if env.RaelV18Connections then
     for _, c in ipairs(env.RaelV18Connections) do
         pcall(function() c:Disconnect() end)
     end
 end
-
 if env.RaelV18Objects then
     for _, obj in ipairs(env.RaelV18Objects) do
         pcall(function() obj:Destroy() end)
@@ -37,16 +29,15 @@ end
 
 env.RaelV18Running = false
 task.wait(0.15)
-
 env.RaelV18Running = true
+
 local SESSION = tick()
 env.RaelV18Session = SESSION
 env.RaelV18Connections = {}
 env.RaelV18Objects = {}
 
 local function alive()
-    return env.RaelV18Running
-        and env.RaelV18Session == SESSION
+    return env.RaelV18Running and env.RaelV18Session == SESSION
 end
 
 local function connect(signal, callback)
@@ -60,10 +51,7 @@ local function track(object)
     return object
 end
 
--- ==========================================
 -- SETTINGS
--- ==========================================
-
 local RANGE_CLEAN = 100
 local RANGE_TRASH = 30
 local SCAN_DELAY = 0.2
@@ -73,11 +61,9 @@ local FEED_RETRY = 8
 
 local enabled = false
 local autoFarm = false
-local busy = false
-
--- HOMEWORK
 local homeworkEnabled = false
 local homeworkBusy = false
+local busy = false
 
 local prompts = setmetatable({}, {__mode = "k"})
 local lastAttempt = setmetatable({}, {__mode = "k"})
@@ -104,7 +90,7 @@ local function getCurrentPen()
     local kandang = getCurrentKandang()
     if not kandang then return nil end
 
-    local kawasan = workspace:FindFirstChild("Kawasan_Kos")
+    local kawasan = W:FindFirstChild("Kawasan_Kos")
     local ternak = kawasan and kawasan:FindFirstChild("Lahan_Ternak")
     return ternak and ternak:FindFirstChild(kandang)
 end
@@ -113,7 +99,7 @@ local function getDroppingFolder()
     local kandang = getCurrentKandang()
     if not kandang then return nil end
 
-    local farm = workspace:FindFirstChild("TernakLokal")
+    local farm = W:FindFirstChild("TernakLokal")
     local owner = farm and farm:FindFirstChild("KotoranSaya_" .. kandang)
     return owner and owner:FindFirstChild("Kotoran")
 end
@@ -213,7 +199,7 @@ local function getObjectPosition(obj)
 end
 
 -- ==========================================
--- TRASHBAG CLEANER LAMA
+-- TRASHBAG - AUTO CLEAN/FARM LAMA
 -- ==========================================
 
 local function isCarryingTrash()
@@ -224,7 +210,7 @@ local function isCarryingTrash()
 end
 
 -- ==========================================
--- TELEPORT
+-- TELEPORT + PROMPT LAMA
 -- ==========================================
 
 local function teleportNear(position, distance)
@@ -240,10 +226,6 @@ local function teleportNear(position, distance)
 
     return alive()
 end
-
--- ==========================================
--- PROMPT INTERACTION
--- ==========================================
 
 local function activatePrompt(prompt)
     if not alive() or not prompt
@@ -307,7 +289,6 @@ title.Font = Enum.Font.GothamBold
 title.TextXAlignment = Enum.TextXAlignment.Left
 title.Parent = frame
 
--- MINIMIZE
 local minimizeButton = Instance.new("TextButton")
 minimizeButton.Name = "MinimizeButton"
 minimizeButton.Size = UDim2.fromOffset(25, 19)
@@ -320,7 +301,6 @@ minimizeButton.Font = Enum.Font.GothamBold
 minimizeButton.Parent = frame
 Instance.new("UICorner", minimizeButton).CornerRadius = UDim.new(0, 5)
 
--- REOPEN RT
 local miniButton = Instance.new("TextButton")
 miniButton.Name = "RaelMiniButton"
 miniButton.Size = UDim2.fromOffset(42, 42)
@@ -335,10 +315,10 @@ miniButton.Active = true
 miniButton.Parent = gui
 Instance.new("UICorner", miniButton).CornerRadius = UDim.new(1, 0)
 
-local function makeButton(name, text, x, y, w, color)
+local function makeButton(name, text, x, y, w, color, h)
     local b = Instance.new("TextButton")
     b.Name = name
-    b.Size = UDim2.fromOffset(w, 29)
+    b.Size = UDim2.fromOffset(w, h or 29)
     b.Position = UDim2.fromOffset(x, y)
     b.BackgroundColor3 = color
     b.TextColor3 = Color3.new(1, 1, 1)
@@ -360,10 +340,9 @@ local farmButton = makeButton(
     Color3.fromRGB(35, 100, 65)
 )
 
--- HOMEWORK BUTTON
 local homeworkButton = makeButton(
     "HomeworkButton", "HOMEWORK: OFF", 5, 55, 195,
-    Color3.fromRGB(35, 100, 65)
+    Color3.fromRGB(35, 75, 145), 27
 )
 
 local status = Instance.new("TextLabel")
@@ -395,278 +374,10 @@ local function updateButtons()
         or Color3.fromRGB(35, 100, 65)
 
     homeworkButton.Text = homeworkEnabled
-        and "HOMEWORK: ON"
-        or "HOMEWORK: OFF"
-
+        and "HOMEWORK: ON" or "HOMEWORK: OFF"
     homeworkButton.BackgroundColor3 = homeworkEnabled
         and Color3.fromRGB(35, 145, 70)
-        or Color3.fromRGB(35, 100, 65)
-end
-
--- ==========================================
--- HOMEWORK ENGINE
--- ==========================================
-
-local function hwRoot()
-    local c = player.Character
-    return c and c:FindFirstChild("HumanoidRootPart")
-end
-
-local function hwCarry()
-    local c = player.Character
-    return c and c:FindFirstChild("TrashBag", true)
-end
-
-local function hwPart(p)
-    local x = p and p.Parent
-    if not x then return nil end
-
-    return x:IsA("BasePart")
-        and x
-        or x:FindFirstChildWhichIsA("BasePart", true)
-end
-
-local function hwGet(h, mode)
-    local a = {}
-
-    for _, v in ipairs(h:GetDescendants()) do
-        if mode == 1
-        and v:IsA("ProximityPrompt")
-        and v.ActionText == "Bersihkan"
-        and v.Enabled then
-            table.insert(a, v)
-
-        elseif mode == 2
-        and v:IsA("BasePart")
-        and v.Name == "TrashBag" then
-            local p = v:FindFirstChild("AmbilPrompt")
-
-            if p and p:IsA("ProximityPrompt") and p.Enabled then
-                table.insert(a, p)
-            end
-        end
-    end
-
-    return a
-end
-
-local function hwUse(p)
-    if not homeworkEnabled or not p
-    or not p.Parent or not p.Enabled then
-        return false
-    end
-
-    local r = hwRoot()
-    local q = hwPart(p)
-
-    if not r or not q then return false end
-
-    r.CFrame = CFrame.new(q.Position + Vector3.new(0, 1.5, 0))
-    task.wait(0.3)
-
-    if not homeworkEnabled or not p.Parent or not p.Enabled then
-        return false
-    end
-
-    local ok = pcall(function()
-        fireproximityprompt(p, p.HoldDuration)
-    end)
-
-    task.wait(0.4)
-    return ok and homeworkEnabled
-end
-
-local function hwWait(v)
-    for i = 1, 40 do
-        if not homeworkEnabled or not alive() then
-            return false
-        end
-
-        if (hwCarry() ~= nil) == v then
-            return true
-        end
-
-        task.wait(0.25)
-    end
-
-    return false
-end
-
-local function hwDispose()
-    if not hwCarry() then return true end
-
-    local r = hwRoot()
-    if not r then return false end
-
-    local best, dist
-
-    for _, p in ipairs(workspace:GetDescendants()) do
-        if p:IsA("ProximityPrompt")
-        and p.Name == "BuangPrompt"
-        and p.ActionText == "Buang"
-        and p.Enabled then
-
-            local q = hwPart(p)
-
-            if q then
-                local d = (r.Position - q.Position).Magnitude
-
-                if not dist or d < dist then
-                    best, dist = p, d
-                end
-            end
-        end
-    end
-
-    if not best or not hwUse(best) then
-        return false
-    end
-
-    return hwWait(false)
-end
-
-local function hwNearest()
-    local r = hwRoot()
-    local folder = workspace:FindFirstChild("KosanSpawned")
-
-    if not r or not folder then return nil end
-
-    local best, dist
-
-    for _, h in ipairs(folder:GetChildren()) do
-        for _, p in ipairs(hwGet(h, 1)) do
-            local q = hwPart(p)
-
-            if q then
-                local d = (r.Position - q.Position).Magnitude
-
-                if not dist or d < dist then
-                    best, dist = h, d
-                end
-            end
-        end
-    end
-
-    return best
-end
-
-local function homeworkRun()
-    local result = "HOMEWORK DIHENTIKAN"
-
-    -- Tunggu CLEANER lama menyelesaikan interaksi aktifnya.
-    while homeworkEnabled and alive() and busy do
-        task.wait(0.1)
-    end
-
-    while homeworkEnabled and alive() do
-        local folder = workspace:FindFirstChild("KosanSpawned")
-
-        if not folder or not hwRoot() then
-            result = "RUMAH / CHARACTER TIDAK DITEMUKAN"
-            break
-        end
-
-        setStatus("HOMEWORK: MENCARI RUMAH")
-
-        local house = hwNearest()
-
-        if not house then
-            result = "HOMEWORK SELESAI - SEMUA BERSIH"
-            break
-        end
-
-        -- BERSIHKAN SEMUA PROMPT DI RUMAH
-        setStatus("HOMEWORK: MEMBERSIHKAN")
-        local done = {}
-
-        while homeworkEnabled and alive() do
-            local target
-
-            for _, p in ipairs(hwGet(house, 1)) do
-                if not done[p] then
-                    target = p
-                    break
-                end
-            end
-
-            if not target then break end
-
-            if not hwUse(target) then
-                result = "GAGAL MEMBERSIHKAN"
-                break
-            end
-
-            done[target] = true
-            task.wait(0.2)
-        end
-
-        if not homeworkEnabled then break end
-
-        -- TUNGGU TRASHBAG SPAWN DAN BUANG SEMUA
-        setStatus("HOMEWORK: MENGURUS SAMPAH")
-        local idle = 0
-
-        while homeworkEnabled and alive() and idle < 30 do
-            if hwCarry() then
-                setStatus("HOMEWORK: MEMBUANG SAMPAH")
-
-                if not hwDispose() then
-                    result = "GAGAL MEMBUANG SAMPAH"
-                    break
-                end
-
-                idle = 0
-            else
-                local bags = hwGet(house, 2)
-
-                if #bags > 0 then
-                    setStatus("HOMEWORK: MENGAMBIL SAMPAH")
-
-                    if not hwUse(bags[1]) or not hwWait(true) then
-                        result = "GAGAL MENGAMBIL SAMPAH"
-                        break
-                    end
-
-                    if not hwDispose() then
-                        result = "GAGAL MEMBUANG SAMPAH"
-                        break
-                    end
-
-                    idle = 0
-
-                elseif #hwGet(house, 1) > 0 then
-                    -- Masih ada kotoran yang muncul kembali.
-                    idle = 0
-                    task.wait(1)
-
-                else
-                    idle += 1
-                    task.wait(1)
-                end
-            end
-        end
-
-        if not homeworkEnabled then break end
-
-        if hwCarry() and not hwDispose() then
-            result = "GAGAL MEMBUANG SAMPAH"
-            break
-        end
-
-        -- Rumah harus benar-benar bersih sebelum pindah.
-        if #hwGet(house, 1) > 0 or #hwGet(house, 2) > 0 then
-            result = "RUMAH BELUM SELESAI"
-            break
-        end
-
-        -- Loop kembali mencari rumah kotor berikutnya.
-    end
-
-    homeworkEnabled = false
-    homeworkBusy = false
-
-    updateButtons()
-    setStatus(result)
+        or Color3.fromRGB(35, 75, 145)
 end
 
 -- ==========================================
@@ -723,12 +434,295 @@ connect(miniButton.MouseButton1Click, function()
 end)
 
 -- ==========================================
+-- HOMEWORK SYSTEM
+-- ==========================================
+
+local function hwRoot()
+    local c = player.Character
+    return c and c:FindFirstChild("HumanoidRootPart")
+end
+
+-- HOMEWORK memakai deteksi recursive sendiri.
+-- Deteksi TrashBag AUTO CLEAN lama tidak diubah.
+local function hwCarrying()
+    local c = player.Character
+    return c and c:FindFirstChild("TrashBag", true)
+end
+
+local function hwPart(prompt)
+    local x = prompt and prompt.Parent
+    if not x then return nil end
+
+    if x:IsA("BasePart") then
+        return x
+    end
+
+    return x:FindFirstChildWhichIsA("BasePart", true)
+end
+
+local function hwMove(prompt)
+    if not alive() or not homeworkEnabled then return false end
+
+    local r = hwRoot()
+    local q = hwPart(prompt)
+
+    if not r or not q then return false end
+
+    r.CFrame = CFrame.new(
+        q.Position + Vector3.new(0, 1.5, 0)
+    )
+
+    task.wait(0.3)
+    return alive() and homeworkEnabled
+end
+
+local function hwUse(prompt)
+    if not prompt or not prompt.Parent or not prompt.Enabled then
+        return false
+    end
+
+    if not hwMove(prompt) then return false end
+
+    local ok = pcall(function()
+        fireproximityprompt(prompt, prompt.HoldDuration)
+    end)
+
+    if not ok then return false end
+
+    task.wait(0.4)
+    return alive() and homeworkEnabled
+end
+
+local function hwWaitCarry(value)
+    for i = 1, 40 do
+        if not alive() or not homeworkEnabled then return false end
+
+        if (hwCarrying() ~= nil) == value then
+            return true
+        end
+
+        task.wait(0.25)
+    end
+
+    return false
+end
+
+local function hwDispose()
+    if not hwCarrying() then return true end
+
+    local r = hwRoot()
+    if not r then return false end
+
+    local best, bd
+
+    for _, v in ipairs(W:GetDescendants()) do
+        if not alive() or not homeworkEnabled then return false end
+
+        if v:IsA("ProximityPrompt")
+        and v.Name == "BuangPrompt"
+        and v.ActionText == "Buang"
+        and v.Enabled then
+            local q = hwPart(v)
+
+            if q then
+                local d = (r.Position - q.Position).Magnitude
+
+                if not bd or d < bd then
+                    best, bd = v, d
+                end
+            end
+        end
+    end
+
+    if not best or not hwUse(best) then
+        return false
+    end
+
+    return hwWaitCarry(false)
+end
+
+local function hwGet(house, mode)
+    local result = {}
+
+    if not house then return result end
+
+    for _, v in ipairs(house:GetDescendants()) do
+        if mode == 1
+        and v:IsA("ProximityPrompt")
+        and v.ActionText == "Bersihkan"
+        and v.Enabled then
+            table.insert(result, v)
+
+        elseif mode == 2
+        and v:IsA("BasePart")
+        and v.Name == "TrashBag" then
+            local p = v:FindFirstChild("AmbilPrompt")
+
+            if p and p:IsA("ProximityPrompt") and p.Enabled then
+                table.insert(result, p)
+            end
+        end
+    end
+
+    return result
+end
+
+local function hwFindHouse()
+    local folder = W:FindFirstChild("KosanSpawned")
+    local r = hwRoot()
+
+    if not folder or not r then return nil end
+
+    local best, bd
+
+    for _, house in ipairs(folder:GetChildren()) do
+        for _, p in ipairs(hwGet(house, 1)) do
+            local q = hwPart(p)
+
+            if q then
+                local d = (r.Position - q.Position).Magnitude
+
+                if not bd or d < bd then
+                    best, bd = house, d
+                end
+            end
+        end
+    end
+
+    return best
+end
+
+local function homeworkRun()
+    if homeworkBusy then return end
+    homeworkBusy = true
+
+    while alive() and homeworkEnabled do
+        local folder = W:FindFirstChild("KosanSpawned")
+
+        if not folder then
+            setStatus("KOSANSPAWNED TIDAK DITEMUKAN")
+            task.wait(2)
+            break
+        end
+
+        local house = hwFindHouse()
+
+        -- Tidak ada rumah kotor: selesai.
+        if not house then
+            setStatus("SEMUA RUMAH SELESAI")
+            break
+        end
+
+        setStatus("HOMEWORK: MEMBERSIHKAN RUMAH")
+
+        -- Bersihkan semua prompt di rumah terpilih.
+        local done = {}
+
+        while alive() and homeworkEnabled do
+            local prompt
+
+            for _, p in ipairs(hwGet(house, 1)) do
+                if not done[p] then
+                    prompt = p
+                    break
+                end
+            end
+
+            if not prompt then break end
+
+            if not hwUse(prompt) then
+                if homeworkEnabled then
+                    setStatus("GAGAL MEMBERSIHKAN")
+                end
+                break
+            end
+
+            done[prompt] = true
+            task.wait(0.2)
+        end
+
+        if not alive() or not homeworkEnabled then break end
+
+        -- Tunggu TrashBag muncul, maksimal 30 detik.
+        setStatus("HOMEWORK: MENUNGGU SAMPAH")
+
+        local idle = 0
+
+        while alive() and homeworkEnabled and idle < 30 do
+            if hwCarrying() then
+                setStatus("HOMEWORK: MEMBUANG SAMPAH")
+
+                if not hwDispose() then
+                    setStatus("GAGAL MEMBUANG SAMPAH")
+                    break
+                end
+
+                idle = 0
+            else
+                local bags = hwGet(house, 2)
+
+                if #bags > 0 then
+                    setStatus("HOMEWORK: MENGAMBIL SAMPAH")
+
+                    if not hwUse(bags[1])
+                    or not hwWaitCarry(true) then
+                        setStatus("GAGAL MENGAMBIL SAMPAH")
+                        break
+                    end
+
+                    setStatus("HOMEWORK: MEMBUANG SAMPAH")
+
+                    if not hwDispose() then
+                        setStatus("GAGAL MEMBUANG SAMPAH")
+                        break
+                    end
+
+                    idle = 0
+
+                elseif #hwGet(house, 1) > 0 then
+                    idle = 0
+                    task.wait(1)
+
+                else
+                    idle += 1
+                    task.wait(1)
+                end
+            end
+        end
+
+        if not alive() or not homeworkEnabled then break end
+
+        -- Rumah selesai, cari rumah kotor berikutnya.
+        if #hwGet(house, 1) > 0
+        or #hwGet(house, 2) > 0
+        or hwCarrying() then
+            setStatus("SAMPAH BELUM SELESAI")
+            break
+        end
+
+        task.wait(0.3)
+    end
+
+    homeworkEnabled = false
+    homeworkBusy = false
+    updateButtons()
+
+    if alive() then
+        if autoFarm then
+            setStatus("HOMEWORK SELESAI - FARM LANJUT")
+        else
+            setStatus("HOMEWORK SELESAI")
+        end
+    end
+end
+
+-- ==========================================
 -- BUTTON EVENTS
 -- ==========================================
 
 connect(cleanButton.MouseButton1Click, function()
-    if not alive() or homeworkEnabled or homeworkBusy then return end
-    if autoFarm then return end
+    if not alive() then return end
+    if autoFarm or homeworkEnabled or homeworkBusy then return end
 
     enabled = not enabled
     updateButtons()
@@ -754,18 +748,16 @@ connect(homeworkButton.MouseButton1Click, function()
 
     if homeworkEnabled then
         homeworkEnabled = false
-        updateButtons()
         setStatus("HOMEWORK DIMATIKAN")
+        updateButtons()
         return
     end
 
     if homeworkBusy then return end
 
     homeworkEnabled = true
-    homeworkBusy = true
-
     updateButtons()
-    setStatus("HOMEWORK AKTIF - FARM DIJEDA")
+    setStatus("HOMEWORK DIMULAI")
 
     task.spawn(homeworkRun)
 end)
@@ -803,6 +795,7 @@ local function getNearest(root)
 
                 if pos then
                     local distance = (root.Position - pos).Magnitude
+
                     if distance <= range and distance < shortest then
                         nearest = prompt
                         shortest = distance
@@ -934,9 +927,7 @@ local function getStock(palung)
             if txt:find("pakan", 1, true)
             or name:find("pakan", 1, true) then
                 local amount = txt:match("(%d+)%s*/%s*100")
-                if amount then
-                    return tonumber(amount)
-                end
+                if amount then return tonumber(amount) end
             end
         end
     end
@@ -944,9 +935,7 @@ local function getStock(palung)
     for _, obj in ipairs(palung:GetDescendants()) do
         if obj:IsA("TextLabel") or obj:IsA("TextButton") then
             local amount = (obj.Text or ""):match("(%d+)%s*/%s*100")
-            if amount then
-                return tonumber(amount)
-            end
+            if amount then return tonumber(amount) end
         end
     end
 
@@ -1010,7 +999,7 @@ local function getFeeders()
     end
 
     local number = getKandangNumber()
-    local farm = workspace:FindFirstChild("TernakLokal")
+    local farm = W:FindFirstChild("TernakLokal")
 
     if farm and number then
         for _, name in ipairs({
@@ -1057,7 +1046,8 @@ local function feedOne()
     local attempted = false
 
     for _, entry in ipairs(feeders) do
-        if not alive() or not autoFarm or homeworkEnabled or homeworkBusy then
+        if not alive() or not autoFarm
+        or homeworkEnabled or homeworkBusy then
             return false
         end
 
@@ -1068,10 +1058,7 @@ local function feedOne()
             continue
         end
 
-        if stock ~= 0 then
-            continue
-        end
-
+        if stock ~= 0 then continue end
         foundZero = true
 
         local now = os.clock()
@@ -1087,8 +1074,6 @@ local function feedOne()
             setStatus("CABAI TIDAK DITEMUKAN")
             return false
         end
-
-        if homeworkEnabled or homeworkBusy then return false end
 
         local prompt = findFeedPrompt(entry.object)
 
@@ -1114,11 +1099,12 @@ local function feedOne()
 
         setStatus(entry.name .. ": MENGISI PAKAN 0/100")
 
-        if not teleportNear(position, 2) then
+        if not teleportNear(position, 2) then continue end
+
+        if not alive() or not autoFarm
+        or homeworkEnabled or homeworkBusy then
             continue
         end
-
-        if homeworkEnabled or homeworkBusy then return false end
 
         local ok = activatePrompt(prompt)
 
@@ -1165,14 +1151,12 @@ end
 -- REGISTER PROMPTS
 -- ==========================================
 
-for _, obj in ipairs(workspace:GetDescendants()) do
+for _, obj in ipairs(W:GetDescendants()) do
     addPrompt(obj)
 end
 
-connect(workspace.DescendantAdded, function(obj)
-    if alive() then
-        addPrompt(obj)
-    end
+connect(W.DescendantAdded, function(obj)
+    if alive() then addPrompt(obj) end
 end)
 
 -- ==========================================
@@ -1183,20 +1167,20 @@ task.spawn(function()
     while alive() and gui.Parent do
         task.wait(SCAN_DELAY)
 
-        if not enabled or busy or homeworkEnabled or homeworkBusy then
+        if not enabled or busy
+        or homeworkEnabled or homeworkBusy then
             continue
         end
 
         local character = player.Character
         local root = character and character:FindFirstChild("HumanoidRootPart")
 
-        if not root then
-            continue
-        end
+        if not root then continue end
 
         local prompt = getNearest(root)
 
-        if prompt and enabled and not homeworkEnabled and not homeworkBusy then
+        if prompt and enabled
+        and not homeworkEnabled and not homeworkBusy then
             busy = true
             lastAttempt[prompt] = os.clock()
 
@@ -1209,7 +1193,7 @@ task.spawn(function()
 end)
 
 -- ==========================================
--- AUTO FARM LOOP V18.2 + HOMEWORK PRIORITY
+-- AUTO FARM LOOP
 -- ==========================================
 
 task.spawn(function()
@@ -1223,7 +1207,7 @@ task.spawn(function()
             continue
         end
 
-        -- HOMEWORK SELALU PRIORITAS
+        -- HOMEWORK PRIORITY
         if homeworkEnabled or homeworkBusy then
             continue
         end
@@ -1280,10 +1264,6 @@ task.spawn(function()
 
             if not prompt or not pos then
                 setStatus("POSISI KOTORAN TIDAK TERBACA")
-                continue
-            end
-
-            if homeworkEnabled or homeworkBusy then
                 continue
             end
 
@@ -1356,9 +1336,7 @@ end)
 local oldTool = backpack:FindFirstChild("TP LOCATION")
     or (player.Character and player.Character:FindFirstChild("TP LOCATION"))
 
-if oldTool then
-    oldTool:Destroy()
-end
+if oldTool then oldTool:Destroy() end
 
 local tool = track(Instance.new("Tool"))
 tool.Name = "TP LOCATION"
@@ -1379,15 +1357,10 @@ connect(tool.Unequipped, function()
 end)
 
 connect(UIS.TouchTapInWorld, function(position, processed)
-    if not alive() or not tpEquipped or processed then
-        return
-    end
+    if not alive() or not tpEquipped or processed then return end
+    if os.clock() - equipTime < 0.25 then return end
 
-    if os.clock() - equipTime < 0.25 then
-        return
-    end
-
-    local camera = workspace.CurrentCamera
+    local camera = W.CurrentCamera
     if not camera then return end
 
     local ray = camera:ViewportPointToRay(position.X, position.Y)
@@ -1395,12 +1368,7 @@ connect(UIS.TouchTapInWorld, function(position, processed)
     params.FilterType = Enum.RaycastFilterType.Exclude
     params.FilterDescendantsInstances = {player.Character}
 
-    local result = workspace:Raycast(
-        ray.Origin,
-        ray.Direction * 1500,
-        params
-    )
-
+    local result = W:Raycast(ray.Origin, ray.Direction * 1500, params)
     if not result then return end
 
     local character = player.Character
@@ -1449,8 +1417,9 @@ updateButtons()
 setStatus("READY - FARM OFF")
 
 print("RAEL'S TRICKS V18.2 + HOMEWORK LOADED")
-print("HOMEWORK PRIORITY READY")
+print("AUTO CLEAN READY")
 print("AUTO FARM READY")
+print("HOMEWORK READY - SEPARATE TOGGLE")
 print("AUTO FEED WHEN FOLDER MISSING")
 print("FEED ONLY AT 0/100")
 print("MINIMIZE + REOPEN READY")
