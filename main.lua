@@ -78,7 +78,7 @@ connect(tool.Unequipped, function()
 end)
 
 local function tpAtScreenPoint(point, source)
-    if not alive() or not tpEnabled then return false end
+    if not alive() or not tpEnabled or not tpEquipped then return false end
     if tpBusy then return false end
     if typeof(point) ~= "Vector2" then return false end
 
@@ -138,7 +138,7 @@ end
 
 -- TouchTapInWorld mengirim ARRAY Vector2, bukan satu Vector2.
 connect(UIS.TouchTapInWorld, function(touchPositions, processedByUI)
-    if processedByUI or not alive() or not tpEnabled then
+    if processedByUI or not alive() or not tpEnabled or not tpEquipped then
         return
     end
 
@@ -157,7 +157,7 @@ connect(UIS.InputBegan, function(input, processedByUI)
     if processedByUI or input.UserInputType ~= Enum.UserInputType.MouseButton1 then
         return
     end
-    if not alive() or not tpEnabled then return end
+    if not alive() or not tpEnabled or not tpEquipped then return end
 
     local point = UIS:GetMouseLocation()
     tpAtScreenPoint(point, "MOUSE")
