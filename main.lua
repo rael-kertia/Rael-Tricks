@@ -43,6 +43,136 @@ replaceOnce(
 )
 
 -- ==========================================
+-- TP LOCATION INPUT + RAYCAST FIX
+-- ==========================================
+
+local tpLocationCode = [==[
+-- ==========================================
+-- TP LOCATION
+-- ==========================================
+
+local oldTool = backpack:FindFirstChild("TP LOCATION")
+    or (player.Character and player.Character:FindFirstChild("TP LOCATION"))
+
+if oldTool then oldTool:Destroy() end
+
+local tool = track(Instance.new("Tool"))
+tool.Name = "TP LOCATION"
+tool.RequiresHandle = false
+tool.CanBeDropped = false
+tool.Parent = backpack
+
+local tpEquipped = false
+local equipTime = 0
+local tpBusy = false
+
+connect(tool.Equipped, function()
+    tpEquipped = true
+    equipTime = os.clock()
+    setStatus("TP LOCATION SIAP - PILIH AREA")
+end)
+
+connect(tool.Unequipped, function()
+    tpEquipped = false
+    tpBusy = false
+end)
+
+local function tpAtScreenPoint(point, source)
+    if not alive() or not tpEnabled or not tpEquipped then return false end
+    if os.clock() - equipTime < 0.2 or tpBusy then return false end
+    if typeof(point) ~= "Vector2" then return false end
+
+    local camera = W.CurrentCamera
+    local character = player.Character
+    local root = character and character:FindFirstChild("HumanoidRootPart")
+    local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+
+    if not camera or not root or not humanoid then
+        setStatus("TP GAGAL - KARAKTER/KAMERA TIDAK SIAP")
+        return false
+    end
+
+    tpBusy = true
+    local ok, result = pcall(function()
+        local ray = camera:ScreenPointToRay(point.X, point.Y)
+        local params = RaycastParams.new()
+        params.FilterType = Enum.RaycastFilterType.Exclude
+        params.FilterDescendantsInstances = {character}
+        params.IgnoreWater = false
+
+        return W:Raycast(ray.Origin, ray.Direction * 2000, params)
+    end)
+
+    if not ok then
+        tpBusy = false
+        setStatus("TP RAYCAST ERROR - " .. tostring(result):sub(1, 55))
+        return false
+    end
+
+    if not result then
+        tpBusy = false
+        setStatus("TP GAGAL - AREA TIDAK TERDETEKSI")
+        return false
+    end
+
+    local height = humanoid.HipHeight + root.Size.Y / 2 + 0.2
+    local target = result.Position + Vector3.new(0, height, 0)
+
+    local moved = pcall(function()
+        root.AssemblyLinearVelocity = Vector3.zero
+        root.AssemblyAngularVelocity = Vector3.zero
+        root.CFrame = CFrame.new(target)
+        humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+    end)
+
+    tpBusy = false
+
+    if moved then
+        setStatus("TP BERHASIL - " .. tostring(source))
+        return true
+    end
+
+    setStatus("TP GAGAL - TELEPORT ERROR")
+    return false
+end
+
+-- TouchTapInWorld mengirim ARRAY Vector2, bukan satu Vector2.
+connect(UIS.TouchTapInWorld, function(touchPositions, processedByUI)
+    if processedByUI or not alive() or not tpEnabled or not tpEquipped then
+        return
+    end
+
+    local point
+    if typeof(touchPositions) == "Vector2" then
+        point = touchPositions
+    elseif type(touchPositions) == "table" then
+        point = touchPositions[1]
+    end
+
+    tpAtScreenPoint(point, "TOUCH")
+end)
+
+-- Dukungan klik mouse untuk PC.
+connect(UIS.InputBegan, function(input, processedByUI)
+    if processedByUI or input.UserInputType ~= Enum.UserInputType.MouseButton1 then
+        return
+    end
+    if not alive() or not tpEnabled or not tpEquipped then return end
+
+    local point = UIS:GetMouseLocation()
+    tpAtScreenPoint(point, "MOUSE")
+end)
+
+]==]
+
+replaceBetween(
+    "-- TP LOCATION\\n-- ==========================================",
+    "-- ==========================================\\n-- ANTI AFK",
+    tpLocationCode,
+    "TP LOCATION INPUT + RAYCAST FIX"
+)
+
+-- ==========================================
 -- HOMEWORK IDLE HANDOFF: FARM/FEED/CONVERT
 -- ==========================================
 
