@@ -1273,12 +1273,7 @@ replaceOnce(
 -- ==========================================
 -- TOGGLE TP LOCATION
 -- ==========================================
-
-replaceOnce(
-    "if not alive() or not tpEquipped or processed then",
-    "if not alive() or not tpEnabled or not tpEquipped or processed then",
-    "TP LOCATION TOGGLE"
-)
+-- tpEnabled sudah diperiksa langsung oleh TP LOCATION INPUT + RAYCAST FIX.
 
 -- ==========================================
 -- UBAH LABEL VERSI
