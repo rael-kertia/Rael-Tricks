@@ -982,8 +982,8 @@ replaceOnce(
 -- ==========================================
 
 replaceOnce(
-    "if not enabled or busy\n        or homeworkEnabled or homeworkBusy then",
-    "if not enabled or busy or converting\n        or homeworkEnabled or homeworkBusy then",
+    "if not enabled or busy\n        or homeworkEnabled or homeworkBusy\n        or hwCarrying() then",
+    "if not enabled or busy or converting\n        or homeworkEnabled or homeworkBusy\n        or hwCarrying() then",
     "CLEANER CONVERT GUARD"
 )
 
@@ -1002,8 +1002,8 @@ replaceOnce(
 -- ==========================================
 
 replaceOnce(
-    "local function feedOne()\n    local feeders = getFeeders()",
-    "local function feedOne()\n    if not autoFeedEnabled then return false end\n    local feeders = getFeeders()",
+    "local function feedOne()\n    if hwCarrying() then",
+    "local function feedOne()\n    if not autoFeedEnabled then return false end\n    if hwCarrying() then",
     "AUTO FEED TOGGLE"
 )
 
