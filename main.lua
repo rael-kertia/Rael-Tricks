@@ -168,6 +168,17 @@ local function getKursRate()
     return nil
 end
 
+local function resolveConvertButton(obj)
+    if not obj then return nil end
+    if obj:IsA("GuiButton") then return obj end
+    for _, child in ipairs(obj:GetDescendants()) do
+        if child:IsA("GuiButton") then
+            return child
+        end
+    end
+    return nil
+end
+
 local function getConvertUI()
     local ui = playerGui:FindFirstChild("ConvertUI")
     local panel = ui and ui:FindFirstChild("PanelConvert")
@@ -178,8 +189,8 @@ local function getConvertUI()
     return {
         panel = panel,
         content = content,
-        masuk = content:FindFirstChild("MasukBtn"),
-        klaim = content:FindFirstChild("KlaimBtn"),
+        masuk = resolveConvertButton(content:FindFirstChild("MasukBtn")),
+        klaim = resolveConvertButton(content:FindFirstChild("KlaimBtn")),
         status = content:FindFirstChild("StatusLbl"),
         gold = content:FindFirstChild("Proses")
             and content.Proses:FindFirstChild("SlotGold")
@@ -234,27 +245,27 @@ local function isRateRising()
 end
 
 local function clickConvertButton(button)
-    if not button or not button.Parent then
+    if not button or not button.Parent
+    or not button:IsA("GuiButton")
+    or not button.Visible or not button.Active then
         return false
     end
 
-    local fired = false
+    if typeof(firesignal) ~= "function" then
+        return false
+    end
 
-    if typeof(firesignal) == "function" then
-        pcall(function()
-            firesignal(button.Activated)
-            fired = true
-        end)
+    local ok = pcall(function()
+        firesignal(button.Activated)
+    end)
 
-        task.wait(0.2)
-
-        pcall(function()
-            firesignal(button.Activated)
-            fired = true
+    if not ok then
+        ok = pcall(function()
+            firesignal(button.MouseButton1Click)
         end)
     end
 
-    return fired
+    return ok
 end
 
 local function closeConvertMachine()
@@ -470,33 +481,73 @@ local function runAutoConvert()
 
     setStatus("MENGKLAIM GOLD")
 
-    if not clickConvertButton(ui.klaim) then
-        finish("KLAIM GOLD GAGAL")
+    local claimGold = readGoldValue(ui)
+    if claimGold <= 0 then
+        finish("NILAI GOLD KLAIM TIDAK TERBACA")
         return false
     end
 
-    start = os.clock()
+    local claimConfirmed = false
+    for attempt = 1, 2 do
+        ui = getConvertUI()
+        if not ui or not ui.klaim then
+            claimConfirmed = true
+            break
+        end
 
-    while alive() and autoFarm
-    and os.clock() - start < 12 do
-        task.wait(0.5)
+        if not clickConvertButton(ui.klaim) then
+            finish("TOMBOL KLAIM TIDAK BISA DIKLIK")
+            return false
+        end
 
-        local count = getManureCount()
+        start = os.clock()
+        while alive() and autoFarm
+        and os.clock() - start < 6 do
+            task.wait(0.5)
 
-        if count == nil or count < beforeManure then
-            setStatus("GOLD DIKLAIM - KELUAR MESIN")
+            local current = getConvertUI()
+            if not current then
+                claimConfirmed = true
+                break
+            end
 
-            closeConvertMachine()
+            local goldNow = readGoldValue(current)
+            local claimButton = current.klaim
+            local statusText = current.status
+                and (current.status.Text or ""):lower() or ""
 
-            task.wait(1)
+            if goldNow < claimGold
+            or (claimButton and (not claimButton.Visible
+                or not claimButton.Active))
+            or statusText:find("diklaim", 1, true) then
+                claimConfirmed = true
+                break
+            end
+        end
 
-            finish("CONVERT BERHASIL - FARM LANJUT")
-            return true
+        if claimConfirmed then break end
+
+        ui = getConvertUI()
+        if attempt == 1 and ui and ui.klaim
+        and ui.klaim.Visible and ui.klaim.Active
+        and readGoldValue(ui) >= claimGold then
+            setStatus("KLAIM BELUM BERUBAH - COBA SEKALI LAGI")
+            task.wait(0.5)
+        else
+            break
         end
     end
 
-    finish("KLAIM BELUM TERKONFIRMASI")
-    return false
+    if not claimConfirmed then
+        finish("KLAIM BELUM TERKONFIRMASI - PANEL TETAP TERBUKA")
+        return false
+    end
+
+    setStatus("GOLD DIKLAIM - KELUAR MESIN")
+    closeConvertMachine()
+    task.wait(1)
+    finish("CONVERT BERHASIL - FARM LANJUT")
+    return true
 end
 ]==]
 
