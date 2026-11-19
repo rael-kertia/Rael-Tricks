@@ -1258,7 +1258,7 @@ replaceOnce(
 
 replaceOnce(
     "if not autoFarm then\n            emptyScans = 0\n            continue\n        end",
-    "if not autoFarm then\n            emptyScans = 0\n            continue\n        end\n\n        if converting then\n            continue\n        end\n\n        if hasManureReady() then\n            if autoConvert then\n                local rate = getKursRate() or 0\n                if rate >= MIN_CONVERT_RATE then\n                    runAutoConvert()\n                else\n                    setStatus(\\"KOTORAN 100 - MENUNGGU KURS 100\\")\n                end\n            else\n                setStatus(\\"KOTORAN 100 - AUTO CONVERT OFF\\")\n            end\n            continue\n        end",
+    "if not autoFarm then\n            emptyScans = 0\n            continue\n        end\n\n        if converting then\n            continue\n        end\n\n        if hasManureReady() then\n            if autoConvert then\n                local rate = getKursRate() or 0\n                if rate >= MIN_CONVERT_RATE then\n                    runAutoConvert()\n                else\n                    setStatus(\"KOTORAN 100 - MENUNGGU KURS 100\")\n                end\n            else\n                setStatus(\"KOTORAN 100 - AUTO CONVERT OFF\")\n            end\n            continue\n        end",
     "AUTO FARM CONVERT TRIGGER"
 )
 
