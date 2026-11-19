@@ -48,49 +48,49 @@ replaceOnce(
 
 replaceOnce(
     "local homeworkBusy = false",
-    "local homeworkBusy = false\\nlocal homeworkIdle = false",
+    "local homeworkBusy = false\nlocal homeworkIdle = false",
     "HOMEWORK IDLE FLAG"
 )
 
 replaceOnce(
-    "homeworkBusy = true\\n\\n    -- Jaga karakter tetap berdiri",
-    "homeworkBusy = true\\nhomeworkIdle = false\\n\\n    -- Jaga karakter tetap berdiri",
+    "homeworkBusy = true\n\n    -- Jaga karakter tetap berdiri",
+    "homeworkBusy = true\nhomeworkIdle = false\n\n    -- Jaga karakter tetap berdiri",
     "HOMEWORK START ACTIVE"
 )
 
 replaceOnce(
-    "if hwCarrying() then\\n            local disposalHouse = hwNearestOwnedHouse()",
-    "if hwCarrying() then\\n            homeworkIdle = false\\n            local disposalHouse = hwNearestOwnedHouse()",
+    "if hwCarrying() then\n            local disposalHouse = hwNearestOwnedHouse()",
+    "if hwCarrying() then\n            homeworkIdle = false\n            local disposalHouse = hwNearestOwnedHouse()",
     "HOMEWORK CARRY ACTIVE"
 )
 
 replaceOnce(
-    "local house = hwFindHouse()\\n\\n        -- Prompt Bersihkan disabled",
-    "local house = hwFindHouse()\\n        homeworkIdle = house == nil\\n\\n        -- Prompt Bersihkan disabled",
+    "local house = hwFindHouse()\n\n        -- Prompt Bersihkan disabled",
+    "local house = hwFindHouse()\n        homeworkIdle = house == nil\n\n        -- Prompt Bersihkan disabled",
     "HOMEWORK IDLE DETECTION"
 )
 
 replaceOnce(
-    "if homeworkEnabled or homeworkBusy then\\n            continue\\n        end\\n\\n        -- Jangan biarkan Auto Farm",
-    "if (homeworkEnabled or homeworkBusy) and not homeworkIdle then\\n            continue\\n        end\\n\\n        -- Jangan biarkan Auto Farm",
+    "if homeworkEnabled or homeworkBusy then\n            continue\n        end\n\n        -- Jangan biarkan Auto Farm",
+    "if (homeworkEnabled or homeworkBusy) and not homeworkIdle then\n            continue\n        end\n\n        -- Jangan biarkan Auto Farm",
     "AUTO FARM IDLE HANDOFF"
 )
 
 replaceOnce(
-    "or homeworkEnabled or homeworkBusy then\\n            return false",
-    "or ((homeworkEnabled or homeworkBusy) and not homeworkIdle) then\\n            return false",
+    "or homeworkEnabled or homeworkBusy then\n            return false",
+    "or ((homeworkEnabled or homeworkBusy) and not homeworkIdle) then\n            return false",
     "AUTO FEED IDLE HANDOFF 1"
 )
 
 replaceOnce(
-    "or homeworkEnabled or homeworkBusy then\\n            continue",
-    "or ((homeworkEnabled or homeworkBusy) and not homeworkIdle) then\\n            continue",
+    "or homeworkEnabled or homeworkBusy then\n            continue",
+    "or ((homeworkEnabled or homeworkBusy) and not homeworkIdle) then\n            continue",
     "AUTO FEED IDLE HANDOFF 2"
 )
 
 replaceOnce(
-    "and not homeworkEnabled and not homeworkBusy\\n        and os.clock() - start < 6 do",
-    "and (not homeworkEnabled or homeworkIdle)\\n        and (not homeworkBusy or homeworkIdle)\\n        and os.clock() - start < 6 do",
+    "and not homeworkEnabled and not homeworkBusy\n        and os.clock() - start < 6 do",
+    "and (not homeworkEnabled or homeworkIdle)\n        and (not homeworkBusy or homeworkIdle)\n        and os.clock() - start < 6 do",
     "AUTO FEED WAIT IDLE HANDOFF"
 )
 
