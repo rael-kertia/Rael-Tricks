@@ -207,6 +207,18 @@ replaceOnce(
 )
 
 replaceOnce(
+    "if not alive() or not autoFarm\n            or homeworkEnabled or homeworkBusy then",
+    "if not alive() or not autoFarm\n            or ((homeworkEnabled or homeworkBusy) and not homeworkIdle) then",
+    "AUTO FARM COLLECT IDLE HANDOFF"
+)
+
+replaceOnce(
+    "while alive() and autoFarm\n            and not homeworkEnabled and not homeworkBusy\n            and os.clock() - start < 4 do",
+    "while alive() and autoFarm\n            and (not homeworkEnabled or homeworkIdle)\n            and (not homeworkBusy or homeworkIdle)\n            and os.clock() - start < 4 do",
+    "AUTO FARM COLLECT VERIFY IDLE HANDOFF"
+)
+
+replaceOnce(
     "or homeworkEnabled or homeworkBusy then\n            return false",
     "or ((homeworkEnabled or homeworkBusy) and not homeworkIdle) then\n            return false",
     "AUTO FEED IDLE HANDOFF 1"
@@ -236,7 +248,7 @@ local convertCode = [==[
 
 local converting = false
 local CONVERT_LIMIT = 100
-local MIN_CONVERT_RATE = 0.0140
+local MIN_CONVERT_RATE = 100
 local lastConvertAttempt = 0
 
 local function findManureTool()
@@ -606,7 +618,7 @@ local function runAutoConvert()
         return false
     end
 
-    setStatus("MEMERIKSA KURS MINIMAL 0,0140")
+    setStatus("MEMERIKSA KURS MINIMAL 100")
     local rate = getKursRate()
     if not rate or rate < MIN_CONVERT_RATE then
         finish("KURS DI BAWAH 0,0140")
@@ -1246,7 +1258,7 @@ replaceOnce(
 
 replaceOnce(
     "if not autoFarm then\n            emptyScans = 0\n            continue\n        end",
-    "if not autoFarm then\n            emptyScans = 0\n            continue\n        end\n\n        if converting then\n            continue\n        end\n\n        if autoConvert and hasManureReady()\n        and (getKursRate() or 0) >= MIN_CONVERT_RATE then\n            runAutoConvert()\n            continue\n        end",
+    "if not autoFarm then\n            emptyScans = 0\n            continue\n        end\n\n        if converting then\n            continue\n        end\n\n        if hasManureReady() then\n            if autoConvert then\n                local rate = getKursRate() or 0\n                if rate >= MIN_CONVERT_RATE then\n                    runAutoConvert()\n                else\n                    setStatus(\\"KOTORAN 100 - MENUNGGU KURS 100\\")\n                end\n            else\n                setStatus(\\"KOTORAN 100 - AUTO CONVERT OFF\\")\n            end\n            continue\n        end",
     "AUTO FARM CONVERT TRIGGER"
 )
 
