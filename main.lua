@@ -248,7 +248,7 @@ local convertCode = [==[
 
 local converting = false
 local CONVERT_LIMIT = 100
-local MIN_CONVERT_RATE = 100
+local MIN_CONVERT_RATE = 0.0140
 local lastConvertAttempt = 0
 
 local function findManureTool()
@@ -618,7 +618,7 @@ local function runAutoConvert()
         return false
     end
 
-    setStatus("MEMERIKSA KURS MINIMAL 100")
+    setStatus("MEMERIKSA KURS MINIMAL 0,0140")
     local rate = getKursRate()
     if not rate or rate < MIN_CONVERT_RATE then
         finish("KURS DI BAWAH 0,0140")
