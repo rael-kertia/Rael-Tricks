@@ -52,7 +52,8 @@ local convertCode = [==[
 -- ==========================================
 
 local converting = false
-local CONVERT_LIMIT = 2000
+local CONVERT_LIMIT = 100
+local MIN_CONVERT_RATE = 0.0140
 local lastConvertAttempt = 0
 
 local function findManureTool()
@@ -134,9 +135,37 @@ local function getManureCount()
     return nil
 end
 
-local function isManureFull()
+local function hasManureReady()
     local count = getManureCount()
     return count ~= nil and count >= CONVERT_LIMIT
+end
+
+local function getKursRate()
+    local candidates = {}
+    local market = playerGui:FindFirstChild("BursaGoldUI")
+    local panel = market and market:FindFirstChild("PanelPasar")
+    local marketContent = panel and panel:FindFirstChild("Konten")
+    local kursBox = marketContent and marketContent:FindFirstChild("KursBox")
+    if kursBox and kursBox:FindFirstChild("Nilai") then
+        table.insert(candidates, kursBox.Nilai)
+    end
+    local ui = playerGui:FindFirstChild("ConvertUI")
+    local convertPanel = ui and ui:FindFirstChild("PanelConvert")
+    local content = convertPanel and convertPanel:FindFirstChild("Content")
+    local strip = content and content:FindFirstChild("KursStrip")
+    if strip and strip:FindFirstChild("Nilai") then
+        table.insert(candidates, strip.Nilai)
+    end
+    for _, obj in ipairs(candidates) do
+        local raw = tostring(obj.Text or "")
+        local value = raw:match("=%s*([%d]+[,.]?[%d]*)")
+            or raw:match("([%d]+[,.][%d]+)")
+        if value then
+            local rate = tonumber(value:gsub(",", "."))
+            if rate then return rate end
+        end
+    end
+    return nil
 end
 
 local function getConvertUI()
@@ -383,32 +412,15 @@ local function runAutoConvert()
         return false
     end
 
-    setStatus("MENUNGGU KURS HIJAU / NAIK")
-
-    start = os.clock()
-
-    while alive() and autoFarm
-    and os.clock() - start < 300 do
-        task.wait(1)
-
-        if isRateRising() then
-            break
-        end
-    end
-
-    if not alive() or not autoFarm then
-        finish("CONVERT DIBATALKAN")
+    setStatus("MEMERIKSA KURS MINIMAL 0,0140")
+    local rate = getKursRate()
+    if not rate or rate < MIN_CONVERT_RATE then
+        finish("KURS DI BAWAH 0,0140")
         return false
     end
-
-    if not isRateRising() then
-        finish("KURS BELUM NAIK - MENUNGGU")
-        return false
-    end
-
-    setStatus("MEMASUKKAN 2000 KOTORAN")
-
     local beforeGold = readGoldValue(ui)
+    local beforeManure = getManureCount() or 0
+    setStatus("MEMASUKKAN "..tostring(beforeManure).." KOTORAN")
 
     if not clickConvertButton(ui.masuk) then
         finish("TOMBOL MASUK GAGAL")
@@ -471,7 +483,7 @@ local function runAutoConvert()
 
         local count = getManureCount()
 
-        if count == nil or count < CONVERT_LIMIT then
+        if count == nil or count < beforeManure then
             setStatus("GOLD DIKLAIM - KELUAR MESIN")
 
             closeConvertMachine()
@@ -1000,7 +1012,7 @@ replaceOnce(
 
 replaceOnce(
     "if not autoFarm then\n            emptyScans = 0\n            continue\n        end",
-    "if not autoFarm then\n            emptyScans = 0\n            continue\n        end\n\n        if converting then\n            continue\n        end\n\n        if autoConvert and isManureFull() then\n            runAutoConvert()\n            continue\n        end",
+    "if not autoFarm then\n            emptyScans = 0\n            continue\n        end\n\n        if converting then\n            continue\n        end\n\n        if autoConvert and hasManureReady()\n        and (getKursRate() or 0) >= MIN_CONVERT_RATE then\n            runAutoConvert()\n            continue\n        end",
     "AUTO FARM CONVERT TRIGGER"
 )
 
