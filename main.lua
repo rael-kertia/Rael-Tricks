@@ -498,6 +498,27 @@ replaceBetween("-- FEED TOOL", "-- REGISTER PROMPTS", "", "REMOVE AUTO FEED")
 replaceBetween("-- AUTO FARM LOOP", "-- TP LOCATION", "", "REMOVE AUTO FARM")
 
 -- ==========================================
+-- HOMEWORK + CLEANER HOTFIX
+-- ==========================================
+
+-- Homework memang perlu memindai semua rumah di KosanSpawned,
+-- bukan hanya rumah dengan OwnerUserId milik pemain.
+replaceOnce(
+    "local function hwOwnsHouse(house)\\n    if not house then return false end\\n    return tonumber(house:GetAttribute(\\"OwnerUserId\\")) == player.UserId\\nend",
+    "local function hwOwnsHouse(house)\\n    return house ~= nil\\nend",
+    "HOMEWORK SCAN ALL HOUSES"
+)
+
+-- Cleaner tetap bisa diaktifkan saat Homework ON; loop Cleaner
+-- sudah memiliki guard agar tidak berjalan bersamaan dengan Homework.
+replaceOnce(
+    "if not alive() or homeworkEnabled or homeworkBusy then return end\\n    enabled = not enabled\\n    updateButtons()",
+    "if not alive() then return end\\n    enabled = not enabled\\n    updateButtons()\\n    setStatus(enabled and \\"CLEANER AKTIF - MENUNGGU HOMEWORK SELESAI\\"
+        or \\"CLEANER NONAKTIF\\")",
+    "CLEANER BUTTON UNLOCK"
+)
+
+-- ==========================================
 -- COMPILE DAN JALANKAN
 -- ==========================================
 
