@@ -1,10 +1,11 @@
--- RAEL DIAGNOSTIC: POPUP PENYEWA (RINGKAS)
+-- RAEL DIAGNOSTIC: POPUP PENYEWA (FOKUS)
 -- Indo Kos: Build & Upgrade | PASIF: TIDAK MENEKAN / MENGIRIM APA PUN
 local P=game:GetService("Players")
 local RS=game:GetService("ReplicatedStorage")
 local CG=game:GetService("CoreGui")
 local plr=P.LocalPlayer
-local KEY={"penyewa","sewa","terima","tolak","tenant","rent","accept","reject","penghuni","kontrak","kos"}
+-- Kata khusus penyewa. Accept/Reject sengaja tidak dipakai sebagai pemicu.
+local KEY={"penyewa","sewa","tenant","rent","penghuni","kontrak","kos"}
 local function match(s)
  s=tostring(s or ""):lower()
  for _,k in ipairs(KEY) do if s:find(k,1,true) then return true end end
@@ -18,10 +19,10 @@ local function add(s)
  s=tostring(s or "")
  if used>=limit then cut=true return end
  local room=limit-used
- if #s>room then s=s:sub(1,math.max(0,room-18)).." [DIPOTONG]" cut=true end
+ if #s>room then s=s:sub(1,math.max(0,room-14)).." [DIPOTONG]" cut=true end
  out[#out+1]=s used=used+#s+1
 end
-add("=== RAEL TENANT DIAGNOSTIC ===")
+add("=== RAEL TENANT DIAGNOSTIC FOKUS ===")
 add("PLAYER: "..plr.Name.." | "..os.date("%Y-%m-%d %H:%M:%S"))
 local roots={plr:FindFirstChildOfClass("PlayerGui"),CG}
 local guiCount,remoteCount,scriptCount=0,0,0
@@ -29,56 +30,63 @@ for _,root in ipairs(roots) do
  if root then
   for _,gui in ipairs(root:GetDescendants()) do
    if gui:IsA("ScreenGui") then
-    local texts,buttons,relevant={},{},match(gui.Name)
+    local texts,buttons,relevant={}, {},match(gui.Name)
     for _,v in ipairs(gui:GetDescendants()) do
      if v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox") then
       if v.Text and v.Text~="" then
-       if match(v.Text) then relevant=true end
-       if #texts<8 then texts[#texts+1]=v end
+       if match(v.Text) then relevant=true texts[#texts+1]=v end
       end
      end
-     if (v:IsA("TextButton") or v:IsA("ImageButton")) and #buttons<10 then buttons[#buttons+1]=v end
+     if v:IsA("TextButton") or v:IsA("ImageButton") then buttons[#buttons+1]=v end
     end
     if relevant then
      guiCount=guiCount+1
      add("")
-     add("GUI: "..gui.Name.." | Enabled: "..tostring(gui.Enabled).." | Order: "..tostring(gui.DisplayOrder))
-     add("PATH: "..short(path(gui),150))
-     add("TEXT:")
-     for _,v in ipairs(texts) do add("- "..v.ClassName.." ["..short(v.Name,35).."] = "..short(v.Text,90)) end
-     add("BUTTON:")
-     for _,b in ipairs(buttons) do
-      add("- "..b.ClassName.." ["..short(b.Name,40).."] Text="..short(safe(function() return b.Text end),65).." Visible="..safe(function() return b.Visible end).." Active="..safe(function() return b.Active end))
+     add("CANDIDATE GUI: "..gui.Name.." | Enabled="..tostring(gui.Enabled).." | Order="..tostring(gui.DisplayOrder))
+     add("PATH: "..short(path(gui),170))
+     add("MATCH TEXT:")
+     if #texts==0 then add("- (nama GUI cocok)") end
+     for _,v in ipairs(texts) do
+      add("- "..v.ClassName.." ["..short(v.Name,35).."] = "..short(v.Text,100))
      end
+     add("BUTTONS DALAM GUI:")
+     for i,b in ipairs(buttons) do
+      if i<=12 then
+       add("- "..b.ClassName.." ["..short(b.Name,35).."] Text="..short(safe(function() return b.Text end),45).." Visible="..safe(function() return b.Visible end))
+      end
+     end
+     if #buttons>12 then add("... +"..(#buttons-12).." tombol") end
     end
    end
   end
  end
 end
 add("")
-add("REMOTES:")
+add("REMOTE KHUSUS:")
 for _,obj in ipairs(RS:GetDescendants()) do
  if (obj:IsA("RemoteEvent") or obj:IsA("RemoteFunction") or obj:IsA("UnreliableRemoteEvent")) and match(obj.Name) then
   remoteCount=remoteCount+1
-  if remoteCount<=15 then add("- "..obj.ClassName.." "..short(path(obj),170)) end
+  if remoteCount<=12 then add("- "..obj.ClassName.." "..short(path(obj),180)) end
  end
 end
-if remoteCount>15 then add("... +"..(remoteCount-15).." remote lainnya") end
-add("GUI SCRIPTS:")
+if remoteCount==0 then add("- Tidak ada nama Remote yang cocok") end
+if remoteCount>12 then add("... +"..(remoteCount-12).." remote lainnya") end
+add("GUI SCRIPT KHUSUS:")
 for _,root in ipairs(roots) do
  if root then
   for _,obj in ipairs(root:GetDescendants()) do
    if obj:IsA("LocalScript") and match(path(obj)) then
     scriptCount=scriptCount+1
-    if scriptCount<=8 then add("- "..short(path(obj),180)) end
+    if scriptCount<=6 then add("- "..short(path(obj),180)) end
    end
   end
  end
 end
+if guiCount==0 then add("TIDAK ADA GUI DENGAN KATA KHUSUS PENYEWA") end
 add("SUMMARY: GUI="..guiCount.." REMOTE="..remoteCount.." SCRIPT="..scriptCount)
 if cut then out[#out+1]="[OUTPUT DIPOTONG: batas 2850 karakter]" end
 local result=table.concat(out,"\n")
 if setclipboard then pcall(setclipboard,result)
 elseif toclipboard then pcall(toclipboard,result) end
 if writefile then pcall(writefile,"Rael_Tenant_Diagnostic.txt",result) end
-print("DIAGNOSTIC RINGKAS SELESAI | "..#result.." karakter")
+print("DIAGNOSTIC FOKUS SELESAI | "..#result.." karakter")
