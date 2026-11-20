@@ -867,183 +867,11 @@ local function paintToggle(button, label, state)
 end
 
 -- ==========================================
--- AUTO GACHA SYSTEM
+-- BLIND BOX PLACEHOLDER
+-- Legacy GachaService automation intentionally disabled.
 -- ==========================================
 
 local autoGachaEnabled = false
-local gachaWorkerRunning = false
-local gachaBusy = false
-
-local Gacha
-
-local function getGachaService()
-    if Gacha then
-        return Gacha
-    end
-
-    local replicatedStorage = game:GetService("ReplicatedStorage")
-    local knitModule = replicatedStorage
-        :WaitForChild("NKSystem")
-        :WaitForChild("Packages")
-        :WaitForChild("Knit")
-
-    local Knit = require(knitModule)
-    Gacha = Knit.GetService("GachaService")
-
-    return Gacha
-end
-
--- PCALL MENANGKAP HASIL AWAIT DENGAN BENAR
-local function callGacha(methodName)
-    local service = getGachaService()
-    local method = service[methodName]
-
-    if type(method) ~= "function" then
-        return false, "METHOD TIDAK DITEMUKAN: " .. methodName
-    end
-
-    local callOK, awaitOK, result = pcall(function()
-        return method(service):await()
-    end)
-
-    if not callOK then
-        return false, tostring(awaitOK)
-    end
-
-    if not awaitOK then
-        return false, result or "PROMISE GAGAL"
-    end
-
-    return true, result
-end
-
-local function claimGachaSingle()
-    local okClaim, claimResult = callGacha("ClaimReward")
-
-    if not okClaim then
-        setStatus("GACHA: KLAIM GAGAL")
-        return false
-    end
-
-    return true
-end
-
-local function claimGachaMulti(results)
-    local total = #results
-
-    for index = 1, total do
-        -- Tetap selesaikan klaim hadiah spin yang sudah berjalan,
-        -- meskipun tombol AUTO GACHA dimatikan.
-        local okClaim = callGacha("ClaimOneMultiReward")
-
-        if not okClaim then
-            setStatus("GACHA: KLAIM MULTI GAGAL")
-            return false
-        end
-
-        task.wait(0.25)
-    end
-
-    return true
-end
-
-local function runAutoGacha()
-    if gachaWorkerRunning then
-        return
-    end
-
-    gachaWorkerRunning = true
-
-    while autoGachaEnabled and alive() do
-        if not gachaBusy then
-            gachaBusy = true
-
-            local stateOK, state = callGacha("GetState")
-
-            if not stateOK or type(state) ~= "table" then
-                setStatus("GACHA: GAGAL MEMBACA STATE")
-                gachaBusy = false
-                task.wait(3)
-            else
-                local free = tonumber(state.free) or 0
-                local spinOK = false
-                local result = nil
-
-                if free >= 10 then
-                    setStatus("GACHA: FREE SPIN X10")
-
-                    spinOK, result = callGacha("SpinX10WithFree")
-
-                    if spinOK
-                    and type(result) == "table"
-                    and result.ok then
-
-                        local results = result.results or {}
-
-                        if #results > 0 then
-                            claimGachaMulti(results)
-                        end
-                    else
-                        spinOK = false
-                    end
-
-                elseif free > 0 then
-                    setStatus("GACHA: FREE SPIN")
-
-                    spinOK, result = callGacha("Spin")
-
-                    if spinOK
-                    and type(result) == "table"
-                    and result.ok then
-
-                        if result.granted ~= false then
-                            claimGachaSingle()
-                        end
-                    else
-                        spinOK = false
-                    end
-
-                else
-                    setStatus("GACHA: PAID SPIN")
-
-                    spinOK, result = callGacha("SpinWithMoney")
-
-                    if spinOK
-                    and type(result) == "table"
-                    and result.ok then
-
-                        claimGachaSingle()
-                    else
-                        spinOK = false
-                    end
-                end
-
-                if spinOK then
-                    setStatus("GACHA: SPIN SELESAI")
-                    task.wait(1.5)
-                else
-                    setStatus("GACHA: SPIN GAGAL / COBA LAGI")
-                    task.wait(3)
-                end
-
-                gachaBusy = false
-            end
-        end
-    end
-
-    gachaBusy = false
-    gachaWorkerRunning = false
-
-    autoGachaEnabled = false
-
-    if gachaButton and gachaButton.Parent then
-        paintToggle(gachaButton, "AUTO GACHA", false)
-    end
-
-    if alive() then
-        setStatus("AUTO GACHA NONAKTIF")
-    end
-end
 
 local function updateButtons()
     paintToggle(cleanButton, "CLEANER", enabled)
@@ -1052,7 +880,7 @@ local function updateButtons()
     paintToggle(feedButton, "AUTO FEED", autoFeedEnabled)
     paintToggle(afkButton, "ANTI-AFK", antiAfkEnabled)
     paintToggle(tpButton, "TP LOCATION", tpEnabled)
-    paintToggle(gachaButton, "AUTO GACHA", autoGachaEnabled)
+    paintToggle(gachaButton, "BLIND BOX", false)
     paintToggle(homeworkButton, "HOMEWORK", homeworkEnabled)
 end
 
@@ -1142,19 +970,10 @@ connect(tpButton.Activated, function()
     setStatus(tpEnabled and "TP LOCATION AKTIF" or "TP LOCATION NONAKTIF")
 end)
 
--- TOGGLE AUTO GACHA
+-- Legacy direct GachaService calls removed.
 connect(gachaButton.Activated, function()
     if not alive() then return end
-
-    autoGachaEnabled = not autoGachaEnabled
-    updateButtons()
-
-    if autoGachaEnabled then
-        setStatus("AUTO GACHA DIMULAI")
-        task.spawn(runAutoGacha)
-    else
-        setStatus("AUTO GACHA DIMATIKAN")
-    end
+    setStatus("BLIND BOX: OTOMATISASI BELUM DIHUBUNGKAN")
 end)
 
 updateButtons()
