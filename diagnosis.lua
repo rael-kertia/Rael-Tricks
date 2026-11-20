@@ -99,45 +99,6 @@ if rc==0 then add("Tidak ada Remote bernama terkait yang terlihat di ReplicatedS
 add("TOTAL REMOTE TERKAIT: "..rc)
 
 add("")
-add("=== LOCALSCRIPT TERKAIT UI SEWA ===")
-local scriptRoots={plr:FindFirstChild("PlayerGui"),plr:FindFirstChild("PlayerScripts")}
-local lsCount=0
-for _,root in ipairs(scriptRoots) do
- if root then
-  for _,v in ipairs(root:GetDescendants()) do
-   if v:IsA("LocalScript") then
-    local p=norm(path(v))
-    if p:find("permintaansewa",1,true) or p:find("kartu",1,true) or p:find("sewa",1,true) then
-     lsCount=lsCount+1
-     if lsCount<=25 then add(v.ClassName.." | "..path(v).." | Enabled="..safe(function() return v.Enabled end)) end
-    end
-   end
-  end
- end
-end
-add("TOTAL LOCALSCRIPT TERKAIT: "..lsCount)
-add("")
-add("=== PENYEWACONTROLLER / HANDLER DETAIL ===")
-local RS=game:GetService("ReplicatedStorage")
-local ctl=RS:FindFirstChild("NKSystem")
-if ctl then
- ctl=ctl:FindFirstChild("Controller")
- if ctl then ctl=ctl:FindFirstChild("PenyewaController") end
-end
-add("CONTROLLER: "..(ctl and ctl.ClassName.." | "..path(ctl) or "TIDAK DITEMUKAN"))
-local decomp=decompile or decompilefunction
-if ctl and type(decomp)=="function" then
- local ok,src=pcall(decomp,ctl)
- if ok and type(src)=="string" then
-  add("CONTROLLER SOURCE (baris sekitar 458):")
-  local lines={}
-  for line in (src.."\\n"):gmatch("(.-)\\n") do lines[#lines+1]=line end
-  local a=math.max(1,458-18)
-  local z=math.min(#lines,458+28)
-  for i=a,z do add(string.format("%d: %s",i,lines[i])) end
- else add("DECOMPILE CONTROLLER GAGAL: "..tostring(src)) end
-else add("DECOMPILE TIDAK TERSEDIA / CONTROLLER BUKAN SCRIPT") end
-add("")
 add("=== KONEKSI EVENT AccBtn (INSPEKSI PASIF) ===")
 local getcon= getconnections
 local dbg=debug
