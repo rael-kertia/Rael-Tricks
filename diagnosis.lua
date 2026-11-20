@@ -1,237 +1,121 @@
--- RAEL DIAGNOSTIC: PERMINTAAN SEWA
--- PASIF: hanya membaca GUI. TIDAK klik tombol / tidak fire remote.
-local Players=game:GetService("Players")
-local plr=Players.LocalPlayer
-local roots={plr:WaitForChild("PlayerGui")}
-pcall(function() table.insert(roots,game:GetService("CoreGui")) end)
-
-local function safe(fn)
- local ok,v=pcall(fn)
- return ok and tostring(v) or "?"
-end
-local function path(o)
- return safe(function() return o:GetFullName() end)
-end
-local function norm(s)
- return tostring(s or ""):lower():gsub("%s+",""):gsub("[^%w]","")
-end
-local function visible(o)
- local p=o
- while p do
-  if p:IsA("GuiObject") and not p.Visible then return false end
-  if p:IsA("ScreenGui") and not p.Enabled then return false end
-  p=p.Parent
+-- RAEL DIAGNOSTIC SEWA V6
+-- PASIF: tidak klik tombol dan tidak memanggil remote.
+local P=game:GetService("Players").LocalPlayer
+local roots={P:WaitForChild("PlayerGui")}
+local function path(x) local ok,v=pcall(function() return x:GetFullName() end) return ok and v or "?" end
+local function add(s) out[#out+1]=tostring(s) end
+local out={}
+local function dumpTable(t,label)
+ add(label.." TYPE=table")
+ local n=0
+ for k,v in pairs(t) do
+  n=n+1
+  if n>35 then add("  ... table dibatasi"); break end
+  local tv=typeof and typeof(v) or type(v)
+  local val
+  if tv=="Instance" then val=v.ClassName.." "..path(v)
+  elseif tv=="table" then val="table"
+  elseif tv=="function" then val="function"
+  else val=tostring(v):sub(1,140) end
+  add("  KEY "..tostring(k):sub(1,100).." ["..tv.."] = "..val)
  end
- return true
+ if n==0 then add("  (kosong)") end
 end
-local out,used={},0
-local LIMIT=9500
-local function add(s)
- s=tostring(s or "")
- if used>=LIMIT then return end
- local room=LIMIT-used
- if #s>room then s=s:sub(1,room) end
- out[#out+1]=s
- used=used+#s+1
-end
-add("=== RAEL DIAGNOSTIC PERMINTAAN SEWA V5 UPVALUE3 ===")
-add("PLAYER: "..plr.Name.." | "..os.date("%Y-%m-%d %H:%M:%S"))
-local found,seen={},{}
-for _,root in ipairs(roots) do
- for _,obj in ipairs(root:GetDescendants()) do
-  if obj:IsA("TextLabel") or obj:IsA("TextButton") or obj:IsA("TextBox") then
-   local t=norm(obj.Text)
-   if t:find("permintaansewa",1,true) then
-    found[#found+1]=obj
-   end
-  end
- end
-end
-add("JUMLAH TEKS JUDUL DITEMUKAN: "..#found)
-for n,title in ipairs(found) do
+local function inspectFn(fn,label)
  add("")
- add("=== POPUP TARGET #"..n.." ===")
- add("JUDUL: "..title.ClassName.." | Name="..title.Name.." | Text="..tostring(title.Text))
- add("VISIBLE: "..tostring(visible(title)))
- add("FULL PATH: "..path(title))
- local parent=title
- for level=1,7 do
-  parent=parent.Parent
-  if not parent then break end
-  add("ANCESTOR "..level..": "..parent.ClassName.." "..parent.Name.." | "..path(parent))
-  local buttons={}
-  for _,v in ipairs(parent:GetDescendants()) do
-   if (v:IsA("TextButton") or v:IsA("ImageButton")) and not seen[v] then
-    local tx=v:IsA("TextButton") and tostring(v.Text) or "(ImageButton)"
-    local nt=norm(tx)
-    if nt=="acc" or nt=="tolak" or level<=2 then
-     buttons[#buttons+1]=v
+ add("=== "..label.." ===")
+ if type(fn)~="function" then add("BUKAN FUNCTION: "..type(fn)); return end
+ local dbg=debug
+ local decomp=decompile or decompilefunction
+ if type(decomp)=="function" then
+  local ok,s=pcall(decomp,fn)
+  if ok and type(s)=="string" then
+   local i=0
+   for line in (s.."\n"):gmatch("(.-)\n") do i=i+1 if i<=45 then add("SRC "..i..": "..line) end end
+  else add("DECOMPILE: "..tostring(s)) end
+ end
+ local gu=(dbg and dbg.getupvalues) or getupvalues
+ if type(gu)=="function" then
+  local ok,u=pcall(gu,fn)
+  if ok and type(u)=="table" then
+   for k,v in pairs(u) do
+    if type(k)=="number" and k<=15 then
+     local typ=typeof and typeof(v) or type(v)
+     if typ=="Instance" then add("UPVALUE "..k.." = "..v.ClassName.." "..path(v))
+     elseif typ=="table" then dumpTable(v,"UPVALUE "..k)
+     else add("UPVALUE "..k.." = "..typ..":"..tostring(v):sub(1,180)) end
     end
    end
-  end
-  for _,b in ipairs(buttons) do
-   seen[b]=true
-   add("  BUTTON: "..b.ClassName.." | Name="..b.Name.." | Text="..safe(function() return b.Text end))
-   add("  PATH: "..path(b))
-   add("  Visible="..safe(function() return b.Visible end).." | Active="..safe(function() return b.Active end).." | AutoButtonColor="..safe(function() return b.AutoButtonColor end))
-  end
-  if parent:IsA("ScreenGui") then break end
+  else add("GETUPVALUES: "..tostring(u)) end
+ end
+ local gc=(dbg and dbg.getconstants) or getconstants
+ if type(gc)=="function" then
+  local ok,c=pcall(gc,fn)
+  if ok and type(c)=="table" then
+   for i,v in ipairs(c) do if i<=100 and (type(v)=="string" or type(v)=="number" or type(v)=="boolean") then add("CONST "..i.." = "..tostring(v):sub(1,140)) end end
+  else add("GETCONSTANTS: "..tostring(c)) end
  end
 end
-if #found==0 then
- add("JUDUL TIDAK TERLIHAT DI PlayerGui/CoreGui SAAT SCRIPT DIJALANKAN.")
- add("Jalankan diagnosis ketika popup PERMINTAAN SEWA sedang terbuka.")
-end
-add("")
-add("=== REMOTE DENGAN NAMA TERKAIT ===")
-local RS=game:GetService("ReplicatedStorage")
-local rc=0
-for _,v in ipairs(RS:GetDescendants()) do
- if v:IsA("RemoteEvent") or v:IsA("RemoteFunction") then
-  local n=norm(v.Name)
-  if n:find("sewa",1,true) or n:find("penyewa",1,true) or n:find("rent",1,true) or n:find("acc",1,true) then
-   rc=rc+1
-   if rc<=15 then add(v.ClassName.." | "..path(v)) end
-  end
- end
-end
-if rc==0 then add("Tidak ada Remote bernama terkait yang terlihat di ReplicatedStorage.") end
-add("TOTAL REMOTE TERKAIT: "..rc)
-
-add("")
-add("=== KONEKSI EVENT AccBtn (INSPEKSI PASIF) ===")
-local getcon= getconnections
-local dbg=debug
-local inspected=0
-for _,root in ipairs(roots) do
- for _,b in ipairs(root:GetDescendants()) do
-  if (b:IsA("TextButton") or b:IsA("ImageButton")) and b.Name=="AccBtn" then
-   inspected=inspected+1
-   add("BUTTON #"..inspected.." | "..path(b).." | visible="..safe(function() return b.Visible end))
-   if type(getcon)=="function" then
-    local events={"Activated","MouseButton1Click","MouseButton1Down"}
-    for _,ev in ipairs(events) do
-     local ok,sig=pcall(function() return b[ev] end)
-     if ok and sig then
-      local cok,cons=pcall(getcon,sig)
-      if cok and type(cons)=="table" then
-       add(" EVENT "..ev.." CONNECTIONS="..#cons)
-       for ci,co in ipairs(cons) do
-        if ci<=5 then
-         local fn=co.Function
-         local info=nil
-         if type(fn)=="function" and dbg and type(dbg.getinfo)=="function" then
-          local iok,iv=pcall(dbg.getinfo,fn)
-          if iok then info=iv end
-         end
-         if info then
-          add("  CONN "..ci.." enabled="..safe(function() return co.Enabled end).." name="..tostring(info.name).." source="..tostring(info.short_src or info.source).." line="..tostring(info.currentline))
-         else
-          add("  CONN "..ci.." enabled="..safe(function() return co.Enabled end).." function="..tostring(fn))
-         end
-         local gu=(dbg and dbg.getupvalues) or getupvalues
-         if type(gu)=="function" and type(fn)=="function" then
-          local uok,ups=pcall(gu,fn)
-          if uok and type(ups)=="table" then
-           for ui,uv in pairs(ups) do
-            local desc=typeof and typeof(uv) or type(uv)
-            if desc=="Instance" then desc=uv.ClassName.." "..path(uv)
-            elseif type(uv)=="string" then desc="string:"..uv:sub(1,100)
-            else desc=desc..":"..tostring(uv):sub(1,100) end
-            if ui<=12 then add("   UPVALUE "..tostring(ui).." = "..desc) end
+add("=== RAEL DIAGNOSTIC SEWA V6 ===")
+add("PLAYER: "..P.Name)
+local gui=P:FindFirstChild("PlayerGui")
+local count=0
+if gui then
+ for _,b in ipairs(gui:GetDescendants()) do
+  if b:IsA("TextButton") and b.Name=="AccBtn" then
+   local card=b.Parent and b.Parent.Parent
+   local title=card and card:FindFirstChild("Isi",true)
+   local label=title and title:FindFirstChild("Label",true)
+   if card and card.Name~="KartuTemplate" and label and label:IsA("TextLabel") and label.Text=="PERMINTAAN SEWA" then
+    local vis=true local x=b
+    while x do if x:IsA("GuiObject") and not x.Visible then vis=false end x=x.Parent end
+    if vis then
+     count=count+1
+     add("")
+     add("ACC BUTTON "..count.." "..path(b))
+     local getcon=getconnections
+     if type(getcon)=="function" then
+      local ok,cons=pcall(getcon,b.Activated)
+      if ok and type(cons)=="table" then
+       add("ACTIVATED CONNECTIONS="..#cons)
+       for ci,c in ipairs(cons) do
+        local fn=c.Function
+        add("CONNECTION "..ci.." enabled="..tostring(c.Enabled))
+        local gu=(debug and debug.getupvalues) or getupvalues
+        if type(gu)=="function" and type(fn)=="function" then
+         local uok,u=pcall(gu,fn)
+         if uok and type(u)=="table" then
+          for ui,uv in pairs(u) do
+           if ui<=8 then
+            local typ=typeof and typeof(uv) or type(uv)
             if ui==3 and type(uv)=="function" then
-             add("   === UPVALUE 3 FUNCTION DETAIL ===")
-             local dfn=decompile or decompilefunction
-             if type(dfn)=="function" then
-              local fok,fs=pcall(dfn,uv)
-              if fok and type(fs)=="string" then
-               local ln=0
-               for line in (fs.."\\n"):gmatch("(.-)\\n") do
-                ln=ln+1
-                if ln<=90 then add("    SRC "..ln..": "..line) end
-               end
-              else add("    DECOMPILE: "..tostring(fs)) end
-             else add("    DECOMPILE TIDAK TERSEDIA") end
-             local fgu=(dbg and dbg.getupvalues) or getupvalues
-             if type(fgu)=="function" then
-              local fok2,fups=pcall(fgu,uv)
-              if fok2 and type(fups)=="table" then
-               for fi,fv in pairs(fups) do
-                if fi<=12 then
-                 local fd=typeof and typeof(fv) or type(fv)
-                 if fd=="Instance" then fd=fv.ClassName.." "..path(fv) else fd=fd..":"..tostring(fv):sub(1,120) end
-                 add("    NESTED UPVALUE "..fi.." = "..fd)
-                end
-               end
-              else add("    NESTED UPVALUES: "..tostring(fups)) end
+             inspectFn(uv,"UPVALUE 3 / CALLBACK")
+             local nok,nu=pcall(gu,uv)
+             if nok and type(nu)=="table" then
+              inspectFn(nu[2],"NESTED FUNCTION 2")
+              inspectFn(nu[5],"NESTED FUNCTION 5")
              end
-             local fgc=(dbg and dbg.getconstants) or getconstants
-             if type(fgc)=="function" then
-              local fok3,fcs=pcall(fgc,uv)
-              if fok3 and type(fcs)=="table" then
-               for fi,fc in ipairs(fcs) do
-                if fi<=100 then
-                 if type(fc)=="string" or type(fc)=="number" or type(fc)=="boolean" then
-                  add("    NESTED CONST "..fi.." = "..tostring(fc):sub(1,120))
-                 end
-                end
-               end
-              else add("    NESTED CONSTANTS: "..tostring(fcs)) end
-             end
-            end
+            elseif typ=="table" then dumpTable(uv,"HANDLER UPVALUE "..ui)
+            else add("HANDLER UPVALUE "..ui.." = "..typ..":"..tostring(uv):sub(1,150)) end
            end
           end
-         end
-         local df=decompile or decompilefunction
-         if type(df)=="function" and type(fn)=="function" then
-          local dok,ds=pcall(df,fn)
-          if dok and type(ds)=="string" then
-           add("   HANDLER SOURCE:")
-           local n=0
-           for line in (ds.."\\n"):gmatch("(.-)\\n") do
-            n=n+1
-            if n<=100 then add("   "..n..": "..line) end
-           end
-          else add("   HANDLER DECOMPILE GAGAL: "..tostring(ds)) end
-         end
-         local gc=(dbg and dbg.getconstants) or getconstants
-         if type(gc)=="function" and type(fn)=="function" then
-          local gok,vals=pcall(gc,fn)
-          if gok and type(vals)=="table" then
-           local hits={}
-           for _,cv in ipairs(vals) do
-            if type(cv)=="string" and (#cv<100) then
-             local z=norm(cv)
-             if z:find("accept",1,true) or z:find("worker",1,true) or z:find("sewa",1,true) or z:find("karyawan",1,true) or z:find("acc",1,true) then
-              hits[#hits+1]=cv
-             end
-            end
-           end
-           if #hits>0 then add("   CONSTANTS: "..table.concat(hits,", "):sub(1,250)) end
-          end
-         end
+         else add("HANDLER GETUPVALUES: "..tostring(u)) end
         end
        end
-      else
-       add(" EVENT "..ev.." getconnections gagal/tidak tersedia")
-      end
-     end
+      else add("GETCONNECTIONS: "..tostring(cons)) end
+     else add("getconnections tidak tersedia") end
     end
-   else
-    add(" getconnections TIDAK TERSEDIA DI EXECUTOR")
    end
   end
  end
 end
-if inspected==0 then add("Tidak menemukan AccBtn saat pemeriksaan.") end
-
+add("")
+add("ACTIVE TARGET COUNT="..count)
 local result=table.concat(out,"\n")
 local copied=false
-if setclipboard then copied=pcall(setclipboard,result)
-elseif toclipboard then copied=pcall(toclipboard,result) end
+if setclipboard then copied=pcall(setclipboard,result) elseif toclipboard then copied=pcall(toclipboard,result) end
 local saved=false
-if writefile then saved=pcall(writefile,"Rael_Tenant_Diagnostic.txt",result) end
-local status="DIAG V5 UPVALUE3 | chars="..#result.." | clipboard="..tostring(copied).." | file="..tostring(saved)
-if setclipboard then pcall(setclipboard,result.."\n\n"..status)
-elseif toclipboard then pcall(toclipboard,result.."\n\n"..status) end
-if writefile then pcall(writefile,"Rael_Tenant_Diagnostic.txt",result.."\n\n"..status) end
+if writefile then saved=pcall(writefile,"Rael_Tenant_V6.txt",result) end
+local status="V6 | chars="..#result.." | clipboard="..tostring(copied).." | file="..tostring(saved)
+if setclipboard then pcall(setclipboard,result.."\n\n"..status) elseif toclipboard then pcall(toclipboard,result.."\n\n"..status) end
+if writefile then pcall(writefile,"Rael_Tenant_V6.txt",result.."\n\n"..status) end
