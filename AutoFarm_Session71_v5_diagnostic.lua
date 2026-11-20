@@ -39,6 +39,7 @@ local function replaceBetween(startMarker, endMarker, newText, label)
     source = source:sub(1, first - 1) .. newText .. "\n\n" .. source:sub(last)
 end
 
+__raelStage = "MEMASANG FLAG FARM"
 replaceOnce(
     "local autoFarm = false",
     "local autoFarm = false\nlocal farmPauseHomework = false\nlocal autoConvert = true\nlocal autoFeedEnabled = true\nlocal antiAfkEnabled = true\nlocal tpEnabled = true",
@@ -168,6 +169,7 @@ end)
 
 ]==]
 
+__raelStage = "MEMASANG TP LOCATION"
 replaceBetween(
     "-- TP LOCATION\n-- ==========================================",
     "-- ==========================================\n-- ANTI AFK",
@@ -345,6 +347,7 @@ connect(farmButton.Activated, function()
 end)
 ]==]
 
+__raelStage = "MEMASANG GUI"
 replaceBetween(
     "-- ==========================================\n-- GUI\n-- ==========================================",
     "-- ==========================================\n-- HOMEWORK SYSTEM",
@@ -356,6 +359,7 @@ replaceBetween(
 -- TOGGLE ANTI-AFK
 -- ==========================================
 
+__raelStage = "MEMASANG ANTI-AFK"
 replaceOnce(
     "connect(player.Idled, function()\n    if not alive() then return end",
     "connect(player.Idled, function()\n    if not alive() or not antiAfkEnabled then return end",
@@ -514,6 +518,7 @@ end)
 -- Controller Sesi 71 membutuhkan feedOne() dan akan mengganti loop Farm di bawah.
 
 -- ==========================================
+__raelStage = "MENGUBAH HOMEWORK DAN CLEANER"
 -- HOMEWORK + CLEANER HOTFIX
 -- ==========================================
 
@@ -565,6 +570,7 @@ source = source:gsub(
 -- COPY OF MAIN.LUA - MAIN.LUA IS NOT MODIFIED
 -- ==========================================
 
+__raelStage = "MEMBANGUN CONTROLLER AUTO FARM"
 local integratedCode = [==[
 local farmPhase = "FEED"
 local cooldownEnd = 0
@@ -909,12 +915,14 @@ if cg then
 end
 
 
+__raelStage = "KOMPILASI SCRIPT GAME"
 local compiled, compileError = loadstring(source)
 
 if not compiled then
     error(reportLoaderError("COMPILE ERROR: " .. tostring(compileError)))
 end
 
+__raelStage = "MENJALANKAN SCRIPT GAME"
 local runOK, runError = pcall(compiled)
 if not runOK then
     error(reportLoaderError("RUNTIME ERROR: " .. tostring(runError)))
