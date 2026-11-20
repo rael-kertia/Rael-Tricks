@@ -25,7 +25,7 @@ local function visible(o)
  return true
 end
 local out,used={},0
-local LIMIT=4800
+local LIMIT=7500
 local function add(s)
  s=tostring(s or "")
  if used>=LIMIT then return end
@@ -34,7 +34,7 @@ local function add(s)
  out[#out+1]=s
  used=used+#s+1
 end
-add("=== RAEL DIAGNOSTIC PERMINTAAN SEWA V2 ===")
+add("=== RAEL DIAGNOSTIC PERMINTAAN SEWA V3 HANDLER ===")
 add("PLAYER: "..plr.Name.." | "..os.date("%Y-%m-%d %H:%M:%S"))
 local found,seen={},{}
 for _,root in ipairs(roots) do
@@ -184,7 +184,7 @@ if setclipboard then copied=pcall(setclipboard,result)
 elseif toclipboard then copied=pcall(toclipboard,result) end
 local saved=false
 if writefile then saved=pcall(writefile,"Rael_Tenant_Diagnostic.txt",result) end
-local status="DIAG V2 | chars="..#result.." | clipboard="..tostring(copied).." | file="..tostring(saved)
+local status="DIAG V3 HANDLER | chars="..#result.." | clipboard="..tostring(copied).." | file="..tostring(saved)
 if setclipboard then pcall(setclipboard,result.."\n\n"..status)
 elseif toclipboard then pcall(toclipboard,result.."\n\n"..status) end
 if writefile then pcall(writefile,"Rael_Tenant_Diagnostic.txt",result.."\n\n"..status) end
