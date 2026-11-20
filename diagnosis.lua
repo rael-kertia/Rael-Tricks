@@ -1,107 +1,104 @@
--- RAEL DIAGNOSTIC SEWA V16 - RESPOND WRAPPER
--- PASIF: hanya inspeksi fungsi dan RemoteFunction; tidak InvokeServer/FireServer.
+-- RAEL SEWA V17 - PROTOTYPE TABLE INSPECTION (PASSIVE)
 local O,seen={},{}
 local function a(x) O[#O+1]=tostring(x) end
-local function safe(fn,...)
- if type(fn)~="function" then return nil end
- local ok,v=pcall(fn,...); if ok then return v end
-end
-local function getuv(f)
- local g=(debug and debug.getupvalues) or getupvalues
- local t=safe(g,f); return type(t)=="table" and t or nil
-end
-local function dumpTable(t,tag,depth)
- if type(t)~="table" or depth>2 or seen[t] then return end
- seen[t]=true; a("\n["..tag.."] "..tostring(t))
+local function safe(fn,...) if type(fn)~="function" then return nil end local ok,v=pcall(fn,...); if ok then return v end end
+local function uv(f) local g=(debug and debug.getupvalues) or getupvalues; local t=safe(g,f); return type(t)=="table" and t end
+local function dump(t,tag,depth)
+ if type(t)~="table" or depth>3 or seen[t] then return end
+ seen[t]=true; a("\nTABLE "..tag.." "..tostring(t))
  local n=0
  for k,v in pairs(t) do
-  n=n+1; if n>30 then a("TABLE_LIMIT"); break end
-  a(tag.."."..tostring(k).." = "..typeof(v).." "..tostring(v):sub(1,140))
-  if type(v)=="table" then dumpTable(v,tag.."."..tostring(k),depth+1) end
+  n=n+1; if n>80 then a("LIMIT"); break end
+  a(tag.."["..tostring(k).."] "..typeof(v).." "..tostring(v):sub(1,180))
   if type(v)=="function" then
-   local u=getuv(v)
-   if u then for i=1,8 do if u[i]~=nil then a(tag.."."..tostring(k)..".UV"..i.." = "..typeof(u[i]).." "..tostring(u[i]):sub(1,140)) end end end
-  end
+   local inf=safe((debug and debug.getinfo) or getinfo,v)
+   if type(inf)=="table" then a("  INFO "..tostring(inf.name).." "..tostring(inf.source).." line="..tostring(inf.linedefined)) end
+   local c=safe((debug and debug.getconstants) or getconstants,v)
+   if type(c)=="table" then for i,x in ipairs(c) do if i>80 then break end; a("  C"..i.." "..typeof(x).." "..tostring(x):sub(1,120)) end end
+   local vu=uv(v); if vu then for i=1,10 do if vu[i]~=nil then
+    a("  UV"..i.." "..typeof(vu[i]).." "..tostring(vu[i]):sub(1,140))
+    if type(vu[i])=="table" then dump(vu[i],tag..".UV"..i,depth+1) end
+    if typeof(vu[i])=="Instance" then a("  PATH "..vu[i]:GetFullName()) end
+   end end end
+  elseif type(v)=="table" then dump(v,tag.."."..tostring(k),depth+1)
+  elseif typeof(v)=="Instance" then a("  PATH "..v:GetFullName()) end
  end
 end
-local function dumpFn(f,tag,depth)
- if type(f)~="function" or depth>2 or seen[f] then return end
- seen[f]=true; a("\n### "..tag.." "..tostring(f))
- local gi=(debug and debug.getinfo) or getinfo
- local inf=safe(gi,f)
- if type(inf)=="table" then
-  a("INFO name="..tostring(inf.name).." src="..tostring(inf.source).." line="..tostring(inf.linedefined).." params="..tostring(inf.nparams).." vararg="..tostring(inf.isvararg))
- end
- local gc=(debug and debug.getconstants) or getconstants
- local cs=safe(gc,f)
- if type(cs)=="table" then for i,v in ipairs(cs) do if i>120 then break end; a("C"..i.." "..typeof(v).." "..tostring(v):sub(1,160)) end else a("CONSTANTS_UNAVAILABLE") end
- local uv=getuv(f)
- if uv then for i=1,12 do local v=uv[i]; if v~=nil then
-  a("UV"..i.." "..typeof(v).." "..tostring(v):sub(1,180))
-  if type(v)=="table" then dumpTable(v,tag..".UV"..i,0) end
-  if type(v)=="function" then dumpFn(v,tag..".UV"..i,depth+1) end
-  if typeof(v)=="Instance" then a("INSTANCE_CLASS="..v.ClassName.." PATH="..v:GetFullName()) end
- end end else a("UPVALUES_UNAVAILABLE") end
+local function fn(f,tag)
+ if type(f)~="function" then a(tag.." NOT_FUNCTION"); return end
+ a("\nFUNCTION "..tag.." "..tostring(f))
+ local inf=safe((debug and debug.getinfo) or getinfo,f)
+ if type(inf)=="table" then a("INFO "..tostring(inf.name).." src="..tostring(inf.source).." line="..tostring(inf.linedefined)) end
+ local c=safe((debug and debug.getconstants) or getconstants,f)
+ if type(c)=="table" then for i,v in ipairs(c) do if i>100 then break end; a("C"..i.." "..typeof(v).." "..tostring(v):sub(1,150)) end end
+ local u=uv(f)
+ if u then for i=1,12 do if u[i]~=nil then
+  a("UV"..i.." "..typeof(u[i]).." "..tostring(u[i]):sub(1,160))
+  if type(u[i])=="table" then dump(u[i],tag..".UV"..i,0) end
+  if typeof(u[i])=="Instance" then a("INSTANCE "..u[i].ClassName.." "..u[i]:GetFullName()) end
+ end end end
  local gp=(debug and debug.getprotos) or getprotos
- local ps=safe(gp,f)
- if type(ps)=="table" then
-  a("PROTOS="..#ps)
+ local ps=safe(gp,f); if type(ps)=="table" then
+  a("PROTOS_COUNT "..#ps)
   local gpr=(debug and debug.getproto) or getproto
-  for i=1,math.min(#ps,6) do
+  for i=1,math.min(#ps,8) do
    local p=ps[i]
-   if type(p)~="function" and type(gpr)=="function" then p=safe(gpr,f,i,true) or safe(gpr,f,i) end
-   if type(p)=="function" then dumpFn(p,tag..".PROTO"..i,depth+1) else a("PROTO"..i.." "..typeof(p).." "..tostring(p)) end
+   if type(p)~="function" and type(gpr)=="function" then p=safe(gpr,f,i,true) or safe(gpr,f,i) or p end
+   if type(p)=="table" then dump(p,tag..".PROTO"..i,0)
+   elseif type(p)=="function" then a("PROTO"..i.." FUNCTION "..tostring(p))
+   else a("PROTO"..i.." "..typeof(p).." "..tostring(p)) end
   end
  end
 end
-local function save()
- local s="=== RAEL SEWA V16 ===\n"..table.concat(O,"\n")
- local cp,wf=false,false
- if setclipboard then cp=pcall(setclipboard,s) elseif toclipboard then cp=pcall(toclipboard,s) end
- if writefile then wf=pcall(writefile,"Rael_Sewa_V16.txt",s) end
- local tail="\n\nV16 END | chars="..#s.." | clipboard="..tostring(cp).." | file="..tostring(wf)
- if setclipboard then pcall(setclipboard,s..tail) elseif toclipboard then pcall(toclipboard,s..tail) end
- if writefile then pcall(writefile,"Rael_Sewa_V16.txt",s..tail) end
-end
-local ok,err=xpcall(function()
- local rs=game:GetService("ReplicatedStorage")
- local nk=rs:FindFirstChild("NKSystem")
- local packages=nk and nk:FindFirstChild("Packages")
- local knit=packages and packages:FindFirstChild("Knit")
- local services=knit and knit:FindFirstChild("Services")
- local ps=services and services:FindFirstChild("PenyewaService")
- local rf=ps and ps:FindFirstChild("RF")
- if not rf then a("PENYEWA_RF_NOT_FOUND"); return end
- for _,name in ipairs({"Respond","VerifyReject"}) do
-  local remote=rf:FindFirstChild(name)
-  if remote then a("\nREMOTE "..remote.ClassName.." "..remote:GetFullName()) end
- end
+local ok,e=xpcall(function()
  local pl=game:GetService("Players").LocalPlayer
  local ui=pl:WaitForChild("PlayerGui"):FindFirstChild("PermintaanSewaUI")
- local btn=ui and ui:FindFirstChild("Tumpukan",true)
- local acc
- if btn then for _,x in ipairs(btn:GetDescendants()) do if x:IsA("TextButton") and x.Name=="AccBtn" then
-  local visible=true; local q=x
-  while q do if q:IsA("GuiObject") and not q.Visible then visible=false end; q=q.Parent end
-  if visible then acc=x; break end
+ local stack=ui and ui:FindFirstChild("Tumpukan",true)
+ local btn
+ if stack then for _,x in ipairs(stack:GetDescendants()) do if x:IsA("TextButton") and x.Name=="AccBtn" then
+  local vis=true; local q=x; while q do if q:IsA("GuiObject") and not q.Visible then vis=false end; q=q.Parent end
+  if vis then btn=x; break end
  end end end
- if not acc then a("VISIBLE_ACC_NOT_FOUND"); return end
- a("BUTTON "..acc:GetFullName())
- local cons=getconnections and safe(getconnections,acc.Activated)
- local cb
- if type(cons)=="table" then for _,c in ipairs(cons) do
-  if type(c.Function)=="function" then local u=getuv(c.Function); if u and type(u[3])=="function" then cb=u[3]; break end end
- end end
- if not cb then a("ACC_CALLBACK_NOT_FOUND") else
-  a("CALLBACK_IDENTITY "..tostring(cb))
-  local cu=getuv(cb)
-  if cu and type(cu[3])=="table" then
-   for _,method in ipairs({"Respond","RespondWithVerify","VerifyReject"}) do
-    local fn=cu[3][method]
-    if type(fn)=="function" then dumpFn(fn,"SERVICE_METHOD_"..method,0) else a("METHOD_"..method.."_NOT_FUNCTION") end
+ if not btn then a("VISIBLE_ACC_NOT_FOUND"); return end
+ a("BUTTON "..btn:GetFullName())
+ local cons=getconnections and safe(getconnections,btn.Activated)
+ local callback
+ if type(cons)=="table" then for _,c in ipairs(cons) do if type(c.Function)=="function" then
+  local u=uv(c.Function); if u and type(u[3])=="function" then callback=u[3]; break end
+ end end end
+ if not callback then a("CALLBACK_NOT_FOUND"); return end
+ fn(callback,"ACC_CALLBACK")
+ local u=uv(callback)
+ if u and type(u[3])=="table" then
+  for _,name in ipairs({"Respond","RespondWithVerify","VerifyReject"}) do
+   local w=u[3][name]
+   if type(w)=="function" then
+    fn(w,"WRAPPER_"..name)
+    local wu=uv(w)
+    if wu and type(wu[1])=="function" then fn(wu[1],"INNER_"..name) end
    end
-  else a("CALLBACK_SERVICE_TABLE_NOT_FOUND") end
+  end
  end
-end,function(e) return tostring(e) end)
-if not ok then a("SCAN_FAILURE="..tostring(err)) end
-save()
+ -- Check whether controller ModuleScript exposes readable Source; never execute it.
+ local nk=game:GetService("ReplicatedStorage"):FindFirstChild("NKSystem")
+ local ctrl=nk and nk:FindFirstChild("Controller")
+ local mod=ctrl and ctrl:FindFirstChild("PenyewaController")
+ if mod then
+  a("\nCONTROLLER_MODULE "..mod.ClassName.." "..mod:GetFullName())
+  local okS,src=pcall(function() return mod.Source end)
+  a("SOURCE_READABLE="..tostring(okS).." TYPE="..typeof(src).." LENGTH="..(okS and type(src)=="string" and #src or 0))
+  if okS and type(src)=="string" then
+   local lines=string.split(src,"\n")
+   for i,line in ipairs(lines) do
+    if line:find("Respond",1,true) or line:find("isTarget",1,true) or line:find("tid",1,true) then
+     a("SOURCE_LINE "..i.." "..line:sub(1,300))
+    end
+   end
+  end
+ else a("CONTROLLER_MODULE_NOT_FOUND") end
+end,function(x) return tostring(x) end)
+if not ok then a("SCAN_STOPPED "..tostring(e)) end
+local out="=== RAEL SEWA V17 ===\n"..table.concat(O,"\n")
+local tail="\nV17 END | chars="..#out
+if setclipboard then pcall(setclipboard,out..tail) elseif toclipboard then pcall(toclipboard,out..tail) end
+if writefile then pcall(writefile,"Rael_Sewa_V17.txt",out..tail) end
