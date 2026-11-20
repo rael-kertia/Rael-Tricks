@@ -1,76 +1,58 @@
--- RAEL AUTO ACC | Indo Kos: Build & Upgrade
--- Auto tekan ACC hanya jika popup "Permintaan Sewa" terdeteksi.
+-- RAEL AUTO ACC | Berdasarkan diagnosis PermintaanSewaUI
+-- Hanya mengaktifkan AccBtn pada kartu dengan judul PERMINTAAN SEWA.
 local Players=game:GetService("Players")
 local plr=Players.LocalPlayer
 local pg=plr:WaitForChild("PlayerGui")
-local roots={pg}
-pcall(function() table.insert(roots,game:GetService("CoreGui")) end)
-
-local clicked=setmetatable({}, {__mode="k"})
-local function norm(s)
- return tostring(s or ""):lower():gsub("%s+",""):gsub("[^%w]","")
+local gui=pg:WaitForChild("PermintaanSewaUI",15)
+if not gui then
+ local m="AUTO ACC: PermintaanSewaUI tidak ditemukan"
+ if setclipboard then pcall(setclipboard,m) end
+ if writefile then pcall(writefile,"Rael_AutoACC_Status.txt",m) end
+ return
 end
-local function visible(o)
+local done=setmetatable({}, {__mode="k"})
+local function norm(s)
+ return tostring(s or ""):upper():gsub("%s+","")
+end
+local function isVisible(o)
  local p=o
- while p do
+ while p and p~=gui.Parent do
   if p:IsA("GuiObject") and not p.Visible then return false end
   if p:IsA("ScreenGui") and not p.Enabled then return false end
   p=p.Parent
  end
  return true
 end
-local function hasTitle(root)
- for _,v in ipairs(root:GetDescendants()) do
-  if (v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox")) and norm(v.Text):find("permintaansewa",1,true) then
-   if visible(v) then return v end
-  end
- end
+local function status(s)
+ local msg="RAEL AUTO ACC | "..s.." | "..os.date("%H:%M:%S")
+ if writefile then pcall(writefile,"Rael_AutoACC_Status.txt",msg) end
 end
-local function findAcc(container)
- for _,v in ipairs(container:GetDescendants()) do
-  if v:IsA("TextButton") and norm(v.Text)=="acc" and visible(v) then return v end
- end
+local stack=gui:WaitForChild("Tumpukan",10)
+if not stack then
+ status("GAGAL: Tumpukan tidak ditemukan")
+ return
 end
-local function activate(b)
- local ok=pcall(function() b:Activate() end)
- if ok then return true end
- if typeof(firesignal)=="function" then
-  local a=pcall(function() firesignal(b.Activated) end)
-  if a then return true end
-  local m=pcall(function() firesignal(b.MouseButton1Click) end)
-  if m then return true end
- end
- return false
-end
-
-while task.wait(0.25) do
- local found=false
- for _,root in ipairs(roots) do
-  for _,v in ipairs(root:GetDescendants()) do
-   if (v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox")) and norm(v.Text):find("permintaansewa",1,true) and visible(v) then
-    local container=v
-    local button
-    for depth=1,7 do
-     container=container.Parent
-     if not container then break end
-     button=findAcc(container)
-     if button then break end
-     if container:IsA("ScreenGui") then break end
-    end
-    if button then
-     found=true
-     if not clicked[button] then
-      if activate(button) then
-       clicked[button]=true
-       local msg="AUTO ACC: tombol ACC ditekan | "..os.date("%H:%M:%S")
-       if writefile then pcall(writefile,"Rael_AutoACC_Status.txt",msg) end
-      end
-     end
+status("AKTIF - menunggu permintaan sewa")
+while task.wait(0.2) do
+ if not gui.Parent or not gui.Enabled then continue end
+ for _,card in ipairs(stack:GetChildren()) do
+  if card:IsA("Frame") and card.Name:match("^Kartu_") and card.Name~="KartuTemplate" then
+   local isi=card:FindFirstChild("Isi")
+   local tag=isi and isi:FindFirstChild("Tag")
+   local label=tag and tag:FindFirstChild("Label")
+   local acc=isi and isi:FindFirstChild("AccBtn")
+   if label and label:IsA("TextLabel") and norm(label.Text)=="PERMINTAANSEWA"
+      and acc and acc:IsA("TextButton") and acc.Visible and acc.Active
+      and isVisible(card) and not done[acc] then
+    done[acc]=true
+    local ok=pcall(function() acc:Activate() end)
+    if ok then
+     status("ACC diaktifkan pada "..card.Name)
+    else
+     done[acc]=nil
+     status("GAGAL mengaktifkan "..card.Name)
     end
    end
   end
- end
- if not found then
-  clicked=setmetatable({}, {__mode="k"})
  end
 end
