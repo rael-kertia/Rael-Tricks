@@ -1242,43 +1242,25 @@ source = source .. [==[
 
 -- ==========================================
 -- AUTO ACC - TERINTEGRASI KE RAEL'S TRICKS
--- ==========================================
 
 local autoAccEnabled = false
 local autoAccBusy = false
 local autoAccLast = {}
 local autoAccVIM = game:GetService("VirtualInputManager")
 
-local autoAccButton = makeButton(
-    "AutoAccButton", "AUTO ACC: OFF", 5, 85, 195,
-    Color3.fromRGB(160, 45, 45), 27
-)
-
-local autoAccInfo = Instance.new("TextLabel")
-autoAccInfo.Name = "AutoAccStatus"
-autoAccInfo.Size = UDim2.new(1, -10, 0, 34)
-autoAccInfo.Position = UDim2.fromOffset(5, 116)
-autoAccInfo.BackgroundTransparency = 1
-autoAccInfo.Text = "Auto ACC: OFF"
-autoAccInfo.TextColor3 = Color3.fromRGB(220, 225, 235)
-autoAccInfo.TextSize = 9
-autoAccInfo.Font = Enum.Font.Gotham
-autoAccInfo.TextWrapped = true
-autoAccInfo.TextXAlignment = Enum.TextXAlignment.Left
-autoAccInfo.Parent = frame
+-- GUI utama memakai makeToggle, bukan makeButton.
+-- Posisi ini mengisi slot kosong di samping HOMEWORK.
+local autoAccButton = makeToggle("AutoAccButton", "AUTO ACC", 12, 225)
 
 local function setAutoAcc(enabled)
     autoAccEnabled = enabled
-    autoAccButton.Text = enabled and "AUTO ACC: ON" or "AUTO ACC: OFF"
-    autoAccButton.BackgroundColor3 = enabled
-        and Color3.fromRGB(35, 145, 70)
-        or Color3.fromRGB(160, 45, 45)
-    autoAccInfo.Text = enabled
-        and "Auto ACC aktif - menunggu permintaan"
-        or "Auto ACC nonaktif"
+    paintToggle(autoAccButton, "AUTO ACC", enabled)
+    setStatus(enabled and "AUTO ACC AKTIF - MENUNGGU PERMINTAAN"
+        or "AUTO ACC NONAKTIF")
 end
 
 connect(autoAccButton.Activated, function()
+    if not alive() then return end
     setAutoAcc(not autoAccEnabled)
 end)
 
@@ -1296,26 +1278,23 @@ local function getAutoAccCards()
             local button = isi and isi:FindFirstChild("AccBtn")
             if button and button:IsA("GuiButton")
             and button.Visible and button.Active then
-                local p, s = button.AbsolutePosition, button.AbsoluteSize
+                local p, size = button.AbsolutePosition, button.AbsoluteSize
                 table.insert(found, {
                     card = card,
                     button = button,
-                    x = p.X + s.X / 2,
-                    y = p.Y + s.Y / 2
+                    x = p.X + size.X / 2,
+                    y = p.Y + size.Y / 2
                 })
             end
         end
     end
 
-    table.sort(found, function(a, b)
-        return a.y < b.y
-    end)
+    table.sort(found, function(a, b) return a.y < b.y end)
     return found
 end
 
 local function autoAccClick(item)
-    local button = item.button
-    local x, y = item.x, item.y
+    local button, x, y = item.button, item.x, item.y
     local pos = Vector2.new(x, y)
 
     pcall(function()
@@ -1325,7 +1304,6 @@ local function autoAccClick(item)
     end)
 
     task.wait(0.45)
-
     if button.Parent and button.Visible then
         local mx, my = x + 44, y + 58
         pcall(function()
@@ -1353,20 +1331,16 @@ task.spawn(function()
                 if now - last > 2.5 then
                     autoAccBusy = true
                     autoAccLast[item.card] = now
-                    autoAccInfo.Text = "Memproses " .. item.card.Name
-                        .. " | Y " .. string.format("%.1f", item.y)
-                        .. " | " .. #cards .. " popup"
+                    setStatus("AUTO ACC: " .. item.card.Name
+                        .. " | " .. #cards .. " popup")
 
                     local gone = autoAccClick(item)
-                    if gone then
-                        autoAccInfo.Text = "ACC terkirim - scan ulang popup tersisa"
-                    else
-                        autoAccInfo.Text = "Popup belum hilang - mencoba lagi"
-                    end
+                    setStatus(gone and "AUTO ACC: popup diproses; scan ulang"
+                        or "AUTO ACC: popup belum hilang; coba ulang")
                     autoAccBusy = false
                 end
             else
-                autoAccInfo.Text = "Auto ACC ON - menunggu permintaan"
+                setStatus("AUTO ACC: menunggu permintaan")
             end
         end
         task.wait(0.15)
