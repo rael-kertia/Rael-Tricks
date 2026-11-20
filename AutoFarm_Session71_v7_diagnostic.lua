@@ -918,7 +918,7 @@ local cleanerGuard = "if not enabled or busy\n        or homeworkEnabled or home
 local cg = source:find(cleanerGuard, 1, true)
 if cg then
     source = source:sub(1, cg - 1)
-        .. "if farmPauseHomework or not enabled or busy\n        or homeworkEnabled or homeworkBusy"
+        .. "if autoFarm or not enabled or busy\n        or homeworkEnabled or homeworkBusy"
         .. source:sub(cg + #cleanerGuard)
 end
 
