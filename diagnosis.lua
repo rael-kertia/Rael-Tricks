@@ -34,7 +34,7 @@ local function add(s)
  out[#out+1]=s
  used=used+#s+1
 end
-add("=== RAEL DIAGNOSTIC PERMINTAAN SEWA V4 SOURCE ===")
+add("=== RAEL DIAGNOSTIC PERMINTAAN SEWA V5 UPVALUE3 ===")
 add("PLAYER: "..plr.Name.." | "..os.date("%Y-%m-%d %H:%M:%S"))
 local found,seen={},{}
 for _,root in ipairs(roots) do
@@ -178,6 +178,46 @@ for _,root in ipairs(roots) do
             elseif type(uv)=="string" then desc="string:"..uv:sub(1,100)
             else desc=desc..":"..tostring(uv):sub(1,100) end
             if ui<=12 then add("   UPVALUE "..tostring(ui).." = "..desc) end
+            if ui==3 and type(uv)=="function" then
+             add("   === UPVALUE 3 FUNCTION DETAIL ===")
+             local dfn=decompile or decompilefunction
+             if type(dfn)=="function" then
+              local fok,fs=pcall(dfn,uv)
+              if fok and type(fs)=="string" then
+               local ln=0
+               for line in (fs.."\\n"):gmatch("(.-)\\n") do
+                ln=ln+1
+                if ln<=90 then add("    SRC "..ln..": "..line) end
+               end
+              else add("    DECOMPILE: "..tostring(fs)) end
+             else add("    DECOMPILE TIDAK TERSEDIA") end
+             local fgu=(dbg and dbg.getupvalues) or getupvalues
+             if type(fgu)=="function" then
+              local fok2,fups=pcall(fgu,uv)
+              if fok2 and type(fups)=="table" then
+               for fi,fv in pairs(fups) do
+                if fi<=12 then
+                 local fd=typeof and typeof(fv) or type(fv)
+                 if fd=="Instance" then fd=fv.ClassName.." "..path(fv) else fd=fd..":"..tostring(fv):sub(1,120) end
+                 add("    NESTED UPVALUE "..fi.." = "..fd)
+                end
+               end
+              else add("    NESTED UPVALUES: "..tostring(fups)) end
+             end
+             local fgc=(dbg and dbg.getconstants) or getconstants
+             if type(fgc)=="function" then
+              local fok3,fcs=pcall(fgc,uv)
+              if fok3 and type(fcs)=="table" then
+               for fi,fc in ipairs(fcs) do
+                if fi<=100 then
+                 if type(fc)=="string" or type(fc)=="number" or type(fc)=="boolean" then
+                  add("    NESTED CONST "..fi.." = "..tostring(fc):sub(1,120))
+                 end
+                end
+               end
+              else add("    NESTED CONSTANTS: "..tostring(fcs)) end
+             end
+            end
            end
           end
          end
@@ -230,7 +270,7 @@ if setclipboard then copied=pcall(setclipboard,result)
 elseif toclipboard then copied=pcall(toclipboard,result) end
 local saved=false
 if writefile then saved=pcall(writefile,"Rael_Tenant_Diagnostic.txt",result) end
-local status="DIAG V4 SOURCE | chars="..#result.." | clipboard="..tostring(copied).." | file="..tostring(saved)
+local status="DIAG V5 UPVALUE3 | chars="..#result.." | clipboard="..tostring(copied).." | file="..tostring(saved)
 if setclipboard then pcall(setclipboard,result.."\n\n"..status)
 elseif toclipboard then pcall(toclipboard,result.."\n\n"..status) end
 if writefile then pcall(writefile,"Rael_Tenant_Diagnostic.txt",result.."\n\n"..status) end
