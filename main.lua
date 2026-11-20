@@ -602,6 +602,226 @@ end
     "HOMEWORK OWN ZONE DISPOSAL"
 )
 
+-- ==========================================
+-- HOMEWORK RELIABILITY HOTFIX
+-- Scan seluruh rumah milik player, deteksi prompt TrashBag recursive,
+-- dan verifikasi perubahan sebelum menganggap interaksi berhasil.
+-- ==========================================
+
+replaceBetween(
+    "local function hwGet(house, mode)",
+    "-- ==========================================\n-- BUTTON EVENTS",
+    [=[
+local function hwGet(house, mode)
+    local result, seen = {}, {}
+    if not house then return result end
+
+    local function add(prompt)
+        if prompt and prompt:IsA("ProximityPrompt") and not seen[prompt] then
+            seen[prompt] = true
+            if mode == 3 or prompt.Enabled then
+                table.insert(result, prompt)
+            end
+        end
+    end
+
+    for _, obj in ipairs(house:GetDescendants()) do
+        if obj:IsA("ProximityPrompt")
+        and obj.ActionText == "Bersihkan"
+        and (mode == 1 or mode == 3) then
+            add(obj)
+        elseif mode == 2 and obj:IsA("BasePart")
+        and obj.Name == "TrashBag" then
+            for _, child in ipairs(obj:GetDescendants()) do
+                if child:IsA("ProximityPrompt")
+                and (child.Name == "AmbilPrompt"
+                    or child.ActionText == "Ambil") then
+                    add(child)
+                end
+            end
+        end
+    end
+    return result
+end
+
+local function hwHouseDistance(house)
+    local root = hwRoot()
+    if not root or not house then return math.huge end
+    local best = math.huge
+
+    for _, prompt in ipairs(hwGet(house, 1)) do
+        local part = hwPart(prompt)
+        if part then
+            best = math.min(best, (root.Position - part.Position).Magnitude)
+        end
+    end
+    for _, prompt in ipairs(hwGet(house, 2)) do
+        local part = hwPart(prompt)
+        if part then
+            best = math.min(best, (root.Position - part.Position).Magnitude)
+        end
+    end
+    return best
+end
+
+local function hwFindHouse()
+    local folder = W:FindFirstChild("KosanSpawned")
+    if not folder or not hwRoot() then return nil end
+
+    local best, bestDistance
+    for _, house in ipairs(folder:GetChildren()) do
+        if hwOwnsHouse(house) then
+            local hasWork = #hwGet(house, 1) > 0 or #hwGet(house, 2) > 0
+            if hasWork then
+                local distance = hwHouseDistance(house)
+                if not bestDistance or distance < bestDistance then
+                    best, bestDistance = house, distance
+                end
+            end
+        end
+    end
+    return best
+end
+
+local function hwWaitPromptResult(prompt, previousProgress, timeout)
+    local started = os.clock()
+    while alive() and homeworkEnabled and os.clock() - started < (timeout or 7) do
+        if not prompt or not prompt.Parent or not prompt.Enabled then
+            return true
+        end
+        local currentProgress = hwProgress and hwProgress() or nil
+        if previousProgress ~= nil and currentProgress ~= nil
+        and currentProgress > previousProgress then
+            return true
+        end
+        task.wait(0.2)
+    end
+    return false
+end
+
+local function hwCleanHouse(house)
+    local attempts = {}
+    while alive() and homeworkEnabled do
+        local pending
+        for _, prompt in ipairs(hwGet(house, 1)) do
+            if not attempts[prompt] then
+                pending = prompt
+                break
+            end
+        end
+        if not pending then return true end
+
+        attempts[pending] = true
+        local before = hwProgress and hwProgress() or nil
+        setStatus("HOMEWORK: MEMBERSIHKAN RUMAH")
+        if not hwUse(pending)
+        or not hwWaitPromptResult(pending, before, 8) then
+            setStatus("CLEAN BELUM TERVERIFIKASI - COBA ULANG")
+            task.wait(1)
+            if pending.Parent and pending.Enabled then
+                attempts[pending] = nil
+            end
+            if attempts[pending] then return false end
+        end
+        task.wait(0.25)
+    end
+    return false
+end
+
+local function hwHandleHouseTrash(house)
+    local started = os.clock()
+    local quietSince = nil
+
+    while alive() and homeworkEnabled do
+        if hwCarrying() then
+            quietSince = nil
+            setStatus("HOMEWORK: MEMBUANG SAMPAH")
+            if not hwDispose(house) or not hwWaitCarry(false) then
+                setStatus("GAGAL MEMBUANG SAMPAH - COBA ULANG")
+                return false
+            end
+            started = os.clock()
+        else
+            local bags = hwGet(house, 2)
+            if #bags > 0 then
+                quietSince = nil
+                local prompt = bags[1]
+                setStatus("HOMEWORK: MENGAMBIL SAMPAH")
+                if not hwUse(prompt) or not hwWaitCarry(true) then
+                    setStatus("GAGAL MENGAMBIL SAMPAH - COBA ULANG")
+                    return false
+                end
+            elseif #hwGet(house, 1) > 0 then
+                quietSince = nil
+                task.wait(0.5)
+            else
+                quietSince = quietSince or os.clock()
+                -- Beri waktu server mereplikasi TrashBag setelah progress bersih.
+                if os.clock() - quietSince >= 3 then
+                    return true
+                end
+                if os.clock() - started > 35 then
+                    setStatus("MENUNGGU SAMPAH TERLALU LAMA")
+                    return false
+                end
+                task.wait(0.25)
+            end
+        end
+    end
+    return false
+end
+
+local function homeworkRun()
+    if homeworkBusy then return end
+    homeworkBusy = true
+    local completed = false
+
+    while alive() and homeworkEnabled do
+        local folder = W:FindFirstChild("KosanSpawned")
+        if not folder then
+            setStatus("KOSANSPAWNED TIDAK DITEMUKAN")
+            break
+        end
+
+        local house = hwFindHouse()
+        if not house then
+            -- Dua kali scan terpisah mencegah status selesai akibat replikasi terlambat.
+            task.wait(1)
+            house = hwFindHouse()
+            if not house and not hwCarrying() then
+                completed = true
+                setStatus("SEMUA RUMAH MILIKMU BERSIH")
+            end
+            break
+        end
+
+        if not hwCleanHouse(house) then break end
+        if not hwHandleHouseTrash(house) then break end
+
+        -- Pastikan rumah terpilih memang sudah tidak punya prompt aktif/sampah.
+        if #hwGet(house, 1) > 0 or #hwGet(house, 2) > 0 or hwCarrying() then
+            setStatus("RUMAH BELUM TUNTAS - SCAN ULANG")
+            break
+        end
+        task.wait(0.5)
+    end
+
+    homeworkEnabled = false
+    homeworkBusy = false
+    updateButtons()
+    if alive() and not completed then
+        setStatus("HOMEWORK DIHENTIKAN / PERLU CEK ULANG")
+    elseif alive() and autoFarm then
+        setStatus("HOMEWORK SELESAI - FARM LANJUT")
+    elseif alive() then
+        setStatus("HOMEWORK SELESAI")
+    end
+end
+
+]=],
+    "HOMEWORK RELIABILITY HOTFIX"
+)
+
 source = source .. [==[
 
 -- ==========================================
