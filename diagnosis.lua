@@ -97,6 +97,87 @@ for _,v in ipairs(RS:GetDescendants()) do
 end
 if rc==0 then add("Tidak ada Remote bernama terkait yang terlihat di ReplicatedStorage.") end
 add("TOTAL REMOTE TERKAIT: "..rc)
+
+add("")
+add("=== LOCALSCRIPT TERKAIT UI SEWA ===")
+local scriptRoots={plr:FindFirstChild("PlayerGui"),plr:FindFirstChild("PlayerScripts")}
+local lsCount=0
+for _,root in ipairs(scriptRoots) do
+ if root then
+  for _,v in ipairs(root:GetDescendants()) do
+   if v:IsA("LocalScript") then
+    local p=norm(path(v))
+    if p:find("permintaansewa",1,true) or p:find("kartu",1,true) or p:find("sewa",1,true) then
+     lsCount=lsCount+1
+     if lsCount<=25 then add(v.ClassName.." | "..path(v).." | Enabled="..safe(function() return v.Enabled end)) end
+    end
+   end
+  end
+ end
+end
+add("TOTAL LOCALSCRIPT TERKAIT: "..lsCount)
+add("")
+add("=== KONEKSI EVENT AccBtn (INSPEKSI PASIF) ===")
+local getcon= getconnections
+local dbg=debug
+local inspected=0
+for _,root in ipairs(roots) do
+ for _,b in ipairs(root:GetDescendants()) do
+  if (b:IsA("TextButton") or b:IsA("ImageButton")) and b.Name=="AccBtn" then
+   inspected=inspected+1
+   add("BUTTON #"..inspected.." | "..path(b).." | visible="..safe(function() return b.Visible end))
+   if type(getcon)=="function" then
+    local events={"Activated","MouseButton1Click","MouseButton1Down"}
+    for _,ev in ipairs(events) do
+     local ok,sig=pcall(function() return b[ev] end)
+     if ok and sig then
+      local cok,cons=pcall(getcon,sig)
+      if cok and type(cons)=="table" then
+       add(" EVENT "..ev.." CONNECTIONS="..#cons)
+       for ci,co in ipairs(cons) do
+        if ci<=5 then
+         local fn=co.Function
+         local info=nil
+         if type(fn)=="function" and dbg and type(dbg.getinfo)=="function" then
+          local iok,iv=pcall(dbg.getinfo,fn)
+          if iok then info=iv end
+         end
+         if info then
+          add("  CONN "..ci.." enabled="..safe(function() return co.Enabled end).." name="..tostring(info.name).." source="..tostring(info.short_src or info.source).." line="..tostring(info.currentline))
+         else
+          add("  CONN "..ci.." enabled="..safe(function() return co.Enabled end).." function="..tostring(fn))
+         end
+         local gc=(dbg and dbg.getconstants) or getconstants
+         if type(gc)=="function" and type(fn)=="function" then
+          local gok,vals=pcall(gc,fn)
+          if gok and type(vals)=="table" then
+           local hits={}
+           for _,cv in ipairs(vals) do
+            if type(cv)=="string" and (#cv<100) then
+             local z=norm(cv)
+             if z:find("accept",1,true) or z:find("worker",1,true) or z:find("sewa",1,true) or z:find("karyawan",1,true) or z:find("acc",1,true) then
+              hits[#hits+1]=cv
+             end
+            end
+           end
+           if #hits>0 then add("   CONSTANTS: "..table.concat(hits,", "):sub(1,250)) end
+          end
+         end
+        end
+       end
+      else
+       add(" EVENT "..ev.." getconnections gagal/tidak tersedia")
+      end
+     end
+    end
+   else
+    add(" getconnections TIDAK TERSEDIA DI EXECUTOR")
+   end
+  end
+ end
+end
+if inspected==0 then add("Tidak menemukan AccBtn saat pemeriksaan.") end
+
 local result=table.concat(out,"\n")
 local copied=false
 if setclipboard then copied=pcall(setclipboard,result)
