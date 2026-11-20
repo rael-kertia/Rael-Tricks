@@ -1,2550 +1,1232 @@
-=== RAEL SEWA V11 ===
-STATUS=SELESAI
-BUTTON 1 Players.Raelity911.PlayerGui.PermintaanSewaUI.Tumpukan.Kartu_33.Isi.AccBtn
+=== BLIND BOX FULL UI SCAN ===
 
-### CARD1_Respond function: 0xa6037f8567a3b807
-CARD1_Respond INFO name= source==ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm what=Lua line=nil
-CARD1_Respond UV1 TYPE=function VALUE=function: 0x242c34a314a2c088
+[GUI] WaypointUI
 
-### CARD1_Respond.UV1 function: 0x242c34a314a2c088
-CARD1_Respond.UV1 INFO name= source==ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client what=Lua line=nil
-CARD1_Respond.UV1 C1=table
-CARD1_Respond.UV1 C2=pack
-CARD1_Respond.UV1 UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1 T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
+[GUI] TopbarCenteredClipped
 
-### CARD1_Respond.UV1.T_onUnhandledRejection function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection INFO name=onUnhandledRejection source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection C1=_unhandledRejectionCallbacks
-CARD1_Respond.UV1.T_onUnhandledRejection C2=table
-CARD1_Respond.UV1.T_onUnhandledRejection C3=insert
-CARD1_Respond.UV1.T_onUnhandledRejection UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T_onUnhandledRejection ALREADY_SEEN function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
+[GUI] TopbarStandardClipped
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new INFO name=_new source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new C1=is
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new C2=error
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_onUnhandledRejection ALREADY_SEEN function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__new ALREADY_SEEN function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
+[GUI] TopbarStandard
+TextButton | Players.Raelity911.PlayerGui.TopbarStandard.Holders.Left.OverflowLeft.IconButton.Menu.IconSpot.ClickRegion | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TopbarStandard.Holders.Right.CMD.IconButton.Menu.IconSpot.ClickRegion | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TopbarStandard.Holders.Right.OverflowRight.IconButton.Menu.IconSpot.ClickRegion | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TopbarStandard.Holders.Right.Widget.IconButton.Menu.IconSpot.ClickRegion | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TopbarStandard.Holders.Right.Widget.IconButton.Menu.IconSpot.ClickRegion | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent INFO name=fromEvent source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fromEvent TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
+[GUI] TopbarCentered
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all INFO name=_all source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__all TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
+[GUI] ContextActionGui
+ImageButton | Players.Raelity911.PlayerGui.ContextActionGui.ContextButtonFrame.ContextActionButton | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try INFO name=_try source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try C1=_new
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try UV1 TYPE=function VALUE=function: 0x37b2e7f814aa399f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try UV2 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__try TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
+[GUI] AdminTitleUI
+TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.ListPanel | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.ListPanel.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.ListPanel.Panel.List.Template.GiftBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.InputPanel | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.InputPanel.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.InputPanel.Panel.KirimBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.InputPanel.Panel.HapusBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.InputPanel.Panel.BatalBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Players.List.Row | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.MoneyRow.GiftMoneyBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TeleportRow.TeleportToBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TeleportRow.BringBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KickBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.BanRow.BanBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TitleRow.GiveTitleBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TitleRow.ClearTitleBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.CekUangResult.CekRefreshBtn | Text=↺ | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.ActionTabRow.TabAksi | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.ActionTabRow.TabAbuse | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.ActionTabRow.TabLog | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.ActionTabRow.TabEvent | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.ActionTabRow.TabKode | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KeyRow.GiftKeyBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn1 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn2 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn3 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn4 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn5 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn6 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn7 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn8 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn9 | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn10 | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn11 | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn12 | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn13 | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn14 | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.GiftItemRow.GiftItemBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.BanUserRow.BanUserBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.GiftAllRow.GiftAllBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.CleanAllBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.PriceRow.SetPriceBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.LimitRow.SetLimitBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.SetHouseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.StreamerRow.StreamerSetBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.StreamerRow.StreamerRemoveBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.WaktuSlider.Hit | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.WaktuBtnRow.WaktuGlobalBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.WaktuBtnRow.WaktuServerBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AnnounceLogSection.LogTopRow.RefreshLogBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TenantRow.AddTenantBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TenantRow.KurangiTenantBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.GoldSection.GoldRow.TambahGoldBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.GoldSection.GoldRow.KurangiGoldBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.ScopeRow.ScopeServerBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.ScopeRow.ScopeGlobalBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.OtoRow.OtomatisBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow1.PembukaanBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow1.LemparBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow2.BurstBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow2.DanceBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow3.PenutupBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow3.BatalBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList._TemplateEmote | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_1 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_2 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_3 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_4 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_5 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_6 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_7 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_8 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_9 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_10 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_11 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_12 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_13 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_14 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_15 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_16 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_17 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_18 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_19 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_20 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_21 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_22 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_23 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_24 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_25 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_26 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_27 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_28 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_29 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_30 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_31 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_32 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_33 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_34 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_35 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_36 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_37 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_38 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_39 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_40 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_41 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_42 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_43 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_44 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_45 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_46 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_47 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_48 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_49 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_50 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_51 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_52 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_53 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_54 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_55 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_56 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_57 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_58 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_59 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_60 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_61 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_62 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_63 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_64 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_65 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_66 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_67 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_68 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_69 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_70 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_71 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_72 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_73 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_74 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_75 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_76 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_77 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_78 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_79 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_80 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_81 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_82 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_83 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_84 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_85 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_86 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_87 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_88 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_89 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_90 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_91 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_92 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_93 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_94 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_95 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_96 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_97 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_98 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_99 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_100 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_101 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_102 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_103 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_104 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_105 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_106 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_107 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_108 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_109 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_110 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_111 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_112 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_113 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_114 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_115 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_116 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_117 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_118 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_119 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_120 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_121 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_122 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_123 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_124 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_125 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_126 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_127 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_128 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_129 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_130 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_131 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_132 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_133 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_134 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_135 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_136 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_137 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_138 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_139 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_140 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_141 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_142 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_143 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_144 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_145 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_146 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_147 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_148 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_149 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_150 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_151 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_152 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_153 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_154 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_155 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_156 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_157 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_158 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_159 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_160 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_161 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_162 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_163 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_164 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_165 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_166 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_167 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_168 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_169 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_170 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_171 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_172 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_173 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_174 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_175 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_176 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_177 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_178 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_179 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_180 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_181 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteRow.MainkanBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteRow.DiamBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.MiniRow.MinimizeBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.SebarRow.SebarBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.LacakSection.LogLacakBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.LacakSection.CariRow.LacakBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.LacakSection.HasilList.HasilTemplate.TpBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.LacakSection.HasilList.HasilTemplate.KickBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.PassRow.BeriPassBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.PassRow.CabutPassBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.PassRow.PilihPassBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.BuatBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.WaktuRow.SatuanBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.DaftarHeader.RefreshKodeBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.DaftarKode._KodeBaris.Tombol.OnOffBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.DaftarKode._KodeBaris.Tombol.WaktuBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.DaftarKode._KodeBaris.Tombol.HapusBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___tostring function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___tostring INFO name=__tostring source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___tostring C1=string
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___tostring C2=format
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
+[GUI] AnnouncementUI
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay INFO name=retryWithDelay source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retryWithDelay TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
+[GUI] UiTurunDomba
+TextButton | Players.Raelity911.PlayerGui.UiTurunDomba.Frame.Turun | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer INFO name=defer source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer C1=debug
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer C2=traceback
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_defer UV2 TYPE=function VALUE=function: 0xd2f369fdad680cb2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
+[GUI] BadgeKeranjang
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race INFO name=race source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_race TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
+[GUI] Badgex2Xp
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry INFO name=retry source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_retry TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
+[GUI] Badgex5KranjangLanudry
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay INFO name=delay source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_delay TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
+[GUI] BikeSystemGui
+TextButton | Players.Raelity911.PlayerGui.BikeSystemGui.MainFrame.ButtonFrame.Spawn.Big | Text=Besar | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.BikeSystemGui.MainFrame.ButtonFrame.Spawn.Small | Text=Kecil | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.BikeSystemGui.MainFrame.ButtonFrame.Cancel | Text=Batal | Visible=false | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__getTime function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__getTime INFO name=clock source==[C] what=C line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__getTime CONST_FAIL=invalid argument #1 to 'getconstants' (expected Lua closure)
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T__getTime UPVALUES_FAIL=invalid argument #1 to 'getupvalues' (expected Lua closure)
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
+[GUI] Button
+ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.StatusRumah | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.ChangeCammera | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.KaryawanUibtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.AdminBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.AdminPanelBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.SwitchRoleBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.MusicButton | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.ShopToken | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.MenuBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.TopbarButtons.SettingButton | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.TopbarButtons.DanceBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.TopbarButtons.RetrunToHome | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.TopbarButtons.ServerListButton | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.TopbarButtons.HadiahButton | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.TopbarRightButtons.UnhideBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.PesainInformasi | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.CustommTitle | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.GudangBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.MutasiBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.Accessory | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.MisiBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.GamepassBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify INFO name=promisify source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_promisify TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
+[GUI] CarryGui
+TextButton | Players.Raelity911.PlayerGui.CarryGui.NotificationFrame.RejectBtn | Text=Reject | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.CarryGui.NotificationFrame.AcceptBtn | Text=Accept | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.CarryGui.GetDownBtn | Text=Get Down | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.ScrollingFrame.CarrySelection.CoupleHug | Text=Couple Hug | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.ScrollingFrame.CarrySelection.PiggyBack | Text=Piggy Back | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.ScrollingFrame.CarrySelection.Bridal | Text=Bridal | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.ScrollingFrame.CarrySelection.PiggyUpperBack | Text=Piggy UpperBack | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.ScrollingFrame.CarrySelection.Pasakal | Text=Pasakal | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.CloseButton | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel INFO name=cancel source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel C1=_status
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel C2=Status
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel C3=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel C4=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel C5=_cancellationHook
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel C6=coroutine
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel C7=close
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_cancel TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
+[GUI] TutorialUI
+ImageButton | Players.Raelity911.PlayerGui.TutorialUI.Root.Kartu.Baris.Lewati | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TutorialUI.Root.Kartu.Baris.Lanjut | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TutorialUI.Root.Konfirm.Panel.Baris.Batal | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TutorialUI.Root.Konfirm.Panel.Baris.Ya | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finally function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finally INFO name=finally source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finally C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
+[GUI] GachaRevealGui
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen INFO name=_andThen source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen C1=_unhandledRejection
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen C2=_status
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen C3=Status
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen C4=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen C5=new
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__andThen UV2 TYPE=function VALUE=function: 0xd2f369fdad680cb2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
+[GUI] Commandgui
+TextButton | Players.Raelity911.PlayerGui.Commandgui.Frame.Frame.TextButton | Text=X | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Commandgui.Frame.Frame.Command1.TextButton | Text=EXECUTE | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Commandgui.Frame.Frame.Command2.TextButton | Text=EXECUTE | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_andThenReturn function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_andThenReturn INFO name=andThenReturn source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_andThenReturn C1=debug
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_andThenReturn C2=traceback
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_andThenReturn UV1 TYPE=function VALUE=function: 0x37b2e7f814aa399f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
+[GUI] ControlBulid
+ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.RotateKanan | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.RotateKiri | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Pasang | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Batal | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Duplikat | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Maju | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Mundur | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Kiri | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Kanan | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Cabut | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finallyReturn function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finallyReturn INFO name=finallyReturn source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finallyReturn C1=debug
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finallyReturn C2=traceback
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finallyReturn UV1 TYPE=function VALUE=function: 0x37b2e7f814aa399f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
+[GUI] CustomTitle
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.KirimBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.HapusBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_1 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_2 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_3 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_4 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_5 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_6 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_7 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_8 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_9 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_10 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_11 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_12 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.FontSizeFrame.FontSize_S | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.FontSizeFrame.FontSize_M | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.FontSizeFrame.FontSize_L | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.FontSizeFrame.FontSize_XL | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_await function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_await INFO name=await source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_await C1=awaitStatus
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_await UV1 TYPE=function VALUE=function: 0xcb276405a69c7804
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
+[GUI] Emotegui
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.Handler.sample.Button | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.Handler.Template | Text=Animation Name | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.TabFrame.Dance | Text=Dance | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.TabFrame.Emote | Text=Emote | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.SpeedBar.bar.dot.Button | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.doll idle pose | Text=doll idle pose | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.girl idle pose | Text=girl idle pose | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Kid tantrum | Text=Kid tantrum | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Nonchalant Sit | Text=Nonchalant Sit | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Police Vest Rest | Text=Police Vest Rest | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Pose 1 | Text=Pose 1 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sad | Text=Sad | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Shinra Pose | Text=Shinra Pose | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.sit | Text=sit | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sit 2 | Text=Sit 2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.sit and hug | Text=sit and hug | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.sitting idle pose | Text=sitting idle pose | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sleep Face | Text=Sleep Face | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sleeping Soundly | Text=Sleeping Soundly | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Spider Swing | Text=Spider Swing | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Spiderman | Text=Spiderman | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Spiderman Hanging | Text=Spiderman Hanging | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Squat Sit | Text=Squat Sit | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sweet Hug V2 | Text=Sweet Hug V2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sweet Sit V1 | Text=Sweet Sit V1 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Swinging | Text=Swinging | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Wall Lean | Text=Wall Lean | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.2pa2 | Text=2pa2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Acelerada | Text=Acelerada | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.AllowSleeps Vibe | Text=AllowSleeps Vibe | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Aram Sam sa | Text=Aram Sam sa | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Arms Up | Text=Arms Up | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Avion | Text=Avion | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Bachata 1 | Text=Bachata 1 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Banana Shake | Text=Banana Shake | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Bel Air | Text=Bel Air | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Belly Dance | Text=Belly Dance | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Belly Twist R | Text=Belly Twist R | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.BHAnew | Text=BHAnew | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Bizcochito | Text=Bizcochito | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Bizcocho | Text=Bizcocho | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.BlindingLights | Text=BlindingLights | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.BlindingLights 1 | Text=BlindingLights 1 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Bones | Text=Bones | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Boogie Down | Text=Boogie Down | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Boots | Text=Boots | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Brazildance | Text=Brazildance | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Break Dance | Text=Break Dance | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Breakdance | Text=Breakdance | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.BreakeDance Floor | Text=BreakeDance Floor | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Can can | Text=Can can | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Candy | Text=Candy | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.CaramelDancen | Text=CaramelDancen | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Cha Cha | Text=Cha Cha | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Chakalita | Text=Chakalita | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Chess | Text=Chess | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Cholo Cumbia | Text=Cholo Cumbia | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Claping | Text=Claping | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Coffin Walking | Text=Coffin Walking | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Confess Dance | Text=Confess Dance | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Conga | Text=Conga | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Conga 1 | Text=Conga 1 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Conga 2 | Text=Conga 2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Conga 4 | Text=Conga 4 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Cool 1 | Text=Cool 1 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Cool 2 | Text=Cool 2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.CrisCroos | Text=CrisCroos | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Cuerda | Text=Cuerda | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dance Viral | Text=Dance Viral | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dancing With Your Eyes | Text=Dancing With Your Eyes | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dia Delicia | Text=Dia Delicia | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.DJ | Text=DJ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.DKWTD | Text=DKWTD | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Don Pollo | Text=Don Pollo | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dougie | Text=Dougie | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Drum Feet | Text=Drum Feet | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Durang | Text=Durang | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dxrk | Text=Dxrk | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dxrk 1 | Text=Dxrk 1 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dxrk R | Text=Dxrk R | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dynamite | Text=Dynamite | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El azul | Text=El azul | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El coco | Text=El coco | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El soon | Text=El soon | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El soon 2 | Text=El soon 2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El soon 3 | Text=El soon 3 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El soon 4 | Text=El soon 4 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El toro | Text=El toro | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Fast Hops | Text=Fast Hops | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Feeling | Text=Feeling | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Festa No Brasil | Text=Festa No Brasil | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Floss | Text=Floss | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.FootLoose | Text=FootLoose | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Get Griddy | Text=Get Griddy | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Get Sturdy | Text=Get Sturdy | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Goyang Dumang | Text=Goyang Dumang | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Griddy | Text=Griddy | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Groove | Text=Groove | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Guadala | Text=Guadala | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Guittar | Text=Guittar | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Heel Toe | Text=Heel Toe | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hellfire | Text=Hellfire | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hip Hop Arm Wave | Text=Hip Hop Arm Wave | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hip Hop Arms | Text=Hip Hop Arms | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hip hop dnce | Text=Hip hop dnce | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hip Hop Snackers | Text=Hip Hop Snackers | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hip Sway | Text=Hip Sway | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hips | Text=Hips | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hit it | Text=Hit it | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hit Rib | Text=Hit Rib | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.In The Rain | Text=In The Rain | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Jack | Text=Jack | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Kanan Kiri | Text=Kanan Kiri | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Kazotsky Kick New | Text=Kazotsky Kick New | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Koboi | Text=Koboi | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.La Chona | Text=La Chona | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Lart Forever 1 | Text=Lart Forever 1 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Last Forever | Text=Last Forever | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Leave | Text=Leave | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Like JEEMIN | Text=Like JEEMIN | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Macarena | Text=Macarena | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Make You Mine | Text=Make You Mine | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Mini Mini | Text=Mini Mini | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Motorcyclist | Text=Motorcyclist | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Ola | Text=Ola | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Ombrino | Text=Ombrino | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Ombrino 2 | Text=Ombrino 2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pangya | Text=Pangya | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Payaso De Rodeo | Text=Payaso De Rodeo | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pcr | Text=Pcr | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pennywise | Text=Pennywise | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Piano Hand | Text=Piano Hand | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pinggul | Text=Pinggul | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Popular | Text=Popular | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Popular Vibe | Text=Popular Vibe | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pull Love | Text=Pull Love | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pump it | Text=Pump it | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Punjab | Text=Punjab | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Push Up | Text=Push Up | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Raise The Roof | Text=Raise The Roof | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Rakai Dance | Text=Rakai Dance | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Rat dances | Text=Rat dances | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Ride The Pony | Text=Ride The Pony | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Rollie | Text=Rollie | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Ruben Dance | Text=Ruben Dance | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa | Text=Salsa | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa Dancing | Text=Salsa Dancing | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa Dancing 1 | Text=Salsa Dancing 1 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa Dancing 2 | Text=Salsa Dancing 2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa Dancing 4 | Text=Salsa Dancing 4 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa Dancing 5 | Text=Salsa Dancing 5 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.SaveUrTears | Text=SaveUrTears | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sepatu | Text=Sepatu | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sequencia | Text=Sequencia | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sequencia 2 | Text=Sequencia 2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Shiit Chill | Text=Shiit Chill | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Shiit Chill 2 | Text=Shiit Chill 2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sign Suffle | Text=Sign Suffle | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Slidin | Text=Slidin | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Space | Text=Space | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Speed | Text=Speed | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Spicy | Text=Spicy | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Spike | Text=Spike | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sponge Dance | Text=Sponge Dance | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.SpongeBob | Text=SpongeBob | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Spongebob Suffle | Text=Spongebob Suffle | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Stay Alive | Text=Stay Alive | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sturdy | Text=Sturdy | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sturdy Dance Ice Space | Text=Sturdy Dance Ice Space | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.swooo | Text=swooo | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.T Pose | Text=T Pose | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Tarian Bukan Masalah Saya  | Text=Tarian Bukan Masalah Saya  | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Tarian Kangaroo | Text=Tarian Kangaroo | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Tarian Pakodi | Text=Tarian Pakodi | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Terminal | Text=Terminal | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.The Dance Laroi | Text=The Dance Laroi | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.The falcon | Text=The falcon | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.The Look | Text=The Look | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.The Robot | Text=The Robot | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Timeless | Text=Timeless | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Tirano | Text=Tirano | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Trapin | Text=Trapin | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.True Heart | Text=True Heart | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Vai Toma | Text=Vai Toma | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Wanna See Me | Text=Wanna See Me | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Yungbblud | Text=Yungbblud | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.Close | Text= | Visible=false | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finallyCall function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finallyCall INFO name=finallyCall source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finallyCall C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_finallyCall UV1 TYPE=function VALUE=function: 0x37b2e7f814aa399f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
+[GUI] GachaEntryGui
+TextButton | Players.Raelity911.PlayerGui.GachaEntryGui.Panel.Row1.SpinButton | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.GachaEntryGui.Panel.Row1.PaidSpinButton | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.GachaEntryGui.Panel.Row2.X10FreeButton | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.GachaEntryGui.Panel.Row2.X10PaidButton | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GachaEntryGui.Panel.CloseButton | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_expect function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_expect INFO name=expect source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_expect C1=awaitStatus
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_expect UV1 TYPE=function VALUE=function: 0xd4853673b6f2b09b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
+[GUI] GachaGui
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout INFO name=timeout source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout C1=debug
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout C2=traceback
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout UV2 TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Kind][ExecutionError] TYPE=string VALUE=ExecutionError
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Kind][TimedOut] TYPE=string VALUE=TimedOut
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Kind][AlreadyCancelled] TYPE=string VALUE=AlreadyCancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[Kind][NotResolvedInTime] TYPE=string VALUE=NotResolvedInTime
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[__index][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index_timeout T[new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
+[GUI] GamepassShop
+TextButton | Players.Raelity911.PlayerGui.GamepassShop.Dim | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GamepassShop.Main.Top.Close | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GamepassShop.Main.Cards.List.Card.Padded.Bottom.BuyBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GamepassShop.Main.Cards.List.Card.Padded.Bottom.GiftBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GamepassShop.Main.Cards.List.Card.OwnedOverlay.GiftBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.GamepassShop.GiftDim | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GamepassShop.GiftPanel.Close | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GamepassShop.GiftPanel.List.PlayerRow.PickBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally INFO name=_finally source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally C1=_unhandledRejection
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally C2=_new
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__finally TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
+[GUI] GudangUi
+ImageButton | Players.Raelity911.PlayerGui.GudangUi.Frame.Topbar.TabFrame.TabDekorasi | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GudangUi.Frame.Topbar.TabFrame.TabPagar | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GudangUi.Frame.Topbar.TabFrame.TabSemua | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GudangUi.Frame.Topbar.CloseBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.GudangUi.Frame.ItemLIst.List.Template.RightPanel.JualBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.GudangUi.Frame.ItemLIst.List.Template.RightPanel.GiftBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.GudangUi.Frame.ItemLIst.List.Template.RightPanel.AddBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.GudangUi.AmountPopup.AmountInput.MinusBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.GudangUi.AmountPopup.AmountInput.PlusBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.GudangUi.AmountPopup.ConfirmBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.GudangUi.AmountPopup.CancelBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GudangUi.GiftPanel.Close | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GudangUi.GiftPanel.List.PlayerRow.PickBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled INFO name=_consumerCancelled source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled C1=_status
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled C2=Status
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled C3=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled C4=_consumers
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled C5=next
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__consumerCancelled TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
+[GUI] HammerWarning
+ImageButton | Players.Raelity911.PlayerGui.HammerWarning.Panel.OkBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject INFO name=_reject source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject C1=_status
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject C2=Status
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject C3=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject C4=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject C5=_valuesLength
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject C6=_values
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject C7=_queuedReject
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject C8=next
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T___index__reject UV2 TYPE=function VALUE=function: 0x37b2e7f814aa399f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
+[GUI] HotbarUI
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot1 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot1.RemoveBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot2 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot2.RemoveBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot3 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot3.RemoveBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot4 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot4.RemoveBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot5 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot5.RemoveBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.InvButton | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Header.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv1 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv1.AddBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv2 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv2.AddBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv3 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv3.AddBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv4 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv4.AddBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv5 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv5.AddBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv6 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv6.AddBtn | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Semua | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Alat | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Kendaraan | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Bibit | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Panen | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Ternak | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.SlotTemplate | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.SlotTemplate.RemoveBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InvSlotTemplate | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InvSlotTemplate.AddBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HotbarUI.TabTemplate | Text= | Visible=false | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is INFO name=is source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_is TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
+[GUI] JamUi
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each INFO name=each source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each UV2 TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Kind][ExecutionError] TYPE=string VALUE=ExecutionError
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Kind][TimedOut] TYPE=string VALUE=TimedOut
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Kind][AlreadyCancelled] TYPE=string VALUE=AlreadyCancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[Kind][NotResolvedInTime] TYPE=string VALUE=NotResolvedInTime
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[__index][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_each T[new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
+[GUI] KaryawanUI
+TextButton | Players.Raelity911.PlayerGui.KaryawanUI.Backdrop | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.Header.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.TabRow.TabPekerja | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.TabRow.TabLamaran | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.TabRow.TabHistory | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.TabRow.TabGaji | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.List.ReqTemplate.Terima | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.List.ReqTemplate.Tolak | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.List.WorkTemplate.Access.BuilderBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.List.WorkTemplate.Access.BersihBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.List.WorkTemplate.Pecat | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.GajiPage.SetBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.GajiPage.Samakan.TerapkanBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.WorkerPanel.Header.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.WorkerPanel.StatusCard.QuitBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.WorkerPanel.List.BossTemplate.Minta | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.WorkerPanel.TawaranCard.TolakBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.WorkerPanel.TawaranCard.SetujuBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.KaryawanUI.ConfirmPopup.Dim | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.ConfirmPopup.Box.YaBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.ConfirmPopup.Box.BatalBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try INFO name=try source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try C1=_try
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try C2=debug
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try C3=traceback
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_try TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype_cancel ALREADY_SEEN function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype_finally ALREADY_SEEN function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype__andThen ALREADY_SEEN function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype_andThenReturn ALREADY_SEEN function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype_finallyReturn ALREADY_SEEN function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype_await ALREADY_SEEN function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype_finallyCall ALREADY_SEEN function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype_expect ALREADY_SEEN function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype_timeout ALREADY_SEEN function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype__finally ALREADY_SEEN function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype__consumerCancelled ALREADY_SEEN function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_prototype__reject ALREADY_SEEN function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_async ALREADY_SEEN function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
+[GUI] MisiRewardGui
+TextButton | Players.Raelity911.PlayerGui.MisiRewardGui.Dim | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled INFO name=allSettled source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_allSettled TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
+[GUI] LaundryUI
+ImageButton | Players.Raelity911.PlayerGui.LaundryUI.MainFrame.LeftPanel.ClothesList.RowTemplate.PlusBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.LaundryUI.MainFrame.RightPanel.RightHeader.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.LaundryUI.MainFrame.RightPanel.StartBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any INFO name=any source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any C1=_all
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any C2=debug
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any C3=traceback
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_any TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
+[GUI] ListrikSwitchUI
+TextButton | Players.Raelity911.PlayerGui.ListrikSwitchUI.Dim | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ListrikSwitchUI.Panel.Close | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ListrikSwitchUI.Panel.Switch | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new INFO name=new source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new C1=_new
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new C2=debug
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new C3=traceback
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_new TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
+[GUI] LokerUI
+TextButton | Players.Raelity911.PlayerGui.LokerUI.Backdrop | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Header.CloseBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.TabBar.TabInfo | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.TabBar.TabSebar | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab1.List.LokerCard.TeleportBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab1.List.LokerCard.LamarBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.SlotSection.Options.Slot1 | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.SlotSection.Options.Slot2 | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.SlotSection.Options.Slot3 | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.SlotSection.Options.Slot4 | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.GajiSection.Stepper.MinBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.GajiSection.Stepper.PlusBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.GajiSection.UbahBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.BroadcastBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject INFO name=reject source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject C1=_new
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject C2=debug
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject C3=traceback
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject UV1 TYPE=function VALUE=function: 0x37b2e7f814aa399f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject UV2 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_reject TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
+[GUI] MiniGame
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold INFO name=fold source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_fold TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
+[GUI] MisiUI
+TextButton | Players.Raelity911.PlayerGui.MisiUI.Backdrop | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MisiUI.Panel.Header.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MisiUI.Panel.Left.ClaimBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all INFO name=all source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all C1=_all
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all C2=debug
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all C3=traceback
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_all TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
+[GUI] MusicUI
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.NowPlaying.Controls.PrevBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.NowPlaying.Controls.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.NowPlaying.Controls.NextBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.NowPlaying.Volume.MinusBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.NowPlaying.Volume.PlusBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Header.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.TabBar.Scroll.ChipTemplate | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.TabBar.Scroll.Chip_ALL | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.TabBar.Scroll.Chip_DJ | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.TabBar.Scroll.Chip_GALAU | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.TabBar.Scroll.Chip_JAWA AKUSTIK | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.SongTemplate.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_1.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_2.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_3.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_4.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_5.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_6.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_7.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_8.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_9.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_10.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_11.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_12.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_13.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_14.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_15.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_16.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_17.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_18.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_19.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_20.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_21.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_22.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_23.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_24.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_25.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_26.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_27.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_28.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_29.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_30.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_31.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_32.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_33.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_34.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_35.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_36.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_37.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_38.PlayBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.CustomBar.PlayCustomBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve INFO name=resolve source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve C1=_new
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve C2=debug
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve C3=traceback
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve UV1 TYPE=function VALUE=function: 0x37b2e7f814aa399f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve UV2 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_resolve TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
+[GUI] NekoCam
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error___tostring function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error___tostring INFO name=__tostring source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error___tostring C1=string
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error___tostring C2=format
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
+[GUI] NotifUiv2
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_getErrorChain function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_getErrorChain INFO name=getErrorChain source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_getErrorChain C1=parent
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_getErrorChain C2=table
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_getErrorChain C3=insert
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
+[GUI] PetUI
+TextButton | Players.Raelity911.PlayerGui.PetUI.Backdrop | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.Header.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.TabBar.vehicle | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.TabBar.TrailTab | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.TabBar.PetTab | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.CardTemplate | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_HalloweenPteranodon | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Winged Fairy | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_AbyssCorn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Fiery Dragon | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Fox | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Bull | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Bunny | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Dog | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Helios | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Ascended Bull | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Gummy Doubull | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_mosmos | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_wipie | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Licaww | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_NagaIjo | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Dragoncoklat | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_PinkPlenger | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_SiirengBiru | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Hantusapu | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Hantuimup | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Astralune | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_NEBULYN | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_mochi Bunny | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.DetailPane.EquipBtn | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend INFO name=extend source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend C1=kind
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend C2=new
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend UV1 TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[Kind][ExecutionError] TYPE=string VALUE=ExecutionError
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[Kind][TimedOut] TYPE=string VALUE=TimedOut
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[Kind][AlreadyCancelled] TYPE=string VALUE=AlreadyCancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[Kind][NotResolvedInTime] TYPE=string VALUE=NotResolvedInTime
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[__index][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[__index][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[__index][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[__index][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[__index][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[__index][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[__index][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[__index][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_extend T[new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
+[GUI] PlayerHUD
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind INFO name=isKind source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind C1=Argument #2 to Promise.Error.isKind must not be nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind C2=assert
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind UV1 TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[Kind][ExecutionError] TYPE=string VALUE=ExecutionError
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[Kind][TimedOut] TYPE=string VALUE=TimedOut
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[Kind][AlreadyCancelled] TYPE=string VALUE=AlreadyCancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[Kind][NotResolvedInTime] TYPE=string VALUE=NotResolvedInTime
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[__index][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[__index][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[__index][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[__index][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[__index][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[__index][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[__index][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[__index][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_isKind T[new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
+[GUI] PlayerList
+TextButton | Players.Raelity911.PlayerGui.PlayerList.Main.Header.CategoryLabel.Hit | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PlayerList.Main.Header.SwapBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.Main.List.Row.HitHolder.Hit | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.Main.List.Row_1337645810.HitHolder.Hit | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.MenuDim | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.ActionMenu.Item | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.InfoPanel.CloseBtn | Text=Tutup | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.ReportPanel.Reasons.ReasonBtn | Text=Alasan | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.ReportPanel.CancelBtn | Text=Batal | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.Presets.P10 | Text=10 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.Presets.P25 | Text=25 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.Presets.P50 | Text=50 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.Presets.P100 | Text=100 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.Presets.P500 | Text=500 | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.SendBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.CancelBtn | Text=Batal | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_is function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_is INFO name=is source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_is C1=type
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
+[GUI] ServerList
+ImageButton | Players.Raelity911.PlayerGui.ServerList.Panel.Header.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ServerList.Panel.List.RowTemplate.Action | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.PrivatContent.PrivList.PrivTemplate.LockBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.PrivatContent.BuatPrivBtn | Text=BUAT SERVER PRIVAT | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.PublikListContent.PubList.PubTemplate.JoinBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.PublikListContent.PindahBtn | Text=MASUK | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.PublikContent.BuatRoomBtn | Text=BUAT SERVER | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.LobbyContent.ReturnBtn | Text=KEMBALI KE LOBBY | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.ModeBar.BtnPlot8 | Text=8 PLOT | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.ModeBar.BtnPlot4 | Text=4 PLOT | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.BarisTab.TabBar.TabPublik | Text=PRIVATE | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.BarisTab.TabBar.TabPrivat | Text=BUAT ROOM | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.BarisTab.TabBar.TabLobby | Text=LOBBY | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.PinCreatePanel | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.PinCreatePanel.Panel.BuatBtn | Text=BUAT SERVER | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.ServerList.PinCreatePanel.Panel.BatalBtn | Text=BATAL | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new INFO name=new source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new C1=error
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new C2=trace
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new C3=context
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new C4=kind
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new C5=parent
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new C6=createdTick
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new C7=createdTrace
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new UV1 TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[Kind][ExecutionError] TYPE=string VALUE=ExecutionError
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[Kind][TimedOut] TYPE=string VALUE=TimedOut
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[Kind][AlreadyCancelled] TYPE=string VALUE=AlreadyCancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[Kind][NotResolvedInTime] TYPE=string VALUE=NotResolvedInTime
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[__index][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[__index][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[__index][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[__index][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[__index][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[__index][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[__index][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[__index][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.T_Error_new T[new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new TABLE_TRUNCATED
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new UV2 TYPE=table VALUE=table: 0x87fcdef804b086ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new T[__mode] TYPE=string VALUE=k
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new UV3 TYPE=function VALUE=function: 0xd2f369fdad680cb2
+[GUI] Setting
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.TopFrame.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.NameSetting.Toggle | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.GuiSetting.Toggle | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.ShadowSetting.Toggle | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.BlurSetting.Toggle | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.MuteBgm.Toggle | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.MuteBoombox.Toggle | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.HideChatBubbles.Toggle | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.PilihTexture.TexBtns.Tex_Low | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.PilihTexture.TexBtns.Tex_Normal | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.PilihTexture.TexBtns.Tex_High | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.GridSetting.Toggle | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 function: 0xd2f369fdad680cb2
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 INFO name=runExecutor source==ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise what=Lua line=nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 C1=traceback is nil
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 C2=assert
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 UV1 TYPE=function VALUE=function: 0x2b88b1edcb9c2430
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 UV2 TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[Kind][ExecutionError] TYPE=string VALUE=ExecutionError
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[Kind][TimedOut] TYPE=string VALUE=TimedOut
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[Kind][AlreadyCancelled] TYPE=string VALUE=AlreadyCancelled
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[Kind][NotResolvedInTime] TYPE=string VALUE=NotResolvedInTime
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[__index][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[__index][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[__index][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[__index][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[__index][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[__index][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[__index][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[__index][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T__new.UV3 T[new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection.T_fromEvent ALREADY_SEEN function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_onUnhandledRejection T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection.T__all ALREADY_SEEN function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T_onUnhandledRejection T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection.T__try ALREADY_SEEN function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T_onUnhandledRejection T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection.T___tostring ALREADY_SEEN function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T_onUnhandledRejection T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection.T_retryWithDelay ALREADY_SEEN function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_onUnhandledRejection T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T_defer ALREADY_SEEN function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection.T_race ALREADY_SEEN function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_onUnhandledRejection T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection.T_retry ALREADY_SEEN function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_onUnhandledRejection T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection.T_delay ALREADY_SEEN function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_onUnhandledRejection T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection.T__getTime ALREADY_SEEN function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T_onUnhandledRejection T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection.T_promisify ALREADY_SEEN function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index_cancel ALREADY_SEEN function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index_finally ALREADY_SEEN function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index__andThen ALREADY_SEEN function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index_andThenReturn ALREADY_SEEN function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index_finallyReturn ALREADY_SEEN function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index_await ALREADY_SEEN function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index_finallyCall ALREADY_SEEN function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index_expect ALREADY_SEEN function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index_timeout ALREADY_SEEN function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index__finally ALREADY_SEEN function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index__consumerCancelled ALREADY_SEEN function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T___index__reject ALREADY_SEEN function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1.T_onUnhandledRejection T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection.T_is ALREADY_SEEN function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_onUnhandledRejection T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection.T_each ALREADY_SEEN function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_onUnhandledRejection T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection.T_try ALREADY_SEEN function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_onUnhandledRejection T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype_cancel ALREADY_SEEN function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype_finally ALREADY_SEEN function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype__andThen ALREADY_SEEN function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype_andThenReturn ALREADY_SEEN function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype_finallyReturn ALREADY_SEEN function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype_await ALREADY_SEEN function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype_finallyCall ALREADY_SEEN function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype_expect ALREADY_SEEN function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype_timeout ALREADY_SEEN function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype__finally ALREADY_SEEN function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype__consumerCancelled ALREADY_SEEN function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_onUnhandledRejection T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection.T_prototype__reject ALREADY_SEEN function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_onUnhandledRejection T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection.T_async ALREADY_SEEN function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_onUnhandledRejection T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection.T_allSettled ALREADY_SEEN function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_onUnhandledRejection T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection.T_any ALREADY_SEEN function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_onUnhandledRejection T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection.T_new ALREADY_SEEN function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_onUnhandledRejection T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection.T_reject ALREADY_SEEN function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_onUnhandledRejection T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection.T_fold ALREADY_SEEN function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_onUnhandledRejection T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection.T_all ALREADY_SEEN function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_onUnhandledRejection T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1.T_onUnhandledRejection T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1.T_onUnhandledRejection T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1.T_onUnhandledRejection T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1.T_onUnhandledRejection T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1.T_onUnhandledRejection T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection.T_resolve ALREADY_SEEN function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_onUnhandledRejection T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection.T_Error___tostring ALREADY_SEEN function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_onUnhandledRejection T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection.T_Error_getErrorChain ALREADY_SEEN function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_onUnhandledRejection T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection.T_Error_extend ALREADY_SEEN function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_onUnhandledRejection T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection.T_Error_isKind ALREADY_SEEN function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_onUnhandledRejection T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection.T_Error_is ALREADY_SEEN function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_onUnhandledRejection T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1.T_onUnhandledRejection T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1.T_onUnhandledRejection T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection.T_Error_new ALREADY_SEEN function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_onUnhandledRejection TABLE_TRUNCATED
-CARD1_Respond.UV1 T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1.T__new ALREADY_SEEN function: 0x4b8abdaf72909eb4
-CARD1_Respond.UV1 T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_Respond.UV1.T_fromEvent ALREADY_SEEN function: 0xd9890009f60b8b39
-CARD1_Respond.UV1 T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1.T__all ALREADY_SEEN function: 0x816d4a5b1c639bd6
-CARD1_Respond.UV1 T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1.T__try ALREADY_SEEN function: 0x9a9320f72ee2a9cb
-CARD1_Respond.UV1 T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1.T___tostring ALREADY_SEEN function: 0x82fc12b22061a5c4
-CARD1_Respond.UV1 T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1.T_retryWithDelay ALREADY_SEEN function: 0x3abdabb5ae6dbb3d
-CARD1_Respond.UV1 T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_defer ALREADY_SEEN function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1 T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1.T_race ALREADY_SEEN function: 0x2fcb4565cb251e5c
-CARD1_Respond.UV1 T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1.T_retry ALREADY_SEEN function: 0x7f63e1ab79b224fc
-CARD1_Respond.UV1 T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1.T_delay ALREADY_SEEN function: 0xce7b47077d62cf8c
-CARD1_Respond.UV1 T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_Respond.UV1.T__getTime ALREADY_SEEN function: 0x048340943b04d1a7
-CARD1_Respond.UV1 T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_Respond.UV1.T_promisify ALREADY_SEEN function: 0xfb7fac5204b77446
-CARD1_Respond.UV1 T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1 T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T___index_cancel ALREADY_SEEN function: 0x14d4f8132a116152
-CARD1_Respond.UV1 T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T___index_finally ALREADY_SEEN function: 0x4145a83e25d301e6
-CARD1_Respond.UV1 T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T___index__andThen ALREADY_SEEN function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1 T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T___index_andThenReturn ALREADY_SEEN function: 0x0c9a891ed2700661
-CARD1_Respond.UV1 T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T___index_finallyReturn ALREADY_SEEN function: 0x60b14059596f355b
-CARD1_Respond.UV1 T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T___index_await ALREADY_SEEN function: 0x613db7de2f2745c3
-CARD1_Respond.UV1 T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T___index_finallyCall ALREADY_SEEN function: 0xdc486691ececef94
-CARD1_Respond.UV1 T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T___index_expect ALREADY_SEEN function: 0x8af81486bcca3672
-CARD1_Respond.UV1 T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T___index_timeout ALREADY_SEEN function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1 T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T___index__finally ALREADY_SEEN function: 0x368bee11c68036ff
-CARD1_Respond.UV1 T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T___index__consumerCancelled ALREADY_SEEN function: 0x9baf14a03c11176a
-CARD1_Respond.UV1 T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T___index__reject ALREADY_SEEN function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1 T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_Respond.UV1 T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_Respond.UV1.T_is ALREADY_SEEN function: 0x46125d810a1fe784
-CARD1_Respond.UV1 T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1.T_each ALREADY_SEEN function: 0x3cbc0dc646d9a4c7
-CARD1_Respond.UV1 T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1.T_try ALREADY_SEEN function: 0x1c18965f8ba8c3c5
-CARD1_Respond.UV1 T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_Respond.UV1 T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_Respond.UV1 T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_Respond.UV1.T_prototype_cancel ALREADY_SEEN function: 0x14d4f8132a116152
-CARD1_Respond.UV1 T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_Respond.UV1.T_prototype_finally ALREADY_SEEN function: 0x4145a83e25d301e6
-CARD1_Respond.UV1 T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1.T_prototype__andThen ALREADY_SEEN function: 0x16a4552e9dc0f233
-CARD1_Respond.UV1 T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_Respond.UV1.T_prototype_andThenReturn ALREADY_SEEN function: 0x0c9a891ed2700661
-CARD1_Respond.UV1 T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_Respond.UV1.T_prototype_finallyReturn ALREADY_SEEN function: 0x60b14059596f355b
-CARD1_Respond.UV1 T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_Respond.UV1.T_prototype_await ALREADY_SEEN function: 0x613db7de2f2745c3
-CARD1_Respond.UV1 T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_Respond.UV1.T_prototype_finallyCall ALREADY_SEEN function: 0xdc486691ececef94
-CARD1_Respond.UV1 T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_Respond.UV1.T_prototype_expect ALREADY_SEEN function: 0x8af81486bcca3672
-CARD1_Respond.UV1 T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1.T_prototype_timeout ALREADY_SEEN function: 0xd8d2a7663c110f2a
-CARD1_Respond.UV1 T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_Respond.UV1.T_prototype__finally ALREADY_SEEN function: 0x368bee11c68036ff
-CARD1_Respond.UV1 T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_Respond.UV1.T_prototype__consumerCancelled ALREADY_SEEN function: 0x9baf14a03c11176a
-CARD1_Respond.UV1 T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1.T_prototype__reject ALREADY_SEEN function: 0xcf51a2d1ef6e26d2
-CARD1_Respond.UV1 T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1.T_async ALREADY_SEEN function: 0xd4d7ac63d93eb3ae
-CARD1_Respond.UV1 T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1.T_allSettled ALREADY_SEEN function: 0x2319ddadb5c52c9f
-CARD1_Respond.UV1 T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1.T_any ALREADY_SEEN function: 0x3572aba3b6550b5a
-CARD1_Respond.UV1 T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1.T_new ALREADY_SEEN function: 0x3784e5ceb056ec77
-CARD1_Respond.UV1 T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_Respond.UV1.T_reject ALREADY_SEEN function: 0x812fb18d3b3475af
-CARD1_Respond.UV1 T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1.T_fold ALREADY_SEEN function: 0xbb4648ff2f4e7191
-CARD1_Respond.UV1 T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_Respond.UV1.T_all ALREADY_SEEN function: 0x7b63babc16dec54f
-CARD1_Respond.UV1 T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_Respond.UV1 T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_Respond.UV1 T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_Respond.UV1 T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_Respond.UV1 T[Status][Started] TYPE=string VALUE=Started
-CARD1_Respond.UV1 T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_Respond.UV1.T_resolve ALREADY_SEEN function: 0x3a010af6a518286c
-CARD1_Respond.UV1 T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1 T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_Respond.UV1.T_Error___tostring ALREADY_SEEN function: 0x529cd44dbde222cd
-CARD1_Respond.UV1 T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_Respond.UV1.T_Error_getErrorChain ALREADY_SEEN function: 0x8dc897df5e30844a
-CARD1_Respond.UV1 T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1.T_Error_extend ALREADY_SEEN function: 0x9c43caa81c41a3ce
-CARD1_Respond.UV1 T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1.T_Error_isKind ALREADY_SEEN function: 0xd9ad735c394b6f08
-CARD1_Respond.UV1 T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1.T_Error_is ALREADY_SEEN function: 0x7a00caf1f48fa22a
-CARD1_Respond.UV1 T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_Respond.UV1 T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_Respond.UV1 T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_Respond.UV1.T_Error_new ALREADY_SEEN function: 0x75281efcd1e774ca
-CARD1_Respond.UV1 TABLE_TRUNCATED
-CARD1_Respond.UV1 UV2 TYPE=boolean VALUE=false
-CARD1_Respond.UV1 UV3 TYPE=userdata VALUE=Respond
-CARD1_Respond.UV1 UV4 TYPE=function VALUE=function: 0x44094e1496ad676f
+[GUI] SwitchRoleUI
+TextButton | Players.Raelity911.PlayerGui.SwitchRoleUI.Dim | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.SwitchRoleUI.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SwitchRoleUI.Panel.Cards.CardPemilik | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SwitchRoleUI.Panel.Cards.CardPekerja | Text= | Visible=true | Active=true
 
-### CARD1_Respond.UV1.UV4 function: 0x44094e1496ad676f
-CARD1_Respond.UV1.UV4 INFO name=ProcessOutbound source==ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client what=Lua line=nil
-CARD1_Respond.UV1.UV4 C1=ipairs
+[GUI] TaxUI
+ImageButton | Players.Raelity911.PlayerGui.TaxUI.Main.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TaxUI.Main.Content.LeftPanel.CekSaldoBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TaxUI.Main.Content.LeftPanel.BayarBtn | Text= | Visible=true | Active=true
 
-### CARD1_VerifyReject function: 0xfb295664969c32a6
-CARD1_VerifyReject INFO name= source==ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm what=Lua line=nil
-CARD1_VerifyReject UV1 TYPE=function VALUE=function: 0x8aa6373127bfef04
+[GUI] TokenInputUI
+TextButton | Players.Raelity911.PlayerGui.TokenInputUI.Dim | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenInputUI.Panel.Close | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenInputUI.Panel.SubmitBtn | Text= | Visible=true | Active=true
 
-### CARD1_VerifyReject.UV1 function: 0x8aa6373127bfef04
-CARD1_VerifyReject.UV1 INFO name= source==ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client what=Lua line=nil
-CARD1_VerifyReject.UV1 C1=table
-CARD1_VerifyReject.UV1 C2=pack
-CARD1_VerifyReject.UV1 UV1 TYPE=table VALUE=table: 0x83cdfe7380e2090e
-CARD1_VerifyReject.UV1 T[onUnhandledRejection] TYPE=function VALUE=function: 0x6633f08c039c9e06
-CARD1_VerifyReject.UV1.T_onUnhandledRejection ALREADY_SEEN function: 0x6633f08c039c9e06
-CARD1_VerifyReject.UV1 T[_new] TYPE=function VALUE=function: 0x4b8abdaf72909eb4
-CARD1_VerifyReject.UV1.T__new ALREADY_SEEN function: 0x4b8abdaf72909eb4
-CARD1_VerifyReject.UV1 T[fromEvent] TYPE=function VALUE=function: 0xd9890009f60b8b39
-CARD1_VerifyReject.UV1.T_fromEvent ALREADY_SEEN function: 0xd9890009f60b8b39
-CARD1_VerifyReject.UV1 T[_all] TYPE=function VALUE=function: 0x816d4a5b1c639bd6
-CARD1_VerifyReject.UV1.T__all ALREADY_SEEN function: 0x816d4a5b1c639bd6
-CARD1_VerifyReject.UV1 T[_try] TYPE=function VALUE=function: 0x9a9320f72ee2a9cb
-CARD1_VerifyReject.UV1.T__try ALREADY_SEEN function: 0x9a9320f72ee2a9cb
-CARD1_VerifyReject.UV1 T[__tostring] TYPE=function VALUE=function: 0x82fc12b22061a5c4
-CARD1_VerifyReject.UV1.T___tostring ALREADY_SEEN function: 0x82fc12b22061a5c4
-CARD1_VerifyReject.UV1 T[retryWithDelay] TYPE=function VALUE=function: 0x3abdabb5ae6dbb3d
-CARD1_VerifyReject.UV1.T_retryWithDelay ALREADY_SEEN function: 0x3abdabb5ae6dbb3d
-CARD1_VerifyReject.UV1 T[defer] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_VerifyReject.UV1.T_defer ALREADY_SEEN function: 0xd4d7ac63d93eb3ae
-CARD1_VerifyReject.UV1 T[race] TYPE=function VALUE=function: 0x2fcb4565cb251e5c
-CARD1_VerifyReject.UV1.T_race ALREADY_SEEN function: 0x2fcb4565cb251e5c
-CARD1_VerifyReject.UV1 T[retry] TYPE=function VALUE=function: 0x7f63e1ab79b224fc
-CARD1_VerifyReject.UV1.T_retry ALREADY_SEEN function: 0x7f63e1ab79b224fc
-CARD1_VerifyReject.UV1 T[delay] TYPE=function VALUE=function: 0xce7b47077d62cf8c
-CARD1_VerifyReject.UV1.T_delay ALREADY_SEEN function: 0xce7b47077d62cf8c
-CARD1_VerifyReject.UV1 T[_getTime] TYPE=function VALUE=function: 0x048340943b04d1a7
-CARD1_VerifyReject.UV1.T__getTime ALREADY_SEEN function: 0x048340943b04d1a7
-CARD1_VerifyReject.UV1 T[promisify] TYPE=function VALUE=function: 0xfb7fac5204b77446
-CARD1_VerifyReject.UV1.T_promisify ALREADY_SEEN function: 0xfb7fac5204b77446
-CARD1_VerifyReject.UV1 T[__index] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_VerifyReject.UV1 T[__index][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_VerifyReject.UV1.T___index_cancel ALREADY_SEEN function: 0x14d4f8132a116152
-CARD1_VerifyReject.UV1 T[__index][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_VerifyReject.UV1.T___index_finally ALREADY_SEEN function: 0x4145a83e25d301e6
-CARD1_VerifyReject.UV1 T[__index][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_VerifyReject.UV1.T___index__andThen ALREADY_SEEN function: 0x16a4552e9dc0f233
-CARD1_VerifyReject.UV1 T[__index][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_VerifyReject.UV1.T___index_andThenReturn ALREADY_SEEN function: 0x0c9a891ed2700661
-CARD1_VerifyReject.UV1 T[__index][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_VerifyReject.UV1.T___index_finallyReturn ALREADY_SEEN function: 0x60b14059596f355b
-CARD1_VerifyReject.UV1 T[__index][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_VerifyReject.UV1.T___index_await ALREADY_SEEN function: 0x613db7de2f2745c3
-CARD1_VerifyReject.UV1 T[__index][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_VerifyReject.UV1.T___index_finallyCall ALREADY_SEEN function: 0xdc486691ececef94
-CARD1_VerifyReject.UV1 T[__index][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_VerifyReject.UV1.T___index_expect ALREADY_SEEN function: 0x8af81486bcca3672
-CARD1_VerifyReject.UV1 T[__index][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_VerifyReject.UV1.T___index_timeout ALREADY_SEEN function: 0xd8d2a7663c110f2a
-CARD1_VerifyReject.UV1 T[__index][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_VerifyReject.UV1.T___index__finally ALREADY_SEEN function: 0x368bee11c68036ff
-CARD1_VerifyReject.UV1 T[__index][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_VerifyReject.UV1.T___index__consumerCancelled ALREADY_SEEN function: 0x9baf14a03c11176a
-CARD1_VerifyReject.UV1 T[__index][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_VerifyReject.UV1.T___index__reject ALREADY_SEEN function: 0xcf51a2d1ef6e26d2
-CARD1_VerifyReject.UV1 T[_unhandledRejectionCallbacks] TYPE=table VALUE=table: 0x43321cded54231a2
-CARD1_VerifyReject.UV1 T[is] TYPE=function VALUE=function: 0x46125d810a1fe784
-CARD1_VerifyReject.UV1.T_is ALREADY_SEEN function: 0x46125d810a1fe784
-CARD1_VerifyReject.UV1 T[each] TYPE=function VALUE=function: 0x3cbc0dc646d9a4c7
-CARD1_VerifyReject.UV1.T_each ALREADY_SEEN function: 0x3cbc0dc646d9a4c7
-CARD1_VerifyReject.UV1 T[try] TYPE=function VALUE=function: 0x1c18965f8ba8c3c5
-CARD1_VerifyReject.UV1.T_try ALREADY_SEEN function: 0x1c18965f8ba8c3c5
-CARD1_VerifyReject.UV1 T[_timeEvent] TYPE=userdata VALUE=Signal Heartbeat
-CARD1_VerifyReject.UV1 T[prototype] TYPE=table VALUE=table: 0x2cb74c083d02f093
-CARD1_VerifyReject.UV1 T[prototype][cancel] TYPE=function VALUE=function: 0x14d4f8132a116152
-CARD1_VerifyReject.UV1.T_prototype_cancel ALREADY_SEEN function: 0x14d4f8132a116152
-CARD1_VerifyReject.UV1 T[prototype][finally] TYPE=function VALUE=function: 0x4145a83e25d301e6
-CARD1_VerifyReject.UV1.T_prototype_finally ALREADY_SEEN function: 0x4145a83e25d301e6
-CARD1_VerifyReject.UV1 T[prototype][_andThen] TYPE=function VALUE=function: 0x16a4552e9dc0f233
-CARD1_VerifyReject.UV1.T_prototype__andThen ALREADY_SEEN function: 0x16a4552e9dc0f233
-CARD1_VerifyReject.UV1 T[prototype][andThenReturn] TYPE=function VALUE=function: 0x0c9a891ed2700661
-CARD1_VerifyReject.UV1.T_prototype_andThenReturn ALREADY_SEEN function: 0x0c9a891ed2700661
-CARD1_VerifyReject.UV1 T[prototype][finallyReturn] TYPE=function VALUE=function: 0x60b14059596f355b
-CARD1_VerifyReject.UV1.T_prototype_finallyReturn ALREADY_SEEN function: 0x60b14059596f355b
-CARD1_VerifyReject.UV1 T[prototype][await] TYPE=function VALUE=function: 0x613db7de2f2745c3
-CARD1_VerifyReject.UV1.T_prototype_await ALREADY_SEEN function: 0x613db7de2f2745c3
-CARD1_VerifyReject.UV1 T[prototype][finallyCall] TYPE=function VALUE=function: 0xdc486691ececef94
-CARD1_VerifyReject.UV1.T_prototype_finallyCall ALREADY_SEEN function: 0xdc486691ececef94
-CARD1_VerifyReject.UV1 T[prototype][expect] TYPE=function VALUE=function: 0x8af81486bcca3672
-CARD1_VerifyReject.UV1.T_prototype_expect ALREADY_SEEN function: 0x8af81486bcca3672
-CARD1_VerifyReject.UV1 T[prototype][timeout] TYPE=function VALUE=function: 0xd8d2a7663c110f2a
-CARD1_VerifyReject.UV1.T_prototype_timeout ALREADY_SEEN function: 0xd8d2a7663c110f2a
-CARD1_VerifyReject.UV1 T[prototype][_finally] TYPE=function VALUE=function: 0x368bee11c68036ff
-CARD1_VerifyReject.UV1.T_prototype__finally ALREADY_SEEN function: 0x368bee11c68036ff
-CARD1_VerifyReject.UV1 T[prototype][_consumerCancelled] TYPE=function VALUE=function: 0x9baf14a03c11176a
-CARD1_VerifyReject.UV1.T_prototype__consumerCancelled ALREADY_SEEN function: 0x9baf14a03c11176a
-CARD1_VerifyReject.UV1 T[prototype][_reject] TYPE=function VALUE=function: 0xcf51a2d1ef6e26d2
-CARD1_VerifyReject.UV1.T_prototype__reject ALREADY_SEEN function: 0xcf51a2d1ef6e26d2
-CARD1_VerifyReject.UV1 T[async] TYPE=function VALUE=function: 0xd4d7ac63d93eb3ae
-CARD1_VerifyReject.UV1.T_async ALREADY_SEEN function: 0xd4d7ac63d93eb3ae
-CARD1_VerifyReject.UV1 T[allSettled] TYPE=function VALUE=function: 0x2319ddadb5c52c9f
-CARD1_VerifyReject.UV1.T_allSettled ALREADY_SEEN function: 0x2319ddadb5c52c9f
-CARD1_VerifyReject.UV1 T[any] TYPE=function VALUE=function: 0x3572aba3b6550b5a
-CARD1_VerifyReject.UV1.T_any ALREADY_SEEN function: 0x3572aba3b6550b5a
-CARD1_VerifyReject.UV1 T[new] TYPE=function VALUE=function: 0x3784e5ceb056ec77
-CARD1_VerifyReject.UV1.T_new ALREADY_SEEN function: 0x3784e5ceb056ec77
-CARD1_VerifyReject.UV1 T[reject] TYPE=function VALUE=function: 0x812fb18d3b3475af
-CARD1_VerifyReject.UV1.T_reject ALREADY_SEEN function: 0x812fb18d3b3475af
-CARD1_VerifyReject.UV1 T[fold] TYPE=function VALUE=function: 0xbb4648ff2f4e7191
-CARD1_VerifyReject.UV1.T_fold ALREADY_SEEN function: 0xbb4648ff2f4e7191
-CARD1_VerifyReject.UV1 T[all] TYPE=function VALUE=function: 0x7b63babc16dec54f
-CARD1_VerifyReject.UV1.T_all ALREADY_SEEN function: 0x7b63babc16dec54f
-CARD1_VerifyReject.UV1 T[Status] TYPE=table VALUE=table: 0xd6b5b72e5dbb9cc6
-CARD1_VerifyReject.UV1 T[Status][Cancelled] TYPE=string VALUE=Cancelled
-CARD1_VerifyReject.UV1 T[Status][Rejected] TYPE=string VALUE=Rejected
-CARD1_VerifyReject.UV1 T[Status][Resolved] TYPE=string VALUE=Resolved
-CARD1_VerifyReject.UV1 T[Status][Started] TYPE=string VALUE=Started
-CARD1_VerifyReject.UV1 T[resolve] TYPE=function VALUE=function: 0x3a010af6a518286c
-CARD1_VerifyReject.UV1.T_resolve ALREADY_SEEN function: 0x3a010af6a518286c
-CARD1_VerifyReject.UV1 T[Error] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_VerifyReject.UV1 T[Error][__tostring] TYPE=function VALUE=function: 0x529cd44dbde222cd
-CARD1_VerifyReject.UV1.T_Error___tostring ALREADY_SEEN function: 0x529cd44dbde222cd
-CARD1_VerifyReject.UV1 T[Error][getErrorChain] TYPE=function VALUE=function: 0x8dc897df5e30844a
-CARD1_VerifyReject.UV1.T_Error_getErrorChain ALREADY_SEEN function: 0x8dc897df5e30844a
-CARD1_VerifyReject.UV1 T[Error][extend] TYPE=function VALUE=function: 0x9c43caa81c41a3ce
-CARD1_VerifyReject.UV1.T_Error_extend ALREADY_SEEN function: 0x9c43caa81c41a3ce
-CARD1_VerifyReject.UV1 T[Error][isKind] TYPE=function VALUE=function: 0xd9ad735c394b6f08
-CARD1_VerifyReject.UV1.T_Error_isKind ALREADY_SEEN function: 0xd9ad735c394b6f08
-CARD1_VerifyReject.UV1 T[Error][is] TYPE=function VALUE=function: 0x7a00caf1f48fa22a
-CARD1_VerifyReject.UV1.T_Error_is ALREADY_SEEN function: 0x7a00caf1f48fa22a
-CARD1_VerifyReject.UV1 T[Error][Kind] TYPE=table VALUE=table: 0x4c81e93c61ed9b8b
-CARD1_VerifyReject.UV1 T[Error][__index] TYPE=table VALUE=table: 0x43dfde148f367f72
-CARD1_VerifyReject.UV1 T[Error][new] TYPE=function VALUE=function: 0x75281efcd1e774ca
-CARD1_VerifyReject.UV1.T_Error_new ALREADY_SEEN function: 0x75281efcd1e774ca
-CARD1_VerifyReject.UV1 TABLE_TRUNCATED
-CARD1_VerifyReject.UV1 UV2 TYPE=boolean VALUE=false
-CARD1_VerifyReject.UV1 UV3 TYPE=userdata VALUE=VerifyReject
-CARD1_VerifyReject.UV1 UV4 TYPE=function VALUE=function: 0xddb696bb31eb3426
+[GUI] TokenListrikShop
+TextButton | Players.Raelity911.PlayerGui.TokenListrikShop.Dim | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Sidebar.Nav.NavToken | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Sidebar.Nav.NavRiwayat | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Close | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card.Padded.BuyBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M5.Padded.BuyBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M10.Padded.BuyBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M15.Padded.BuyBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M30.Padded.BuyBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M120.Padded.BuyBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M500.Padded.BuyBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TokenListrikShop.ResultOverlay.Dim | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.ResultOverlay.Pop.Buttons.CopyBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.ResultOverlay.Pop.Buttons.CloseBtn | Text= | Visible=true | Active=true
 
-### CARD1_VerifyReject.UV1.UV4 function: 0xddb696bb31eb3426
-CARD1_VerifyReject.UV1.UV4 INFO name=ProcessOutbound source==ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client what=Lua line=nil
-CARD1_VerifyReject.UV1.UV4 C1=ipairs
-BUTTON 2 Players.Raelity911.PlayerGui.PermintaanSewaUI.Tumpukan.Kartu_34.Isi.AccBtn
-CARD2_Respond ALREADY_SEEN function: 0xa6037f8567a3b807
-CARD2_VerifyReject ALREADY_SEEN function: 0xfb295664969c32a6
-VISIBLE_BUTTONS=2
+[GUI] TraktorUI
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Traktor.Tombol.BeliGoldBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Traktor.Tombol.BeliRobuxBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Traktor.Tombol.HadiahBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Traktor.Tombol.SpawnBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Gerbong.Tombol.BeliGoldBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Gerbong.Tombol.BeliRobuxBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Gerbong.Tombol.HadiahBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Gerbong.Tombol.Spawn1Btn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Gerbong.Tombol.Spawn2Btn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelHadiah.Close | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelHadiah.List.PlayerRow.PickBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelHadiah.ModeBayar.ModeRobux | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelHadiah.ModeBayar.ModeAset | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.HudTangki.UpgradeBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.KonfirmasiTangki.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.KonfirmasiTangki.Content.Tombol.UpgradeBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TraktorUI.KonfirmasiTangki.Content.Tombol.BatalBtn | Text= | Visible=true | Active=true
 
-V11 END | chars=285754 | clipboard=true | file=true
+[GUI] TransferUI
+ImageButton | Players.Raelity911.PlayerGui.TransferUI.Panel.TransferBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TransferUI.Panel.CancelBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TransferUI.Panel.CloseBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TransferUI.Panel.QuickAmounts.Quick_10000 | Text=10K | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TransferUI.Panel.QuickAmounts.Quick_50000 | Text=50K | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TransferUI.Panel.QuickAmounts.Quick_100000 | Text=100K | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TransferUI.Panel.QuickAmounts.Quick_500000 | Text=500K | Visible=true | Active=true
+
+[GUI] TutorialUi
+TextButton | Players.Raelity911.PlayerGui.TutorialUi.Main.Container.Confirm | Text=Tutup | Visible=true | Active=true
+
+[GUI] UiDombaGift
+ImageButton | Players.Raelity911.PlayerGui.UiDombaGift.Main.Topbar.CloseBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiDombaGift.Main.DombaRowTemplate.GiftBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.UiDombaGift.PlayerList.Topbar.CloseBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiDombaGift.PlayerList.PlayerRowTemplate.SelectBtn | Text= | Visible=true | Active=true
+
+[GUI] UiGame
+TextButton | Players.Raelity911.PlayerGui.UiGame.UpgradeUi.UpgradeBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.UpgradeUi.MoveBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.Toparframe.TabBulding | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.Toparframe.TabDekorasi | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.Toparframe.TabPagar | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.Toparframe.TabPremium | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.Toparframe.TabAlat | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.CloseBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Template.RightPanel.UnlockBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Template.RightPanel.Spawn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_1.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_1.RightPanel.Spawn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_2.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_2.RightPanel.Spawn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_3.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_3.RightPanel.Spawn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_4.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_4.RightPanel.Spawn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_5.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_5.RightPanel.Spawn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_6.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_6.RightPanel.Spawn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_7.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_7.RightPanel.Spawn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_8.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_8.RightPanel.Spawn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_9.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_9.RightPanel.Spawn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_10.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_10.RightPanel.Spawn | Text= | Visible=true | Active=true
+
+[GUI] UiMutasiTransfer
+ImageButton | Players.Raelity911.PlayerGui.UiMutasiTransfer.Main.Topbar.CloseBtn | Text= | Visible=true | Active=true
+
+[GUI] TanamUI
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelLahan.Topbar.CloseBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TanamUI.PanelLahan.Content.Kiri.AutoCard.ToggleAuto | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Wortel.BeliBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Wortel.Qty.MinBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Wortel.Qty.PlusBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Cabai.BeliBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Cabai.Qty.MinBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Cabai.Qty.PlusBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Tomat.BeliBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Tomat.Qty.MinBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Tomat.Qty.PlusBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.UpgradeGundukan.UpgradeBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelSegera.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelSegera.Content.OkeBtn | Text= | Visible=true | Active=true
+
+[GUI] TernakUI
+ImageButton | Players.Raelity911.PlayerGui.TernakUI.PanelBeliDomba.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TernakUI.PanelBeliDomba.Content.Cards.Card_Domba.BeliBtn | Text= | Visible=true | Active=true
+
+[GUI] ConvertUI
+ImageButton | Players.Raelity911.PlayerGui.ConvertUI.PanelConvert.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ConvertUI.PanelConvert.Content.MasukBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ConvertUI.PanelConvert.Content.KlaimBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.ConvertUI.PanelConvert.Content.KursStrip.PasarBtn | Text= | Visible=true | Active=true
+
+[GUI] TeleportUI
+ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Rumah.PergiBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Pajak.PergiBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Gacha.PergiBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Kebun.PergiBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Ternak.PergiBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Prioritas.PergiBtn | Text= | Visible=true | Active=true
+
+[GUI] TeleportTransisi
+
+[GUI] TutorialTernakUI
+ImageButton | Players.Raelity911.PlayerGui.TutorialTernakUI.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
+
+[GUI] TradeUI
+TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupAjakan.TerimaBtn | Text=SETUJU | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupAjakan.TolakBtn | Text=BATAL | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupAjakan.BatalAjakBtn | Text=BATALKAN AJAKAN | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupAjakan.KirimBtn | Text=AJAK | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupAjakan.BatalKonfBtn | Text=BATAL | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.Topbar.CloseBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.BatalBtn | Text=BATAL | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.SetujuBtn | Text=SETUJU | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomBarang.Grid.KartuTemplate | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomSaya.Gold.Klik | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomSaya.Kunci.Klik | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomSaya.Grid.KartuTemplate | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomSaya.Uang.Klik | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomLawan.Grid.KartuTemplate | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.MinBtn | Text=- | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.PlusBtn | Text=+ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.MaksBtn | Text=MAKS | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.KeluarkanBtn | Text=KELUARKAN | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.TawarkanBtn | Text=TAWARKAN | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.Topbar.TutupBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupHasil.OkBtn | Text=OKE | Visible=true | Active=true
+
+[GUI] HarianUI
+ImageButton | Players.Raelity911.PlayerGui.HarianUI.Entri.Top.Close | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HarianUI.Entri.Isi.Komunitas.Aksi | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HarianUI.Entri.Isi.Favorit.Aksi | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HarianUI.Entri.Isi.Like.Kotak | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HarianUI.Entri.Open | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.HarianUI.Daftar.Top.Close | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.HarianUI.Daftar.Klaim | Text= | Visible=true | Active=true
+
+[GUI] AdminAbuseUI
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseUI.JogetBtn | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseUI.Banner.HematBtn | Text= | Visible=false | Active=true
+
+[GUI] AdminAbuseKontrol
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Topbar.CloseBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.OtomatisBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.PembukaanBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.LemparBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.BurstBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.DanceBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.PenutupBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.EmoteBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.DiamBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.BatalBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Baris2.PanelBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Baris2.BersihBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Baris3.SebarBtn | Text= | Visible=true | Active=true
+
+[GUI] BursaGoldUI
+ImageButton | Players.Raelity911.PlayerGui.BursaGoldUI.PanelPasar.Topbar.CloseBtn | Text= | Visible=true | Active=true
+
+[GUI] KotakMisteriUI
+
+[GUI] SetorAsetUI
+ImageButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Top.Close | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Aset_uang | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Aset_kunci | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Aset_gold | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Cepat1 | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Cepat2 | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Cepat3 | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Cepat4 | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Setor | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.TabSetor | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.TabTarik | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Riwayat | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuProgres.Node1 | Text=1 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuProgres.Node2 | Text=2 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuProgres.Node3 | Text=3 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuProgres.Node4 | Text=4 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuProgres.Node5 | Text=5 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Konfirmasi | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Konfirmasi.Kotak.Batal | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Konfirmasi.Kotak.Ya | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Riwayat | Text= | Visible=false | Active=true
+ImageButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Riwayat.Kotak.Kepala.Tutup | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Riwayat.Kotak.BarisTpl.Struk | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Struk.Tutup | Text= | Visible=true | Active=true
+
+[GUI] PermintaanSewaUI
+TextButton | Players.Raelity911.PlayerGui.PermintaanSewaUI.KartuTemplate.Isi.AccBtn | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.PermintaanSewaUI.KartuTemplate.Isi.TolakBtn | Text= | Visible=true | Active=true
+
+[GUI] GajiNotifUI
+ImageButton | Players.Raelity911.PlayerGui.GajiNotifUI.TawaranKartu.LanjutBtn | Text= | Visible=true | Active=true
+ImageButton | Players.Raelity911.PlayerGui.GajiNotifUI.TawaranKartu.BerhentiBtn | Text= | Visible=true | Active=true
+
+[GUI] RedeemUI
+ImageButton | Players.Raelity911.PlayerGui.RedeemUI.Panel.Top.Close | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RedeemUI.Panel.Tukar | Text= | Visible=true | Active=true
+
+[GUI] BlindBoxLayar
+ImageButton | Players.Raelity911.PlayerGui.BlindBoxLayar.Tutup | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.BlindBoxLayar.Auto | Text= | Visible=true | Active=true
+
+[GUI] TabletUI
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.MyZone | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.Market | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.Musik | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.Pesan | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.Peta | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.Setelan | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMyZone.AppBar.Kembali | Text=‹ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.HomeBar | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.AppBar.Kembali | Text=‹ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Tab.Beli | Text=BELI | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Tab.Jual | Text=JUAL | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Tab.Riwayat | Text=RIWAYAT | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Kategori.K_semua | Text=Semua | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Kategori.K_gold | Text=Gold | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Kategori.K_kunci | Text=Kunci Emas | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Kategori.K_pet | Text=Pet | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Kategori.K_tani | Text=Tani & Ternak | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Urut | Text=Urut: Termurah | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Detail.Isi.TombolBeli | Text=BELI SEKARANG | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalJual.Form.TombolPasang | Text=PASANG DI MARKET | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalJual.Form.TombolJumlah | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalJual.Form.TombolHarga | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalJual.Lapak.Muat | Text=MUAT ULANG | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Konfirmasi.Kartu.Batal | Text=BATAL | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Konfirmasi.Kartu.Ya | Text=YA | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Templates.KartuBarang | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Templates.TasItem | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Templates.BarisLapak.Aksi | Text=AKSI | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Templates.Chip | Text=Semua | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Langkah.KurangBesar | Text=- | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Langkah.KurangKecil | Text=- | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Langkah.TambahKecil | Text=- | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Langkah.TambahBesar | Text=- | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Cepat.C1 | Text=- | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Cepat.C2 | Text=- | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Cepat.C3 | Text=- | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Cepat.C4 | Text=- | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Batal | Text=BATAL | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Simpan | Text=SIMPAN | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Kembali | Text=‹ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Beranda | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Beranda.Ikon | Text=⌂ | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Cari | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Cari.Ikon | Text=⌕ | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Koleksi | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Koleksi.Ikon | Text=≡ | Visible=true | Active=false
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.BuatPlaylist | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Disukai | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Speaker | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.Atas.Mundur | Text=‹ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.Atas.Maju | Text=› | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.Atas.KotakID.Putar | Text=PUTAR | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalDaftar.Aksi.PutarBesar | Text=▶ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalDaftar.Aksi.AcakBesar | Text=⇄ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Suka | Text=♡ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Kontrol.Acak | Text=⇄ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Kontrol.Sebelum | Text=⏮ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Kontrol.Maju | Text=⏭ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Kontrol.Ulang | Text=↻ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Kontrol.Putar | Text=▶ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Progres.Bar | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Progres.Bar.Area | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.VolIkon | Text=🔈 | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Volume | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Volume.Area | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Ubin | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Kartu | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Baris | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Baris.Suka | Text=♡ | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.ItemPlaylist | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.ItemSpeaker | Text= | Visible=false | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.ItemSpeaker.Tombol | Text=SAMBUNG | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.PanelSpeaker.Kartu.Perangkat | Text= | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.PanelSpeaker.Kartu.Tutup | Text=Tutup | Visible=true | Active=true
+
+[GUI] TouchGui
+ImageButton | Players.Raelity911.PlayerGui.TouchGui.TouchControlFrame.JumpButton | Text= | Visible=false | Active=true
+
+[GUI] ProximityPrompts
+TextButton | Players.Raelity911.PlayerGui.ProximityPrompts.Prompt.TextButton | Text=Button | Visible=true | Active=true
+
+[GUI] c77af9f1-3f2c-45fb-b7f7-315702bd0e9f
+TextButton | Players.Raelity911.PlayerGui.c77af9f1-3f2c-45fb-b7f7-315702bd0e9f.Entry | Text=:ff <player> | Visible=false | Active=true
+
+[GUI] RaelsTricksV1
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.Header.MinimizeButton | Text=— | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.CleanButton | Text=CLEANER: ON | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.FarmButton | Text=AUTO FARM: OFF | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.ConvertButton | Text=CONVERT: ON | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.FeedButton | Text=AUTO FEED: ON | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.AfkButton | Text=ANTI-AFK: ON | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.TpButton | Text=TP LOCATION: ON | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.GachaButton | Text=AUTO GACHA: OFF | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.HomeworkButton | Text=HOMEWORK: OFF | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.AutoAccButton | Text=AUTO ACC: ON | Visible=true | Active=true
+TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.RaelMiniButton | Text=RT | Visible=true | Active=true
