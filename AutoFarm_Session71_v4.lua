@@ -763,10 +763,11 @@ task.spawn(function()
         end
         if manureCount() >= CONVERT_LIMIT then
             local wasHomework = farmPhase == "COOLDOWN"
-            if wasHomework then stopHomeworkAndWait() end
+            stopHomeworkAndWait()
             convertAt2000()
             -- farmPhase dan cooldownEnd sengaja tidak di-reset.
             if wasHomework and farmPhase == "COOLDOWN" and os.clock() < cooldownEnd then
+                farmPauseHomework = false
                 homeworkSet(true)
             end
             continue
@@ -774,6 +775,13 @@ task.spawn(function()
 
         if farmPhase == "FEED" then
             farmPauseHomework = true
+            if homeworkBusy then
+                stopHomeworkAndWait()
+                if homeworkBusy then
+                    setStatus("MENUNGGU HOMEWORK BERHENTI")
+                    continue
+                end
+            end
             if not getCurrentKandang() then
                 setStatus("MEMBACA DATA KANDANG")
                 continue
@@ -803,6 +811,13 @@ task.spawn(function()
 
         elseif farmPhase == "PICKUP" then
             farmPauseHomework = true
+            if homeworkBusy then
+                stopHomeworkAndWait()
+                if homeworkBusy then
+                    setStatus("MENUNGGU HOMEWORK BERHENTI")
+                    continue
+                end
+            end
             if hwCarrying() then
                 setStatus("MENUNGGU MUATAN HOMEWORK DIBUANG")
                 continue
