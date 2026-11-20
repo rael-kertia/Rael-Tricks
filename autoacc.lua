@@ -1,58 +1,82 @@
--- RAEL AUTO ACC | Berdasarkan diagnosis PermintaanSewaUI
--- Hanya mengaktifkan AccBtn pada kartu dengan judul PERMINTAAN SEWA.
+-- RAEL AUTO ACC ENGINE
+-- File terpisah: autoacc.lua | Tidak menyentuh main.lua.
+-- Jalankan bersama autoacc_gui.lua.
+local env=(getgenv and getgenv()) or _G
+local state=env.RAEL_AUTOACC or {}
+env.RAEL_AUTOACC=state
+state.Enabled=state.Enabled==true
+state.EngineToken=(state.EngineToken or 0)+1
+local token=state.EngineToken
+
 local Players=game:GetService("Players")
 local plr=Players.LocalPlayer
 local pg=plr:WaitForChild("PlayerGui")
-local gui=pg:WaitForChild("PermintaanSewaUI",15)
-if not gui then
- local m="AUTO ACC: PermintaanSewaUI tidak ditemukan"
- if setclipboard then pcall(setclipboard,m) end
- if writefile then pcall(writefile,"Rael_AutoACC_Status.txt",m) end
- return
-end
-local done=setmetatable({}, {__mode="k"})
-local function norm(s)
- return tostring(s or ""):upper():gsub("%s+","")
-end
-local function isVisible(o)
- local p=o
- while p and p~=gui.Parent do
-  if p:IsA("GuiObject") and not p.Visible then return false end
-  if p:IsA("ScreenGui") and not p.Enabled then return false end
-  p=p.Parent
+local ui=pg:WaitForChild("PermintaanSewaUI",20)
+if not ui then state.Status="PermintaanSewaUI tidak ditemukan"; return end
+local stack=ui:WaitForChild("Tumpukan",10)
+if not stack then state.Status="Tumpukan tidak ditemukan"; return end
+
+local slots={
+ {name="ATAS",x=708,y=154},
+ {name="BAWAH",x=708,y=281}
+}
+local vim=game:GetService("VirtualInputManager")
+local seen=setmetatable({}, {__mode="k"})
+local last=setmetatable({}, {__mode="k"})
+local function visible(o)
+ while o and o~=ui do
+  if o:IsA("GuiObject") and not o.Visible then return false end
+  o=o.Parent
  end
- return true
+ return ui.Enabled
 end
-local function status(s)
- local msg="RAEL AUTO ACC | "..s.." | "..os.date("%H:%M:%S")
- if writefile then pcall(writefile,"Rael_AutoACC_Status.txt",msg) end
-end
-local stack=gui:WaitForChild("Tumpukan",10)
-if not stack then
- status("GAGAL: Tumpukan tidak ditemukan")
- return
-end
-status("AKTIF - menunggu permintaan sewa")
-while task.wait(0.2) do
- if not gui.Parent or not gui.Enabled then continue end
+local function findAt(slot)
  for _,card in ipairs(stack:GetChildren()) do
-  if card:IsA("Frame") and card.Name:match("^Kartu_") and card.Name~="KartuTemplate" then
+  if card.Name:match("^Kartu_%d+$") then
    local isi=card:FindFirstChild("Isi")
-   local tag=isi and isi:FindFirstChild("Tag")
-   local label=tag and tag:FindFirstChild("Label")
-   local acc=isi and isi:FindFirstChild("AccBtn")
-   if label and label:IsA("TextLabel") and norm(label.Text)=="PERMINTAANSEWA"
-      and acc and acc:IsA("TextButton") and acc.Visible and acc.Active
-      and isVisible(card) and not done[acc] then
-    done[acc]=true
-    local ok=pcall(function() acc:Activate() end)
-    if ok then
-     status("ACC diaktifkan pada "..card.Name)
-    else
-     done[acc]=nil
-     status("GAGAL mengaktifkan "..card.Name)
+   local b=isi and isi:FindFirstChild("AccBtn")
+   if b and b:IsA("GuiButton") and b.Visible and b.Active and visible(card) then
+    local p=b.AbsolutePosition
+    local s=b.AbsoluteSize
+    local x=p.X+s.X/2
+    local y=p.Y+s.Y/2
+    if math.abs(x-slot.x)<=12 and math.abs(y-slot.y)<=12 then
+     return b,card
     end
    end
   end
  end
 end
+local function tap(x,y)
+ return pcall(function()
+  vim:SendMouseButtonEvent(x,y,0,true,game,0)
+  task.wait(0.05)
+  vim:SendMouseButtonEvent(x,y,0,false,game,0)
+ end)
+end
+
+state.Status="Mesin siap - OFF"
+while state.EngineToken==token do
+ if state.Enabled and ui.Parent and ui.Enabled then
+  for _,slot in ipairs(slots) do
+   local b,card=findAt(slot)
+   if b and not seen[b] then
+    local now=os.clock()
+    if not last[b] or now-last[b]>=0.8 then
+     last[b]=now
+     local ok,err=tap(slot.x,slot.y)
+     if ok then
+      seen[b]=true
+      state.Status="Klik dikirim: slot "..slot.name.." ("..card.Name..")"
+     else
+      state.Status="Input gagal: "..tostring(err)
+     end
+    end
+   end
+  end
+ elseif not state.Enabled then
+  state.Status="OFF - menunggu diaktifkan"
+ end
+ task.wait(0.12)
+end
+state.Status="Mesin dihentikan"
