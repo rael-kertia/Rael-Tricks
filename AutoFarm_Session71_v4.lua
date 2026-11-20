@@ -333,8 +333,7 @@ connect(farmButton.Activated, function()
     if not alive() then return end
     autoFarm = not autoFarm
     if autoFarm then
-        farmPhase = "FEED"
-        setStatus("AUTO FARM AKTIF - CEK PALUNG")
+        setStatus("AUTO FARM AKTIF - MELANJUTKAN SIKLUS")
     else
         setStatus("AUTO FARM NONAKTIF")
     end
