@@ -494,8 +494,8 @@ end)
 -- ==========================================
 -- FITUR DIHAPUS: AUTO FEED DAN AUTO FARM
 -- ==========================================
-replaceBetween("-- FEED TOOL", "-- REGISTER PROMPTS", "", "REMOVE AUTO FEED")
-replaceBetween("-- AUTO FARM LOOP", "-- TP LOCATION", "", "REMOVE AUTO FARM")
+-- Jangan hapus helper Feed atau loop Farm asli di tahap ini.
+-- Controller Sesi 71 membutuhkan feedOne() dan akan mengganti loop Farm di bawah.
 
 -- ==========================================
 -- HOMEWORK + CLEANER HOTFIX
