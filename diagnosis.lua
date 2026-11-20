@@ -1,180 +1,186 @@
--- RAEL'S TRICKS | FULL GAME DIAGNOSIS - SAFE / THROTTLED
--- READ ONLY. NO HOOKS, NO REQUIRE, NO REMOTE CALLS, NO UI CLICKS.
--- Limits and yields prevent Android client freeze.
-local O,seenFn={},{}
-local MAX_CHARS=180000
-local MAX_OBJECTS=14000
-local MAX_GC=18000
-local MAX_MATCH=90
-local function add(s)
- if #O<MAX_CHARS then O[#O+1]=tostring(s) end
-end
-local function safe(v)
+-- RAEL'S TRICKS | BLIND BOX ROOT-CAUSE DIAGNOSIS
+-- READ ONLY: no hook, no require, no remote call, no UI click, no state mutation.
+-- Narrow scan for BlindBox only. Bounded and yields to avoid Android freeze.
+local O,seen={},{}
+local function out(s) O[#O+1]=tostring(s) end
+local function val(v)
  if typeof(v)=="Instance" then
   local ok,s=pcall(function() return v:GetFullName() end)
   return ok and s or v.Name
  end
- if type(v)=="string" then return string.sub(v,1,220) end
+ if type(v)=="string" then return string.sub(v,1,260) end
  return tostring(v)
 end
-local function match(s)
- s=tostring(s):lower()
- for _,w in ipairs({"gacha","blind","kotak","pet","ternak","sewa","penyewa","tenant","kos","market","shop","inventory","hadiah","reward","claim","spin","upgrade","build","uang","money","sapu","sampah","pajak","aset","rumah","kamar","furnitur","furniture","kendaraan","vehicle","job","pekerja","gaji","bank","deposit","withdraw","jual","beli","trade","quest","misi","level","exp","rebirth","prestige","plot","tycoon"}) do
-  if s:find(w,1,true) then return true end
- end
- return false
-end
-local function consts(f)
+local function constants(f)
  if not debug or not debug.getconstants then return {} end
  local ok,t=pcall(debug.getconstants,f)
  return ok and type(t)=="table" and t or {}
 end
-local function ups(f)
+local function upvalues(f)
  if not debug or not debug.getupvalues then return {} end
  local ok,t=pcall(debug.getupvalues,f)
  return ok and type(t)=="table" and t or {}
 end
-local function dumpFn(label,f)
- if type(f)~="function" or seenFn[f] then return end
- seenFn[f]=true
- add("\n[FUNCTION] "..label)
+local function dump(f,label,deep)
+ if type(f)~="function" or seen[f] then return end
+ seen[f]=true
+ out("\n[FUNCTION] "..label)
  if debug and debug.getinfo then
   local ok,i=pcall(debug.getinfo,f)
-  if ok and i then add("INFO "..safe(i.source).." name="..safe(i.name).." line="..safe(i.linedefined)) end
+  if ok and i then out("INFO source="..val(i.source).." name="..val(i.name).." line="..val(i.linedefined)) end
  end
- local c=consts(f)
+ local c=constants(f)
  for i,v in pairs(c) do
-  if type(v)=="string" or type(v)=="number" then add(" C"..i.." "..safe(v)) end
+  if type(v)=="string" or type(v)=="number" then out(" C"..i.." "..val(v)) end
  end
- local u=ups(f)
+ local u=upvalues(f)
  for i,v in pairs(u) do
-  local t=type(v)
-  if t=="function" then add(" U"..i.." FUNCTION")
-  elseif t=="table" then
-   add(" U"..i.." TABLE")
+  if type(v)=="function" then
+   out(" U"..i.." FUNCTION "..val(v))
+   if deep then
+    local cc=constants(v)
+    for j,x in pairs(cc) do if type(x)=="string" or type(x)=="number" then out("  U"..i..".C"..j.." "..val(x)) end end
+   end
+  elseif type(v)=="table" then
+   out(" U"..i.." TABLE")
    local n=0
    for k,x in pairs(v) do
     n=n+1
-    if n>35 then add("  TABLE TRUNCATED"); break end
-    if type(x)=="function" then add("  ["..safe(k).."] FUNCTION")
-    elseif type(x)=="table" then add("  ["..safe(k).."] TABLE")
-    else add("  ["..safe(k).."] "..type(x).." "..safe(x)) end
+    if n>55 then out("  TABLE_LIMIT"); break end
+    if type(x)=="function" then out("  ["..val(k).."] FUNCTION")
+    elseif type(x)=="table" then out("  ["..val(k).."] TABLE")
+    else out("  ["..val(k).."] "..type(x).." "..val(x)) end
    end
-  else add(" U"..i.." "..t.." "..safe(v)) end
+  else out(" U"..i.." "..type(v).." "..val(v)) end
  end
 end
-local function yieldNow() task.wait() end
-local P=game:GetService("Players").LocalPlayer
+local function has(c,w)
+ for _,v in pairs(c) do
+  if type(v)=="string" then
+   local s=v:lower()
+   for _,q in ipairs(w) do if s:find(q,1,true) then return true end end
+  end
+ end
+ return false
+end
 local RS=game:GetService("ReplicatedStorage")
-add("=== FULL GAME DIAGNOSIS SAFE MODE ===")
-add("PLAYER "..safe(P).." USERID "..safe(P.UserId).." TIME "..os.date("%Y-%m-%d %H:%M:%S"))
-add("READ ONLY | NO HOOKS | NO REQUIRE | NO REMOTE CALLS")
--- 1. Key service tree inventory
-add("\n=== 1. REPLICATED STORAGE / WORKSPACE / PLAYER OBJECTS ===")
-local roots={RS,game:GetService("Workspace"),P:FindFirstChild("PlayerGui"),P:FindFirstChild("PlayerScripts"),P:FindFirstChild("Backpack"),P.Character}
-local count=0
-for _,root in ipairs(roots) do
- if root then
-  add("\n[ROOT] "..safe(root))
-  local ok,ds=pcall(function() return root:GetDescendants() end)
-  if ok then
-   for _,x in ipairs(ds) do
-    count=count+1
-    if count>MAX_OBJECTS then add("OBJECT LIMIT REACHED"); break end
-    local cl=x.ClassName
-    local full=safe(x)
-    if x:IsA("RemoteEvent") or x:IsA("RemoteFunction") or x:IsA("UnreliableRemoteEvent") or x:IsA("BindableEvent") or x:IsA("BindableFunction") then
-     add("[REMOTE] "..cl.." "..full)
-    elseif x:IsA("ModuleScript") then
-     add("[MODULE] "..full)
-    elseif x:IsA("LocalScript") then
-     if match(full) then add("[LOCALSCRIPT] "..full.." Disabled="..safe(x.Disabled)) end
-    elseif x:IsA("ProximityPrompt") then
-     add("[PROMPT] "..full.." Action="..safe(x.ActionText).." Object="..safe(x.ObjectText).." Enabled="..safe(x.Enabled))
-    elseif x:IsA("ClickDetector") then add("[CLICK] "..full)
-    elseif x:IsA("Tool") then add("[TOOL] "..full)
-    elseif x:IsA("ValueBase") and match(full) then add("[VALUE] "..full.."="..safe(x.Value))
-    elseif (x:IsA("TextButton") or x:IsA("TextLabel") or x:IsA("TextBox")) and (match(full) or match(x.Text)) then
-     add("[GUI] "..full.." Text="..safe(x.Text).." Visible="..safe(x.Visible).." Active="..safe(x.Active))
-    end
-    if count%350==0 then yieldNow() end
-   end
-  end
- end
+local P=game:GetService("Players").LocalPlayer
+out("=== BLIND BOX ROOT-CAUSE DIAGNOSIS ===")
+out("PLAYER "..val(P).." TIME "..os.date("%Y-%m-%d %H:%M:%S"))
+out("READ ONLY | NO HOOKS | NO REQUIRE | NO REMOTE CALLS")
+-- A. Only relevant module paths; do not require modules.
+out("\n=== A. BLIND BOX MODULES ===")
+local wanted={BlindBoxTampil=true,GachaController=true,GachaConfig=true,KotakController=true}
+for _,x in ipairs(RS:GetDescendants()) do
+ if x:IsA("ModuleScript") and wanted[x.Name] then out("[MODULE] "..val(x)) end
 end
-add("OBJECTS SCANNED "..count)
--- 2. Loaded game functions. Constants fetched once per function, throttled.
-add("\n=== 2. LOADED FUNCTIONS / CONSTANTS / UPVALUES ===")
-local checked,hits=0,0
-if getgc and debug and debug.getconstants then
- local ok,g=pcall(getgc,true)
- add("GETGC "..safe(ok).." COUNT "..(ok and type(g)=="table" and #g or 0))
- if ok and type(g)=="table" then
-  for _,f in ipairs(g) do
-   if type(f)=="function" and not seenFn[f] then
-    checked=checked+1
-    local info=""
-    if debug.getinfo then
-     local a,b=pcall(debug.getinfo,f)
-     if a and b then info=tostring(b.source).." "..tostring(b.name) end
-    end
-    local c=consts(f)
-    local found=match(info)
-    for _,v in pairs(c) do
-     if type(v)=="string" then
-      if match(v) then found=true end
-     end
-    end
-    if found then
-     hits=hits+1
-     -- dump the constants already collected, avoiding another constants pass
-     add("\n[GC MATCH "..hits.."] "..info)
-     for i,v in pairs(c) do if type(v)=="string" or type(v)=="number" then add(" C"..i.." "..safe(v)) end end
-     local u=ups(f)
-     for i,v in pairs(u) do
-      local t=type(v)
-      if t=="function" then add(" U"..i.." FUNCTION")
-      elseif t=="table" then
-       add(" U"..i.." TABLE")
-       local n=0
-       for k,x in pairs(v) do
-        n=n+1
-        if n>30 then add("  TABLE TRUNCATED"); break end
-        if type(x)=="function" then add("  ["..safe(k).."] FUNCTION")
-        elseif type(x)=="table" then add("  ["..safe(k).."] TABLE")
-        else add("  ["..safe(k).."] "..type(x).." "..safe(x)) end
-       end
-      else add(" U"..i.." "..t.." "..safe(v)) end
-     end
-     seenFn[f]=true
-    end
-    if hits>=MAX_MATCH then add("MATCH LIMIT REACHED"); break end
-    if checked%120==0 then yieldNow() end
-   end
-   if checked>=MAX_GC then add("GC SCAN LIMIT REACHED"); break end
-  end
- end
-else add("GETGC / DEBUG CONSTANTS UNAVAILABLE") end
-add("FUNCTIONS CHECKED "..checked.." MATCHES "..hits)
--- 3. ScreenGui state and character
-add("\n=== 3. ACTIVE PLAYER UI / CHARACTER ===")
+-- B. Live BlindBox GUI and relevant descendants only.
+out("\n=== B. LIVE BLIND BOX UI ===")
 local pg=P:FindFirstChild("PlayerGui")
-if pg then
- for _,x in ipairs(pg:GetChildren()) do
-  if x:IsA("ScreenGui") then add("[SCREEN] "..safe(x).." Enabled="..safe(x.Enabled).." Order="..safe(x.DisplayOrder)) end
+local gui=pg and pg:FindFirstChild("BlindBoxLayar",true)
+if gui then
+ out("[GUI FOUND] "..val(gui).." Class="..gui.ClassName)
+ for _,x in ipairs(gui:GetDescendants()) do
+  if x:IsA("GuiButton") or x:IsA("TextLabel") or x:IsA("TextBox") or x:IsA("ViewportFrame") or x:IsA("Camera") or x:IsA("Model") or x:IsA("ValueBase") then
+   local s="[UI] "..x.ClassName.." "..val(x)
+   if x:IsA("TextButton") or x:IsA("TextLabel") or x:IsA("TextBox") then s=s.." Text="..val(x.Text).." Visible="..val(x.Visible) end
+   if x:IsA("GuiButton") then s=s.." Active="..val(x.Active) end
+   if x:IsA("ValueBase") then s=s.." Value="..val(x.Value) end
+   out(s)
+  end
+ end
+else out("BlindBoxLayar NOT FOUND (open Blind Box before running)") end
+-- C. Only Blind Box-related remotes, preserving full path.
+out("\n=== C. BLIND BOX-NAMED REMOTES ===")
+local remoteN=0
+for _,x in ipairs(RS:GetDescendants()) do
+ if (x:IsA("RemoteEvent") or x:IsA("RemoteFunction") or x:IsA("UnreliableRemoteEvent")) and (x.Name:lower():find("blind",1,true) or x.Name:lower():find("gacha",1,true)) then
+  remoteN=remoteN+1; out("[REMOTE] "..x.ClassName.." "..val(x))
  end
 end
-local ch=P.Character
-if ch then
- local h=ch:FindFirstChildOfClass("Humanoid")
- local rp=ch:FindFirstChild("HumanoidRootPart")
- add("CHARACTER "..safe(ch).." HEALTH="..(h and safe(h.Health) or "-").." WALKSPEED="..(h and safe(h.WalkSpeed) or "-").." ROOT="..(rp and safe(rp.Position) or "-"))
+if remoteN==0 then out("No remote with Blind/Gacha in name; this does NOT prove no indirect server route.") end
+-- D. Find private orchestrator and inspect its closure graph.
+out("\n=== D. PRIVATE BLINDBOX ORCHESTRATOR ===")
+local gc={}
+if getgc then
+ local ok,g=pcall(getgc,true)
+ if ok and type(g)=="table" then gc=g else out("getgc unavailable/error") end
+else out("getgc unavailable") end
+local candidates={}
+for i=1,#gc do
+ local f=gc[i]
+ if type(f)=="function" then
+  local c=constants(f)
+  if has(c,{"bukaBlindBox"}) then
+   candidates[#candidates+1]=f
+  end
+ end
+ if i%100==0 then task.wait() end
+ if i>=12000 then out("GC bound reached at 12000 objects"); break end
 end
--- 4. Tagged objects, safe bounded list
-add("\n=== 4. COLLECTION TAGS ===")
-local ok,t=pcall(function() return game:GetService("CollectionService"):GetAllTags() end)
-if ok then for _,v in ipairs(t) do add("[TAG] "..safe(v)) end else add("TAG API UNAVAILABLE") end
+out("GC OBJECTS CHECKED "..math.min(#gc,12000).." | ORCHESTRATOR CANDIDATES "..#candidates)
+local targetSet={}
+for i,f in ipairs(candidates) do
+ targetSet[f]=true
+ dump(f,"GachaController.bukaBlindBox candidate "..i,true)
+ -- Capture direct upvalue function references, especially callback U2.
+ local u=upvalues(f)
+ for j,v in pairs(u) do
+  if type(v)=="function" then dump(v,"bukaBlindBox.U"..j,false) end
+  if type(v)=="table" then
+   for k,x in pairs(v) do
+    if type(x)=="function" then dump(x,"bukaBlindBox.U"..j.."."..val(k),false) end
+   end
+  end
+ end
+end
+if #candidates==0 then out("No loaded function constant 'bukaBlindBox' found. Keep Blind Box open and ensure it has been opened once in this session.") end
+-- E. Search loaded closures for direct references to the exact orchestrator function.
+out("\n=== E. CALLERS / REFERENCES TO ORCHESTRATOR ===")
+local callerN,checked=0,0
+if #candidates>0 then
+ for i=1,#gc do
+  local f=gc[i]
+  if type(f)=="function" and not targetSet[f] then
+   checked=checked+1
+   local u=upvalues(f)
+   local found=false
+   for _,v in pairs(u) do
+    if targetSet[v] then found=true end
+    if type(v)=="table" then
+     for _,x in pairs(v) do if targetSet[x] then found=true end end
+    end
+   end
+   if found then
+    callerN=callerN+1
+    dump(f,"DIRECT CALLER CANDIDATE "..callerN,false)
+   end
+  end
+  if i%100==0 then task.wait() end
+  if i>=12000 then break end
+ end
+end
+out("CLOSURES CHECKED "..checked.." | DIRECT CALLER CANDIDATES "..callerN)
+-- F. Focused loaded functions with blind-box vocabulary (constants only).
+out("\n=== F. BLIND / REWARD FUNCTION MATCHES ===")
+local n=0
+for i=1,#gc do
+ local f=gc[i]
+ if type(f)=="function" and not seen[f] then
+  local c=constants(f)
+  if has(c,{"blindbox","blind box","bukaBlindBox","claimcallback","blindboxtampil"}) then
+   n=n+1; dump(f,"BLIND VOCAB MATCH "..n,false)
+   if n>=45 then out("MATCH LIMIT 45"); break end
+  end
+ end
+ if i%100==0 then task.wait() end
+ if i>=12000 then break end
+end
+out("VOCAB MATCHES "..n)
+-- G. State snapshot of only exact BlindBox-related values already present in GUI.
+out("\n=== G. END ===")
+out("This scan does not invoke any discovered function or remote.")
 local result=table.concat(O,"\n")
 if writefile then pcall(writefile,"Hasil.lua",result) end
 if setclipboard then pcall(setclipboard,result) end
-print("DIAGNOSIS SELESAI: "..#result.." chars. Hasil.lua dan clipboard.")
+print("BLIND BOX DIAGNOSIS DONE | "..#result.." chars | Hasil.lua + clipboard")
