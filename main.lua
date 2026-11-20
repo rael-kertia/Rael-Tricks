@@ -701,6 +701,7 @@ end
 
 local function hwCleanHouse(house)
     local attempts = {}
+    local failures = {}
     while alive() and homeworkEnabled do
         local pending
         for _, prompt in ipairs(hwGet(house, 1)) do
@@ -719,9 +720,13 @@ local function hwCleanHouse(house)
             setStatus("CLEAN BELUM TERVERIFIKASI - COBA ULANG")
             task.wait(1)
             if pending.Parent and pending.Enabled then
+                failures[pending] = (failures[pending] or 0) + 1
+                if failures[pending] >= 3 then
+                    setStatus("PROMPT GAGAL 3 KALI - HOMEWORK DIJEDA")
+                    return false
+                end
                 attempts[pending] = nil
             end
-            if attempts[pending] then return false end
         end
         task.wait(0.25)
     end
