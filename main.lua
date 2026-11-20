@@ -1248,13 +1248,26 @@ local autoAccBusy = false
 local autoAccLast = {}
 local autoAccVIM = game:GetService("VirtualInputManager")
 
--- GUI utama memakai makeToggle, bukan makeButton.
--- Posisi ini mengisi slot kosong di samping HOMEWORK.
-local autoAccButton = makeToggle("AutoAccButton", "AUTO ACC", 12, 225)
+-- Buat tombol langsung agar tidak bergantung pada helper GUI lokal.
+local autoAccButton = Instance.new("TextButton")
+autoAccButton.Name = "AutoAccButton"
+autoAccButton.Size = UDim2.fromOffset(110, 32)
+autoAccButton.Position = UDim2.fromOffset(12, 225)
+autoAccButton.BackgroundColor3 = Color3.fromRGB(127, 29, 29)
+autoAccButton.BorderSizePixel = 0
+autoAccButton.Text = "AUTO ACC: OFF"
+autoAccButton.TextColor3 = Color3.fromRGB(248, 250, 252)
+autoAccButton.TextSize = 10
+autoAccButton.Font = Enum.Font.GothamBold
+autoAccButton.Parent = frame
+Instance.new("UICorner", autoAccButton).CornerRadius = UDim.new(0, 7)
 
 local function setAutoAcc(enabled)
     autoAccEnabled = enabled
-    paintToggle(autoAccButton, "AUTO ACC", enabled)
+    autoAccButton.Text = enabled and "AUTO ACC: ON" or "AUTO ACC: OFF"
+    autoAccButton.BackgroundColor3 = enabled
+        and Color3.fromRGB(5, 150, 105)
+        or Color3.fromRGB(127, 29, 29)
     setStatus(enabled and "AUTO ACC AKTIF - MENUNGGU PERMINTAAN"
         or "AUTO ACC NONAKTIF")
 end
