@@ -525,9 +525,18 @@ replaceOnce(
 )
 
 -- Pause Homework work loops without changing its visible toggle.
+-- Homework worker stays alive while paused; only its work is suspended.
 source = source:gsub(
-    "while alive%(%) and homeworkEnabled do",
-    "while alive() and homeworkEnabled and not farmPauseHomework do"
+    "while alive%(%) and homeworkEnabled and not farmPauseHomework do",
+    "while alive() and homeworkEnabled do"
+)
+source = source:gsub(
+    "while alive%(%) and homeworkEnabled do\\n        local folder = W:FindFirstChild%(\"KosanSpawned\")",
+    "while alive() and homeworkEnabled do\\n        if farmPauseHomework then task.wait(0.1); continue end\\n        local folder = W:FindFirstChild(\"KosanSpawned\")"
+)
+source = source:gsub(
+    "while alive%(%) and homeworkEnabled do\\n            pcall%(hwForceStand%)",
+    "while alive() and homeworkEnabled do\\n            if not farmPauseHomework then pcall(hwForceStand) end"
 )
 source = source:gsub(
     "if not alive%(%) or not homeworkEnabled then break end",
