@@ -1,105 +1,99 @@
--- RAEL DIAGNOSTIC SEWA V9 - INSPEKSI HANDLER
--- PASIF: tidak klik ACC/Tolak dan tidak memanggil remote.
+-- RAEL DIAGNOSTIC SEWA V10 - TELUSURI RESPOND
+-- PASIF: tidak klik tombol dan tidak memanggil remote.
 local out={}
 local function add(v) out[#out+1]=tostring(v) end
-local function path(x)
- local ok,s=pcall(function() return x:GetFullName() end)
- return ok and s or "?"
-end
-local function safeUp(f)
+local function ups(f)
  local g=(debug and debug.getupvalues) or getupvalues
  if type(g)~="function" then return nil,"API_UPVALUES_TIDAK_ADA" end
  local ok,v=pcall(g,f)
  if ok and type(v)=="table" then return v end
  return nil,tostring(v)
 end
-local function constants(f,tag)
+local function cons(f,tag)
  local g=(debug and debug.getconstants) or getconstants
  if type(g)~="function" then add(tag.." CONSTANTS_API=NONE") return end
  local ok,v=pcall(g,f)
- if not ok or type(v)~="table" then add(tag.." CONSTANTS_READ_FAIL="..tostring(v)) return end
- for i,z in ipairs(v) do
-  if i>45 then break end
-  if type(z)=="string" or type(z)=="number" or type(z)=="boolean" then add(tag.." CONST "..i.."="..tostring(z):sub(1,100)) end
+ if not ok or type(v)~="table" then add(tag.." CONSTANTS_FAIL="..tostring(v)) return end
+ for i,x in ipairs(v) do
+  if i>70 then break end
+  if type(x)=="string" or type(x)=="number" or type(x)=="boolean" then add(tag.." C"..i.."="..tostring(x):sub(1,120)) end
  end
 end
-local function tableDump(t,tag)
- if type(t)~="table" then return end
- local n=0
- for k,v in pairs(t) do
-  n=n+1
-  if n>24 then add(tag.." TABLE_TRUNCATED"); break end
-  add(tag.." KEY="..tostring(k):sub(1,70).." TYPE="..type(v).." VAL="..tostring(v):sub(1,100))
-  if type(v)=="table" then
-   local m=0
-   for k2,v2 in pairs(v) do
-    m=m+1
-    if m>8 then add(tag.."  SUB_TRUNCATED"); break end
-    add(tag.."  SUB "..tostring(k2):sub(1,50).." ["..type(v2).."]="..tostring(v2):sub(1,90))
+local function inspect(f,tag,depth)
+ if type(f)~="function" then add(tag.." NOT_FUNCTION="..type(f)); return end
+ add("")
+ add("=== FUNCTION "..tag.." "..tostring(f).." ===")
+ cons(f,tag)
+ local u,e=ups(f)
+ if not u then add(tag.." UPS_FAIL="..e); return end
+ for i=1,12 do
+  local v=u[i]
+  if v~=nil then
+   add(tag.." UV"..i.." TYPE="..type(v).." VALUE="..tostring(v):sub(1,150))
+   if type(v)=="table" and depth>0 then
+    local n=0
+    for k,z in pairs(v) do
+     n=n+1
+     if n>35 then add(tag.." TABLE_TRUNCATED"); break end
+     add(tag.." TABLE["..tostring(k):sub(1,80).."] TYPE="..type(z).." VALUE="..tostring(z):sub(1,130))
+     if type(z)=="function" and (tostring(k)=="Respond" or tostring(k)=="VerifyReject" or tostring(k)=="TenantLeft" or tostring(k)=="TenantArrived") then
+      inspect(z,tag.."."..tostring(k),depth-1)
+     elseif type(z)=="table" then
+      for k2,z2 in pairs(z) do
+       if type(z2)=="function" then add(tag.." TABLE SUB "..tostring(k).."."..tostring(k2).." FN="..tostring(z2)) end
+      end
+     end
+    end
    end
   end
  end
- add(tag.." TABLE_ITEMS_SCANNED="..math.min(n,24))
 end
 local function finish(status)
- local s="=== RAEL SEWA V9 ===\n"..status.."\n"..table.concat(out,"\n")
+ local s="=== RAEL SEWA V10 ===\n"..status.."\n"..table.concat(out,"\n")
  local copied=false
  if setclipboard then copied=pcall(setclipboard,s) elseif toclipboard then copied=pcall(toclipboard,s) end
  local saved=false
- if writefile then saved=pcall(writefile,"Rael_Sewa_V9.txt",s) end
- local tail="\n\nV9 END | chars="..#s.." | clipboard="..tostring(copied).." | file="..tostring(saved)
+ if writefile then saved=pcall(writefile,"Rael_Sewa_V10.txt",s) end
+ local tail="\n\nV10 END | chars="..#s.." | clipboard="..tostring(copied).." | file="..tostring(saved)
  if setclipboard then pcall(setclipboard,s..tail) elseif toclipboard then pcall(toclipboard,s..tail) end
- if writefile then pcall(writefile,"Rael_Sewa_V9.txt",s..tail) end
+ if writefile then pcall(writefile,"Rael_Sewa_V10.txt",s..tail) end
 end
 local ok,err=xpcall(function()
- local P=game:GetService("Players").LocalPlayer
- local gui=P:WaitForChild("PlayerGui")
- add("PLAYER="..P.Name)
- local root=gui:FindFirstChild("PermintaanSewaUI")
- if not root then add("UI_NOT_FOUND") return end
- local cards={}
- for _,x in ipairs(root:GetDescendants()) do
-  if x:IsA("TextButton") and x.Name=="AccBtn" then
-   local visible=true local q=x
+ local p=game:GetService("Players").LocalPlayer
+ local root=p:WaitForChild("PlayerGui"):FindFirstChild("PermintaanSewaUI")
+ if not root then add("UI_NOT_FOUND"); return end
+ local n=0
+ for _,b in ipairs(root:GetDescendants()) do
+  if b:IsA("TextButton") and b.Name=="AccBtn" then
+   local visible=true local q=b
    while q do if q:IsA("GuiObject") and not q.Visible then visible=false end q=q.Parent end
-   if visible then cards[#cards+1]=x end
-  end
- end
- add("VISIBLE ACC BUTTONS="..#cards)
- for i,b in ipairs(cards) do
-  add("")
-  add("BUTTON #"..i.." "..path(b))
-  local id
-  local cns=getconnections and getconnections(b.Activated)
-  add("CONNECTIONS="..tostring(cns and #cns or 0))
-  if cns then
-   for ci,c in ipairs(cns) do
-    if type(c.Function)=="function" then
-     add("HANDLER #"..ci.." "..tostring(c.Function))
-     local u,e=safeUp(c.Function)
-     if not u then add("HANDLER_UPVALUES_FAIL="..e) else
-      for j=1,6 do
-       local v=u[j]
-       if v~=nil then
-        add("HANDLER UPVALUE "..j.." TYPE="..type(v).." VALUE="..tostring(v):sub(1,100))
-        if j==1 and type(v)=="table" then tableDump(v,"STATE") end
-        if j==4 then id=v end
-        if j==3 and type(v)=="function" then
-         add("CALLBACK UPVALUE3="..tostring(v))
-         local nu,ne=safeUp(v)
-         if not nu then add("CALLBACK_UPVALUES_FAIL="..ne) else
-          for ni=1,8 do
-           local nf=nu[ni]
-           if type(nf)=="function" then
-            add("CALLBACK NESTED FN "..ni.." "..tostring(nf))
-            constants(nf,"NESTED"..ni)
-            local fu,fe=safeUp(nf)
-            if not fu then add("NESTED"..ni.."_UPVALUES_FAIL="..fe) else
-             for fi=1,10 do
-              local fv=fu[fi]
-              if fv~=nil then
-               add("NESTED"..ni.." UPVALUE "..fi.." TYPE="..type(fv).." VALUE="..tostring(fv):sub(1,110))
-               if type(fv)=="table" then tableDump(fv,"NESTED"..ni.." UV"..fi) end
+   if visible then
+    n=n+1
+    add("BUTTON "..n.." "..b:GetFullName())
+    local cs=getconnections and getconnections(b.Activated)
+    if cs then for _,c in ipairs(cs) do
+     if type(c.Function)=="function" then
+      local u=ups(c.Function)
+      if u and type(u[3])=="function" then
+       local nu=ups(u[3])
+       if nu then
+        for ni=1,8 do
+         if type(nu[ni])=="function" then
+          local fu=ups(nu[ni])
+          if fu then
+           for fi=1,10 do
+            if type(fu[fi])=="function" then
+             local f2u=ups(fu[fi])
+             if f2u then
+              for ui=1,8 do
+               local t=f2u[ui]
+               if type(t)=="table" then
+                for key,fn in pairs(t) do
+                 if type(fn)=="function" and (key=="Respond" or key=="VerifyReject") then
+                  inspect(fn,"CARD"..n.."_NEST"..ni.."_UV"..fi.."_"..key,2)
+                 end
+                end
+               end
               end
              end
             end
@@ -110,10 +104,10 @@ local ok,err=xpcall(function()
        end
       end
      end
-    end
+    end end
    end
   end
-  add("CARD_ID_UPVALUE4="..tostring(id))
  end
+ add("VISIBLE_BUTTONS="..n)
 end,function(e) return tostring(e) end)
 if ok then finish("STATUS=SELESAI") else add("RUNTIME_FAILURE="..tostring(err)); finish("STATUS=GAGAL") end
