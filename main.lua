@@ -381,7 +381,7 @@ local autoAccVIM = game:GetService("VirtualInputManager")
 local autoAccButton = Instance.new("TextButton")
 autoAccButton.Name = "AutoAccButton"
 autoAccButton.Size = UDim2.fromOffset(110, 32)
-autoAccButton.Position = UDim2.fromOffset(12, 225)
+autoAccButton.Position = UDim2.fromOffset(12, 188)
 autoAccButton.BackgroundColor3 = Color3.fromRGB(127, 29, 29)
 autoAccButton.BorderSizePixel = 0
 autoAccButton.Text = "AUTO ACC: OFF"
@@ -615,12 +615,12 @@ local gachaBusy = false
 local gachaService
 
 -- Perluas panel utama agar seluruh tombol tetap berada di dalam GUI yang sama.
-frame.Size = UDim2.fromOffset(205, 335)
+frame.Size = UDim2.fromOffset(205, 300)
 
 local gachaButton = Instance.new("TextButton")
 gachaButton.Name = "AutoGachaButton"
 gachaButton.Size = UDim2.fromOffset(180, 29)
-gachaButton.Position = UDim2.fromOffset(12, 260)
+gachaButton.Position = UDim2.fromOffset(12, 222)
 gachaButton.BackgroundColor3 = Color3.fromRGB(127, 29, 29)
 gachaButton.BorderSizePixel = 0
 gachaButton.Text = "AUTO GACHA: OFF"
@@ -633,7 +633,7 @@ Instance.new("UICorner", gachaButton).CornerRadius = UDim.new(0, 6)
 local gachaPaidButton = Instance.new("TextButton")
 gachaPaidButton.Name = "GachaPaidSpinButton"
 gachaPaidButton.Size = UDim2.fromOffset(180, 29)
-gachaPaidButton.Position = UDim2.fromOffset(12, 294)
+gachaPaidButton.Position = UDim2.fromOffset(12, 256)
 gachaPaidButton.BackgroundColor3 = Color3.fromRGB(71, 85, 105)
 gachaPaidButton.BorderSizePixel = 0
 gachaPaidButton.Text = "PAID SPIN: OFF"
