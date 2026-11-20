@@ -25,7 +25,7 @@ local function visible(o)
  return true
 end
 local out,used={},0
-local LIMIT=7500
+local LIMIT=9500
 local function add(s)
  s=tostring(s or "")
  if used>=LIMIT then return end
@@ -34,7 +34,7 @@ local function add(s)
  out[#out+1]=s
  used=used+#s+1
 end
-add("=== RAEL DIAGNOSTIC PERMINTAAN SEWA V3 HANDLER ===")
+add("=== RAEL DIAGNOSTIC PERMINTAAN SEWA V4 SOURCE ===")
 add("PLAYER: "..plr.Name.." | "..os.date("%Y-%m-%d %H:%M:%S"))
 local found,seen={},{}
 for _,root in ipairs(roots) do
@@ -117,6 +117,27 @@ for _,root in ipairs(scriptRoots) do
 end
 add("TOTAL LOCALSCRIPT TERKAIT: "..lsCount)
 add("")
+add("=== PENYEWACONTROLLER / HANDLER DETAIL ===")
+local RS=game:GetService("ReplicatedStorage")
+local ctl=RS:FindFirstChild("NKSystem")
+if ctl then
+ ctl=ctl:FindFirstChild("Controller")
+ if ctl then ctl=ctl:FindFirstChild("PenyewaController") end
+end
+add("CONTROLLER: "..(ctl and ctl.ClassName.." | "..path(ctl) or "TIDAK DITEMUKAN"))
+local decomp=decompile or decompilefunction
+if ctl and type(decomp)=="function" then
+ local ok,src=pcall(decomp,ctl)
+ if ok and type(src)=="string" then
+  add("CONTROLLER SOURCE (baris sekitar 458):")
+  local lines={}
+  for line in (src.."\\n"):gmatch("(.-)\\n") do lines[#lines+1]=line end
+  local a=math.max(1,458-18)
+  local z=math.min(#lines,458+28)
+  for i=a,z do add(string.format("%d: %s",i,lines[i])) end
+ else add("DECOMPILE CONTROLLER GAGAL: "..tostring(src)) end
+else add("DECOMPILE TIDAK TERSEDIA / CONTROLLER BUKAN SCRIPT") end
+add("")
 add("=== KONEKSI EVENT AccBtn (INSPEKSI PASIF) ===")
 local getcon= getconnections
 local dbg=debug
@@ -146,6 +167,31 @@ for _,root in ipairs(roots) do
           add("  CONN "..ci.." enabled="..safe(function() return co.Enabled end).." name="..tostring(info.name).." source="..tostring(info.short_src or info.source).." line="..tostring(info.currentline))
          else
           add("  CONN "..ci.." enabled="..safe(function() return co.Enabled end).." function="..tostring(fn))
+         end
+         local gu=(dbg and dbg.getupvalues) or getupvalues
+         if type(gu)=="function" and type(fn)=="function" then
+          local uok,ups=pcall(gu,fn)
+          if uok and type(ups)=="table" then
+           for ui,uv in pairs(ups) do
+            local desc=typeof and typeof(uv) or type(uv)
+            if desc=="Instance" then desc=uv.ClassName.." "..path(uv)
+            elseif type(uv)=="string" then desc="string:"..uv:sub(1,100)
+            else desc=desc..":"..tostring(uv):sub(1,100) end
+            if ui<=12 then add("   UPVALUE "..tostring(ui).." = "..desc) end
+           end
+          end
+         end
+         local df=decompile or decompilefunction
+         if type(df)=="function" and type(fn)=="function" then
+          local dok,ds=pcall(df,fn)
+          if dok and type(ds)=="string" then
+           add("   HANDLER SOURCE:")
+           local n=0
+           for line in (ds.."\\n"):gmatch("(.-)\\n") do
+            n=n+1
+            if n<=100 then add("   "..n..": "..line) end
+           end
+          else add("   HANDLER DECOMPILE GAGAL: "..tostring(ds)) end
          end
          local gc=(dbg and dbg.getconstants) or getconstants
          if type(gc)=="function" and type(fn)=="function" then
@@ -184,7 +230,7 @@ if setclipboard then copied=pcall(setclipboard,result)
 elseif toclipboard then copied=pcall(toclipboard,result) end
 local saved=false
 if writefile then saved=pcall(writefile,"Rael_Tenant_Diagnostic.txt",result) end
-local status="DIAG V3 HANDLER | chars="..#result.." | clipboard="..tostring(copied).." | file="..tostring(saved)
+local status="DIAG V4 SOURCE | chars="..#result.." | clipboard="..tostring(copied).." | file="..tostring(saved)
 if setclipboard then pcall(setclipboard,result.."\n\n"..status)
 elseif toclipboard then pcall(toclipboard,result.."\n\n"..status) end
 if writefile then pcall(writefile,"Rael_Tenant_Diagnostic.txt",result.."\n\n"..status) end
