@@ -1,153 +1,219 @@
--- RAEL'S TRICKS | BLIND BOX FULL DIAGNOSIS
--- READ ONLY: tidak menekan UI, tidak invoke/fire remote, tidak mengubah state.
-local RS=game:GetService("ReplicatedStorage")
-local P=game:GetService("Players").LocalPlayer
-local O,seenFn,seenTab={}, {}, {}
+-- RAEL'S TRICKS | FULL GAME DIAGNOSIS (CLIENT VISIBLE)
+-- READ ONLY. NO HOOKS, NO REMOTE INVOKE/FIRE, NO BUTTON CLICKS,
+-- NO MODULE REQUIRE, NO STATE CHANGES.
+local O,seenFn,seenObj={},{},{}
 local function add(s) O[#O+1]=tostring(s) end
-local function path(x)
- if typeof(x)=="Instance" then
-  local ok,s=pcall(function() return x:GetFullName() end)
-  return ok and s or x.Name
+local function safe(v)
+ local t=typeof(v)
+ if t=="Instance" then
+  local ok,s=pcall(function() return v:GetFullName() end)
+  return ok and s or v.Name
  end
- return tostring(x)
+ if type(v)=="string" then return string.sub(v,1,350) end
+ return tostring(v)
 end
-local function constants(fn)
+local function prop(x,p)
+ local ok,v=pcall(function() return x[p] end)
+ return ok and v or nil
+end
+local function getConsts(f)
  if not debug or not debug.getconstants then return {} end
- local ok,t=pcall(debug.getconstants,fn)
- return ok and type(t)=="table" and t or {}
+ local ok,v=pcall(debug.getconstants,f)
+ return ok and type(v)=="table" and v or {}
 end
-local function values(fn)
+local function getUps(f)
  if not debug or not debug.getupvalues then return {} end
- local ok,t=pcall(debug.getupvalues,fn)
- return ok and type(t)=="table" and t or {}
+ local ok,v=pcall(debug.getupvalues,f)
+ return ok and type(v)=="table" and v or {}
 end
-local function dumpFn(name,fn,depth)
- if type(fn)~="function" or seenFn[fn] or depth>2 then return end
- seenFn[fn]=true
- add("\n### FUNCTION "..name)
+local function dumpFn(label,f,depth)
+ if type(f)~="function" or seenFn[f] or depth>1 then return end
+ seenFn[f]=true
+ add("\n[F] "..label)
  if debug and debug.getinfo then
-  local ok,i=pcall(debug.getinfo,fn)
-  if ok and i then add("INFO "..tostring(i.source).." line="..tostring(i.linedefined).." name="..tostring(i.name)) end
+  local ok,i=pcall(debug.getinfo,f)
+  if ok and i then add("SRC="..safe(i.source).." NAME="..safe(i.name).." LINE="..safe(i.linedefined)) end
  end
- local c=constants(fn)
+ local c=getConsts(f)
  for i,v in pairs(c) do
-  if type(v)=="string" or typeof(v)=="Instance" or type(v)=="number" then
-   add("C"..i.." "..path(v))
+  local t=type(v)
+  if t=="string" or t=="number" or t=="boolean" or typeof(v)=="Instance" then
+   add(" C"..i.." "..t.." "..safe(v))
   end
  end
- local u=values(fn)
+ local u=getUps(f)
  for i,v in pairs(u) do
-  local ty=type(v)
-  add("U"..i.." "..ty.." "..path(v))
-  if ty=="function" then dumpFn(name..".U"..i,v,depth+1)
-  elseif ty=="table" and depth<2 then
-   if not seenTab[v] then
-    seenTab[v]=true
-    local n=0
-    for k,x in pairs(v) do
-     n=n+1
-     if n>100 then add("  TABLE TRUNCATED"); break end
-     local xt=type(x)
-     if xt=="function" then
-      add("  ["..tostring(k).."] FUNCTION")
-      dumpFn(name..".U"..i.."."..tostring(k),x,depth+1)
-     elseif xt=="table" then
-      add("  ["..tostring(k).."] TABLE "..tostring(x))
-     else add("  ["..tostring(k).."] "..xt.." "..path(x)) end
-    end
+  local t=type(v)
+  if t=="function" then
+   add(" U"..i.." FUNCTION")
+   if depth<1 then dumpFn(label..".U"..i,v,depth+1) end
+  elseif t=="table" then
+   add(" U"..i.." TABLE")
+   local n=0
+   for k,x in pairs(v) do
+    n=n+1
+    if n>70 then add("  ...TABLE LIMIT"); break end
+    local xt=type(x)
+    if xt=="function" then add("  ["..safe(k).."] FUNCTION")
+    elseif xt=="table" then add("  ["..safe(k).."] TABLE")
+    else add("  ["..safe(k).."] "..xt.." "..safe(x)) end
    end
-  end
+  else add(" U"..i.." "..t.." "..safe(v)) end
  end
- if debug and debug.getprotos and depth<2 then
-  local ok,ps=pcall(debug.getprotos,fn)
+ if debug and debug.getprotos and depth==0 then
+  local ok,ps=pcall(debug.getprotos,f)
   if ok and type(ps)=="table" then
-   for i,p in pairs(ps) do if type(p)=="function" then dumpFn(name..".PROTO"..i,p,depth+1) end end
+   for i,p in pairs(ps) do if type(p)=="function" then add(" PROTO"..i.." FUNCTION") end end
   end
  end
 end
-local function findModule(name)
- for _,x in ipairs(RS:GetDescendants()) do
-  if x:IsA("ModuleScript") and x.Name==name then return x end
+local function matches(s)
+ s=tostring(s):lower()
+ for _,w in ipairs({"gacha","blind","kotak","pet","ternak","sewa","penyewa","tenant","kos","market","shop","inventory","hadiah","reward","claim","spin","upgrade","build","uang","money","sapu","sampah","pajak","aset","rumah","kamar","furnitur","furniture","kendaraan","vehicle","job","pekerja","gaji","bank","deposit","withdraw","jual","beli","jualbeli","trade","quest","misi","level","exp","experience","rebirth","prestige","plot","tycoon","interaksi","interact"}) do
+  if s:find(w,1,true) then return true end
  end
+ return false
 end
-add("=== RAEL BLIND BOX FULL DIAGNOSIS ===")
-add("Player "..P.Name.." | "..os.date("%Y-%m-%d %H:%M:%S"))
--- A. module exports and function bodies
-local names={"GachaController","BlindBoxTampil","GachaConfig","KotakController"}
-local mods={}
-for _,n in ipairs(names) do
- local m=findModule(n)
- add("\n### MODULE "..n.." = "..path(m))
- if m then
-  local ok,res=pcall(require,m)
-  add("REQUIRE "..tostring(ok).." "..(ok and type(res) or tostring(res)))
-  if ok and type(res)=="table" then
-   mods[n]=res
-   for k,v in pairs(res) do
-    if type(v)=="function" then dumpFn(n.."."..tostring(k),v,0)
-    elseif type(v)=="table" then
-     add("EXPORT "..tostring(k).." TABLE")
-     for a,b in pairs(v) do
-      if type(b)=="function" then dumpFn(n.."."..tostring(k).."."..tostring(a),b,0)
-      elseif typeof(b)=="Instance" then add("  "..tostring(a).." "..path(b)) end
-     end
-    else add("EXPORT "..tostring(k).." "..type(v).." "..path(v)) end
-   end
+local services={}
+for _,n in ipairs({"ReplicatedStorage","Workspace","Players","Lighting","SoundService","StarterGui","StarterPlayer","Teams","CollectionService","TextChatService"}) do
+ local ok,v=pcall(function() return game:GetService(n) end)
+ if ok and v then services[#services+1]=v end
+end
+local P=game:GetService("Players").LocalPlayer
+add("=== RAEL TRICKS | FULL GAME DIAGNOSIS ===")
+add("PLAYER "..safe(P).." USERID "..safe(P.UserId).." TIME "..os.date("%Y-%m-%d %H:%M:%S"))
+add("MODE READ-ONLY | NO HOOKS | NO REMOTE CALLS | NO MODULE REQUIRE")
+-- 1: all relevant instances across client-visible game trees
+add("\n=== 1. GAME INSTANCE TREE / OBJECT INVENTORY ===")
+local total,scriptCount,remoteCount,promptCount,toolCount=0,0,0,0,0
+for _,root in ipairs(services) do
+ add("\n[SERVICE] "..safe(root))
+ local descendants={}
+ pcall(function() descendants=root:GetDescendants() end)
+ for _,x in ipairs(descendants) do
+  total=total+1
+  local cl=x.ClassName
+  local nm=x.Name
+  local full=safe(x)
+  if x:IsA("LuaSourceContainer") then
+   scriptCount=scriptCount+1
+   if matches(full) or x:IsA("LocalScript") then add("[SCRIPT] "..cl.." "..full.." Disabled="..safe(prop(x,"Disabled"))) end
+  end
+  if x:IsA("RemoteEvent") or x:IsA("RemoteFunction") or x:IsA("UnreliableRemoteEvent") or x:IsA("BindableEvent") or x:IsA("BindableFunction") then
+   remoteCount=remoteCount+1
+   add("[REMOTE] "..cl.." "..full)
+  end
+  if x:IsA("ProximityPrompt") then
+   promptCount=promptCount+1
+   add("[PROMPT] "..full.." Action="..safe(x.ActionText).." Object="..safe(x.ObjectText).." Enabled="..safe(x.Enabled).." Hold="..safe(x.HoldDuration))
+  elseif x:IsA("ClickDetector") then add("[CLICK] "..full.." Distance="..safe(x.MaxActivationDistance))
+  elseif x:IsA("Tool") then
+   toolCount=toolCount+1
+   add("[TOOL] "..full.." Enabled="..safe(x.Enabled).." RequiresHandle="..safe(x.RequiresHandle))
+  elseif x:IsA("ModuleScript") and matches(full) then
+   add("[MODULE] "..full)
+  elseif x:IsA("ValueBase") and matches(full) then
+   add("[VALUE] "..cl.." "..full.." Value="..safe(prop(x,"Value")))
+  elseif (x:IsA("TextButton") or x:IsA("TextLabel") or x:IsA("TextBox")) and (matches(full) or matches(prop(x,"Text"))) then
+   add("[GUI] "..cl.." "..full.." Text="..safe(prop(x,"Text")).." Visible="..safe(prop(x,"Visible")).." Active="..safe(prop(x,"Active")))
+  elseif x:IsA("Attribute") then
+   -- Attributes are read from their owning instances below when relevant.
+  end
+  if matches(full) then
+   local attrs={}
+   pcall(function() attrs=x:GetAttributes() end)
+   for k,v in pairs(attrs) do add("[ATTR] "..full.." "..k.."="..safe(v)) end
   end
  end
 end
--- B. remote/event/function inventory relevant to Gacha, BlindBox, Kotak
-add("\n### REMOTE INVENTORY")
-local count=0
+add("COUNTS instances="..total.." scripts="..scriptCount.." remotes="..remoteCount.." prompts="..promptCount.." tools="..toolCount)
+-- 2: player runtime and GUI tree
+add("\n=== 2. PLAYER RUNTIME / GUI / BACKPACK ===")
+for _,root in ipairs({P:FindFirstChild("PlayerGui"),P:FindFirstChild("PlayerScripts"),P:FindFirstChild("Backpack"),P.Character}) do
+ if root then
+  add("[PLAYER ROOT] "..safe(root))
+  for _,x in ipairs(root:GetDescendants()) do
+   if x:IsA("LuaSourceContainer") or x:IsA("RemoteEvent") or x:IsA("RemoteFunction") or x:IsA("Tool") or x:IsA("ProximityPrompt") then
+    add("[PLAYER OBJECT] "..x.ClassName.." "..safe(x))
+   elseif x:IsA("TextButton") or x:IsA("TextLabel") or x:IsA("TextBox") then
+    add("[PLAYER UI] "..safe(x).." Text="..safe(x.Text).." Visible="..safe(x.Visible).." Active="..safe(x.Active))
+   elseif x:IsA("ValueBase") and matches(safe(x)) then add("[PLAYER VALUE] "..safe(x).."="..safe(x.Value)) end
+  end
+ end
+end
+-- 3: module inventory; intentionally do not require modules
+add("\n=== 3. MODULE INVENTORY (NOT REQUIRED) ===")
+local RS=game:GetService("ReplicatedStorage")
 for _,x in ipairs(RS:GetDescendants()) do
- if x:IsA("RemoteEvent") or x:IsA("RemoteFunction") or x:IsA("BindableEvent") or x:IsA("BindableFunction") then
-  local s=(x.Name.." "..x:GetFullName()):lower()
-  if s:find("gacha") or s:find("blind") or s:find("kotak") or s:find("reward") or s:find("claim") then
-   count=count+1; add(x.ClassName.." "..path(x))
-  end
+ if x:IsA("ModuleScript") then
+  add("[MODULE] "..safe(x))
  end
 end
-add("REMOTE MATCHES "..count)
--- C. all loaded GC functions whose constants identify the Blind Box flow
-add("\n### LOADED FUNCTION SEARCH")
+-- 4: live functions already loaded in client; inspect source/constants/upvalues
+add("\n=== 4. LOADED GAME FUNCTIONS / CONSTANTS / UPVALUES ===")
+local gcCount,hitCount=0,0
 if getgc and debug and debug.getconstants then
  local ok,g=pcall(getgc,true)
- local hits=0
+ add("GETGC "..safe(ok).." COUNT "..(ok and type(g)=="table" and #g or 0))
  if ok and type(g)=="table" then
-  for _,v in ipairs(g) do
-   if type(v)=="function" and not seenFn[v] then
-    local c=constants(v); local match={}
-    for _,z in pairs(c) do
-     if type(z)=="string" then
-      local q=z:lower()
-      if q:find("blindbox") or q:find("blind box") or q:find("bukablindbox") or q:find("claimcallback") then
-       match[#match+1]=z
-      end
-     end
+  for _,f in ipairs(g) do
+   if type(f)=="function" and not seenFn[f] then
+    gcCount=gcCount+1
+    local c=getConsts(f)
+    local info=""
+    if debug.getinfo then
+     local a,b=pcall(debug.getinfo,f)
+     if a and b then info=tostring(b.source).." "..tostring(b.name) end
     end
-    if #match>0 then
-     hits=hits+1
-     add("\nGC HIT "..hits.." constants="..table.concat(match,", "))
-     dumpFn("GC_HIT_"..hits,v,0)
-     if hits>=80 then add("GC SEARCH LIMIT 80"); break end
+    local hay=info
+    local matched={}
+    for _,v in pairs(c) do if type(v)=="string" then hay=hay.." "..v end end
+    if matches(hay) then
+     hitCount=hitCount+1
+     dumpFn("GC_MATCH_"..hitCount.." "..info,f,0)
+     if hitCount>=250 then add("GC MATCH LIMIT 250"); break end
     end
    end
   end
  end
- add("GC HITS "..hits.." getgc="..tostring(ok))
-else add("getgc/debug.getconstants unavailable") end
--- D. live BlindBox GUI state snapshot (read only)
-add("\n### LIVE GUI")
-local gui=P:FindFirstChild("PlayerGui") and P.PlayerGui:FindFirstChild("BlindBoxLayar")
-add("GUI "..path(gui))
-if gui then
- for _,x in ipairs(gui:GetDescendants()) do
-  if x:IsA("TextButton") or x:IsA("TextLabel") then
-   add(x.ClassName.." "..path(x).." Text="..tostring(x.Text).." Visible="..tostring(x.Visible))
-  end
+else add("GETGC OR DEBUG CONSTANTS UNAVAILABLE") end
+add("GC FUNCTIONS CHECKED "..gcCount.." MATCHES "..hitCount)
+-- 5: known game controllers/services by names in replicated storage
+add("\n=== 5. GAME MODULES BY PATH / CONTROLLER MAP ===")
+for _,x in ipairs(RS:GetDescendants()) do
+ if x:IsA("ModuleScript") and (matches(x.Name) or x.Parent and matches(x.Parent.Name)) then
+  add("[GAME MODULE] "..safe(x).." Parent="..safe(x.Parent))
  end
 end
+-- 6: world interactables and tagged objects
+add("\n=== 6. WORLD INTERACTABLES ===")
+local W=game:GetService("Workspace")
+for _,x in ipairs(W:GetDescendants()) do
+ if x:IsA("ProximityPrompt") or x:IsA("ClickDetector") or x:IsA("TouchTransmitter") then
+  add("[INTERACTABLE] "..x.ClassName.." "..safe(x).." Parent="..safe(x.Parent))
+ end
+end
+if CollectionService then
+ local ok,t=pcall(function() return game:GetService("CollectionService"):GetAllTags() end)
+ if ok then for _,tag in ipairs(t) do add("[TAG] "..tag) end end
+end
+-- 7: key runtime state values
+add("\n=== 7. PLAYER / CHARACTER STATE ===")
+local char=P.Character
+if char then
+ local h=char:FindFirstChildOfClass("Humanoid")
+ local root=char:FindFirstChild("HumanoidRootPart")
+ add("CHAR "..safe(char).." HUMANOID "..safe(h).." HEALTH "..(h and safe(h.Health) or "-").." WALKSPEED "..(h and safe(h.WalkSpeed) or "-"))
+ add("ROOT "..safe(root).." POSITION "..(root and safe(root.Position) or "-"))
+end
+local pg=P:FindFirstChild("PlayerGui")
+if pg then
+ for _,x in ipairs(pg:GetChildren()) do
+  if x:IsA("ScreenGui") then add("[SCREEN] "..safe(x).." Enabled="..safe(x.Enabled).." DisplayOrder="..safe(x.DisplayOrder)) end
+ end
+end
+-- 8: finish / save
 local result=table.concat(O,"\n")
-if setclipboard then pcall(setclipboard,result) end
 if writefile then pcall(writefile,"Hasil.lua",result) end
-print("BLIND BOX DIAGNOSIS SELESAI | hasil disalin dan disimpan sebagai Hasil.lua")
+if setclipboard then pcall(setclipboard,result) end
+print("FULL GAME DIAGNOSIS SELESAI | "..#result.." karakter | Hasil.lua + clipboard")
