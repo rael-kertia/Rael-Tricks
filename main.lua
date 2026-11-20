@@ -615,7 +615,7 @@ local gachaBusy = false
 local gachaService
 
 -- Perluas panel utama agar seluruh tombol tetap berada di dalam GUI yang sama.
-frame.Size = UDim2.fromOffset(205, 340)
+frame.Size = UDim2.fromOffset(252, 340)
 
 local gachaButton = Instance.new("TextButton")
 gachaButton.Name = "AutoGachaButton"
