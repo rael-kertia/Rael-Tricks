@@ -1,1232 +1,1449 @@
-=== BLIND BOX FULL UI SCAN ===
-
-[GUI] WaypointUI
-
-[GUI] TopbarCenteredClipped
-
-[GUI] TopbarStandardClipped
-
-[GUI] TopbarStandard
-TextButton | Players.Raelity911.PlayerGui.TopbarStandard.Holders.Left.OverflowLeft.IconButton.Menu.IconSpot.ClickRegion | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TopbarStandard.Holders.Right.CMD.IconButton.Menu.IconSpot.ClickRegion | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TopbarStandard.Holders.Right.OverflowRight.IconButton.Menu.IconSpot.ClickRegion | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TopbarStandard.Holders.Right.Widget.IconButton.Menu.IconSpot.ClickRegion | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TopbarStandard.Holders.Right.Widget.IconButton.Menu.IconSpot.ClickRegion | Text= | Visible=true | Active=true
-
-[GUI] TopbarCentered
-
-[GUI] ContextActionGui
-ImageButton | Players.Raelity911.PlayerGui.ContextActionGui.ContextButtonFrame.ContextActionButton | Text= | Visible=true | Active=true
-
-[GUI] AdminTitleUI
-TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.ListPanel | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.ListPanel.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.ListPanel.Panel.List.Template.GiftBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.InputPanel | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.InputPanel.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.InputPanel.Panel.KirimBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.InputPanel.Panel.HapusBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.InputPanel.Panel.BatalBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Players.List.Row | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.MoneyRow.GiftMoneyBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TeleportRow.TeleportToBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TeleportRow.BringBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KickBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.BanRow.BanBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TitleRow.GiveTitleBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TitleRow.ClearTitleBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.CekUangResult.CekRefreshBtn | Text=↺ | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.ActionTabRow.TabAksi | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.ActionTabRow.TabAbuse | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.ActionTabRow.TabLog | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.ActionTabRow.TabEvent | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.ActionTabRow.TabKode | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KeyRow.GiftKeyBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn1 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn2 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn3 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn4 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn5 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn6 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn7 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn8 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn9 | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn10 | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn11 | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn12 | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn13 | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TestZonaRow.ZonaBtn14 | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.GiftItemRow.GiftItemBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.BanUserRow.BanUserBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.GiftAllRow.GiftAllBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.CleanAllBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.PriceRow.SetPriceBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.LimitRow.SetLimitBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.SetHouseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.StreamerRow.StreamerSetBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.StreamerRow.StreamerRemoveBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.WaktuSlider.Hit | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.WaktuBtnRow.WaktuGlobalBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AbuseSection.WaktuBtnRow.WaktuServerBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.AnnounceLogSection.LogTopRow.RefreshLogBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TenantRow.AddTenantBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.TenantRow.KurangiTenantBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.GoldSection.GoldRow.TambahGoldBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.GoldSection.GoldRow.KurangiGoldBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.ScopeRow.ScopeServerBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.ScopeRow.ScopeGlobalBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.OtoRow.OtomatisBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow1.PembukaanBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow1.LemparBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow2.BurstBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow2.DanceBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow3.PenutupBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.FaseRow3.BatalBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList._TemplateEmote | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_1 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_2 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_3 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_4 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_5 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_6 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_7 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_8 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_9 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_10 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_11 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_12 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_13 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_14 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_15 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_16 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_17 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_18 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_19 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_20 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_21 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_22 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_23 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_24 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_25 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_26 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_27 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_28 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_29 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_30 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_31 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_32 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_33 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_34 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_35 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_36 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_37 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_38 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_39 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_40 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_41 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_42 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_43 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_44 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_45 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_46 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_47 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_48 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_49 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_50 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_51 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_52 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_53 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_54 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_55 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_56 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_57 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_58 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_59 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_60 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_61 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_62 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_63 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_64 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_65 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_66 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_67 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_68 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_69 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_70 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_71 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_72 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_73 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_74 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_75 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_76 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_77 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_78 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_79 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_80 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_81 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_82 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_83 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_84 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_85 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_86 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_87 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_88 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_89 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_90 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_91 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_92 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_93 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_94 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_95 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_96 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_97 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_98 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_99 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_100 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_101 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_102 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_103 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_104 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_105 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_106 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_107 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_108 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_109 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_110 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_111 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_112 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_113 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_114 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_115 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_116 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_117 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_118 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_119 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_120 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_121 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_122 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_123 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_124 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_125 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_126 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_127 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_128 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_129 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_130 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_131 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_132 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_133 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_134 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_135 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_136 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_137 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_138 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_139 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_140 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_141 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_142 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_143 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_144 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_145 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_146 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_147 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_148 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_149 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_150 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_151 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_152 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_153 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_154 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_155 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_156 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_157 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_158 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_159 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_160 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_161 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_162 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_163 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_164 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_165 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_166 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_167 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_168 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_169 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_170 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_171 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_172 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_173 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_174 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_175 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_176 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_177 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_178 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_179 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_180 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteList.E_181 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteRow.MainkanBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.EmoteRow.DiamBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.MiniRow.MinimizeBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.EventSection.SebarRow.SebarBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.LacakSection.LogLacakBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.LacakSection.CariRow.LacakBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.LacakSection.HasilList.HasilTemplate.TpBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.LacakSection.HasilList.HasilTemplate.KickBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.PassRow.BeriPassBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.PassRow.CabutPassBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.PassRow.PilihPassBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.BuatBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.WaktuRow.SatuanBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.DaftarHeader.RefreshKodeBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.DaftarKode._KodeBaris.Tombol.OnOffBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.DaftarKode._KodeBaris.Tombol.WaktuBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminTitleUI.AdminPanel.Panel.Body.Actions.KodeSection.DaftarKode._KodeBaris.Tombol.HapusBtn | Text= | Visible=true | Active=true
-
-[GUI] AnnouncementUI
-
-[GUI] UiTurunDomba
-TextButton | Players.Raelity911.PlayerGui.UiTurunDomba.Frame.Turun | Text= | Visible=true | Active=true
-
-[GUI] BadgeKeranjang
-
-[GUI] Badgex2Xp
-
-[GUI] Badgex5KranjangLanudry
-
-[GUI] BikeSystemGui
-TextButton | Players.Raelity911.PlayerGui.BikeSystemGui.MainFrame.ButtonFrame.Spawn.Big | Text=Besar | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.BikeSystemGui.MainFrame.ButtonFrame.Spawn.Small | Text=Kecil | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.BikeSystemGui.MainFrame.ButtonFrame.Cancel | Text=Batal | Visible=false | Active=true
-
-[GUI] Button
-ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.StatusRumah | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.ChangeCammera | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.KaryawanUibtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.AdminBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.AdminPanelBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.SwitchRoleBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.MusicButton | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.ShopToken | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.LeftButtons.MenuBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.TopbarButtons.SettingButton | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.TopbarButtons.DanceBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.TopbarButtons.RetrunToHome | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.TopbarButtons.ServerListButton | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.TopbarButtons.HadiahButton | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.TopbarRightButtons.UnhideBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.PesainInformasi | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.CustommTitle | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.GudangBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.MutasiBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.Accessory | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.MisiBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Button.RightButtons.GamepassBtn | Text= | Visible=true | Active=true
-
-[GUI] CarryGui
-TextButton | Players.Raelity911.PlayerGui.CarryGui.NotificationFrame.RejectBtn | Text=Reject | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.CarryGui.NotificationFrame.AcceptBtn | Text=Accept | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.CarryGui.GetDownBtn | Text=Get Down | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.ScrollingFrame.CarrySelection.CoupleHug | Text=Couple Hug | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.ScrollingFrame.CarrySelection.PiggyBack | Text=Piggy Back | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.ScrollingFrame.CarrySelection.Bridal | Text=Bridal | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.ScrollingFrame.CarrySelection.PiggyUpperBack | Text=Piggy UpperBack | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.ScrollingFrame.CarrySelection.Pasakal | Text=Pasakal | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.CarryGui.MainFrame.CloseButton | Text= | Visible=true | Active=true
-
-[GUI] TutorialUI
-ImageButton | Players.Raelity911.PlayerGui.TutorialUI.Root.Kartu.Baris.Lewati | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TutorialUI.Root.Kartu.Baris.Lanjut | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TutorialUI.Root.Konfirm.Panel.Baris.Batal | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TutorialUI.Root.Konfirm.Panel.Baris.Ya | Text= | Visible=true | Active=true
-
-[GUI] GachaRevealGui
-
-[GUI] Commandgui
-TextButton | Players.Raelity911.PlayerGui.Commandgui.Frame.Frame.TextButton | Text=X | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Commandgui.Frame.Frame.Command1.TextButton | Text=EXECUTE | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Commandgui.Frame.Frame.Command2.TextButton | Text=EXECUTE | Visible=true | Active=true
-
-[GUI] ControlBulid
-ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.RotateKanan | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.RotateKiri | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Pasang | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Batal | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Duplikat | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Maju | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Mundur | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Kiri | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Kanan | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ControlBulid.Frame.Cabut | Text= | Visible=true | Active=true
-
-[GUI] CustomTitle
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.KirimBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.HapusBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_1 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_2 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_3 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_4 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_5 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_6 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_7 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_8 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_9 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_10 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_11 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.ColorFrame.Color_12 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.FontSizeFrame.FontSize_S | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.FontSizeFrame.FontSize_M | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.FontSizeFrame.FontSize_L | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.CustomTitle.Panel.FontSizeFrame.FontSize_XL | Text= | Visible=true | Active=true
-
-[GUI] Emotegui
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.Handler.sample.Button | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.Handler.Template | Text=Animation Name | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.TabFrame.Dance | Text=Dance | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.TabFrame.Emote | Text=Emote | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.SpeedBar.bar.dot.Button | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.doll idle pose | Text=doll idle pose | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.girl idle pose | Text=girl idle pose | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Kid tantrum | Text=Kid tantrum | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Nonchalant Sit | Text=Nonchalant Sit | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Police Vest Rest | Text=Police Vest Rest | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Pose 1 | Text=Pose 1 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sad | Text=Sad | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Shinra Pose | Text=Shinra Pose | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.sit | Text=sit | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sit 2 | Text=Sit 2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.sit and hug | Text=sit and hug | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.sitting idle pose | Text=sitting idle pose | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sleep Face | Text=Sleep Face | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sleeping Soundly | Text=Sleeping Soundly | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Spider Swing | Text=Spider Swing | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Spiderman | Text=Spiderman | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Spiderman Hanging | Text=Spiderman Hanging | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Squat Sit | Text=Squat Sit | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sweet Hug V2 | Text=Sweet Hug V2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Sweet Sit V1 | Text=Sweet Sit V1 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Swinging | Text=Swinging | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.EmoteContainer.Wall Lean | Text=Wall Lean | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.2pa2 | Text=2pa2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Acelerada | Text=Acelerada | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.AllowSleeps Vibe | Text=AllowSleeps Vibe | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Aram Sam sa | Text=Aram Sam sa | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Arms Up | Text=Arms Up | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Avion | Text=Avion | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Bachata 1 | Text=Bachata 1 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Banana Shake | Text=Banana Shake | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Bel Air | Text=Bel Air | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Belly Dance | Text=Belly Dance | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Belly Twist R | Text=Belly Twist R | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.BHAnew | Text=BHAnew | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Bizcochito | Text=Bizcochito | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Bizcocho | Text=Bizcocho | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.BlindingLights | Text=BlindingLights | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.BlindingLights 1 | Text=BlindingLights 1 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Bones | Text=Bones | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Boogie Down | Text=Boogie Down | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Boots | Text=Boots | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Brazildance | Text=Brazildance | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Break Dance | Text=Break Dance | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Breakdance | Text=Breakdance | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.BreakeDance Floor | Text=BreakeDance Floor | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Can can | Text=Can can | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Candy | Text=Candy | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.CaramelDancen | Text=CaramelDancen | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Cha Cha | Text=Cha Cha | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Chakalita | Text=Chakalita | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Chess | Text=Chess | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Cholo Cumbia | Text=Cholo Cumbia | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Claping | Text=Claping | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Coffin Walking | Text=Coffin Walking | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Confess Dance | Text=Confess Dance | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Conga | Text=Conga | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Conga 1 | Text=Conga 1 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Conga 2 | Text=Conga 2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Conga 4 | Text=Conga 4 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Cool 1 | Text=Cool 1 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Cool 2 | Text=Cool 2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.CrisCroos | Text=CrisCroos | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Cuerda | Text=Cuerda | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dance Viral | Text=Dance Viral | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dancing With Your Eyes | Text=Dancing With Your Eyes | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dia Delicia | Text=Dia Delicia | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.DJ | Text=DJ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.DKWTD | Text=DKWTD | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Don Pollo | Text=Don Pollo | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dougie | Text=Dougie | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Drum Feet | Text=Drum Feet | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Durang | Text=Durang | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dxrk | Text=Dxrk | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dxrk 1 | Text=Dxrk 1 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dxrk R | Text=Dxrk R | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Dynamite | Text=Dynamite | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El azul | Text=El azul | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El coco | Text=El coco | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El soon | Text=El soon | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El soon 2 | Text=El soon 2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El soon 3 | Text=El soon 3 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El soon 4 | Text=El soon 4 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.El toro | Text=El toro | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Fast Hops | Text=Fast Hops | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Feeling | Text=Feeling | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Festa No Brasil | Text=Festa No Brasil | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Floss | Text=Floss | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.FootLoose | Text=FootLoose | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Get Griddy | Text=Get Griddy | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Get Sturdy | Text=Get Sturdy | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Goyang Dumang | Text=Goyang Dumang | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Griddy | Text=Griddy | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Groove | Text=Groove | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Guadala | Text=Guadala | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Guittar | Text=Guittar | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Heel Toe | Text=Heel Toe | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hellfire | Text=Hellfire | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hip Hop Arm Wave | Text=Hip Hop Arm Wave | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hip Hop Arms | Text=Hip Hop Arms | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hip hop dnce | Text=Hip hop dnce | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hip Hop Snackers | Text=Hip Hop Snackers | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hip Sway | Text=Hip Sway | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hips | Text=Hips | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hit it | Text=Hit it | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Hit Rib | Text=Hit Rib | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.In The Rain | Text=In The Rain | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Jack | Text=Jack | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Kanan Kiri | Text=Kanan Kiri | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Kazotsky Kick New | Text=Kazotsky Kick New | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Koboi | Text=Koboi | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.La Chona | Text=La Chona | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Lart Forever 1 | Text=Lart Forever 1 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Last Forever | Text=Last Forever | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Leave | Text=Leave | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Like JEEMIN | Text=Like JEEMIN | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Macarena | Text=Macarena | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Make You Mine | Text=Make You Mine | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Mini Mini | Text=Mini Mini | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Motorcyclist | Text=Motorcyclist | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Ola | Text=Ola | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Ombrino | Text=Ombrino | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Ombrino 2 | Text=Ombrino 2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pangya | Text=Pangya | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Payaso De Rodeo | Text=Payaso De Rodeo | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pcr | Text=Pcr | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pennywise | Text=Pennywise | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Piano Hand | Text=Piano Hand | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pinggul | Text=Pinggul | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Popular | Text=Popular | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Popular Vibe | Text=Popular Vibe | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pull Love | Text=Pull Love | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Pump it | Text=Pump it | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Punjab | Text=Punjab | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Push Up | Text=Push Up | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Raise The Roof | Text=Raise The Roof | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Rakai Dance | Text=Rakai Dance | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Rat dances | Text=Rat dances | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Ride The Pony | Text=Ride The Pony | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Rollie | Text=Rollie | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Ruben Dance | Text=Ruben Dance | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa | Text=Salsa | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa Dancing | Text=Salsa Dancing | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa Dancing 1 | Text=Salsa Dancing 1 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa Dancing 2 | Text=Salsa Dancing 2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa Dancing 4 | Text=Salsa Dancing 4 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Salsa Dancing 5 | Text=Salsa Dancing 5 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.SaveUrTears | Text=SaveUrTears | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sepatu | Text=Sepatu | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sequencia | Text=Sequencia | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sequencia 2 | Text=Sequencia 2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Shiit Chill | Text=Shiit Chill | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Shiit Chill 2 | Text=Shiit Chill 2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sign Suffle | Text=Sign Suffle | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Slidin | Text=Slidin | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Space | Text=Space | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Speed | Text=Speed | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Spicy | Text=Spicy | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Spike | Text=Spike | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sponge Dance | Text=Sponge Dance | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.SpongeBob | Text=SpongeBob | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Spongebob Suffle | Text=Spongebob Suffle | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Stay Alive | Text=Stay Alive | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sturdy | Text=Sturdy | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Sturdy Dance Ice Space | Text=Sturdy Dance Ice Space | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.swooo | Text=swooo | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.T Pose | Text=T Pose | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Tarian Bukan Masalah Saya  | Text=Tarian Bukan Masalah Saya  | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Tarian Kangaroo | Text=Tarian Kangaroo | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Tarian Pakodi | Text=Tarian Pakodi | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Terminal | Text=Terminal | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.The Dance Laroi | Text=The Dance Laroi | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.The falcon | Text=The falcon | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.The Look | Text=The Look | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.The Robot | Text=The Robot | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Timeless | Text=Timeless | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Tirano | Text=Tirano | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Trapin | Text=Trapin | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.True Heart | Text=True Heart | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Vai Toma | Text=Vai Toma | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Wanna See Me | Text=Wanna See Me | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.MainFrame.Container.DanceContainer.Yungbblud | Text=Yungbblud | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.Emotegui.GuiFrame.Close | Text= | Visible=false | Active=true
-
-[GUI] GachaEntryGui
-TextButton | Players.Raelity911.PlayerGui.GachaEntryGui.Panel.Row1.SpinButton | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.GachaEntryGui.Panel.Row1.PaidSpinButton | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.GachaEntryGui.Panel.Row2.X10FreeButton | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.GachaEntryGui.Panel.Row2.X10PaidButton | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GachaEntryGui.Panel.CloseButton | Text= | Visible=true | Active=true
-
-[GUI] GachaGui
-
-[GUI] GamepassShop
-TextButton | Players.Raelity911.PlayerGui.GamepassShop.Dim | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GamepassShop.Main.Top.Close | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GamepassShop.Main.Cards.List.Card.Padded.Bottom.BuyBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GamepassShop.Main.Cards.List.Card.Padded.Bottom.GiftBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GamepassShop.Main.Cards.List.Card.OwnedOverlay.GiftBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.GamepassShop.GiftDim | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GamepassShop.GiftPanel.Close | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GamepassShop.GiftPanel.List.PlayerRow.PickBtn | Text= | Visible=true | Active=true
-
-[GUI] GudangUi
-ImageButton | Players.Raelity911.PlayerGui.GudangUi.Frame.Topbar.TabFrame.TabDekorasi | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GudangUi.Frame.Topbar.TabFrame.TabPagar | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GudangUi.Frame.Topbar.TabFrame.TabSemua | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GudangUi.Frame.Topbar.CloseBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.GudangUi.Frame.ItemLIst.List.Template.RightPanel.JualBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.GudangUi.Frame.ItemLIst.List.Template.RightPanel.GiftBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.GudangUi.Frame.ItemLIst.List.Template.RightPanel.AddBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.GudangUi.AmountPopup.AmountInput.MinusBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.GudangUi.AmountPopup.AmountInput.PlusBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.GudangUi.AmountPopup.ConfirmBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.GudangUi.AmountPopup.CancelBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GudangUi.GiftPanel.Close | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GudangUi.GiftPanel.List.PlayerRow.PickBtn | Text= | Visible=true | Active=true
-
-[GUI] HammerWarning
-ImageButton | Players.Raelity911.PlayerGui.HammerWarning.Panel.OkBtn | Text= | Visible=true | Active=true
-
-[GUI] HotbarUI
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot1 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot1.RemoveBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot2 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot2.RemoveBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot3 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot3.RemoveBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot4 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot4.RemoveBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot5 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.LeftSlots.Slot5.RemoveBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.Root.InvButton | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Header.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv1 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv1.AddBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv2 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv2.AddBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv3 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv3.AddBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv4 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv4.AddBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv5 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv5.AddBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv6 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Grid.Inv6.AddBtn | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Semua | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Alat | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Kendaraan | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Bibit | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Panen | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HotbarUI.InventoryPanel.Kategori.Tab_Ternak | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.SlotTemplate | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.SlotTemplate.RemoveBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InvSlotTemplate | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HotbarUI.InvSlotTemplate.AddBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HotbarUI.TabTemplate | Text= | Visible=false | Active=true
-
-[GUI] JamUi
-
-[GUI] KaryawanUI
-TextButton | Players.Raelity911.PlayerGui.KaryawanUI.Backdrop | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.Header.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.TabRow.TabPekerja | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.TabRow.TabLamaran | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.TabRow.TabHistory | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.TabRow.TabGaji | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.List.ReqTemplate.Terima | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.List.ReqTemplate.Tolak | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.List.WorkTemplate.Access.BuilderBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.List.WorkTemplate.Access.BersihBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.List.WorkTemplate.Pecat | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.GajiPage.SetBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.BossPanel.GajiPage.Samakan.TerapkanBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.WorkerPanel.Header.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.WorkerPanel.StatusCard.QuitBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.WorkerPanel.List.BossTemplate.Minta | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.WorkerPanel.TawaranCard.TolakBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.WorkerPanel.TawaranCard.SetujuBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.KaryawanUI.ConfirmPopup.Dim | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.ConfirmPopup.Box.YaBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.KaryawanUI.ConfirmPopup.Box.BatalBtn | Text= | Visible=true | Active=true
-
-[GUI] MisiRewardGui
-TextButton | Players.Raelity911.PlayerGui.MisiRewardGui.Dim | Text= | Visible=true | Active=true
-
-[GUI] LaundryUI
-ImageButton | Players.Raelity911.PlayerGui.LaundryUI.MainFrame.LeftPanel.ClothesList.RowTemplate.PlusBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.LaundryUI.MainFrame.RightPanel.RightHeader.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.LaundryUI.MainFrame.RightPanel.StartBtn | Text= | Visible=true | Active=true
-
-[GUI] ListrikSwitchUI
-TextButton | Players.Raelity911.PlayerGui.ListrikSwitchUI.Dim | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ListrikSwitchUI.Panel.Close | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ListrikSwitchUI.Panel.Switch | Text= | Visible=true | Active=true
-
-[GUI] LokerUI
-TextButton | Players.Raelity911.PlayerGui.LokerUI.Backdrop | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Header.CloseBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.TabBar.TabInfo | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.TabBar.TabSebar | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab1.List.LokerCard.TeleportBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab1.List.LokerCard.LamarBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.SlotSection.Options.Slot1 | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.SlotSection.Options.Slot2 | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.SlotSection.Options.Slot3 | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.SlotSection.Options.Slot4 | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.GajiSection.Stepper.MinBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.GajiSection.Stepper.PlusBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.GajiSection.UbahBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.LokerUI.Panel.Content.Tab2.BroadcastBtn | Text= | Visible=true | Active=true
-
-[GUI] MiniGame
-
-[GUI] MisiUI
-TextButton | Players.Raelity911.PlayerGui.MisiUI.Backdrop | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MisiUI.Panel.Header.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MisiUI.Panel.Left.ClaimBtn | Text= | Visible=true | Active=true
-
-[GUI] MusicUI
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.NowPlaying.Controls.PrevBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.NowPlaying.Controls.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.NowPlaying.Controls.NextBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.NowPlaying.Volume.MinusBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.NowPlaying.Volume.PlusBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Header.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.TabBar.Scroll.ChipTemplate | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.TabBar.Scroll.Chip_ALL | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.TabBar.Scroll.Chip_DJ | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.TabBar.Scroll.Chip_GALAU | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.TabBar.Scroll.Chip_JAWA AKUSTIK | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.SongTemplate.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_1.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_2.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_3.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_4.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_5.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_6.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_7.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_8.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_9.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_10.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_11.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_12.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_13.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_14.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_15.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_16.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_17.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_18.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_19.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_20.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_21.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_22.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_23.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_24.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_25.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_26.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_27.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_28.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_29.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_30.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_31.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_32.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_33.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_34.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_35.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_36.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_37.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.Content.LibraryPage.List.Song_38.PlayBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.MusicUI.Panel.CustomBar.PlayCustomBtn | Text= | Visible=true | Active=true
-
-[GUI] NekoCam
-
-[GUI] NotifUiv2
-
-[GUI] PetUI
-TextButton | Players.Raelity911.PlayerGui.PetUI.Backdrop | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.Header.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.TabBar.vehicle | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.TabBar.TrailTab | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.TabBar.PetTab | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.CardTemplate | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_HalloweenPteranodon | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Winged Fairy | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_AbyssCorn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Fiery Dragon | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Fox | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Bull | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Bunny | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Dog | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Helios | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Ascended Bull | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Gummy Doubull | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_mosmos | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_wipie | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Licaww | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_NagaIjo | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Dragoncoklat | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_PinkPlenger | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_SiirengBiru | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Hantusapu | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Hantuimup | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_Astralune | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_NEBULYN | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.GridScroll.Card_mochi Bunny | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PetUI.Panel.DetailPane.EquipBtn | Text= | Visible=true | Active=true
-
-[GUI] PlayerHUD
-
-[GUI] PlayerList
-TextButton | Players.Raelity911.PlayerGui.PlayerList.Main.Header.CategoryLabel.Hit | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PlayerList.Main.Header.SwapBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.Main.List.Row.HitHolder.Hit | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.Main.List.Row_1337645810.HitHolder.Hit | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.MenuDim | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.ActionMenu.Item | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.InfoPanel.CloseBtn | Text=Tutup | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.ReportPanel.Reasons.ReasonBtn | Text=Alasan | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.ReportPanel.CancelBtn | Text=Batal | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.Presets.P10 | Text=10 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.Presets.P25 | Text=25 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.Presets.P50 | Text=50 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.Presets.P100 | Text=100 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.Presets.P500 | Text=500 | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.SendBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PlayerList.GiftRobuxPanel.Content.CancelBtn | Text=Batal | Visible=true | Active=true
-
-[GUI] ServerList
-ImageButton | Players.Raelity911.PlayerGui.ServerList.Panel.Header.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ServerList.Panel.List.RowTemplate.Action | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.PrivatContent.PrivList.PrivTemplate.LockBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.PrivatContent.BuatPrivBtn | Text=BUAT SERVER PRIVAT | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.PublikListContent.PubList.PubTemplate.JoinBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.PublikListContent.PindahBtn | Text=MASUK | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.PublikContent.BuatRoomBtn | Text=BUAT SERVER | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.LobbyContent.ReturnBtn | Text=KEMBALI KE LOBBY | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.ModeBar.BtnPlot8 | Text=8 PLOT | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.ModeBar.BtnPlot4 | Text=4 PLOT | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.BarisTab.TabBar.TabPublik | Text=PRIVATE | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.BarisTab.TabBar.TabPrivat | Text=BUAT ROOM | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.ServerListPanel.Panel.BarisTab.TabBar.TabLobby | Text=LOBBY | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.PinCreatePanel | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.PinCreatePanel.Panel.BuatBtn | Text=BUAT SERVER | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.ServerList.PinCreatePanel.Panel.BatalBtn | Text=BATAL | Visible=true | Active=true
-
-[GUI] Setting
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.TopFrame.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.NameSetting.Toggle | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.GuiSetting.Toggle | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.ShadowSetting.Toggle | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.BlurSetting.Toggle | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.MuteBgm.Toggle | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.MuteBoombox.Toggle | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.HideChatBubbles.Toggle | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.PilihTexture.TexBtns.Tex_Low | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.PilihTexture.TexBtns.Tex_Normal | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.PilihTexture.TexBtns.Tex_High | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.Setting.SettingFrame.Container.List.GridSetting.Toggle | Text= | Visible=true | Active=true
-
-[GUI] SwitchRoleUI
-TextButton | Players.Raelity911.PlayerGui.SwitchRoleUI.Dim | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.SwitchRoleUI.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SwitchRoleUI.Panel.Cards.CardPemilik | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SwitchRoleUI.Panel.Cards.CardPekerja | Text= | Visible=true | Active=true
-
-[GUI] TaxUI
-ImageButton | Players.Raelity911.PlayerGui.TaxUI.Main.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TaxUI.Main.Content.LeftPanel.CekSaldoBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TaxUI.Main.Content.LeftPanel.BayarBtn | Text= | Visible=true | Active=true
-
-[GUI] TokenInputUI
-TextButton | Players.Raelity911.PlayerGui.TokenInputUI.Dim | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenInputUI.Panel.Close | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenInputUI.Panel.SubmitBtn | Text= | Visible=true | Active=true
-
-[GUI] TokenListrikShop
-TextButton | Players.Raelity911.PlayerGui.TokenListrikShop.Dim | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Sidebar.Nav.NavToken | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Sidebar.Nav.NavRiwayat | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Close | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card.Padded.BuyBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M5.Padded.BuyBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M10.Padded.BuyBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M15.Padded.BuyBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M30.Padded.BuyBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M120.Padded.BuyBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.Main.Content.Cards.List.Card_M500.Padded.BuyBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TokenListrikShop.ResultOverlay.Dim | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.ResultOverlay.Pop.Buttons.CopyBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TokenListrikShop.ResultOverlay.Pop.Buttons.CloseBtn | Text= | Visible=true | Active=true
-
-[GUI] TraktorUI
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Traktor.Tombol.BeliGoldBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Traktor.Tombol.BeliRobuxBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Traktor.Tombol.HadiahBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Traktor.Tombol.SpawnBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Gerbong.Tombol.BeliGoldBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Gerbong.Tombol.BeliRobuxBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Gerbong.Tombol.HadiahBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Gerbong.Tombol.Spawn1Btn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelTraktor.Content.Cards.Card_Gerbong.Tombol.Spawn2Btn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelHadiah.Close | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelHadiah.List.PlayerRow.PickBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelHadiah.ModeBayar.ModeRobux | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.PanelHadiah.ModeBayar.ModeAset | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.HudTangki.UpgradeBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.KonfirmasiTangki.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.KonfirmasiTangki.Content.Tombol.UpgradeBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TraktorUI.KonfirmasiTangki.Content.Tombol.BatalBtn | Text= | Visible=true | Active=true
-
-[GUI] TransferUI
-ImageButton | Players.Raelity911.PlayerGui.TransferUI.Panel.TransferBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TransferUI.Panel.CancelBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TransferUI.Panel.CloseBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TransferUI.Panel.QuickAmounts.Quick_10000 | Text=10K | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TransferUI.Panel.QuickAmounts.Quick_50000 | Text=50K | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TransferUI.Panel.QuickAmounts.Quick_100000 | Text=100K | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TransferUI.Panel.QuickAmounts.Quick_500000 | Text=500K | Visible=true | Active=true
-
-[GUI] TutorialUi
-TextButton | Players.Raelity911.PlayerGui.TutorialUi.Main.Container.Confirm | Text=Tutup | Visible=true | Active=true
-
-[GUI] UiDombaGift
-ImageButton | Players.Raelity911.PlayerGui.UiDombaGift.Main.Topbar.CloseBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiDombaGift.Main.DombaRowTemplate.GiftBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.UiDombaGift.PlayerList.Topbar.CloseBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiDombaGift.PlayerList.PlayerRowTemplate.SelectBtn | Text= | Visible=true | Active=true
-
-[GUI] UiGame
-TextButton | Players.Raelity911.PlayerGui.UiGame.UpgradeUi.UpgradeBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.UpgradeUi.MoveBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.Toparframe.TabBulding | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.Toparframe.TabDekorasi | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.Toparframe.TabPagar | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.Toparframe.TabPremium | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.Toparframe.TabAlat | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.UiGame.Frame.Topbar.CloseBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Template.RightPanel.UnlockBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Template.RightPanel.Spawn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_1.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_1.RightPanel.Spawn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_2.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_2.RightPanel.Spawn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_3.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_3.RightPanel.Spawn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_4.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_4.RightPanel.Spawn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_5.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_5.RightPanel.Spawn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_6.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_6.RightPanel.Spawn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_7.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_7.RightPanel.Spawn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_8.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_8.RightPanel.Spawn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_9.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_9.RightPanel.Spawn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_10.RightPanel.UnlockBtn | Text= | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.UiGame.Frame.ItemLIst.List.Item_10.RightPanel.Spawn | Text= | Visible=true | Active=true
-
-[GUI] UiMutasiTransfer
-ImageButton | Players.Raelity911.PlayerGui.UiMutasiTransfer.Main.Topbar.CloseBtn | Text= | Visible=true | Active=true
-
-[GUI] TanamUI
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelLahan.Topbar.CloseBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TanamUI.PanelLahan.Content.Kiri.AutoCard.ToggleAuto | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Wortel.BeliBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Wortel.Qty.MinBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Wortel.Qty.PlusBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Cabai.BeliBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Cabai.Qty.MinBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Cabai.Qty.PlusBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Tomat.BeliBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Tomat.Qty.MinBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.Cards.Card_Tomat.Qty.PlusBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelToko.Content.UpgradeGundukan.UpgradeBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelSegera.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TanamUI.PanelSegera.Content.OkeBtn | Text= | Visible=true | Active=true
-
-[GUI] TernakUI
-ImageButton | Players.Raelity911.PlayerGui.TernakUI.PanelBeliDomba.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TernakUI.PanelBeliDomba.Content.Cards.Card_Domba.BeliBtn | Text= | Visible=true | Active=true
-
-[GUI] ConvertUI
-ImageButton | Players.Raelity911.PlayerGui.ConvertUI.PanelConvert.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ConvertUI.PanelConvert.Content.MasukBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ConvertUI.PanelConvert.Content.KlaimBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.ConvertUI.PanelConvert.Content.KursStrip.PasarBtn | Text= | Visible=true | Active=true
-
-[GUI] TeleportUI
-ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Rumah.PergiBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Pajak.PergiBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Gacha.PergiBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Kebun.PergiBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Ternak.PergiBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TeleportUI.PanelTeleport.Content.Cards.Card_Prioritas.PergiBtn | Text= | Visible=true | Active=true
-
-[GUI] TeleportTransisi
-
-[GUI] TutorialTernakUI
-ImageButton | Players.Raelity911.PlayerGui.TutorialTernakUI.Panel.Topbar.CloseBtn | Text= | Visible=true | Active=true
-
-[GUI] TradeUI
-TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupAjakan.TerimaBtn | Text=SETUJU | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupAjakan.TolakBtn | Text=BATAL | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupAjakan.BatalAjakBtn | Text=BATALKAN AJAKAN | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupAjakan.KirimBtn | Text=AJAK | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupAjakan.BatalKonfBtn | Text=BATAL | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.Topbar.CloseBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.BatalBtn | Text=BATAL | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.SetujuBtn | Text=SETUJU | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomBarang.Grid.KartuTemplate | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomSaya.Gold.Klik | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomSaya.Kunci.Klik | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomSaya.Grid.KartuTemplate | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomSaya.Uang.Klik | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.KolomLawan.Grid.KartuTemplate | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.MinBtn | Text=- | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.PlusBtn | Text=+ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.MaksBtn | Text=MAKS | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.KeluarkanBtn | Text=KELUARKAN | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.TawarkanBtn | Text=TAWARKAN | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.TradeUI.JendelaTrade.PopupJumlah.Topbar.TutupBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TradeUI.PopupHasil.OkBtn | Text=OKE | Visible=true | Active=true
-
-[GUI] HarianUI
-ImageButton | Players.Raelity911.PlayerGui.HarianUI.Entri.Top.Close | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HarianUI.Entri.Isi.Komunitas.Aksi | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HarianUI.Entri.Isi.Favorit.Aksi | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HarianUI.Entri.Isi.Like.Kotak | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HarianUI.Entri.Open | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.HarianUI.Daftar.Top.Close | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.HarianUI.Daftar.Klaim | Text= | Visible=true | Active=true
-
-[GUI] AdminAbuseUI
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseUI.JogetBtn | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseUI.Banner.HematBtn | Text= | Visible=false | Active=true
-
-[GUI] AdminAbuseKontrol
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Topbar.CloseBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.OtomatisBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.PembukaanBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.LemparBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.BurstBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.DanceBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.PenutupBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.EmoteBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.DiamBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Grid.BatalBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Baris2.PanelBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Baris2.BersihBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.AdminAbuseKontrol.Jendela.Isi.Baris3.SebarBtn | Text= | Visible=true | Active=true
-
-[GUI] BursaGoldUI
-ImageButton | Players.Raelity911.PlayerGui.BursaGoldUI.PanelPasar.Topbar.CloseBtn | Text= | Visible=true | Active=true
-
-[GUI] KotakMisteriUI
-
-[GUI] SetorAsetUI
-ImageButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Top.Close | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Aset_uang | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Aset_kunci | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Aset_gold | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Cepat1 | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Cepat2 | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Cepat3 | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Cepat4 | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Setor | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.TabSetor | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.TabTarik | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuSetor.Riwayat | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuProgres.Node1 | Text=1 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuProgres.Node2 | Text=2 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuProgres.Node3 | Text=3 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuProgres.Node4 | Text=4 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.KartuProgres.Node5 | Text=5 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Konfirmasi | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Konfirmasi.Kotak.Batal | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Konfirmasi.Kotak.Ya | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Riwayat | Text= | Visible=false | Active=true
-ImageButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Riwayat.Kotak.Kepala.Tutup | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Panel.Riwayat.Kotak.BarisTpl.Struk | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.SetorAsetUI.Struk.Tutup | Text= | Visible=true | Active=true
-
-[GUI] PermintaanSewaUI
-TextButton | Players.Raelity911.PlayerGui.PermintaanSewaUI.KartuTemplate.Isi.AccBtn | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.PermintaanSewaUI.KartuTemplate.Isi.TolakBtn | Text= | Visible=true | Active=true
-
-[GUI] GajiNotifUI
-ImageButton | Players.Raelity911.PlayerGui.GajiNotifUI.TawaranKartu.LanjutBtn | Text= | Visible=true | Active=true
-ImageButton | Players.Raelity911.PlayerGui.GajiNotifUI.TawaranKartu.BerhentiBtn | Text= | Visible=true | Active=true
-
-[GUI] RedeemUI
-ImageButton | Players.Raelity911.PlayerGui.RedeemUI.Panel.Top.Close | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RedeemUI.Panel.Tukar | Text= | Visible=true | Active=true
-
-[GUI] BlindBoxLayar
-ImageButton | Players.Raelity911.PlayerGui.BlindBoxLayar.Tutup | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.BlindBoxLayar.Auto | Text= | Visible=true | Active=true
-
-[GUI] TabletUI
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.MyZone | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.Market | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.Musik | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.Pesan | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.Peta | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.Beranda.Aplikasi.Setelan | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMyZone.AppBar.Kembali | Text=‹ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.HomeBar | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.AppBar.Kembali | Text=‹ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Tab.Beli | Text=BELI | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Tab.Jual | Text=JUAL | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Tab.Riwayat | Text=RIWAYAT | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Kategori.K_semua | Text=Semua | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Kategori.K_gold | Text=Gold | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Kategori.K_kunci | Text=Kunci Emas | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Kategori.K_pet | Text=Pet | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Kategori.K_tani | Text=Tani & Ternak | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Kiri.Urut | Text=Urut: Termurah | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalBeli.Detail.Isi.TombolBeli | Text=BELI SEKARANG | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalJual.Form.TombolPasang | Text=PASANG DI MARKET | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalJual.Form.TombolJumlah | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalJual.Form.TombolHarga | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.HalJual.Lapak.Muat | Text=MUAT ULANG | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Konfirmasi.Kartu.Batal | Text=BATAL | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Konfirmasi.Kartu.Ya | Text=YA | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Templates.KartuBarang | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Templates.TasItem | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Templates.BarisLapak.Aksi | Text=AKSI | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.Templates.Chip | Text=Semua | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Langkah.KurangBesar | Text=- | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Langkah.KurangKecil | Text=- | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Langkah.TambahKecil | Text=- | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Langkah.TambahBesar | Text=- | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Cepat.C1 | Text=- | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Cepat.C2 | Text=- | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Cepat.C3 | Text=- | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Cepat.C4 | Text=- | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Batal | Text=BATAL | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMarket.PopupAngka.Kartu.Simpan | Text=SIMPAN | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Kembali | Text=‹ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Beranda | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Beranda.Ikon | Text=⌂ | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Cari | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Cari.Ikon | Text=⌕ | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Koleksi | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Koleksi.Ikon | Text=≡ | Visible=true | Active=false
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.BuatPlaylist | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Disukai | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.DaftarPlaylist.ItemPlaylist | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Samping.Speaker | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.Atas.Mundur | Text=‹ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.Atas.Maju | Text=› | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.Atas.KotakID.Putar | Text=PUTAR | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.Ubin.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPutarLagi.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalBeranda.KartuPilihan.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalDaftar.Aksi.PutarBesar | Text=▶ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Utama.HalDaftar.Aksi.AcakBesar | Text=⇄ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Suka | Text=♡ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Kontrol.Acak | Text=⇄ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Kontrol.Sebelum | Text=⏮ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Kontrol.Maju | Text=⏭ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Kontrol.Ulang | Text=↻ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Kontrol.Putar | Text=▶ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Progres.Bar | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Progres.Bar.Area | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.VolIkon | Text=🔈 | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Volume | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Pemutar.Volume.Area | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Ubin | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Ubin.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Kartu | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Kartu.PutarKecil | Text=▶ | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Baris | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.Baris.Suka | Text=♡ | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.ItemPlaylist | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.ItemSpeaker | Text= | Visible=false | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.Templat.ItemSpeaker.Tombol | Text=SAMBUNG | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.PanelSpeaker.Kartu.Perangkat | Text= | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.TabletUI.Bingkai.Layar.AppMusik.PanelSpeaker.Kartu.Tutup | Text=Tutup | Visible=true | Active=true
-
-[GUI] TouchGui
-ImageButton | Players.Raelity911.PlayerGui.TouchGui.TouchControlFrame.JumpButton | Text= | Visible=false | Active=true
-
-[GUI] ProximityPrompts
-TextButton | Players.Raelity911.PlayerGui.ProximityPrompts.Prompt.TextButton | Text=Button | Visible=true | Active=true
-
-[GUI] c77af9f1-3f2c-45fb-b7f7-315702bd0e9f
-TextButton | Players.Raelity911.PlayerGui.c77af9f1-3f2c-45fb-b7f7-315702bd0e9f.Entry | Text=:ff <player> | Visible=false | Active=true
-
-[GUI] RaelsTricksV1
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.Header.MinimizeButton | Text=— | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.CleanButton | Text=CLEANER: ON | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.FarmButton | Text=AUTO FARM: OFF | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.ConvertButton | Text=CONVERT: ON | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.FeedButton | Text=AUTO FEED: ON | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.AfkButton | Text=ANTI-AFK: ON | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.TpButton | Text=TP LOCATION: ON | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.GachaButton | Text=AUTO GACHA: OFF | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.HomeworkButton | Text=HOMEWORK: OFF | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.Main.AutoAccButton | Text=AUTO ACC: ON | Visible=true | Active=true
-TextButton | Players.Raelity911.PlayerGui.RaelsTricksV1.RaelMiniButton | Text=RT | Visible=true | Active=true
+
+## GachaController.ShowKeyReward
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = 0
+C2 = tonumber
+
+## GachaController.ShowKeyReward.U1
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = PlayerGui
+C2 = WaitForChild
+C3 = GachaRevealGui
+C4 = FindFirstChild
+C5 = rarityColor
+C6 = rarity
+C7 = type
+C8 = none
+C9 = icon
+C10 = 
+C11 = Holder
+C12 = Pop
+C13 = Rays
+C14 = ItemIcon
+C15 = 0.4
+C16 = Scale
+C17 = Rotation
+C18 = Color3
+C19 = fromRGB
+GachaController.ShowKeyReward.U1.U2 [TABLE]
+
+## GachaController.ShowKeyReward.U1.U2.rarityColor
+SOURCE: =ReplicatedStorage.NKSystem.Util.GachaConfig LINE: nil
+C1 = Rarities
+C2 = Common
+C3 = color
+GachaController.ShowKeyReward.U1.U2.rarityColor.U1 [TABLE]
+GachaController.ShowKeyReward.U1.U2.rarityColor.U1.MAX_FREE = 10
+
+## GachaController.ShowKeyReward.U1.U2.rarityColor.U1.resolvePath
+SOURCE: =ReplicatedStorage.NKSystem.Util.GachaConfig LINE: nil
+C1 = type
+GachaController.ShowKeyReward.U1.U2.rarityColor.U1.SPIN_PRICE = 200000
+
+## GachaController.ShowKeyReward.U1.U2.rarityColor.U1.formatMoney
+SOURCE: =ReplicatedStorage.NKSystem.Util.GachaConfig LINE: nil
+C1 = 0
+C2 = tonumber
+
+## GachaController.ShowKeyReward.U1.U2.rarityColor.U1.getItem
+SOURCE: =ReplicatedStorage.NKSystem.Util.GachaConfig LINE: nil
+C1 = ipairs
+GachaController.ShowKeyReward.U1.U2.rarityColor.U1.getItem.U1 [TABLE]
+GachaController.ShowKeyReward.U1.U2.rarityColor.U1.getItem.U1.MAX_FREE = 10
+GachaController.ShowKeyReward.U1.U2.rarityColor.U1.getItem.U1.SPIN_PRICE = 200000
+GachaController.ShowKeyReward.U1.U2.MAX_FREE = 10
+GachaController.ShowKeyReward.U1.U2.SPIN_PRICE = 200000
+GachaController.ShowKeyReward.U1.U3 [TABLE]
+GachaController.ShowKeyReward.U1.U3.CloseIcon = rbxassetid://134557119979432
+
+## GachaController.ShowKeyReward.U1.U3.bounce
+SOURCE: =ReplicatedStorage.NKSystem.Util.UITheme LINE: nil
+C1 = Bounce
+C2 = FindFirstChild
+C3 = Instance
+C4 = new
+GachaController.ShowKeyReward.U1.U3.bounce.U2 [TABLE]
+GachaController.ShowKeyReward.U1.U3.bounce.U2.CloseIcon = rbxassetid://134557119979432
+
+## GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient
+SOURCE: =ReplicatedStorage.NKSystem.Util.UITheme LINE: nil
+C1 = Lapis
+C2 = FindFirstChild
+C3 = setButton
+C4 = Grad
+C5 = Instance
+C6 = new
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U1 [TABLE]
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U1.Confirm = Primary
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U1.Cancel = Danger
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U1.Action = Primary
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U1.Owned = Owned
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U1.Disabled = Disabled
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U1.Secondary = Secondary
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U2 [TABLE]
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U2.CloseIcon = rbxassetid://134557119979432
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U2.Stagger = 0.07
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyGradient.U2.PopFrom = 0.55
+
+## GachaController.ShowKeyReward.U1.U3.bounce.U2.applyStroke
+SOURCE: =ReplicatedStorage.NKSystem.Util.UITheme LINE: nil
+C1 = Stroke
+C2 = Text
+C3 = UIStroke
+C4 = FindFirstChildOfClass
+C5 = Instance
+C6 = new
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyStroke.U1 [TABLE]
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyStroke.U1.CloseIcon = rbxassetid://134557119979432
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyStroke.U1.Stagger = 0.07
+GachaController.ShowKeyReward.U1.U3.bounce.U2.applyStroke.U1.PopFrom = 0.55
+
+## GachaController.ShowKeyReward.U1.U3.bounce.U2.pop
+SOURCE: =ReplicatedStorage.NKSystem.Util.UITheme LINE: nil
+C1 = Pop
+C2 = FindFirstChild
+C3 = Instance
+C4 = new
+GachaController.ShowKeyReward.U1.U3.bounce.U2.pop.U2 [TABLE]
+GachaController.ShowKeyReward.U1.U3.bounce.U2.pop.U2.CloseIcon = rbxassetid://134557119979432
+GachaController.ShowKeyReward.U1.U3.bounce.U2.pop.U2.Stagger = 0.07
+GachaController.ShowKeyReward.U1.U3.bounce.U2.pop.U2.PopFrom = 0.55
+
+## GachaController.ShowKeyReward.U1.U3.bounce.U2.setButton
+SOURCE: =ReplicatedStorage.NKSystem.Util.UITheme LINE: nil
+C1 = Button
+C2 = Primary
+C3 = Base
+C4 = BackgroundColor3
+C5 = Lapis
+C6 = FindFirstChild
+C7 = Grad
+C8 = UIGradient
+C9 = FindFirstChildOfClass
+C10 = Enabled
+C11 = ColorSequence
+C12 = new
+GachaController.ShowKeyReward.U1.U3.bounce.U2.setButton.U1 [TABLE]
+GachaController.ShowKeyReward.U1.U3.bounce.U2.setButton.U1.CloseIcon = rbxassetid://134557119979432
+GachaController.ShowKeyReward.U1.U3.bounce.U2.setButton.U1.Stagger = 0.07
+GachaController.ShowKeyReward.U1.U3.bounce.U2.setButton.U1.PopFrom = 0.55
+GachaController.ShowKeyReward.U1.U3.bounce.U2.Stagger = 0.07
+GachaController.ShowKeyReward.U1.U3.bounce.U2.PopFrom = 0.55
+GachaController.ShowKeyReward.U1.U3.Stagger = 0.07
+GachaController.ShowKeyReward.U1.U3.PopFrom = 0.55
+
+## GachaController.KnitStart
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = GetService
+C2 = GachaService
+C3 = pcall
+GachaController.KnitStart.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U1.ClaimReward.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+GachaController.KnitStart.U1.ClaimReward.U1.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.onUnhandledRejection
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = _unhandledRejectionCallbacks
+C2 = table
+C3 = insert
+GachaController.KnitStart.U1.ClaimReward.U1.U1.onUnhandledRejection.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1._new
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = is
+C2 = error
+GachaController.KnitStart.U1.ClaimReward.U1.U1._new.U1 [TABLE]
+GachaController.KnitStart.U1.ClaimReward.U1.U1._new.U2 [TABLE]
+GachaController.KnitStart.U1.ClaimReward.U1.U1._new.U2.__mode = k
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.fromEvent
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+GachaController.KnitStart.U1.ClaimReward.U1.U1.fromEvent.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1._all
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = type
+GachaController.KnitStart.U1.ClaimReward.U1.U1._all.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1._try
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = _new
+GachaController.KnitStart.U1.ClaimReward.U1.U1._try.U2 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.__tostring
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = string
+C2 = format
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.retryWithDelay
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = type
+GachaController.KnitStart.U1.ClaimReward.U1.U1.retryWithDelay.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.defer
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = debug
+C2 = traceback
+GachaController.KnitStart.U1.ClaimReward.U1.U1.defer.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.race
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = type
+GachaController.KnitStart.U1.ClaimReward.U1.U1.race.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.retry
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = type
+GachaController.KnitStart.U1.ClaimReward.U1.U1.retry.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.delay
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = type
+GachaController.KnitStart.U1.ClaimReward.U1.U1.delay.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1._getTime
+SOURCE: =[C] LINE: nil
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.promisify
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+GachaController.KnitStart.U1.ClaimReward.U1.U1.promisify.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.is
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = type
+GachaController.KnitStart.U1.ClaimReward.U1.U1.is.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.each
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = type
+GachaController.KnitStart.U1.ClaimReward.U1.U1.each.U1 [TABLE]
+GachaController.KnitStart.U1.ClaimReward.U1.U1.each.U2 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.try
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = _try
+C2 = debug
+C3 = traceback
+GachaController.KnitStart.U1.ClaimReward.U1.U1.try.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.allSettled
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = type
+GachaController.KnitStart.U1.ClaimReward.U1.U1.allSettled.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.any
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = _all
+C2 = debug
+C3 = traceback
+GachaController.KnitStart.U1.ClaimReward.U1.U1.any.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.new
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = _new
+C2 = debug
+C3 = traceback
+GachaController.KnitStart.U1.ClaimReward.U1.U1.new.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.reject
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = _new
+C2 = debug
+C3 = traceback
+GachaController.KnitStart.U1.ClaimReward.U1.U1.reject.U2 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.fold
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = type
+GachaController.KnitStart.U1.ClaimReward.U1.U1.fold.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.all
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = _all
+C2 = debug
+C3 = traceback
+GachaController.KnitStart.U1.ClaimReward.U1.U1.all.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.resolve
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = _new
+C2 = debug
+C3 = traceback
+GachaController.KnitStart.U1.ClaimReward.U1.U1.resolve.U2 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U1.some
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.evaera_promise@4.0.0.promise LINE: nil
+C1 = type
+GachaController.KnitStart.U1.ClaimReward.U1.U1.some.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimReward.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+
+## GachaController.KnitStart.U1.Spin
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U1.Spin.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+GachaController.KnitStart.U1.Spin.U1.U1 [TABLE]
+
+## GachaController.KnitStart.U1.Spin.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+
+## GachaController.KnitStart.U1.SpinX10WithFree
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U1.SpinX10WithFree.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+GachaController.KnitStart.U1.SpinX10WithFree.U1.U1 [TABLE]
+
+## GachaController.KnitStart.U1.SpinX10WithFree.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+
+## GachaController.KnitStart.U1.SpinX10WithMoney
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U1.SpinX10WithMoney.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+GachaController.KnitStart.U1.SpinX10WithMoney.U1.U1 [TABLE]
+
+## GachaController.KnitStart.U1.SpinX10WithMoney.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+
+## GachaController.KnitStart.U1.GetState
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U1.GetState.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+GachaController.KnitStart.U1.GetState.U1.U1 [TABLE]
+
+## GachaController.KnitStart.U1.GetState.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+
+## GachaController.KnitStart.U1.ClaimOneMultiReward
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U1.ClaimOneMultiReward.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+GachaController.KnitStart.U1.ClaimOneMultiReward.U1.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimOneMultiReward.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+
+## GachaController.KnitStart.U1.GetInventory
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U1.GetInventory.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+GachaController.KnitStart.U1.GetInventory.U1.U1 [TABLE]
+
+## GachaController.KnitStart.U1.GetInventory.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+
+## GachaController.KnitStart.U1.SpinWithMoney
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U1.SpinWithMoney.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+GachaController.KnitStart.U1.SpinWithMoney.U1.U1 [TABLE]
+
+## GachaController.KnitStart.U1.SpinWithMoney.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+
+## GachaController.KnitStart.U1.ClaimMultiReward
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U1.ClaimMultiReward.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+GachaController.KnitStart.U1.ClaimMultiReward.U1.U1 [TABLE]
+
+## GachaController.KnitStart.U1.ClaimMultiReward.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+GachaController.KnitStart.U2 [TABLE]
+
+## GachaController.KnitStart.U2.AddControllers
+SOURCE: =ReplicatedStorage.NKSystem.Packages.Knit.KnitClient LINE: nil
+C1 = Controllers cannot be added after calling "Knit.Start()"
+C2 = assert
+
+## GachaController.KnitStart.U2.GetService
+SOURCE: =ReplicatedStorage.NKSystem.Packages.Knit.KnitClient LINE: nil
+C1 = Cannot call GetService until Knit has been started
+C2 = assert
+GachaController.KnitStart.U2.GetService.U1 [TABLE]
+GachaController.KnitStart.U2.GetService.U4 [TABLE]
+GachaController.KnitStart.U2.GetService.U5 [TABLE]
+
+## GachaController.KnitStart.U2.GetService.U5.GetSignal
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+C1 = GetSignal
+C2 = _instancesFolder
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1 [TABLE]
+
+## GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetSignal
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = IsServer
+C2 = GetSignal must be called from the client
+C3 = assert
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetSignal.U1 [TABLE]
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetSignal.U1.DefaultCommFolderName = __comm__
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetSignal.U1.WaitForChildTimeout = 60
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetSignal.U2 [TABLE]
+
+## GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetFunction
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = IsServer
+C2 = GetFunction must be called from the client
+C3 = assert
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetFunction.U1 [TABLE]
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetFunction.U1.DefaultCommFolderName = __comm__
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetFunction.U1.WaitForChildTimeout = 60
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetFunction.U2 [TABLE]
+
+## GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetProperty
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = IsServer
+C2 = GetProperty must be called from the client
+C3 = assert
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetProperty.U1 [TABLE]
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetProperty.U1.DefaultCommFolderName = __comm__
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetProperty.U1.WaitForChildTimeout = 60
+GachaController.KnitStart.U2.GetService.U5.GetSignal.U1.GetProperty.U2 [TABLE]
+
+## GachaController.KnitStart.U2.GetService.U5.Destroy
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U2.GetService.U5.BuildObject
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+C1 = _instancesFolder
+C2 = RF
+C3 = FindFirstChild
+C4 = RE
+C5 = RP
+C6 = GetChildren
+C7 = RemoteFunction
+C8 = IsA
+C9 = Name
+C10 = GetFunction
+C11 = RemoteEvent
+C12 = UnreliableRemoteEvent
+C13 = GetSignal
+C14 = GetProperty
+
+## GachaController.KnitStart.U2.GetService.U5.GetProperty
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+C1 = GetProperty
+C2 = _instancesFolder
+GachaController.KnitStart.U2.GetService.U5.GetProperty.U1 [TABLE]
+
+## GachaController.KnitStart.U2.GetService.U5.GetFunction
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+C1 = GetFunction
+C2 = _instancesFolder
+C3 = _usePromise
+GachaController.KnitStart.U2.GetService.U5.GetFunction.U1 [TABLE]
+
+## GachaController.KnitStart.U2.GetService.U5.new
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+C1 = IsServer
+C2 = ClientComm must be constructed from the client
+C3 = assert
+GachaController.KnitStart.U2.GetService.U5.new.U1 [TABLE]
+GachaController.KnitStart.U2.GetService.U5.new.U1.DefaultCommFolderName = __comm__
+
+## GachaController.KnitStart.U2.GetService.U5.new.U1.GetCommSubFolder
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Util LINE: nil
+C1 = IsServer
+C2 = FindFirstChild
+C3 = Instance
+C4 = new
+GachaController.KnitStart.U2.GetService.U5.new.U1.GetCommSubFolder.U1 [TABLE]
+GachaController.KnitStart.U2.GetService.U5.new.U1.GetCommSubFolder.U1.DefaultCommFolderName = __comm__
+GachaController.KnitStart.U2.GetService.U5.new.U1.GetCommSubFolder.U1.WaitForChildTimeout = 60
+GachaController.KnitStart.U2.GetService.U5.new.U1.GetCommSubFolder.U2 [TABLE]
+GachaController.KnitStart.U2.GetService.U5.new.U1.WaitForChildTimeout = 60
+GachaController.KnitStart.U2.GetService.U5.new.U2 [TABLE]
+
+## GachaController.KnitStart.U2.GetController
+SOURCE: =ReplicatedStorage.NKSystem.Packages.Knit.KnitClient LINE: nil
+C1 = Cannot call GetController until Knit has been started
+C2 = assert
+GachaController.KnitStart.U2.GetController.U1 [TABLE]
+
+## GachaController.KnitStart.U2.OnStart
+SOURCE: =ReplicatedStorage.NKSystem.Packages.Knit.KnitClient LINE: nil
+C1 = resolve
+C2 = fromEvent
+C3 = Event
+GachaController.KnitStart.U2.OnStart.U2 [TABLE]
+
+## GachaController.KnitStart.U2.AddControllersDeep
+SOURCE: =ReplicatedStorage.NKSystem.Packages.Knit.KnitClient LINE: nil
+C1 = Controllers cannot be added after calling "Knit.Start()"
+C2 = assert
+
+## GachaController.KnitStart.U2.Start
+SOURCE: =ReplicatedStorage.NKSystem.Packages.Knit.KnitClient LINE: nil
+C1 = reject
+C2 = Knit already started
+C3 = table
+C4 = freeze
+GachaController.KnitStart.U2.Start.U2 [TABLE]
+GachaController.KnitStart.U2.Start.U3 [TABLE]
+GachaController.KnitStart.U2.Start.U4 [TABLE]
+GachaController.KnitStart.U2.Start.U5 [TABLE]
+
+## GachaController.KnitStart.U2.GetControllers
+SOURCE: =ReplicatedStorage.NKSystem.Packages.Knit.KnitClient LINE: nil
+C1 = Cannot call GetControllers until Knit has been started
+C2 = assert
+GachaController.KnitStart.U2.GetControllers.U2 [TABLE]
+
+## GachaController.KnitStart.U2.CreateController
+SOURCE: =ReplicatedStorage.NKSystem.Packages.Knit.KnitClient LINE: nil
+C1 = type
+GachaController.KnitStart.U2.CreateController.U1 [TABLE]
+GachaController.KnitStart.U3 [TABLE]
+
+## GachaController.KnitStart.U3.GetKeys
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## GachaController.KnitStart.U3.GetKeys.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+GachaController.KnitStart.U3.GetKeys.U1.U1 [TABLE]
+
+## GachaController.KnitStart.U3.GetKeys.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+
+## GachaController.KnitStart.U4
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = KeysChanged
+GachaController.KnitStart.U4.U1 [TABLE]
+
+## GachaController.KnitStart.U4.U2
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = PlayerGui
+C2 = FindFirstChild
+C3 = PlayerHUD
+C4 = MainFrame
+C5 = Container
+C6 = KunciFrame
+C7 = Plakat
+C8 = Vlue
+C9 = TextLabel
+C10 = IsA
+C11 = formatMoney
+C12 = 0
+C13 = tonumber
+GachaController.KnitStart.U4.U2.U2 [TABLE]
+GachaController.KnitStart.U4.U2.U2.MAX_FREE = 10
+GachaController.KnitStart.U4.U2.U2.SPIN_PRICE = 200000
+GachaController.KnitStart.U6 = 7
+GachaController.KnitStart.U7 = 10
+GachaController.KnitStart.U8 [TABLE]
+GachaController.KnitStart.U8.MAX_FREE = 10
+GachaController.KnitStart.U8.SPIN_PRICE = 200000
+
+## GachaController.KnitStart.U9
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = PlayerGui
+C2 = WaitForChild
+C3 = GachaEntryGui
+C4 = FindFirstChild
+C5 = Panel
+C6 = FreeLabel
+C7 = StatusPelanggan
+C8 = string
+C9 = format
+GachaController.KnitStart.U9.U2 [TABLE]
+GachaController.KnitStart.U9.U2.MAX_FREE = 10
+GachaController.KnitStart.U9.U2.SPIN_PRICE = 200000
+GachaController.KnitStart.U9.U3 [TABLE]
+GachaController.KnitStart.U9.U3.CloseIcon = rbxassetid://134557119979432
+GachaController.KnitStart.U9.U3.Stagger = 0.07
+GachaController.KnitStart.U9.U3.PopFrom = 0.55
+GachaController.KnitStart.U9.U4 = 200000
+GachaController.KnitStart.U9.U5 = 2000000
+
+## GachaController.KnitStart.U10
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = PlayerGui
+C2 = WaitForChild
+C3 = GachaEntryGui
+C4 = FindFirstChild
+C5 = Panel
+C6 = Row1
+C7 = Row2
+C8 = CloseButton
+GachaController.KnitStart.U10.U2 [TABLE]
+GachaController.KnitStart.U10.U2.CloseIcon = rbxassetid://134557119979432
+GachaController.KnitStart.U10.U2.Stagger = 0.07
+GachaController.KnitStart.U10.U2.PopFrom = 0.55
+GachaController.KnitStart.U10.U3 = 7
+
+## GachaController.KnitStart.U10.U5
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = GetState
+C2 = await
+C3 = type
+GachaController.KnitStart.U10.U5.U2 [TABLE]
+GachaController.KnitStart.U10.U5.U3 = 7
+GachaController.KnitStart.U10.U5.U4 = 10
+GachaController.KnitStart.U10.U5.U5 [TABLE]
+GachaController.KnitStart.U10.U5.U5.MAX_FREE = 10
+GachaController.KnitStart.U10.U5.U5.SPIN_PRICE = 200000
+
+## GachaController.KnitStart.U10.U5.U7
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+
+## GachaController.KnitStart.U10.U5.U10
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = PlayerGui
+C2 = WaitForChild
+C3 = GachaEntryGui
+C4 = FindFirstChild
+C5 = 1
+C6 = Panel
+C7 = Backdrop
+C8 = pop
+C9 = Enabled
+GachaController.KnitStart.U10.U5.U10.U2 = 4
+GachaController.KnitStart.U10.U5.U10.U3 [TABLE]
+GachaController.KnitStart.U10.U5.U10.U3.CloseIcon = rbxassetid://134557119979432
+GachaController.KnitStart.U10.U5.U10.U3.Stagger = 0.07
+GachaController.KnitStart.U10.U5.U10.U3.PopFrom = 0.55
+
+## GachaController.KnitStart.U10.U5.U11
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = mulai
+C2 = pcall
+GachaController.KnitStart.U10.U5.U11.U1 [TABLE]
+
+## GachaController.KnitStart.U10.U6
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = SpinWithMoney
+C2 = await
+C3 = type
+GachaController.KnitStart.U10.U6.U2 [TABLE]
+GachaController.KnitStart.U10.U6.U3 = 7
+GachaController.KnitStart.U10.U6.U4 = 10
+GachaController.KnitStart.U10.U6.U5 [TABLE]
+GachaController.KnitStart.U10.U6.U5.MAX_FREE = 10
+GachaController.KnitStart.U10.U6.U5.SPIN_PRICE = 200000
+
+## GachaController.KnitStart.U10.U7
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = SpinX10WithFree
+C2 = await
+C3 = type
+GachaController.KnitStart.U10.U7.U2 [TABLE]
+GachaController.KnitStart.U10.U7.U3 = 7
+GachaController.KnitStart.U10.U7.U4 = 10
+GachaController.KnitStart.U10.U7.U5 [TABLE]
+GachaController.KnitStart.U10.U7.U5.MAX_FREE = 10
+GachaController.KnitStart.U10.U7.U5.SPIN_PRICE = 200000
+
+## GachaController.KnitStart.U10.U8
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = SpinX10WithMoney
+C2 = await
+C3 = type
+GachaController.KnitStart.U10.U8.U2 [TABLE]
+GachaController.KnitStart.U10.U8.U3 = 7
+GachaController.KnitStart.U10.U8.U4 = 10
+GachaController.KnitStart.U10.U8.U5 [TABLE]
+GachaController.KnitStart.U10.U8.U5.MAX_FREE = 10
+GachaController.KnitStart.U10.U8.U5.SPIN_PRICE = 200000
+
+## GachaController.KnitStart.U11
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = GachaTriger
+C2 = WaitForChild
+
+## GachaController.KnitStart.U11.U3
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = PlayerGui
+C2 = WaitForChild
+C3 = GachaEntryGui
+C4 = FindFirstChild
+C5 = GetState
+C6 = await
+C7 = type
+GachaController.KnitStart.U11.U3.U5 = 7
+GachaController.KnitStart.U11.U3.U6 = 10
+GachaController.KnitStart.U11.U3.U7 [TABLE]
+GachaController.KnitStart.U11.U3.U8 [TABLE]
+GachaController.KnitStart.U11.U3.U8.MAX_FREE = 10
+GachaController.KnitStart.U11.U3.U8.SPIN_PRICE = 200000
+GachaController.KnitStart.U11.U3.U9 [TABLE]
+GachaController.KnitStart.U11.U3.U9.CloseIcon = rbxassetid://134557119979432
+GachaController.KnitStart.U11.U3.U9.Stagger = 0.07
+GachaController.KnitStart.U11.U3.U9.PopFrom = 0.55
+
+## GachaController.KnitStart.U11.U3.U10
+SOURCE: =ReplicatedStorage.NKSystem.Controller.GachaController LINE: nil
+C1 = Panel
+C2 = FindFirstChild
+C3 = Etalase
+C4 = Kotak3D
+C5 = Kotak
+C6 = Rays
+C7 = Spesial
+C8 = Foto
+C9 = Sapu3D
+C10 = Sapu
+C11 = ipairs
+GachaController.KnitStart.U11.U3.U10.U1 = 4
+
+## KotakController.KnitStart
+SOURCE: =ReplicatedStorage.NKSystem.Controller.KotakController LINE: nil
+C1 = GetService
+C2 = KotakService
+C3 = PlayerGui
+C4 = WaitForChild
+C5 = KotakMisteriUI
+C6 = [KotakController] StarterGui.KotakMisteriUI tidak ada
+C7 = Layar
+C8 = Kotak
+C9 = Skala
+C10 = Badan
+C11 = Tutup
+C12 = Sinar
+C13 = Sinar2
+C14 = Cahaya
+C15 = Judul
+C16 = UIStroke
+C17 = FindFirstChildOfClass
+C18 = Hadiah
+C19 = _Kartu
+C20 = Info
+C21 = Kilat
+C22 = Konfeti
+C23 = Visible
+C24 = task
+C25 = spawn
+KotakController.KnitStart.U1 [TABLE]
+
+## KotakController.KnitStart.U1.Buka
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## KotakController.KnitStart.U1.Buka.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+KotakController.KnitStart.U1.Buka.U1.U1 [TABLE]
+
+## KotakController.KnitStart.U1.Buka.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+
+## KotakController.KnitStart.U1.Jumlah
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client.ClientComm LINE: nil
+
+## KotakController.KnitStart.U1.Jumlah.U1
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = table
+C2 = pack
+KotakController.KnitStart.U1.Jumlah.U1.U1 [TABLE]
+
+## KotakController.KnitStart.U1.Jumlah.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Packages._Index.sleitnick_comm@1.0.1.comm.Client LINE: nil
+C1 = ipairs
+KotakController.KnitStart.U2 [TABLE]
+
+## KotakController.KnitStart.U4
+SOURCE: =ReplicatedStorage.NKSystem.Controller.KotakController LINE: nil
+
+## KotakController.KnitStart.U22
+SOURCE: =ReplicatedStorage.NKSystem.Controller.KotakController LINE: nil
+C1 = ipairs
+
+## KotakController.KnitStart.U22.U1
+SOURCE: =ReplicatedStorage.NKSystem.Controller.KotakController LINE: nil
+C1 = Tool
+C2 = IsA
+C3 = KotakMisteri
+C4 = GetAttribute
+C5 = Activated
+C6 = Connect
+C7 = Unequipped
+KotakController.KnitStart.U22.U1.U1 [TABLE]
+
+## KotakController.KnitStart.U22.U1.U2
+SOURCE: =ReplicatedStorage.NKSystem.Controller.KotakController LINE: nil
+C1 = task
+C2 = wait
+KotakController.KnitStart.U22.U1.U2.U5 = 0
+KotakController.KnitStart.U22.U1.U2.U22 [TABLE]
+KotakController.KnitStart.U22.U1.U2.U27 [TABLE]
+KotakController.KnitStart.U22.U1.U2.U27.MUSIK_DANCE = 78852932059882
+KotakController.KnitStart.U22.U1.U2.U27.AVATAR_USER_ID = 8131035694
+KotakController.KnitStart.U22.U1.U2.U27.PENGUMUMAN = ADMIN ABUSE dimulai! Owner datang melempar Kotak Misteri. Pungut sebanyak-banyaknya lalu buka dari hotbar!
+KotakController.KnitStart.U22.U1.U2.U27.PELUANG_KE_PEMAIN = 0.3
+KotakController.KnitStart.U22.U1.U2.U27.SEBAR_MAKS = 500
+KotakController.KnitStart.U22.U1.U2.U27.MAKS_DROP_AKTIF = 60
+KotakController.KnitStart.U22.U1.U2.U27.UMUR_DROP = 40
+KotakController.KnitStart.U22.U1.U2.U27.TENGGELAM = 0.38
+KotakController.KnitStart.U22.U1.U2.U27.BULAT_UANG = 1000
+KotakController.KnitStart.U22.U1.U2.U27.JEDA_ANTAR_DROP = 0.12
+KotakController.KnitStart.U22.U1.U2.U27.SUDUT_SEBAR_TITIK = 65
+KotakController.KnitStart.U22.U1.U2.U27.JARAK_AMBIL = 7
+KotakController.KnitStart.U22.U1.U2.U27.VOLUME_MUSIK = 0.6
+KotakController.KnitStart.U22.U1.U2.U27.BURST = 14
+KotakController.KnitStart.U22.U1.U2.U27.SEBAR_PER_TICK = 20
+KotakController.KnitStart.U22.U1.U2.U27.SPEED_MUSIK = 0.4
+KotakController.KnitStart.U22.U1.U2.U27.MIN_PEMAIN = 4
+KotakController.KnitStart.U22.U1.U2.U27.MAKS_FASE_LEMPAR = 1800
+KotakController.KnitStart.U22.U1.U2.U27.MAJU_TITIK = 45
+KotakController.KnitStart.U22.U1.U2.U27.KLAIM_PER_DETIK = 12
+KotakController.KnitStart.U22.U1.U2.U27.JARAK_KLAIM_SERVER = 18
+KotakController.KnitStart.U22.U1.U2.U27.TITIK_NAMA = AdminAbuseTitik
+KotakController.KnitStart.U22.U1.U2.U27.TINGGI_AVATAR = 509
+KotakController.KnitStart.U22.U1.U2.U27.LAMA_TERBANG = 2.6
+KotakController.KnitStart.U22.U1.U2.U27.TOPIC = NK_AdminAbuseEvent_v1
+
+## KotakController.KnitStart.U22.U1.U4
+SOURCE: =ReplicatedStorage.NKSystem.Controller.KotakController LINE: nil
+C1 = 1
+C2 = 0.12
+C3 = 0.3
+C4 = BackgroundTransparency
+KotakController.KnitStart.U22.U1.U4.U1 = 0
+
+## BlindBoxTampil.mulai
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = PlayerGui
+C2 = WaitForChild
+C3 = BlindBoxLayar
+C4 = FindFirstChild
+C5 = BlindBox
+C6 = Rak
+C7 = Kotak
+C8 = Dunia
+C9 = ipairs
+BlindBoxTampil.mulai.U1 [TABLE]
+
+## BlindBoxTampil.mulai.U4
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = cam
+C2 = 2
+C3 = FieldOfView
+C4 = math
+C5 = rad
+BlindBoxTampil.mulai.U4.U1 [TABLE]
+
+## BlindBoxTampil.mulai.U5
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = rakPose
+C2 = rak
+C3 = PivotTo
+C4 = pairs
+BlindBoxTampil.mulai.U5.U1 [TABLE]
+
+## BlindBoxTampil.mulai.U6
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = ipairs
+
+## BlindBoxTampil.mulai.U9
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = Auto
+C2 = FindFirstChild
+C3 = Label
+C4 = AUTO BUKA: NYALA
+C5 = AUTO BUKA: MATI
+C6 = Text
+C7 = Color3
+C8 = fromRGB
+
+## BlindBoxTampil.mulai.U10
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = Instance
+C2 = new
+BlindBoxTampil.mulai.U10.U1 [TABLE]
+
+## BlindBoxTampil.aktif
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+BlindBoxTampil.aktif.U1 [TABLE]
+
+## BlindBoxTampil.selesai
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = gui
+C2 = Tutup
+C3 = Visible
+C4 = sambungAuto
+C5 = Disconnect
+C6 = Auto
+C7 = FindFirstChild
+C8 = ipairs
+BlindBoxTampil.selesai.U1 [TABLE]
+
+## BlindBoxTampil.selesai.U2
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = Text
+C2 = 0.25
+C3 = TextTransparency
+
+## BlindBoxTampil.selesai.U4
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = 3
+
+## BlindBoxTampil.selesai.U5
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = os
+C2 = clock
+
+## BlindBoxTampil.selesai.U6
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = 0.5
+C2 = 3
+C3 = 1
+C4 = 2
+
+## BlindBoxTampil.buka
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = dipilih
+C2 = gui
+C3 = kotak
+C4 = kosong
+C5 = cahaya
+C6 = Destroy
+C7 = Tutup
+C8 = Visible
+C9 = 1
+C10 = rarityColor
+C11 = rarity
+C12 = type
+C13 = none
+C14 = cam
+C15 = 2
+C16 = FieldOfView
+C17 = math
+C18 = rad
+BlindBoxTampil.buka.U1 [TABLE]
+BlindBoxTampil.buka.U2 [TABLE]
+BlindBoxTampil.buka.U2.MAX_FREE = 10
+BlindBoxTampil.buka.U2.SPIN_PRICE = 200000
+
+## BlindBoxTampil.buka.U6
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = type
+C2 = pet
+C3 = domba
+C4 = tool
+C5 = PlayerGui
+C6 = WaitForChild
+C7 = BlindBoxModel
+C8 = id
+C9 = tostring
+
+## BlindBoxTampil.buka.U7
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = cam
+C2 = vpf
+C3 = CFrame
+C4 = PointToObjectSpace
+C5 = 2
+C6 = FieldOfView
+C7 = math
+C8 = rad
+BlindBoxTampil.buka.U7.U1 [TABLE]
+
+## BlindBoxTampil.buka.U10
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = type
+C2 = money
+C3 = + Rp 
+C4 = formatMoney
+C5 = 0
+C6 = amount
+C7 = keys
+C8 = + 
+C9 =  Kunci Emas
+C10 = tool
+C11 = masuk ke ranselmu
+C12 = domba
+C13 = masuk ke kandang
+C14 = pet
+C15 = Pet baru! Pakai di menu PET
+C16 = none
+C17 = kotak kosong, coba lagi ya
+C18 = 
+BlindBoxTampil.buka.U10.U1 [TABLE]
+BlindBoxTampil.buka.U10.U1.MAX_FREE = 10
+BlindBoxTampil.buka.U10.U1.SPIN_PRICE = 200000
+
+## BlindBoxTampil.buka.U12
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = ipairs
+
+## BlindBoxTampil.pilih
+SOURCE: =ReplicatedStorage.NKSystem.Util.BlindBoxTampil LINE: nil
+C1 = gui
+C2 = Tombol
+C3 = WaitForChild
+C4 = ipairs
+BlindBoxTampil.pilih.U1 [TABLE]
+
+=== SERVICE REMOTES ===
+
+SERVICE BangunKosanService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.AddFromGudang
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.GetOwnedItems
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.GetTenantCount
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.GetServerTimeOfDay
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.SellFromGudang
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.UpgradeBuilding
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.MarkTutorialSeen
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.CabutItem
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.GetSellPrice
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.HammerHit
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.GetGudangData
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.PlaceItem
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.SellBuilding
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.MoveBuilding
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.GiftFromGudang
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.GetTutorialSeen
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.MarkNewShopItemsSeen
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.PlaceBuilding
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BangunKosanService.RF.GetSeenNewShopItems
+
+SERVICE MoneyService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MoneyService.RF.GetPlayerData
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MoneyService.RF.UnlockLevel
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.MoneyService.RE.Notify
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.MoneyService.RE.MoneyChanged
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.MoneyService.RE.ShopUpdated
+
+SERVICE LevelService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LevelService.RE.LevelChanged
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LevelService.RE.LeveledUp
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LevelService.RF.GetLevelData
+
+SERVICE PenyewaService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.PenyewaService.RE.TenantLeft
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.PenyewaService.RE.TenantArrived
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.PenyewaService.RF.VerifyReject
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.PenyewaService.RF.RespondWithVerify
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.PenyewaService.RF.Respond
+
+SERVICE KosanStateService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.KosanStateService.RE.PlayPickupAnim
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.KosanStateService.RE.CleanProgress
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KosanStateService.RF.GetPetaZona
+
+SERVICE ZoneService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ZoneService.RF.GetMyZoneIndex
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.ZoneService.RE.ZoneAssigned
+
+SERVICE KaryawanService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.FireWorker
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.RequestJob
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.GetWorkers
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.GetMyStatus
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.SetAccess
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.QuitJob
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.SetGaji
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.GetHistory
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.GetWorkerHistory
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.JawabTawaran
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.GetGaji
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.AcceptWorker
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.IsWorker
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.GetMyBoss
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.GetBosses
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.RejectWorker
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RF.GetRequests
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RE.Notify
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RE.Updated
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RE.Tawaran
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.KaryawanService.RE.Gaji
+
+SERVICE OverheadService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.OverheadService.RF.SetOwnTitle
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.OverheadService.RF.SetStreamerTitle
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.OverheadService.RF.RemoveStreamerTitle
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.OverheadService.RF.ReportDevice
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.OverheadService.RF.AmIAdmin
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.OverheadService.RF.GiftTitle
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.OverheadService.RF.GetPlayerList
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.OverheadService.RE.Updated
+
+SERVICE LeaderboardService
+
+SERVICE GamepassService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.GamepassService.RE.Updated
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.GamepassService.RE.Notify
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GamepassService.RF.GetCatalog
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GamepassService.RF.PromptGift
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GamepassService.RF.PromptBuy
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GamepassService.RF.GetPlayerList
+
+SERVICE PlayerStatService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.PlayerStatService.RF.GetPlayTime
+
+SERVICE ReportService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ReportService.RF.GetReasons
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ReportService.RF.Submit
+
+SERVICE AdminService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GiftItem
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.SetPass
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GiftMoney
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.TeleportBuildingsToZone
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.SetWaktu
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.CekPass
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GetTenantData
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GetKnownPlayers
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.SetWaktuGlobal
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GetPlayers
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GetPlayerGold
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.BanByUsername
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GiftGold
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GetPlayerMoney
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.SetItemLimit
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.Ban
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.Teleport
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.Unban
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GetPlayerMoneyOffline
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.AddTenantData
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GetAnnouncementLog
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GetMyZoneIndex
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GetCatalogItems
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GiftKeys
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.Kick
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.AmIAdmin
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.SetItemPrice
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.GiftMoneyAll
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminService.RF.CleanAllHouses
+
+SERVICE RobuxTransferService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.RobuxTransferService.RF.GetLimits
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.RobuxTransferService.RF.Send
+
+SERVICE MoneyTransferService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MoneyTransferService.RF.GetLimits
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MoneyTransferService.RF.Send
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.MoneyTransferService.RE.Notify
+
+SERVICE SwitchRoleService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.SwitchRoleService.RF.SwitchRole
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.SwitchRoleService.RF.GetRole
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.SwitchRoleService.RE.RoleChanged
+
+SERVICE EmoteService
+
+SERVICE TransferService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TransferService.RF.Transfer
+
+SERVICE ReturnHomeService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.ReturnHomeService.RE.Mulai
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ReturnHomeService.RF.Pergi
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ReturnHomeService.RF.Minta
+
+SERVICE DayNightService
+
+SERVICE BoomboxService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.TogglePause
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.SambungSpeaker
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.HasSpeaker
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.Play
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.CariSpeaker
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.PlayCustom
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.Next
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.GetState
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.PutusSpeaker
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.Stop
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.KontrolTablet
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.PutarTablet
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RF.SetVolume
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RE.VolumeChanged
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RE.StateChanged
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.BoomboxService.RE.TabletPutus
+
+SERVICE LayanganService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LayanganService.RE.LayanganEquipped
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LayanganService.RE.UlurStart
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LayanganService.RE.UlurStop
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LayanganService.RE.LayanganUnequipped
+
+SERVICE KebunService
+
+SERVICE ServerHopService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ServerHopService.RF.NewServer
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ServerHopService.RF.QuickZone
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ServerHopService.RF.GetList
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ServerHopService.RF.Join
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.ServerHopService.RE.Notify
+
+SERVICE WatersprayService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.WatersprayService.RE.Notify
+
+SERVICE ConvertService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ConvertService.RF.Klaim
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ConvertService.RF.Masukkan
+
+SERVICE RongsokanService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.RongsokanService.RF.Ambil
+
+SERVICE FollowPetShopService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.FollowPetShopService.RF.Buy
+
+SERVICE TokenListrikService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TokenListrikService.RF.InputKode
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TokenListrikService.RF.BeliToken
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TokenListrikService.RF.GetAllStates
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TokenListrikService.RF.GetMyData
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TokenListrikService.RF.ToggleSwitch
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TokenListrikService.RE.OpenTokenInputUI
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TokenListrikService.RE.Notify
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TokenListrikService.RE.ListrikStateChanged
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TokenListrikService.RE.OpenListrikSwitchUI
+
+SERVICE LokerService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LokerService.RE.Badge
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LokerService.RE.Updated
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LokerService.RE.Notify
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LokerService.RF.Broadcast
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LokerService.RF.GetInfoSebar
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LokerService.RF.GetLokers
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LokerService.RF.GetBadge
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LokerService.RF.MarkRead
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LokerService.RF.TeleportToOwner
+
+SERVICE GlobalRankService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GlobalRankService.RF.GetTopRanks
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.GlobalRankService.RE.RanksUpdated
+
+SERVICE CatTembokService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.CatTembokService.RF.CatRumah
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.CatTembokService.RF.GetCatPrice
+
+SERVICE GachaService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GachaService.RF.ClaimReward
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GachaService.RF.Spin
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GachaService.RF.SpinX10WithFree
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GachaService.RF.SpinX10WithMoney
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GachaService.RF.GetState
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GachaService.RF.ClaimOneMultiReward
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GachaService.RF.GetInventory
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GachaService.RF.SpinWithMoney
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.GachaService.RF.ClaimMultiReward
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.GachaService.RE.StateChanged
+
+SERVICE DombaService
+
+SERVICE DombaRideService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.DombaRideService.RE.RideStopped
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.DombaRideService.RE.RideStarted
+
+SERVICE DombaGiftService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.DombaGiftService.RE.Notify
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.DombaGiftService.RF.GetPlayerList
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.DombaGiftService.RF.GiftDomba
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.DombaGiftService.RF.GetMyDomba
+
+SERVICE MutasiService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MutasiService.RF.GetHistory
+
+SERVICE TaxService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TaxService.RF.HitungPajak
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TaxService.RF.BayarPajak
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TaxService.RF.GetRiwayat
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TaxService.RF.GetSaldo
+
+SERVICE LaundryService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LaundryService.RE.Updated
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LaundryService.RE.Notify
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LaundryService.RE.OpenMachine
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LaundryService.RF.StartWash
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LaundryService.RF.GetMachineState
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LaundryService.RF.GetDebugLog
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LaundryService.RF.DepositClothes
+
+SERVICE RefreshService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.RefreshService.RF.DoRefresh
+
+SERVICE PriceOverrideService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.PriceOverrideService.RE.Updated
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.PriceOverrideService.RF.GetAll
+
+SERVICE LimitOverrideService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.LimitOverrideService.RE.Updated
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.LimitOverrideService.RF.GetAll
+
+SERVICE PialaService
+
+SERVICE PialaSingingService
+
+SERVICE MisiService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.MisiService.RE.Updated
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MisiService.RF.Claim
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MisiService.RF.GetMisi
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MisiService.RF.IsUnlocked
+
+SERVICE PialaDonaturService
+
+SERVICE TraktorService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RF.HargaRobux
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RF.BeliGold
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RF.DaftarPemain
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RF.Spawn
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RF.Hadiahkan
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RF.Info
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RF.BeliRobux
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RF.UpgradeTangki
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RE.Notify
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RE.Berubah
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RE.Tersedot
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RE.MulaiMengemudi
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TraktorService.RE.SelesaiMengemudi
+
+SERVICE ClaimBroomService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.ClaimBroomService.RE.Updated
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ClaimBroomService.RF.ClaimReward
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ClaimBroomService.RF.GetDeadline
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ClaimBroomService.RF.OwnerCompleteMission
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.ClaimBroomService.RF.GetState
+
+SERVICE KeyService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.KeyService.RE.KeysChanged
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KeyService.RF.GetKeys
+
+SERVICE AnnouncementService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.AnnouncementService.RE.Show
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AnnouncementService.RF.Send
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AnnouncementService.RF.CanSend
+
+SERVICE TanamService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TanamService.RF.UpgradeGundukan
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TanamService.RF.Panen
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TanamService.RF.SetAuto
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TanamService.RF.Siram
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TanamService.RF.Tanam
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TanamService.RF.BeliBibit
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TanamService.RE.Dipanen
+
+SERVICE TernakService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TernakService.RF.IsiPakan
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TernakService.RF.BeliDomba
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TernakService.RF.Saldo
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TernakService.RF.AmbilKotoran
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TernakService.RF.GendongDomba
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TernakService.RF.TaruhDomba
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TernakService.RE.KotoranDiambil
+
+SERVICE GoldLeaderboardService
+
+SERVICE TradeService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TradeService.RF.Cancel
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TradeService.RF.Accept
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TradeService.RF.Unconfirm
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TradeService.RF.SetOffer
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TradeService.RF.Confirm
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TradeService.RF.Decline
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TradeService.RF.GetInventory
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TradeService.RF.Request
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TradeService.RF.CancelRequest
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TradeService.RE.Event
+
+SERVICE HarianService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.HarianService.RF.LaporFavorit
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.HarianService.RF.Klaim
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.HarianService.RF.CekKomunitas
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.HarianService.RF.KlikLike
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.HarianService.RF.GetStatus
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.HarianService.RE.StatusBerubah
+
+SERVICE AdminAbuseService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminAbuseService.RF.AmbilLog
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminAbuseService.RF.GetState
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminAbuseService.RF.AdminAksi
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminAbuseService.RF.AdminInfo
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminAbuseService.RF.Klaim
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminAbuseService.RE.Log
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminAbuseService.RE.Fase
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminAbuseService.RE.Dapat
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminAbuseService.RE.Hilang
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminAbuseService.RE.Lempar
+
+SERVICE BursaGoldService
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.BursaGoldService.RE.KursBerubah
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.BursaGoldService.RF.GetPasar
+
+SERVICE AdminLacakService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminLacakService.RF.KickJarakJauh
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminLacakService.RF.Cari
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminLacakService.RF.TeleportKe
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AdminLacakService.RF.AmbilLog
+
+SERVICE KotakService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KotakService.RF.Buka
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.KotakService.RF.Jumlah
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.KotakService.RE.JumlahBerubah
+
+SERVICE TabunganIDKService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TabunganIDKService.RF.GetRiwayat
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TabunganIDKService.RF.Tarik
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TabunganIDKService.RF.Setor
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.TabunganIDKService.RF.GetStatus
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TabunganIDKService.RE.NaikTahap
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.TabunganIDKService.RE.StatusBerubah
+
+SERVICE GerbangService
+
+SERVICE RedeemService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.RedeemService.RF.Tukar
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.RedeemService.RF.DaftarKode
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.RedeemService.RF.AturKode
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.RedeemService.RF.BuatKode
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.RedeemService.RE.KodeBerubah
+
+SERVICE AlatService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.AlatService.RF.Beli
+
+SERVICE MarketService
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RF.Ambil
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RF.StokJual
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RF.Beli
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RF.Riwayat
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RF.Tarik
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RF.Info
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RF.Lapakku
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RF.Detail
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RF.Pasang
+RemoteFunction ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RF.Jelajah
+RemoteEvent ReplicatedStorage.NKSystem.Packages.Knit.Services.MarketService.RE.Kabar
