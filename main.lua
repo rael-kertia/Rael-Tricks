@@ -1230,6 +1230,152 @@ source = source:gsub("V18%.2", "V1")
 source = source:gsub("V18%.3", "V1")
 
 -- ==========================================
+-- INTEGRASI AUTO ACC
+-- ==========================================
+
+source = source:gsub("frame.Size = UDim2.fromOffset%(205, 115%)",
+    "frame.Size = UDim2.fromOffset(205, 180)")
+source = source:gsub("status.Position = UDim2.fromOffset%(5, 88%)",
+    "status.Position = UDim2.fromOffset(5, 155)")
+
+source = source .. [==[
+
+-- ==========================================
+-- AUTO ACC - TERINTEGRASI KE RAEL'S TRICKS
+-- ==========================================
+
+local autoAccEnabled = false
+local autoAccBusy = false
+local autoAccLast = {}
+local autoAccVIM = game:GetService("VirtualInputManager")
+
+local autoAccButton = makeButton(
+    "AutoAccButton", "AUTO ACC: OFF", 5, 85, 195,
+    Color3.fromRGB(160, 45, 45), 27
+)
+
+local autoAccInfo = Instance.new("TextLabel")
+autoAccInfo.Name = "AutoAccStatus"
+autoAccInfo.Size = UDim2.new(1, -10, 0, 34)
+autoAccInfo.Position = UDim2.fromOffset(5, 116)
+autoAccInfo.BackgroundTransparency = 1
+autoAccInfo.Text = "Auto ACC: OFF"
+autoAccInfo.TextColor3 = Color3.fromRGB(220, 225, 235)
+autoAccInfo.TextSize = 9
+autoAccInfo.Font = Enum.Font.Gotham
+autoAccInfo.TextWrapped = true
+autoAccInfo.TextXAlignment = Enum.TextXAlignment.Left
+autoAccInfo.Parent = frame
+
+local function setAutoAcc(enabled)
+    autoAccEnabled = enabled
+    autoAccButton.Text = enabled and "AUTO ACC: ON" or "AUTO ACC: OFF"
+    autoAccButton.BackgroundColor3 = enabled
+        and Color3.fromRGB(35, 145, 70)
+        or Color3.fromRGB(160, 45, 45)
+    autoAccInfo.Text = enabled
+        and "Auto ACC aktif - menunggu permintaan"
+        or "Auto ACC nonaktif"
+end
+
+connect(autoAccButton.Activated, function()
+    setAutoAcc(not autoAccEnabled)
+end)
+
+local function getAutoAccCards()
+    local found = {}
+    local requestUI = playerGui:FindFirstChild("PermintaanSewaUI")
+    local stack = requestUI and requestUI:FindFirstChild("Tumpukan")
+    if not requestUI or not requestUI.Enabled or not stack then
+        return found
+    end
+
+    for _, card in ipairs(stack:GetChildren()) do
+        if card.Name:match("^Kartu_%d+$") and card.Visible then
+            local isi = card:FindFirstChild("Isi")
+            local button = isi and isi:FindFirstChild("AccBtn")
+            if button and button:IsA("GuiButton")
+            and button.Visible and button.Active then
+                local p, s = button.AbsolutePosition, button.AbsoluteSize
+                table.insert(found, {
+                    card = card,
+                    button = button,
+                    x = p.X + s.X / 2,
+                    y = p.Y + s.Y / 2
+                })
+            end
+        end
+    end
+
+    table.sort(found, function(a, b)
+        return a.y < b.y
+    end)
+    return found
+end
+
+local function autoAccClick(item)
+    local button = item.button
+    local x, y = item.x, item.y
+    local pos = Vector2.new(x, y)
+
+    pcall(function()
+        autoAccVIM:SendTouchEvent(0, Enum.UserInputState.Begin, pos)
+        task.wait(0.10)
+        autoAccVIM:SendTouchEvent(0, Enum.UserInputState.End, pos)
+    end)
+
+    task.wait(0.45)
+
+    if button.Parent and button.Visible then
+        local mx, my = x + 44, y + 58
+        pcall(function()
+            autoAccVIM:SendMouseMoveEvent(mx, my, game)
+            task.wait(0.05)
+            autoAccVIM:SendMouseButtonEvent(mx, my, 0, true, game, 1)
+            task.wait(0.08)
+            autoAccVIM:SendMouseButtonEvent(mx, my, 0, false, game, 1)
+        end)
+        task.wait(0.65)
+    end
+
+    return not (button.Parent and button.Visible)
+end
+
+task.spawn(function()
+    while alive() and gui.Parent do
+        if autoAccEnabled and not autoAccBusy then
+            local cards = getAutoAccCards()
+            if #cards > 0 then
+                local item = cards[1]
+                local now = os.clock()
+                local last = autoAccLast[item.card] or 0
+
+                if now - last > 2.5 then
+                    autoAccBusy = true
+                    autoAccLast[item.card] = now
+                    autoAccInfo.Text = "Memproses " .. item.card.Name
+                        .. " | Y " .. string.format("%.1f", item.y)
+                        .. " | " .. #cards .. " popup"
+
+                    local gone = autoAccClick(item)
+                    if gone then
+                        autoAccInfo.Text = "ACC terkirim - scan ulang popup tersisa"
+                    else
+                        autoAccInfo.Text = "Popup belum hilang - mencoba lagi"
+                    end
+                    autoAccBusy = false
+                end
+            else
+                autoAccInfo.Text = "Auto ACC ON - menunggu permintaan"
+            end
+        end
+        task.wait(0.15)
+    end
+end)
+
+]==]
+
+-- ==========================================
 -- COMPILE DAN JALANKAN
 -- ==========================================
 
