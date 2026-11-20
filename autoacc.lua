@@ -1,5 +1,5 @@
--- RAEL AUTO ACC ENGINE v3
--- Input sentuh memakai signature Vector2; main.lua tidak disentuh.
+-- RAEL AUTO ACC ENGINE v5
+-- Koordinat UI tanpa inset; mouse X dikoreksi +44 dari hasil kalibrasi.
 local env=(getgenv and getgenv()) or _G
 local state=env.RAEL_AUTOACC or {}
 env.RAEL_AUTOACC=state
@@ -14,12 +14,7 @@ if not ui then state.Status="UI permintaan tidak ditemukan"; return end
 local stack=ui:WaitForChild("Tumpukan",10)
 if not stack then state.Status="Tumpukan tidak ditemukan"; return end
 local vim=game:GetService("VirtualInputManager")
-local GuiService=game:GetService("GuiService")
 local slots={{name="ATAS",x=708,y=154},{name="BAWAH",x=708,y=281}}
-local function screenPos(x,y)
- local inset=GuiService:GetGuiInset()
- return x+inset.X,y+inset.Y
-end
 local attempts=setmetatable({}, {__mode="k"})
 local busy=setmetatable({}, {__mode="k"})
 
@@ -49,8 +44,7 @@ end
 
 local function sendTouch(x,y)
  if not vim then return false,"VIM tidak tersedia" end
- local sx,sy=screenPos(x,y)
- local pos=Vector2.new(sx,sy)
+ local pos=Vector2.new(x,y)
  local ok,err=pcall(function()
   vim:SendTouchEvent(0,Enum.UserInputState.Begin,pos)
   task.wait(0.10)
@@ -61,7 +55,7 @@ end
 
 local function sendMouse(x,y)
  if not vim then return false,"VIM tidak tersedia" end
- local sx,sy=screenPos(x,y)
+ local sx,sy=x+44,y
  return pcall(function()
   vim:SendMouseMoveEvent(sx,sy,game)
   task.wait(0.05)
