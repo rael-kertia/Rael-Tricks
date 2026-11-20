@@ -602,6 +602,191 @@ end
     "HOMEWORK OWN ZONE DISPOSAL"
 )
 
+source = source .. [==[
+
+-- ==========================================
+-- AUTO GACHA - TERINTEGRASI KE GUI UTAMA
+-- Knit GachaService | Paid Spin default OFF
+-- ==========================================
+
+local gachaAutoEnabled = false
+local gachaPaidEnabled = false
+local gachaBusy = false
+local gachaService
+
+-- Perluas panel utama agar seluruh tombol tetap berada di dalam GUI yang sama.
+frame.Size = UDim2.fromOffset(205, 335)
+
+local gachaButton = Instance.new("TextButton")
+gachaButton.Name = "AutoGachaButton"
+gachaButton.Size = UDim2.fromOffset(180, 29)
+gachaButton.Position = UDim2.fromOffset(12, 260)
+gachaButton.BackgroundColor3 = Color3.fromRGB(127, 29, 29)
+gachaButton.BorderSizePixel = 0
+gachaButton.Text = "AUTO GACHA: OFF"
+gachaButton.TextColor3 = Color3.new(1, 1, 1)
+gachaButton.TextSize = 10
+gachaButton.Font = Enum.Font.GothamBold
+gachaButton.Parent = frame
+Instance.new("UICorner", gachaButton).CornerRadius = UDim.new(0, 6)
+
+local gachaPaidButton = Instance.new("TextButton")
+gachaPaidButton.Name = "GachaPaidSpinButton"
+gachaPaidButton.Size = UDim2.fromOffset(180, 29)
+gachaPaidButton.Position = UDim2.fromOffset(12, 294)
+gachaPaidButton.BackgroundColor3 = Color3.fromRGB(71, 85, 105)
+gachaPaidButton.BorderSizePixel = 0
+gachaPaidButton.Text = "PAID SPIN: OFF"
+gachaPaidButton.TextColor3 = Color3.new(1, 1, 1)
+gachaPaidButton.TextSize = 10
+gachaPaidButton.Font = Enum.Font.GothamBold
+gachaPaidButton.Parent = frame
+Instance.new("UICorner", gachaPaidButton).CornerRadius = UDim.new(0, 6)
+
+local function paintGacha()
+    gachaButton.Text = gachaAutoEnabled and "AUTO GACHA: ON" or "AUTO GACHA: OFF"
+    gachaButton.BackgroundColor3 = gachaAutoEnabled
+        and Color3.fromRGB(5, 150, 105) or Color3.fromRGB(127, 29, 29)
+    gachaPaidButton.Text = gachaPaidEnabled and "PAID SPIN: ON" or "PAID SPIN: OFF"
+    gachaPaidButton.BackgroundColor3 = gachaPaidEnabled
+        and Color3.fromRGB(180, 110, 20) or Color3.fromRGB(71, 85, 105)
+end
+
+local function getGachaService()
+    if gachaService then return gachaService end
+    local rs = game:GetService("ReplicatedStorage")
+    local nk = rs:WaitForChild("NKSystem", 15)
+    if not nk then error("NKSystem tidak ditemukan") end
+    local packages = nk:WaitForChild("Packages", 15)
+    if not packages then error("Packages tidak ditemukan") end
+    local knitModule = packages:WaitForChild("Knit", 15)
+    if not knitModule then error("Knit tidak ditemukan") end
+    local Knit = require(knitModule)
+    gachaService = Knit.GetService("GachaService")
+    if not gachaService then error("GachaService tidak ditemukan") end
+    return gachaService
+end
+
+local function gachaCall(methodName)
+    local ok, a, b = pcall(function()
+        local svc = getGachaService()
+        local method = svc[methodName]
+        if type(method) ~= "function" then
+            error("METHOD TIDAK DITEMUKAN: " .. methodName)
+        end
+        return method(svc):await()
+    end)
+    if not ok then return false, tostring(a) end
+    if not a then return false, b or "PROMISE GAGAL" end
+    return true, b
+end
+
+local function gachaClaimSingle()
+    local ok = gachaCall("ClaimReward")
+    if not ok then setStatus("GACHA: KLAIM GAGAL") end
+    return ok
+end
+
+local function gachaClaimMulti(results)
+    for i = 1, #results do
+        -- Selesaikan klaim hasil x10 meskipun toggle dimatikan di tengah proses.
+        local ok = gachaCall("ClaimOneMultiReward")
+        if not ok then
+            setStatus("GACHA: KLAIM X10 GAGAL " .. i .. "/" .. #results)
+            return false
+        end
+        task.wait(0.25)
+    end
+    return true
+end
+
+local function gachaCycle()
+    setStatus("GACHA: MEMBACA STATE")
+    local stateOK, state = gachaCall("GetState")
+    if not stateOK or type(state) ~= "table" then
+        setStatus("GACHA: GAGAL MEMBACA STATE")
+        return false
+    end
+
+    local free = tonumber(state.free) or 0
+    local spinOK, result
+
+    if free >= 10 then
+        setStatus("GACHA: FREE SPIN X10")
+        spinOK, result = gachaCall("SpinX10WithFree")
+        if spinOK and type(result) == "table" and result.ok then
+            local results = result.results or {}
+            if #results > 0 then gachaClaimMulti(results) end
+        else
+            spinOK = false
+        end
+    elseif free > 0 then
+        setStatus("GACHA: FREE SPIN")
+        spinOK, result = gachaCall("Spin")
+        if spinOK and type(result) == "table" and result.ok then
+            if result.granted ~= false then gachaClaimSingle() end
+        else
+            spinOK = false
+        end
+    elseif gachaPaidEnabled then
+        setStatus("GACHA: PAID SPIN")
+        spinOK, result = gachaCall("SpinWithMoney")
+        if spinOK and type(result) == "table" and result.ok then
+            gachaClaimSingle()
+        else
+            spinOK = false
+        end
+    else
+        setStatus("GACHA: MENUNGGU FREE SPIN • PAID OFF")
+        return nil
+    end
+
+    if spinOK then
+        setStatus("GACHA: SPIN SELESAI • FREE " .. free)
+        return true
+    end
+    setStatus("GACHA: SPIN GAGAL / COBA LAGI")
+    return false
+end
+
+local function gachaWorker()
+    if gachaBusy then return end
+    gachaBusy = true
+    while alive() and gachaAutoEnabled do
+        local ok, result = pcall(gachaCycle)
+        if not ok then
+            setStatus("GACHA ERROR: " .. tostring(result):sub(1, 75))
+        end
+        task.wait(ok and result == false and 3 or 1.5)
+    end
+    gachaBusy = false
+    if alive() then setStatus("AUTO GACHA NONAKTIF") end
+end
+
+connect(gachaButton.Activated, function()
+    if not alive() then return end
+    gachaAutoEnabled = not gachaAutoEnabled
+    paintGacha()
+    if gachaAutoEnabled then
+        setStatus("AUTO GACHA DIMULAI")
+        task.spawn(gachaWorker)
+    else
+        setStatus("AUTO GACHA DIMATIKAN")
+    end
+end)
+
+connect(gachaPaidButton.Activated, function()
+    if not alive() then return end
+    gachaPaidEnabled = not gachaPaidEnabled
+    paintGacha()
+    setStatus(gachaPaidEnabled and "GACHA: PAID SPIN DIIZINKAN"
+        or "GACHA: PAID SPIN DINONAKTIFKAN")
+end)
+
+paintGacha()
+
+]==]
+
 -- ==========================================
 -- COMPILE DAN JALANKAN
 -- ==========================================
