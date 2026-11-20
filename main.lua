@@ -367,6 +367,28 @@ source = source:gsub("frame.Size = UDim2.fromOffset%(205, 115%)",
 source = source:gsub("status.Position = UDim2.fromOffset%(5, 88%)",
     "status.Position = UDim2.fromOffset(5, 155)")
 
+
+-- ==========================================
+-- HOMEWORK WORKER KEEP ALIVE
+-- Siklus Homework yang selesai/gagal harus scan ulang,
+-- bukan keluar dari worker saat toggle masih ON.
+-- ==========================================
+replaceOnce(
+    [=[            else
+                break
+            end
+        end
+    end)
+end)]=],
+    [=[            else
+                task.wait(1)
+            end
+        end
+    end)
+end)]=],
+    "HOMEWORK WORKER KEEP ALIVE"
+)
+
 source = source .. [==[
 
 -- ==========================================
@@ -811,15 +833,14 @@ local function homeworkRun()
         task.wait(0.5)
     end
 
-    homeworkEnabled = false
+    -- Jangan matikan toggle otomatis saat satu siklus gagal/selesai scan.
+    -- Homework harus tetap ON dan worker akan scan ulang sampai user mematikannya.
     homeworkBusy = false
     updateButtons()
-    if alive() and not completed then
-        setStatus("HOMEWORK DIHENTIKAN / PERLU CEK ULANG")
-    elseif alive() and autoFarm then
-        setStatus("HOMEWORK SELESAI - FARM LANJUT")
-    elseif alive() then
-        setStatus("HOMEWORK SELESAI")
+    if alive() and homeworkEnabled then
+        setStatus(completed and "ZONA BERSIH - MEMANTAU RUMAH"
+            or "HOMEWORK GAGAL SEMENTARA - SCAN ULANG")
+        task.wait(1)
     end
 end
 
