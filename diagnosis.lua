@@ -1,81 +1,98 @@
--- RAEL DIAGNOSTIC SEWA V13 - TRACE ARGUMEN ACC
--- PASIF: tidak klik, tidak memanggil Respond/VerifyReject.
-local O,seen={},{}
+-- RAEL DIAGNOSTIC SEWA V14 - DECOMPILE CALLBACK
+-- PASIF: tidak klik dan tidak memanggil remote.
+local O={}
 local function a(x) O[#O+1]=tostring(x) end
-local function up(f)
- local g=(debug and debug.getupvalues) or getupvalues
- if type(g)~="function" then return nil end
- local ok,t=pcall(g,f); if ok and type(t)=="table" then return t end
+local function safe(fn,...)
+ if type(fn)~="function" then return nil end
+ local ok,v=pcall(fn,...); if ok then return v end
+ return nil
 end
-local function info(f,tag,depth)
+local function dumpSource(f,tag)
  if type(f)~="function" then return end
- local id=tostring(f); if seen[id] then return end; seen[id]=true
- a("\n### "..tag.." "..id.." depth="..depth)
+ a("\n### "..tag.." "..tostring(f))
  local gi=(debug and debug.getinfo) or getinfo
- if type(gi)=="function" then local ok,x=pcall(gi,f); if ok and type(x)=="table" then a("INFO name="..tostring(x.name).." src="..tostring(x.source).." line="..tostring(x.linedefined).." nparams="..tostring(x.nparams)) end end
+ local inf=safe(gi,f)
+ if type(inf)=="table" then a("INFO name="..tostring(inf.name).." src="..tostring(inf.source).." line="..tostring(inf.linedefined).." params="..tostring(inf.nparams)) end
+ local dc=decompile or (debug and debug.decompile)
+ if type(dc)=="function" then
+  local src=safe(dc,f)
+  if type(src)=="string" then
+   a("DECOMPILE_BEGIN")
+   a(src:sub(1,12000))
+   a("DECOMPILE_END")
+  else a("DECOMPILE_UNAVAILABLE") end
+ else a("NO_DECOMPILE_API") end
  local gc=(debug and debug.getconstants) or getconstants
- if type(gc)=="function" then
-  local ok,t=pcall(gc,f); if ok and type(t)=="table" then
-   for i,v in ipairs(t) do if i>100 then break end
-    if type(v)=="string" or type(v)=="number" or type(v)=="boolean" then a("C"..i.."="..tostring(v):sub(1,90)) end
-   end
+ local cs=safe(gc,f)
+ if type(cs)=="table" then
+  a("CONSTANTS:")
+  for i,v in ipairs(cs) do if i>160 then break end
+   a("C"..i.." ["..typeof(v).."]="..tostring(v):sub(1,180))
   end
- end
- local u=up(f)
- if u then for i=1,12 do local v=u[i]; if v~=nil then
-  local ty=typeof(v); local st=tostring(v)
-  a("UV"..i.." "..ty.." "..st:sub(1,130))
-  if type(v)=="table" then
-   local n=0
-   for k,x in pairs(v) do
-    n=n+1; if n>12 then a("UV"..i.." TABLE_MORE"); break end
-    if type(x)~="table" then a("UV"..i.."["..tostring(k):sub(1,35).."]="..typeof(x)..":"..tostring(x):sub(1,90)) end
-   end
-  end
-  if typeof(v)=="Instance" then a("INSTANCE "..v.ClassName.." "..v:GetFullName()) end
-  if type(v)=="function" and depth<2 then info(v,tag.."_UV"..i,depth+1) end
- end end end
+ else a("CONSTANTS_UNAVAILABLE") end
  local gp=(debug and debug.getprotos) or getprotos
- if type(gp)=="function" and depth<2 then
-  local ok,ps=pcall(gp,f)
-  if ok and type(ps)=="table" then
-   a("PROTOS="..#ps)
-   for i,p in ipairs(ps) do if i>8 then break end; info(p,tag.."_PROTO"..i,depth+1) end
-  else a("PROTOS_UNAVAILABLE") end
- end
+ local ps=safe(gp,f)
+ if type(ps)=="table" then
+  a("PROTOS="..#ps)
+  local gpr=(debug and debug.getproto) or getproto
+  for i=1,math.min(#ps,8) do
+   local p=ps[i]
+   if type(p)~="function" and type(gpr)=="function" then p=safe(gpr,f,i,true) or safe(gpr,f,i) end
+   if type(p)=="function" then
+    a("\nPROTO_"..i.." "..tostring(p))
+    local pi=safe(gi,p)
+    if type(pi)=="table" then a("PROTO_INFO name="..tostring(pi.name).." src="..tostring(pi.source).." line="..tostring(pi.linedefined)) end
+    local pc=safe(gc,p)
+    if type(pc)=="table" then for j,v in ipairs(pc) do if j>100 then break end; a("P"..i.."C"..j.." ["..typeof(v).."]="..tostring(v):sub(1,160)) end end
+    local pd=type(dc)=="function" and safe(dc,p) or nil
+    if type(pd)=="string" then a("PROTO_DECOMPILE_BEGIN"); a(pd:sub(1,7000)); a("PROTO_DECOMPILE_END") end
+   else a("PROTO_"..i.."_NOT_FUNCTION "..typeof(p).." "..tostring(p)) end
+  end
+ else a("PROTOS_UNAVAILABLE") end
 end
 local function save()
- local s="=== RAEL SEWA V13 ===\n"..table.concat(O,"\n")
+ local s="=== RAEL SEWA V14 ===\n"..table.concat(O,"\n")
  local cp,wf=false,false
  if setclipboard then cp=pcall(setclipboard,s) elseif toclipboard then cp=pcall(toclipboard,s) end
- if writefile then wf=pcall(writefile,"Rael_Sewa_V13.txt",s) end
- local tail="\n\nV13 END | chars="..#s.." | clipboard="..tostring(cp).." | file="..tostring(wf)
+ if writefile then wf=pcall(writefile,"Rael_Sewa_V14.txt",s) end
+ local tail="\n\nV14 END | chars="..#s.." | clipboard="..tostring(cp).." | file="..tostring(wf)
  if setclipboard then pcall(setclipboard,s..tail) elseif toclipboard then pcall(toclipboard,s..tail) end
- if writefile then pcall(writefile,"Rael_Sewa_V13.txt",s..tail) end
+ if writefile then pcall(writefile,"Rael_Sewa_V14.txt",s..tail) end
 end
 local ok,err=xpcall(function()
- local p=game:GetService("Players").LocalPlayer
- local root=p:WaitForChild("PlayerGui"):FindFirstChild("PermintaanSewaUI")
- if not root then a("UI_NOT_FOUND"); return end
- local count=0
- for _,b in ipairs(root:GetDescendants()) do
-  local vis=true; local q=b
-  while q do if q:IsA("GuiObject") and not q.Visible then vis=false end; q=q.Parent end
-  if b:IsA("TextButton") and b.Name=="AccBtn" and vis then
-   count=count+1; a("\nBUTTON "..b:GetFullName())
-   local cs=getconnections and getconnections(b.Activated)
-   if cs then for _,c in ipairs(cs) do if type(c.Function)=="function" then
-    local h=up(c.Function); local cb=h and h[3]
-    if type(cb)=="function" then
-     a("CARD_ID_UPVALUE4="..tostring(h[4]))
-     info(cb,"ACC_CALLBACK",0)
-     local cu=up(cb); local f5=cu and cu[5]
-     if type(f5)=="function" then info(f5,"CALLBACK_UV5",0) end
+ local pl=game:GetService("Players").LocalPlayer
+ local ui=pl:WaitForChild("PlayerGui"):FindFirstChild("PermintaanSewaUI")
+ if not ui then a("UI_NOT_FOUND"); return end
+ local n=0
+ for _,b in ipairs(ui:GetDescendants()) do
+  local visible=true; local q=b
+  while q do if q:IsA("GuiObject") and not q.Visible then visible=false end; q=q.Parent end
+  if b:IsA("TextButton") and b.Name=="AccBtn" and visible then
+   n=n+1; a("\nBUTTON "..b:GetFullName())
+   local con=getconnections and safe(getconnections,b.Activated)
+   if type(con)=="table" then
+    for _,c in ipairs(con) do
+     local fn=c.Function
+     if type(fn)=="function" then
+      local gu=(debug and debug.getupvalues) or getupvalues
+      local uv=safe(gu,fn)
+      local cb=type(uv)=="table" and uv[3]
+      if type(cb)=="function" then
+       a("CARD_ID_UPVALUE4="..tostring(uv[4]))
+       dumpSource(cb,"ACC_CALLBACK")
+       local cu=safe(gu,cb)
+       if type(cu)=="table" then
+        for i,v in ipairs(cu) do
+         if type(v)=="function" then dumpSource(v,"CALLBACK_UPVALUE_"..i) end
+        end
+       end
+      end
+     end
     end
-   end end end
+   else a("GETCONNECTIONS_UNAVAILABLE") end
   end
  end
- a("\nVISIBLE_BUTTONS="..count)
+ a("\nVISIBLE_BUTTONS="..n)
 end,function(e) return tostring(e) end)
 if not ok then a("SCAN_FAILURE="..tostring(err)) end
 save()
