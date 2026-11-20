@@ -847,12 +847,10 @@ local a = source:find(insertMarker, 1, true)
 if not a then error("SESSION 71: AUTO CLEANER MARKER NOT FOUND") end
 source = source:sub(1, a - 1) .. integratedCode .. "\n\n" .. source:sub(a)
 
-local oldFarmStart = "-- ==========================================\n-- AUTO FARM LOOP"
-local oldFarmAt = source:find(oldFarmStart, 1, true)
+local oldFarmAt = source:find("-- AUTO FARM LOOP", 1, true)
 if not oldFarmAt then error("SESSION 71: OLD FARM LOOP NOT FOUND") end
-local oldFarmBody = source:find("task.spawn(function()", oldFarmAt, true)
-local oldFarmEnd = source:find("-- ==========================================\n-- TP LOCATION", oldFarmAt, true)
-if not oldFarmBody or not oldFarmEnd then error("SESSION 71: FARM LOOP BOUNDS NOT FOUND") end
+local oldFarmEnd = source:find("-- TP LOCATION", oldFarmAt, true)
+if not oldFarmEnd then error("SESSION 71: TP LOCATION MARKER NOT FOUND AFTER FARM LOOP") end
 source = source:sub(1, oldFarmAt - 1)
     .. "-- AUTO FARM LOOP V18.2 DISABLED: REPLACED BY SESSION 71 CONTROLLER\n\n"
     .. source:sub(oldFarmEnd)
