@@ -14,7 +14,12 @@ if not ui then state.Status="UI permintaan tidak ditemukan"; return end
 local stack=ui:WaitForChild("Tumpukan",10)
 if not stack then state.Status="Tumpukan tidak ditemukan"; return end
 local vim=game:GetService("VirtualInputManager")
+local GuiService=game:GetService("GuiService")
 local slots={{name="ATAS",x=708,y=154},{name="BAWAH",x=708,y=281}}
+local function screenPos(x,y)
+ local inset=GuiService:GetGuiInset()
+ return x+inset.X,y+inset.Y
+end
 local attempts=setmetatable({}, {__mode="k"})
 local busy=setmetatable({}, {__mode="k"})
 
@@ -44,7 +49,8 @@ end
 
 local function sendTouch(x,y)
  if not vim then return false,"VIM tidak tersedia" end
- local pos=Vector2.new(x,y)
+ local sx,sy=screenPos(x,y)
+ local pos=Vector2.new(sx,sy)
  local ok,err=pcall(function()
   vim:SendTouchEvent(0,Enum.UserInputState.Begin,pos)
   task.wait(0.10)
@@ -55,12 +61,13 @@ end
 
 local function sendMouse(x,y)
  if not vim then return false,"VIM tidak tersedia" end
+ local sx,sy=screenPos(x,y)
  return pcall(function()
-  vim:SendMouseMoveEvent(x,y,game)
+  vim:SendMouseMoveEvent(sx,sy,game)
   task.wait(0.05)
-  vim:SendMouseButtonEvent(x,y,0,true,game,1)
+  vim:SendMouseButtonEvent(sx,sy,0,true,game,1)
   task.wait(0.08)
-  vim:SendMouseButtonEvent(x,y,0,false,game,1)
+  vim:SendMouseButtonEvent(sx,sy,0,false,game,1)
  end)
 end
 
