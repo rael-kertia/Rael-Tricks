@@ -532,6 +532,76 @@ replaceOnce(
     "CLEANER BUTTON UNLOCK"
 )
 
+
+-- ==========================================
+-- HOMEWORK DISPOSAL: DETEKSI ZONA BERDASARKAN PEMILIK
+-- Nomor Gedung dinamis; jangan pernah memakai nomor tetap.
+-- ==========================================
+
+replaceBetween(
+    "local function hwDispose(house)",
+    "local function hwGet(house, mode)",
+    [=[
+local function hwDispose(house)
+    if not hwCarrying() then return true end
+    local r = hwRoot()
+    if not r then return false end
+
+    local best, bd
+    local function scanRoot(root)
+        if not root then return end
+        for _, v in ipairs(root:GetDescendants()) do
+            if not alive() or not homeworkEnabled then return end
+            if v:IsA("ProximityPrompt")
+            and v.Name == "BuangPrompt"
+            and v.ActionText == "Buang"
+            and v.Enabled then
+                local q = hwPart(v)
+                if q then
+                    local d = (r.Position - q.Position).Magnitude
+                    if not bd or d < bd then
+                        best, bd = v, d
+                    end
+                end
+            end
+        end
+    end
+
+    -- Tempat sampah di rumah sendiri tetap diizinkan.
+    local folder = W:FindFirstChild("KosanSpawned")
+    if folder then
+        for _, h in ipairs(folder:GetChildren()) do
+            if hwOwnsHouse(h) then
+                scanRoot(h)
+            end
+        end
+    end
+
+    -- Zona publik hanya boleh dipakai jika atribut pemilik cocok.
+    -- Nomor ZonaSpawanGedung berubah setiap server, jadi tidak di-hardcode.
+    for _, zone in ipairs(W:GetChildren()) do
+        if zone.Name:match("^ZonaSpawanGedung")
+        and tonumber(zone:GetAttribute("PemilikUserId")) == player.UserId then
+            scanRoot(zone)
+        end
+    end
+
+    if not best then
+        setStatus("TEMPAT SAMPAH ZONA SENDIRI TIDAK DITEMUKAN")
+        task.wait(1)
+        return false
+    end
+
+    if not hwUse(best) then
+        setStatus("INTERAKSI BUANG GAGAL - COBA LAGI")
+        return false
+    end
+    return hwWaitCarry(false)
+end
+]=],
+    "HOMEWORK OWN ZONE DISPOSAL"
+)
+
 -- ==========================================
 -- COMPILE DAN JALANKAN
 -- ==========================================
