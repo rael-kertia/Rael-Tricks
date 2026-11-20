@@ -91,7 +91,7 @@ local ok,err=xpcall(function()
               local ca,cc=pcall(gc,nu[ni])
               if ca and type(cc)=="table" then
                for k,z in ipairs(cc) do
-                if k<=50 and (type(z)=="string" or type(z)=="number" or type(z)=="boolean") then add("    NESTED"..ni.." CONST "..k.."="..tostring(z):sub(1,100) end
+                if k<=50 and (type(z)=="string" or type(z)=="number" or type(z)=="boolean") then add("    NESTED"..ni.." CONST "..k.."="..tostring(z):sub(1,100)) end
                end
               else add("    CONSTANT READ FAILED") end
              end
