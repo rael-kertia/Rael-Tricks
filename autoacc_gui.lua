@@ -36,10 +36,10 @@ title.Font=Enum.Font.GothamBold
 title.TextSize=16
 title.Parent=frame
 
-local function makeButton(text,y,color)
+local function makeButton(text,x,color)
  local b=Instance.new("TextButton")
  b.Size=UDim2.new(0.5,-12,0,34)
- b.Position=UDim2.new(y==43 and 0 or 0.5, y==43 and 8 or 4, 0, y)
+ b.Position=UDim2.new(x, x==0 and 8 or 4, 0, 43)
  b.BackgroundColor3=color
  b.BorderSizePixel=0
  b.Text=text
@@ -51,8 +51,8 @@ local function makeButton(text,y,color)
  return b
 end
 
-local on=makeButton("ON",43,Color3.fromRGB(35,145,85))
-local off=makeButton("OFF",43,Color3.fromRGB(170,60,60))
+local on=makeButton("ON",0,Color3.fromRGB(35,145,85))
+local off=makeButton("OFF",0.5,Color3.fromRGB(170,60,60))
 local status=Instance.new("TextLabel")
 status.Size=UDim2.new(1,-16,0,48)
 status.Position=UDim2.fromOffset(8,84)
