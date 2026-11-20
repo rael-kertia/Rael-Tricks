@@ -1,5 +1,5 @@
--- RAEL AUTO ACC ENGINE v5
--- Koordinat UI tanpa inset; mouse X dikoreksi +44 dari hasil kalibrasi.
+-- RAEL AUTO ACC ENGINE v6
+-- Touch memakai koordinat UI; mouse dikoreksi X +44 dan Y +58 berdasarkan inset layar.
 local env=(getgenv and getgenv()) or _G
 local state=env.RAEL_AUTOACC or {}
 env.RAEL_AUTOACC=state
@@ -55,7 +55,7 @@ end
 
 local function sendMouse(x,y)
  if not vim then return false,"VIM tidak tersedia" end
- local sx,sy=x+44,y
+ local sx,sy=x+44,y+58
  return pcall(function()
   vim:SendMouseMoveEvent(sx,sy,game)
   task.wait(0.05)
