@@ -83,19 +83,6 @@ source = raelReplaceBetween(
 
 -- HomeworkRun asli dipertahankan agar tidak mengubah alur inti.
 
--- AUTO ACC: hilangkan pesan status dari panel status utama.
--- Tombol ON/OFF dan fungsi Auto Acc tetap berjalan.
-local autoAccStart = "-- AUTO ACC - TERINTEGRASI KE RAEL'S TRICKS"
-local autoAccEnd = "-- FITUR DIHAPUS: AUTO FEED DAN AUTO FARM"
-local autoAccA = source:find(autoAccStart, 1, true)
-local autoAccB = autoAccA and source:find(autoAccEnd, autoAccA + #autoAccStart, true)
-assert(autoAccA and autoAccB, "Marker blok Auto Acc tidak ditemukan")
-local autoAccBlock = source:sub(autoAccA, autoAccB - 1)
-autoAccBlock = "local function raelAutoAccNoop(...) end\n"
-    .. autoAccBlock:gsub("setStatus%(", "raelAutoAccNoop(")
-source = source:sub(1, autoAccA - 1) .. autoAccBlock .. source:sub(autoAccB)
-
-
 -- GACHA: gunakan tombol native game agar GachaController sendiri yang
 -- menjalankan Spin, reveal BlindBox, dan seluruh proses klaim hadiah.
 local raelGachaNative = [=[
