@@ -1,7 +1,7 @@
 -- RAEL'S TRICKS - HOMEWORK TEST LOADER
 -- Separate test entrypoint. Does not modify main.lua or main_obfuscated.lua.
 
-local url = "https://raw.githubusercontent.com/rael-kertia/Rael-Tricks/main/main_obfuscated.lua"
+local url = "https://raw.githubusercontent.com/rael-kertia/Rael-Tricks/main/main_obfuscated.lua?v=rael-test-20261121-2"
 local response = game:HttpGet(url)
 if type(response) ~= "string" or response == "" then
     error("RAEL TEST: core tidak bisa diunduh")
