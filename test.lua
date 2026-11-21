@@ -82,6 +82,94 @@ source = raelReplaceBetween(
     raelHwGet
 )
 
+
+-- PERBAIKAN 2:
+-- Free tetap 1x per siklus; Paid menggunakan X10.
+-- Parameter hasil wajib diteruskan ke ClaimOneMultiReward.
+local raelGachaFunctions = [=[
+local function gachaCall(methodName, argument)
+    local ok, a, b = pcall(function()
+        local svc = getGachaService()
+        local method = svc[methodName]
+        if type(method) ~= "function" then
+            error("METHOD TIDAK DITEMUKAN: " .. methodName)
+        end
+        return method(svc, argument):await()
+    end)
+    if not ok then return false, tostring(a) end
+    if not a then return false, b or "PROMISE GAGAL" end
+    return true, b
+end
+
+local function gachaClaimSingle()
+    local ok = gachaCall("ClaimReward")
+    if not ok then setStatus("GACHA: KLAIM GAGAL") end
+    return ok
+end
+
+local function gachaClaimMulti(results)
+    for i = 1, #results do
+        local ok = gachaCall("ClaimOneMultiReward", results[i])
+        if not ok then
+            setStatus("GACHA: KLAIM X10 GAGAL " .. i .. "/" .. #results)
+            return false
+        end
+        task.wait(0.25)
+    end
+    return true
+end
+
+local function gachaCycle()
+    setStatus("GACHA: MEMBACA STATE")
+    local stateOK, state = gachaCall("GetState")
+    if not stateOK or type(state) ~= "table" then
+        setStatus("GACHA: GAGAL MEMBACA STATE")
+        return false
+    end
+
+    local free = tonumber(state.free) or 0
+    local spinOK, result
+
+    if free > 0 then
+        setStatus("GACHA: FREE SPIN 1X")
+        spinOK, result = gachaCall("Spin")
+        if spinOK and type(result) == "table" and result.ok then
+            if result.granted ~= false then gachaClaimSingle() end
+        else
+            spinOK = false
+        end
+    elseif gachaPaidEnabled then
+        setStatus("GACHA: PAID SPIN X10")
+        spinOK, result = gachaCall("SpinX10WithMoney")
+        if spinOK and type(result) == "table" and result.ok then
+            local results = result.results or {}
+            if #results > 0 then
+                gachaClaimMulti(results)
+            end
+        else
+            spinOK = false
+        end
+    else
+        setStatus("GACHA: MENUNGGU FREE SPIN (PAID OFF)")
+        return nil
+    end
+
+    if spinOK then
+        setStatus("GACHA: SPIN SELESAI - FREE " .. free)
+        return true
+    end
+    setStatus("GACHA: SPIN GAGAL / COBA LAGI")
+    return false
+end
+]=]
+
+source = raelReplaceBetween(
+    source,
+    "local function gachaCall(methodName)",
+    "local function gachaWorker()",
+    raelGachaFunctions
+)
+
 -- HomeworkRun asli dipertahankan agar tidak mengubah alur inti.
 
 ]==]
