@@ -246,6 +246,25 @@ source = source:sub(1, raelStatusAt - 1)
 
 wrapper = wrapper:sub(1, at - 1) .. patch .. "\n" .. wrapper:sub(at)
 
+-- AUTO ACC memakai setStatus GUI integrasi yang terpisah dari core.
+-- Filter di sini agar pesan Auto Acc tidak menimpa status fitur utama.
+local raelOuterStatusMarker = [=[local function setStatus(msg)
+    if status and status.Parent then status.Text = "STATUS: " .. tostring(msg) end
+end]=]
+local raelOuterStatusReplacement = [=[local function setStatus(msg)
+    if type(msg) == "string" and msg:match("^AUTO ACC") then
+        return
+    end
+    if status and status.Parent then status.Text = "STATUS: " .. tostring(msg) end
+end]=]
+local raelOuterStatusAt = wrapper:find(raelOuterStatusMarker, 1, true)
+assert(raelOuterStatusAt, "Fungsi status GUI Auto Acc tidak ditemukan")
+assert(not wrapper:find(raelOuterStatusMarker, raelOuterStatusAt + #raelOuterStatusMarker, true),
+    "Fungsi status GUI Auto Acc ditemukan lebih dari sekali")
+wrapper = wrapper:sub(1, raelOuterStatusAt - 1)
+    .. raelOuterStatusReplacement
+    .. wrapper:sub(raelOuterStatusAt + #raelOuterStatusMarker)
+
 local chunk, compileError = loadstring(wrapper)
 assert(chunk, "Wrapper compile gagal: " .. tostring(compileError))
 chunk()
