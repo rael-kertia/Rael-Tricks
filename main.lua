@@ -213,12 +213,17 @@ local function gachaCycle()
     end
 end]=]
 
-source = raelReplaceBetween(
-    source,
-    "local function getGachaService()",
-    "local function gachaWorker()",
-    raelGachaNative
-)
+-- Core saat ini tidak menyertakan blok Gacha. Jangan paksa replace
+-- marker yang tidak ada karena itu menghentikan loader sebelum GUI dibuat.
+if source:find("local function getGachaService()", 1, true)
+and source:find("local function gachaWorker()", 1, true) then
+    source = raelReplaceBetween(
+        source,
+        "local function getGachaService()",
+        "local function gachaWorker()",
+        raelGachaNative
+    )
+end
 
 ]==]
 
