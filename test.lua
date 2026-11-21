@@ -88,7 +88,6 @@ source = raelReplaceBetween(
 -- menjalankan Spin, reveal BlindBox, dan seluruh proses klaim hadiah.
 local raelGachaNative = [=[
 local gachaService
-
 local function getGachaService()
     if gachaService then return gachaService end
     local rs = game:GetService("ReplicatedStorage")
@@ -104,70 +103,81 @@ local function getGachaService()
     return gachaService
 end
 
-local function gachaReadState()
-    local ok, requestOK, state = pcall(function()
-        return getGachaService():GetState():await()
+local function gachaCall(methodName, ...)
+    local args = table.pack(...)
+    local ok, requestOK, result = pcall(function()
+        local svc = getGachaService()
+        local method = svc[methodName]
+        if type(method) ~= "function" then
+            error("METHOD TIDAK DITEMUKAN: " .. methodName)
+        end
+        return method(svc, table.unpack(args, 1, args.n)):await()
     end)
     if not ok then return false, tostring(requestOK) end
-    if not requestOK or type(state) ~= "table" then
-        return false, "STATE GACHA TIDAK VALID"
-    end
-    return true, state
+    if not requestOK then return false, result or "PROMISE GAGAL" end
+    return true, result
 end
 
-local function gachaGetNativeButton(paid)
-    local players = game:GetService("Players")
-    local player = players.LocalPlayer
-    local playerGui = player and player:FindFirstChild("PlayerGui")
-    local gui = playerGui and playerGui:FindFirstChild("GachaEntryGui")
-    if not gui or not gui.Enabled then return nil end
-    local panel = gui:FindFirstChild("Panel")
-    if not panel then return nil end
-    local row = panel:FindFirstChild(paid and "Row2" or "Row1")
-    if not row then return nil end
-    local button = row:FindFirstChild(paid and "X10PaidButton" or "SpinButton")
-    if not button or not button:IsA("GuiButton") then return nil end
-    if not button.Visible or not button.Active then return nil end
-    return button
+-- Callback asli BlindBox meneruskan indeks urutan 1..N.
+local function gachaClaimMulti(results)
+    if type(results) ~= "table" or #results == 0 then
+        setStatus("GACHA: DAFTAR HASIL X10 KOSONG")
+        return false
+    end
+    for i = 1, #results do
+        setStatus("GACHA: KLAIM HADIAH " .. i .. "/" .. #results)
+        local claimOK = gachaCall("ClaimOneMultiReward", i)
+        if not claimOK then
+            setStatus("GACHA: KLAIM GAGAL " .. i .. "/" .. #results)
+            return false
+        end
+        task.wait(0.35)
+    end
+    return true
 end
 
 local function gachaCycle()
     setStatus("GACHA: MEMBACA STATE")
-    local stateOK, state = gachaReadState()
-    if not stateOK then
+    local stateOK, state = gachaCall("GetState")
+    if not stateOK or type(state) ~= "table" then
         setStatus("GACHA: GAGAL MEMBACA STATE")
         return false
     end
-
     local free = tonumber(state.free) or 0
-    local usePaid = free <= 0 and gachaPaidEnabled
-    if free <= 0 and not usePaid then
+
+    if free >= 10 then
+        setStatus("GACHA: FREE X10")
+        local spinOK, result = gachaCall("SpinX10WithFree")
+        if not spinOK or type(result) ~= "table" or not result.ok then
+            setStatus("GACHA: FREE X10 GAGAL")
+            return false
+        end
+        return gachaClaimMulti(result.results)
+    elseif free > 0 then
+        setStatus("GACHA: FREE SPIN 1X")
+        local spinOK, result = gachaCall("Spin")
+        if not spinOK or type(result) ~= "table" or not result.ok then
+            setStatus("GACHA: FREE SPIN GAGAL")
+            return false
+        end
+        local claimOK = gachaCall("ClaimReward")
+        if not claimOK then
+            setStatus("GACHA: KLAIM FREE SPIN GAGAL")
+            return false
+        end
+        return true
+    elseif gachaPaidEnabled then
+        setStatus("GACHA: PAID X10")
+        local spinOK, result = gachaCall("SpinX10WithMoney")
+        if not spinOK or type(result) ~= "table" or not result.ok then
+            setStatus("GACHA: PAID X10 GAGAL")
+            return false
+        end
+        return gachaClaimMulti(result.results)
+    else
         setStatus("GACHA: MENUNGGU FREE SPIN (PAID OFF)")
         return nil
     end
-
-    local button = gachaGetNativeButton(usePaid)
-    if not button then
-        setStatus("GACHA: BUKA MENU GACHA TERLEBIH DAHULU")
-        return nil
-    end
-
-    local activated, activationError = pcall(function()
-        button:Activate()
-    end)
-    if not activated then
-        setStatus("GACHA: TOMBOL NATIVE GAGAL DIAKTIFKAN")
-        return false
-    end
-
-    if usePaid then
-        setStatus("GACHA: PAID X10 - REVEAL/KLAIM OLEH GAME")
-        task.wait(60)
-    else
-        setStatus("GACHA: FREE X1 - REVEAL/KLAIM OLEH GAME")
-        task.wait(15)
-    end
-    return true
 end
 ]=]
 
