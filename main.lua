@@ -220,6 +220,27 @@ source = raelReplaceBetween(
     raelGachaNative
 )
 
+-- HILANGKAN HANYA STATUS AUTO ACC.
+-- Tombol dan proses Auto Acc tetap utuh; status fitur lain tidak disentuh.
+local autoAccStart = source:find("-- AUTO ACC - TERINTEGRASI KE RAEL'S TRICKS", 1, true)
+assert(autoAccStart, "Blok Auto Acc tidak ditemukan")
+
+local autoAccBlock = source:sub(autoAccStart)
+local _, autoAccStatusCount = autoAccBlock:gsub("setStatus%(", "")
+assert(autoAccStatusCount == 4, "Jumlah pemanggilan status Auto Acc berubah; patch dibatalkan")
+
+local autoAccMarker = "local autoAccLast = {}"
+assert(autoAccBlock:find(autoAccMarker, 1, true), "Titik patch status Auto Acc tidak ditemukan")
+
+autoAccBlock = autoAccBlock:gsub("setStatus%(", "setAutoAccStatus(")
+autoAccBlock = autoAccBlock:gsub(
+    autoAccMarker,
+    autoAccMarker .. "\\nlocal function setAutoAccStatus(_) end",
+    1
+)
+
+source = source:sub(1, autoAccStart - 1) .. autoAccBlock
+
 ]==]
 
 wrapper = wrapper:sub(1, at - 1) .. patch .. "\n" .. wrapper:sub(at)
