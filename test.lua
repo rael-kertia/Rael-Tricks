@@ -30,7 +30,7 @@ local function raelReplaceBetween(text, firstMarker, nextMarker, replacement)
     if not a then error("Rael patch: marker awal tidak ditemukan: " .. firstMarker) end
     local b = text:find(nextMarker, a + #firstMarker, true)
     if not b then error("Rael patch: marker akhir tidak ditemukan: " .. nextMarker) end
-    return text:sub(1, a) .. replacement .. "\n\n" .. text:sub(b)
+    return text:sub(1, a - 1) .. replacement .. "\n\n" .. text:sub(b)
 end
 
 -- PERBAIKAN 1:
