@@ -103,6 +103,7 @@ local function getGachaService()
     return gachaService
 end
 
+-- Semua pemanggilan menunggu Promise selesai. Tidak ada retry otomatis.
 local function gachaCall(methodName, ...)
     local args = table.pack(...)
     local ok, requestOK, result = pcall(function()
@@ -111,28 +112,49 @@ local function gachaCall(methodName, ...)
         if type(method) ~= "function" then
             error("METHOD TIDAK DITEMUKAN: " .. methodName)
         end
-        return method(svc, table.unpack(args, 1, args.n)):await()
+        local promise = method(svc, table.unpack(args, 1, args.n))
+        if not promise or type(promise.await) ~= "function" then
+            error("RESPONS PROMISE TIDAK VALID: " .. methodName)
+        end
+        return promise:await()
     end)
+
     if not ok then return false, tostring(requestOK) end
-    if not requestOK then return false, result or "PROMISE GAGAL" end
+    if requestOK ~= true then
+        return false, result or ("SERVER MENOLAK: " .. methodName)
+    end
     return true, result
 end
 
--- Callback asli BlindBox meneruskan indeks urutan 1..N.
+-- X10 = satu spin server, lalu klaim tiap indeks secara berurutan.
+-- Jika satu klaim gagal, hentikan; jangan ulangi indeks yang sama.
 local function gachaClaimMulti(results)
-    if type(results) ~= "table" or #results == 0 then
-        setStatus("GACHA: DAFTAR HASIL X10 KOSONG")
+    if type(results) ~= "table" then
+        setStatus("GACHA: HASIL X10 TIDAK VALID")
         return false
     end
-    for i = 1, #results do
-        setStatus("GACHA: KLAIM HADIAH " .. i .. "/" .. #results)
-        local claimOK = gachaCall("ClaimOneMultiReward", i)
-        if not claimOK then
-            setStatus("GACHA: KLAIM GAGAL " .. i .. "/" .. #results)
+
+    local count = #results
+    if count ~= 10 then
+        setStatus("GACHA: JUMLAH HASIL TIDAK 10 (" .. count .. ")")
+        return false
+    end
+
+    for i = 1, count do
+        if results[i] == nil then
+            setStatus("GACHA: HASIL KE-" .. i .. " KOSONG")
             return false
         end
-        task.wait(0.35)
+
+        setStatus("GACHA: KLAIM HADIAH " .. i .. "/10")
+        local claimOK, claimResult = gachaCall("ClaimOneMultiReward", i)
+        if not claimOK then
+            setStatus("GACHA: KLAIM GAGAL " .. i .. "/10 - " .. tostring(claimResult))
+            return false
+        end
     end
+
+    setStatus("GACHA: 10 KLAIM SELESAI")
     return true
 end
 
@@ -143,43 +165,47 @@ local function gachaCycle()
         setStatus("GACHA: GAGAL MEMBACA STATE")
         return false
     end
-    local free = tonumber(state.free) or 0
 
+    local free = tonumber(state.free) or 0
     if free >= 10 then
         setStatus("GACHA: FREE X10")
         local spinOK, result = gachaCall("SpinX10WithFree")
-        if not spinOK or type(result) ~= "table" or not result.ok then
+        if not spinOK or type(result) ~= "table" or result.ok ~= true then
             setStatus("GACHA: FREE X10 GAGAL")
             return false
         end
         return gachaClaimMulti(result.results)
+
     elseif free > 0 then
         setStatus("GACHA: FREE SPIN 1X")
         local spinOK, result = gachaCall("Spin")
-        if not spinOK or type(result) ~= "table" or not result.ok then
+        if not spinOK or type(result) ~= "table" or result.ok ~= true then
             setStatus("GACHA: FREE SPIN GAGAL")
             return false
         end
-        local claimOK = gachaCall("ClaimReward")
+
+        local claimOK, claimResult = gachaCall("ClaimReward")
         if not claimOK then
-            setStatus("GACHA: KLAIM FREE SPIN GAGAL")
+            setStatus("GACHA: KLAIM FREE SPIN GAGAL - " .. tostring(claimResult))
             return false
         end
+        setStatus("GACHA: FREE SPIN SELESAI")
         return true
+
     elseif gachaPaidEnabled then
         setStatus("GACHA: PAID X10")
         local spinOK, result = gachaCall("SpinX10WithMoney")
-        if not spinOK or type(result) ~= "table" or not result.ok then
+        if not spinOK or type(result) ~= "table" or result.ok ~= true then
             setStatus("GACHA: PAID X10 GAGAL")
             return false
         end
         return gachaClaimMulti(result.results)
+
     else
         setStatus("GACHA: MENUNGGU FREE SPIN (PAID OFF)")
         return nil
     end
-end
-]=]
+end]=]
 
 source = raelReplaceBetween(
     source,
