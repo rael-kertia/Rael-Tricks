@@ -84,6 +84,100 @@ source = raelReplaceBetween(
 
 -- HomeworkRun asli dipertahankan agar tidak mengubah alur inti.
 
+-- GACHA: gunakan tombol native game agar GachaController sendiri yang
+-- menjalankan Spin, reveal BlindBox, dan seluruh proses klaim hadiah.
+local raelGachaNative = [=[
+local gachaService
+
+local function getGachaService()
+    if gachaService then return gachaService end
+    local rs = game:GetService("ReplicatedStorage")
+    local nk = rs:WaitForChild("NKSystem", 15)
+    if not nk then error("NKSystem tidak ditemukan") end
+    local packages = nk:WaitForChild("Packages", 15)
+    if not packages then error("Packages tidak ditemukan") end
+    local knitModule = packages:WaitForChild("Knit", 15)
+    if not knitModule then error("Knit tidak ditemukan") end
+    local Knit = require(knitModule)
+    gachaService = Knit.GetService("GachaService")
+    if not gachaService then error("GachaService tidak ditemukan") end
+    return gachaService
+end
+
+local function gachaReadState()
+    local ok, requestOK, state = pcall(function()
+        return getGachaService():GetState():await()
+    end)
+    if not ok then return false, tostring(requestOK) end
+    if not requestOK or type(state) ~= "table" then
+        return false, "STATE GACHA TIDAK VALID"
+    end
+    return true, state
+end
+
+local function gachaGetNativeButton(paid)
+    local players = game:GetService("Players")
+    local player = players.LocalPlayer
+    local playerGui = player and player:FindFirstChild("PlayerGui")
+    local gui = playerGui and playerGui:FindFirstChild("GachaEntryGui")
+    if not gui or not gui.Enabled then return nil end
+    local panel = gui:FindFirstChild("Panel")
+    if not panel then return nil end
+    local row = panel:FindFirstChild(paid and "Row2" or "Row1")
+    if not row then return nil end
+    local button = row:FindFirstChild(paid and "X10PaidButton" or "SpinButton")
+    if not button or not button:IsA("GuiButton") then return nil end
+    if not button.Visible or not button.Active then return nil end
+    return button
+end
+
+local function gachaCycle()
+    setStatus("GACHA: MEMBACA STATE")
+    local stateOK, state = gachaReadState()
+    if not stateOK then
+        setStatus("GACHA: GAGAL MEMBACA STATE")
+        return false
+    end
+
+    local free = tonumber(state.free) or 0
+    local usePaid = free <= 0 and gachaPaidEnabled
+    if free <= 0 and not usePaid then
+        setStatus("GACHA: MENUNGGU FREE SPIN (PAID OFF)")
+        return nil
+    end
+
+    local button = gachaGetNativeButton(usePaid)
+    if not button then
+        setStatus("GACHA: BUKA MENU GACHA TERLEBIH DAHULU")
+        return nil
+    end
+
+    local activated, activationError = pcall(function()
+        button:Activate()
+    end)
+    if not activated then
+        setStatus("GACHA: TOMBOL NATIVE GAGAL DIAKTIFKAN")
+        return false
+    end
+
+    if usePaid then
+        setStatus("GACHA: PAID X10 - REVEAL/KLAIM OLEH GAME")
+        task.wait(60)
+    else
+        setStatus("GACHA: FREE X1 - REVEAL/KLAIM OLEH GAME")
+        task.wait(15)
+    end
+    return true
+end
+]=]
+
+source = raelReplaceBetween(
+    source,
+    "local function getGachaService()",
+    "local function gachaWorker()",
+    raelGachaNative
+)
+
 ]==]
 
 wrapper = wrapper:sub(1, at - 1) .. patch .. "\n" .. wrapper:sub(at)
