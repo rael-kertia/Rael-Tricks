@@ -237,20 +237,20 @@ local autoAccMarker = "local autoAccLast = {}"
 local markerAt = source:find(autoAccMarker, autoAccStart, true)
 assert(markerAt, "Titik patch Auto Acc tidak ditemukan")
 source = source:sub(1, markerAt + #autoAccMarker - 1)
-    .. "\\nlocal function setAutoAccStatus(_) end"
+    .. "\nlocal function setAutoAccStatus(_) end"
     .. source:sub(markerAt + #autoAccMarker)
 
 source = raelReplaceOnce(source,
-    'setStatus(enabled and "AUTO ACC AKTIF - MENUNGGU PERMINTAAN"\\n        or "AUTO ACC NONAKTIF")',
-    'setAutoAccStatus(enabled and "AUTO ACC AKTIF - MENUNGGU PERMINTAAN"\\n        or "AUTO ACC NONAKTIF")',
+    'setStatus(enabled and "AUTO ACC AKTIF - MENUNGGU PERMINTAAN"\n        or "AUTO ACC NONAKTIF")',
+    'setAutoAccStatus(enabled and "AUTO ACC AKTIF - MENUNGGU PERMINTAAN"\n        or "AUTO ACC NONAKTIF")',
     "toggle")
 source = raelReplaceOnce(source,
-    'setStatus("AUTO ACC: " .. item.card.Name\\n                        .. " | " .. #cards .. " popup")',
-    'setAutoAccStatus("AUTO ACC: " .. item.card.Name\\n                        .. " | " .. #cards .. " popup")',
+    'setStatus("AUTO ACC: " .. item.card.Name\n                        .. " | " .. #cards .. " popup")',
+    'setAutoAccStatus("AUTO ACC: " .. item.card.Name\n                        .. " | " .. #cards .. " popup")',
     "popup ditemukan")
 source = raelReplaceOnce(source,
-    'setStatus(gone and "AUTO ACC: popup diproses; scan ulang"\\n                        or "AUTO ACC: popup belum hilang; coba ulang")',
-    'setAutoAccStatus(gone and "AUTO ACC: popup diproses; scan ulang"\\n                        or "AUTO ACC: popup belum hilang; coba ulang")',
+    'setStatus(gone and "AUTO ACC: popup diproses; scan ulang"\n                        or "AUTO ACC: popup belum hilang; coba ulang")',
+    'setAutoAccStatus(gone and "AUTO ACC: popup diproses; scan ulang"\n                        or "AUTO ACC: popup belum hilang; coba ulang")',
     "hasil klik")
 source = raelReplaceOnce(source,
     'setStatus("AUTO ACC: menunggu permintaan")',
