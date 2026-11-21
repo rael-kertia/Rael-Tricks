@@ -221,26 +221,41 @@ source = raelReplaceBetween(
 )
 
 -- HILANGKAN HANYA STATUS AUTO ACC.
--- Tombol dan proses Auto Acc tetap utuh; status fitur lain tidak disentuh.
+-- Ganti empat pemanggilan spesifik; jangan scan seluruh source karena
+-- wrapper menambahkan patch fitur lain setelah blok Auto Acc.
 local autoAccStart = source:find("-- AUTO ACC - TERINTEGRASI KE RAEL'S TRICKS", 1, true)
 assert(autoAccStart, "Blok Auto Acc tidak ditemukan")
 
-local autoAccBlock = source:sub(autoAccStart)
-local _, autoAccStatusCount = autoAccBlock:gsub("setStatus%(", "")
-assert(autoAccStatusCount == 4, "Jumlah pemanggilan status Auto Acc berubah; patch dibatalkan")
+local function raelReplaceOnce(text, oldText, newText, label)
+    local a, b = text:find(oldText, 1, true)
+    assert(a, "Status Auto Acc tidak ditemukan: " .. label)
+    assert(not text:find(oldText, b + 1, true), "Status Auto Acc ganda: " .. label)
+    return text:sub(1, a - 1) .. newText .. text:sub(b + 1)
+end
 
 local autoAccMarker = "local autoAccLast = {}"
-assert(autoAccBlock:find(autoAccMarker, 1, true), "Titik patch status Auto Acc tidak ditemukan")
+local markerAt = source:find(autoAccMarker, autoAccStart, true)
+assert(markerAt, "Titik patch Auto Acc tidak ditemukan")
+source = source:sub(1, markerAt + #autoAccMarker - 1)
+    .. "\\nlocal function setAutoAccStatus(_) end"
+    .. source:sub(markerAt + #autoAccMarker)
 
-autoAccBlock = autoAccBlock:gsub("setStatus%(", "setAutoAccStatus(")
-autoAccBlock = autoAccBlock:gsub(
-    autoAccMarker,
-    autoAccMarker .. "\nlocal function setAutoAccStatus(_) end",
-    1
-)
-
-source = source:sub(1, autoAccStart - 1) .. autoAccBlock
-
+source = raelReplaceOnce(source,
+    'setStatus(enabled and "AUTO ACC AKTIF - MENUNGGU PERMINTAAN"\\n        or "AUTO ACC NONAKTIF")',
+    'setAutoAccStatus(enabled and "AUTO ACC AKTIF - MENUNGGU PERMINTAAN"\\n        or "AUTO ACC NONAKTIF")',
+    "toggle")
+source = raelReplaceOnce(source,
+    'setStatus("AUTO ACC: " .. item.card.Name\\n                        .. " | " .. #cards .. " popup")',
+    'setAutoAccStatus("AUTO ACC: " .. item.card.Name\\n                        .. " | " .. #cards .. " popup")',
+    "popup ditemukan")
+source = raelReplaceOnce(source,
+    'setStatus(gone and "AUTO ACC: popup diproses; scan ulang"\\n                        or "AUTO ACC: popup belum hilang; coba ulang")',
+    'setAutoAccStatus(gone and "AUTO ACC: popup diproses; scan ulang"\\n                        or "AUTO ACC: popup belum hilang; coba ulang")',
+    "hasil klik")
+source = raelReplaceOnce(source,
+    'setStatus("AUTO ACC: menunggu permintaan")',
+    'setAutoAccStatus("AUTO ACC: menunggu permintaan")',
+    "menunggu")
 ]==]
 
 wrapper = wrapper:sub(1, at - 1) .. patch .. "\n" .. wrapper:sub(at)
