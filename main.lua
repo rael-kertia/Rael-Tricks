@@ -220,6 +220,28 @@ source = raelReplaceBetween(
     raelGachaNative
 )
 
+-- Sembunyikan hanya status Auto Acc; status fitur lain tetap normal.
+local raelStatusMarker = [=[local function setStatus(msg)
+    if status and status.Parent then
+        status.Text = "Status: " .. msg
+    end
+end]=]
+local raelStatusReplacement = [=[local function setStatus(msg)
+    if type(msg) == "string" and msg:match("^AUTO ACC") then
+        return
+    end
+    if status and status.Parent then
+        status.Text = "Status: " .. msg
+    end
+end]=]
+local raelStatusAt = source:find(raelStatusMarker, 1, true)
+assert(raelStatusAt, "Status function marker tidak ditemukan")
+assert(not source:find(raelStatusMarker, raelStatusAt + #raelStatusMarker, true),
+    "Status function marker ditemukan lebih dari sekali")
+source = source:sub(1, raelStatusAt - 1)
+    .. raelStatusReplacement
+    .. source:sub(raelStatusAt + #raelStatusMarker)
+
 ]==]
 
 wrapper = wrapper:sub(1, at - 1) .. patch .. "\n" .. wrapper:sub(at)
