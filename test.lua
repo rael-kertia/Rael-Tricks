@@ -1,6 +1,6 @@
 -- RAEL'S TRICKS - TEST
--- Salinan jalur eksekusi main.lua + dua patch Homework.
--- main.lua dan main_obfuscated.lua tidak diubah.
+-- Salinan jalur eksekusi core + dua patch Homework dan satu patch Gacha.
+-- main.lua dan main_obfuscated.lua belum diubah.
 
 local url = "https://raw.githubusercontent.com/rael-kertia/Rael-Tricks/main/main_obfuscated.lua"
 local response = game:HttpGet(url)
