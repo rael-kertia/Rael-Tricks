@@ -602,6 +602,117 @@ end
     "HOMEWORK OWN ZONE DISPOSAL"
 )
 
+-- ==========================================
+-- HOMEWORK SCAN FIX: RECURSIVE PROMPT + ATTACHMENT POSITION
+-- Hanya mengubah deteksi target Homework.
+-- ==========================================
+
+replaceBetween(
+    "local function hwPart(prompt)",
+    "local function hwForceStand()",
+    [=[
+local function hwPart(prompt)
+    local x = prompt and prompt.Parent
+    if not x then return nil end
+
+    if x:IsA("BasePart") then
+        return x
+    end
+
+    -- Prompt dapat berada di dalam Attachment pada sebuah BasePart.
+    local ancestor = x:FindFirstAncestorWhichIsA("BasePart")
+    if ancestor then return ancestor end
+
+    return x:FindFirstChildWhichIsA("BasePart", true)
+end
+]=],
+    "HOMEWORK PROMPT ATTACHMENT POSITION"
+)
+
+replaceBetween(
+    "local function hwGet(house, mode)",
+    "local function hwFindHouse()",
+    [=[
+local function hwGet(house, mode)
+    local result = {}
+    if not house then return result end
+
+    for _, v in ipairs(house:GetDescendants()) do
+        if (mode == 1 or mode == 3)
+        and v:IsA("ProximityPrompt")
+        and v.ActionText == "Bersihkan"
+        and (mode == 3 or v.Enabled) then
+            table.insert(result, v)
+
+        elseif (mode == 2 or mode == 4)
+        and v.Name == "TrashBag"
+        and (v:IsA("BasePart") or v:IsA("Model") or v:IsA("Folder")) then
+            -- Cari prompt Ambil secara recursive, bukan hanya anak langsung.
+            for _, p in ipairs(v:GetDescendants()) do
+                if p:IsA("ProximityPrompt") then
+                    local action = (p.ActionText or ""):lower()
+                    local isTake = p.Name == "AmbilPrompt"
+                        or action:find("ambil", 1, true) ~= nil
+
+                    if isTake and (mode == 4 or p.Enabled) then
+                        table.insert(result, p)
+                    end
+                end
+            end
+        end
+    end
+
+    return result
+end
+]=],
+    "HOMEWORK RECURSIVE TRASHBAG PROMPT SCAN"
+)
+
+replaceBetween(
+    "local function hwFindHouse()",
+    "local function hwNearestOwnedHouse()",
+    [=[
+local function hwFindHouse()
+    local folder = W:FindFirstChild("KosanSpawned")
+    local r = hwRoot()
+    if not folder or not r then return nil end
+
+    local best, bd
+
+    for _, house in ipairs(folder:GetChildren()) do
+        if hwOwnsHouse(house) then
+            -- Rumah dianggap masih perlu diproses jika memiliki prompt
+            -- Bersihkan aktif ATAU prompt Ambil sampah yang aktif.
+            local targets = hwGet(house, 1)
+            for _, p in ipairs(hwGet(house, 2)) do
+                table.insert(targets, p)
+            end
+
+            for _, p in ipairs(targets) do
+                local q = hwPart(p)
+                if q then
+                    local d = (r.Position - q.Position).Magnitude
+                    if not bd or d < bd then
+                        best, bd = house, d
+                    end
+                end
+            end
+        end
+    end
+
+    return best
+end
+]=],
+    "HOMEWORK FIND DIRTY HOUSE"
+)
+
+replaceOnce(
+    [=[if hwOwnsHouse(h) and #hwGet(h, 3) > 0 then]=],
+    [=[if hwOwnsHouse(h)
+                and (#hwGet(h, 3) > 0 or #hwGet(h, 4) > 0) then]=],
+    "HOMEWORK DIRTY BAG COOLDOWN DETECTION"
+)
+
 source = source .. [==[
 
 -- ==========================================
