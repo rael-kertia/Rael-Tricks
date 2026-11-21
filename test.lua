@@ -152,6 +152,13 @@ local function gachaClaimMulti(results)
             setStatus("GACHA: KLAIM GAGAL " .. i .. "/10 - " .. tostring(claimResult))
             return false
         end
+
+        -- Jeda presentasi tanpa animasi: mengikuti fase buka X10 di BlindBoxTampil.
+        -- Durasi reveal terukur: 0.75 + 0.55 + 0.50 + 0.45 + 1.60 + 0.30 = 4.15 detik.
+        -- Ini hanya pacing lokal; bukan perlindungan atau jaminan anti-detection.
+        if i < count then
+            task.wait(4.15)
+        end
     end
 
     setStatus("GACHA: 10 KLAIM SELESAI")
