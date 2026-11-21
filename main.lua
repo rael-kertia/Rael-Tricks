@@ -235,7 +235,7 @@ assert(autoAccBlock:find(autoAccMarker, 1, true), "Titik patch status Auto Acc t
 autoAccBlock = autoAccBlock:gsub("setStatus%(", "setAutoAccStatus(")
 autoAccBlock = autoAccBlock:gsub(
     autoAccMarker,
-    autoAccMarker .. "\\nlocal function setAutoAccStatus(_) end",
+    autoAccMarker .. "\nlocal function setAutoAccStatus(_) end",
     1
 )
 
