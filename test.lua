@@ -137,7 +137,10 @@ local function homeworkRun()
         while alive() and homeworkEnabled do
             local pending
             for _, p in ipairs(hwGet(house, 1)) do
-                if not done[p] then pending = p break end
+                if not done[p] then
+                    pending = p
+                    break
+                end
             end
             if not pending then break end
             if not hwUse(pending) then break end
@@ -162,7 +165,10 @@ local function homeworkRun()
                 local nextBag
                 if batchCount < 6 then
                     for _, p in ipairs(bags) do
-                        if not triedBags[p] then nextBag = p break end
+                        if not triedBags[p] then
+                            nextBag = p
+                            break
+                        end
                     end
                 end
 
