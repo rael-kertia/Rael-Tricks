@@ -81,7 +81,49 @@ source = raelReplaceBetween(
     raelHwGet
 )
 
--- HomeworkRun asli dipertahankan agar tidak mengubah alur inti.
+-- HOMEWORK: lepaskan rumah yang menunggu cooldown agar scan bisa memilih rumah lain.
+-- Rumah baru dinyatakan selesai setelah tidak ada prompt Bersihkan, prompt TrashBag,
+-- atau muatan selama tiga pemeriksaan berurutan. Progress GUI global tidak menjadi kunci.
+local raelHomeworkWait = [=[
+                    local remainingClean = #hwGet(house, 3)
+                    local remainingBags = #hwGet(house, 4)
+
+                    -- Prompt disabled menandakan rumah masih cooldown/update.
+                    -- Keluar dari rumah ini agar loop luar dapat scan rumah lain.
+                    if remainingClean > 0 or remainingBags > 0 then
+                        quiet = 0
+                        if remainingClean > 0 then
+                            setStatus("HOMEWORK: RUMAH COOLDOWN - SCAN ULANG")
+                        else
+                            setStatus("HOMEWORK: MENUNGGU UPDATE SAMPAH")
+                        end
+                        break
+                    end
+
+                    if hadTrash then
+                        quiet += 1
+                        if quiet >= 3 then
+                            break
+                        end
+                        setStatus("HOMEWORK: VERIFIKASI RUMAH KOSONG")
+                    else
+                        quiet += 1
+                        if quiet >= 5 then
+                            setStatus("RUMAH BELUM MEMUNCULKAN SAMPAH - SCAN ULANG")
+                            break
+                        end
+                        setStatus("HOMEWORK: MENUNGGU SAMPAH MUNCUL")
+                    end
+                    task.wait(1)
+]=]
+
+source = raelReplaceBetween(
+    source,
+    "                    -- Hanya anggap selesai setelah sampah pernah muncul",
+    "                end\n            end\n        end\n\n        if not alive() or not homeworkEnabled then break end",
+    raelHomeworkWait
+)
+
 
 -- GACHA: gunakan tombol native game agar GachaController sendiri yang
 -- menjalankan Spin, reveal BlindBox, dan seluruh proses klaim hadiah.
