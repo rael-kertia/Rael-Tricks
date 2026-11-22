@@ -81,6 +81,44 @@ source = raelReplaceBetween(
     raelHwGet
 )
 
+-- Rumah yang masih memiliki TrashBag aktif juga harus bisa dipilih,
+-- termasuk ketika prompt Bersihkan rumah tersebut sedang cooldown.
+local raelHwFindHouse = [=[
+local function hwFindHouse()
+    local folder = W:FindFirstChild("KosanSpawned")
+    local r = hwRoot()
+    if not folder or not r then return nil end
+
+    local best, bd
+    for _, house in ipairs(folder:GetChildren()) do
+        if hwOwnsHouse(house) then
+            local prompts = hwGet(house, 1)
+            for _, p in ipairs(hwGet(house, 2)) do
+                table.insert(prompts, p)
+            end
+
+            for _, p in ipairs(prompts) do
+                local q = hwPart(p)
+                if q then
+                    local d = (r.Position - q.Position).Magnitude
+                    if not bd or d < bd then
+                        best, bd = house, d
+                    end
+                end
+            end
+        end
+    end
+    return best
+end
+]=]
+
+source = raelReplaceBetween(
+    source,
+    "local function hwFindHouse()",
+    "local function homeworkRun()",
+    raelHwFindHouse
+)
+
 -- HOMEWORK: lepaskan rumah yang menunggu cooldown agar scan bisa memilih rumah lain.
 -- Rumah baru dinyatakan selesai setelah tidak ada prompt Bersihkan, prompt TrashBag,
 -- atau muatan selama tiga pemeriksaan berurutan. Progress GUI global tidak menjadi kunci.
