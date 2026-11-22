@@ -874,14 +874,14 @@ local function runConvert()
         if not autoConvert or not alive() then return end
 
         local before = getManureCount()
+        local leaderstats = player:FindFirstChild("leaderstats")
+        local gold = leaderstats and (leaderstats:FindFirstChild("Gold") or leaderstats:FindFirstChild("Uang"))
+        local goldBefore
+        if gold and (gold:IsA("IntValue") or gold:IsA("NumberValue")) then goldBefore = gold.Value end
+
         setStatus("RATE HIJAU - MASUK")
         clickButton(masuk)
         task.wait(0.6)
-
-        local goldBefore
-        local leaderstats = player:FindFirstChild("leaderstats")
-        local gold = leaderstats and (leaderstats:FindFirstChild("Gold") or leaderstats:FindFirstChild("Uang"))
-        if gold and (gold:IsA("IntValue") or gold:IsA("NumberValue")) then goldBefore = gold.Value end
 
         setStatus("MENUNGGU HASIL CONVERT")
         local completed = waitConvertUntil(function()
@@ -907,6 +907,15 @@ local function runConvert()
             local current = getManureCount()
             return before and current and current < before
         end, 20)
+
+        -- Close the conversion panel if the game exposes a conventional close control.
+        local rootUI = playerGui:FindFirstChild("ConvertUI", true)
+        if rootUI then
+            for _, name in ipairs({"CloseBtn","CloseButton","TutupBtn","ExitBtn"}) do
+                local close = findButton(rootUI, name)
+                if close then clickButton(close); break end
+            end
+        end
         setStatus("CONVERT SELESAI")
     end)
     if not ok then setStatus("CONVERT ERROR: "..tostring(err)) end
