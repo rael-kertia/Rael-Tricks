@@ -692,8 +692,12 @@ end
 local function readNumber(value)
     if typeof(value) == "number" then return value end
     if typeof(value) == "string" then
-        local digits = value:gsub("[^%d]", "")
-        if digits ~= "" then return tonumber(digits) end
+        -- Read only the first numeric token (e.g. "2000/2000" -> 2000).
+        local token = value:match("%d[%d%. ,]*")
+        if token then
+            local digits = token:gsub("[^%d]", "")
+            if digits ~= "" then return tonumber(digits) end
+        end
     end
     return nil
 end
@@ -802,8 +806,18 @@ local function waitUntil(fn, seconds)
     return nil
 end
 
+local function waitConvertUntil(fn, seconds)
+    local started = os.clock()
+    while alive() and autoConvert and os.clock()-started < seconds do
+        local ok, result = pcall(fn)
+        if ok and result then return result end
+        task.wait(0.25)
+    end
+    return nil
+end
+
 local function runConvert()
-    if convertBusy or not autoConvert or not alive() then return end
+    if convertBusy or farmBusy or not autoConvert or not alive() then return end
     convertBusy = true
     local ok, err = pcall(function()
         local count = getManureCount()
@@ -830,7 +844,7 @@ local function runConvert()
             return
         end
 
-        local content, masuk, klaim = waitUntil(function()
+        local content, masuk, klaim = waitConvertUntil(function()
             local a,b,c = findConvertUI()
             if a and b and c then return {a,b,c} end
         end, 15)
@@ -842,7 +856,7 @@ local function runConvert()
         setStatus("MENUNGGU RATE CONVERT")
 
         -- Wait for rate indicator to become green; avoid clicking before the timing cue.
-        local rateReady = waitUntil(function()
+        local rateReady = waitConvertUntil(function()
             for _, v in ipairs(content[1]:GetDescendants()) do
                 if v:IsA("TextLabel") or v:IsA("TextButton") then
                     local txt = (v.Text or ""):lower()
@@ -870,7 +884,7 @@ local function runConvert()
         if gold and (gold:IsA("IntValue") or gold:IsA("NumberValue")) then goldBefore = gold.Value end
 
         setStatus("MENUNGGU HASIL CONVERT")
-        local completed = waitUntil(function()
+        local completed = waitConvertUntil(function()
             local current = getManureCount()
             local statusText = ""
             for _, v in ipairs(content[1]:GetDescendants()) do
@@ -889,7 +903,7 @@ local function runConvert()
         if not autoConvert or not alive() then return end
         setStatus("KLAIM HASIL")
         clickButton(klaim)
-        waitUntil(function()
+        waitConvertUntil(function()
             local current = getManureCount()
             return before and current and current < before
         end, 20)
