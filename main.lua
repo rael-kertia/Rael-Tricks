@@ -730,6 +730,42 @@ paintJamButton()
 
 ]====]
 
+-- EXIT BUTTON UNTUK MAIN GUI: hentikan seluruh fitur V18 + Homework + Jam Ajaib.
+local exitButton = Instance.new("TextButton")
+exitButton.Name = "ExitButton"
+exitButton.Size = UDim2.fromOffset(25, 19)
+exitButton.Position = UDim2.new(1, -58, 0, 1)
+exitButton.BackgroundColor3 = Color3.fromRGB(155, 38, 38)
+exitButton.BorderSizePixel = 0
+exitButton.Text = "X"
+exitButton.TextColor3 = Color3.new(1, 1, 1)
+exitButton.TextSize = 12
+exitButton.Font = Enum.Font.GothamBold
+exitButton.ZIndex = 20
+exitButton.Active = true
+exitButton.AutoButtonColor = true
+exitButton.Parent = frame
+Instance.new("UICorner", exitButton).CornerRadius = UDim.new(0, 5)
+
+connect(exitButton.Activated, function()
+    if not alive() then return end
+    enabled = false
+    autoFarm = false
+    homeworkEnabled = false
+    jamAutoEnabled = false
+    env.RaelV18Running = false
+
+    for _, connection in ipairs(env.RaelV18Connections or {}) do
+        pcall(function() connection:Disconnect() end)
+    end
+    for _, object in ipairs(env.RaelV18Objects or {}) do
+        pcall(function() object:Destroy() end)
+    end
+    env.RaelV18Connections = {}
+    env.RaelV18Objects = {}
+    gui:Destroy()
+end)
+
 ]==]
 
 wrapper = wrapper:sub(1, at - 1) .. patch .. "\n" .. wrapper:sub(at)
