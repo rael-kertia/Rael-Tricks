@@ -730,6 +730,7 @@ paintJamButton()
 
 ]====]
 
+source = source .. [=[
 -- EXIT BUTTON UNTUK MAIN GUI: hentikan seluruh fitur V18 + Homework + Jam Ajaib.
 local exitButton = Instance.new("TextButton")
 exitButton.Name = "ExitButton"
@@ -766,6 +767,7 @@ connect(exitButton.Activated, function()
     gui:Destroy()
 end)
 
+]=]
 ]==]
 
 wrapper = wrapper:sub(1, at - 1) .. patch .. "\n" .. wrapper:sub(at)
