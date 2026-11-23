@@ -373,6 +373,49 @@ source = raelReplaceOnce(source,
     'setAutoAccStatus("AUTO ACC: menunggu permintaan")',
     "menunggu")
 
+-- ==========================================
+-- RAPikan LAYOUT FITUR DAN TOMBOL MINIMIZE
+-- ==========================================
+
+-- Tombol minimize core sebelumnya memakai karakter kontrol sehingga
+-- tampil sebagai kotak. Ganti dengan tanda minus yang terbaca.
+source = source:gsub('minimizeButton%.Text = "[^"]*"', 'minimizeButton.Text = "-"')
+
+-- Sediakan baris khusus untuk Auto Jam Ajaib.
+-- Geser status dan fitur tambahan agar tidak menimpa Anti-AFK / TP.
+source = source:gsub(
+    "statusPanel.Position = UDim2.fromOffset%(12, 145%)",
+    "statusPanel.Position = UDim2.fromOffset(12, 178)"
+)
+source = source:gsub(
+    "autoAccButton.Position = UDim2.fromOffset%(12, 188%)",
+    "autoAccButton.Position = UDim2.fromOffset(12, 226)"
+)
+source = source:gsub(
+    "gachaButton.Position = UDim2.fromOffset%(12, 222%)",
+    "gachaButton.Position = UDim2.fromOffset(12, 263)"
+)
+source = source:gsub(
+    "gachaPaidButton.Position = UDim2.fromOffset%(12, 256%)",
+    "gachaPaidButton.Position = UDim2.fromOffset(12, 298)"
+)
+
+-- Tombol minimize/reopen dibuat eksplisit dengan ZIndex di atas panel.
+source = source:gsub(
+    "minimizeButton%.Text = \"-\"",
+    "minimizeButton.Text = \"-\"\nminimizeButton.ZIndex = 20"
+)
+source = source:gsub(
+    "miniButton%.Text = \"RT\"",
+    "miniButton.Text = \"RT\"\nminiButton.ZIndex = 30"
+)
+
+-- Pastikan ukuran panel cukup untuk semua tombol yang telah ditata.
+source = source:gsub(
+    "frame.Size = UDim2.fromOffset%(252, 340%)",
+    "frame.Size = UDim2.fromOffset(252, 340)"
+)
+
 -- AUTO JAM AJAIB: ditambahkan ke source core, bukan loader terpisah.
 source = source .. [====[
 
@@ -390,7 +433,7 @@ local jamService
 local jamButton = Instance.new("TextButton")
 jamButton.Name = "AutoJamAjaibButton"
 jamButton.Size = UDim2.fromOffset(180, 29)
-jamButton.Position = UDim2.fromOffset(12, 91)
+jamButton.Position = UDim2.fromOffset(12, 138)
 jamButton.BackgroundColor3 = Color3.fromRGB(127, 29, 29)
 jamButton.BorderSizePixel = 0
 jamButton.Text = "AUTO JAM AJAIB: OFF"
