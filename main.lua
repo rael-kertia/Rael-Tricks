@@ -22,12 +22,12 @@ diagnosticLabel.TextColor3 = Color3.new(1, 1, 1)
 diagnosticLabel.TextSize = 12
 diagnosticLabel.Font = Enum.Font.GothamBold
 diagnosticLabel.TextWrapped = true
-diagnosticLabel.Text = "RAEL LOADER: MEMULAI"
+diagnosticLabel.Text = "RAEL LOADER 6A413C0: MEMULAI"
 diagnosticLabel.Parent = diagnosticGui
 Instance.new("UICorner", diagnosticLabel).CornerRadius = UDim.new(0, 8)
 
 local function diagnosticStatus(message, failed)
-    diagnosticLabel.Text = "RAEL LOADER: " .. tostring(message)
+    diagnosticLabel.Text = "RAEL LOADER 6A413C0: " .. tostring(message)
     diagnosticLabel.BackgroundColor3 = failed
         and Color3.fromRGB(150, 35, 35)
         or Color3.fromRGB(30, 90, 65)
