@@ -104,10 +104,14 @@ local function getSheepHungerStatus()
         end
     end
 
-    if total ~= REQUIRED_SHEEP then
-        return false, hungry, "DATA DOMBA " .. total .. "/" .. REQUIRED_SHEEP
+    if total < REQUIRED_SHEEP then
+        return false, math.min(hungry, REQUIRED_SHEEP), "DATA DOMBA " .. total .. "/" .. REQUIRED_SHEEP
     end
-    return hungry == REQUIRED_SHEEP, hungry, hungry .. "/" .. REQUIRED_SHEEP .. " DOMBA LAPAR"
+
+    -- TernakLokal boleh memuat model duplikat/lebih dari 15.
+    -- Yang dibutuhkan hanya memastikan minimal 15 domba terdeteksi lapar.
+    local displayHungry = math.min(hungry, REQUIRED_SHEEP)
+    return hungry >= REQUIRED_SHEEP, displayHungry, displayHungry .. "/" .. REQUIRED_SHEEP .. " DOMBA LAPAR"
 end
 
 local farmCycle = "WAIT_HUNGRY"
