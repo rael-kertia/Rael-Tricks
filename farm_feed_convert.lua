@@ -1092,6 +1092,17 @@ task.spawn(function()
                 return
             end
 
+            if farmCycle == "WAIT_HUNGER_RESET" then
+                local allHungry, hungry, detail = getSheepHungerStatus()
+                if allHungry == nil or hungry == REQUIRED_SHEEP then
+                    setStatus("MENUNGGU DOMBA MERESPONS PAKAN: " .. tostring(detail))
+                    return
+                end
+                farmCycle = "WAIT_HUNGRY"
+                setStatus("DOMBA SUDAH MAKAN - MENUNGGU 15 LAPAR LAGI")
+                return
+            end
+
             if farmCycle == "FEED_EMPTY_TROUGHS" then
                 if not autoFeed then
                     setStatus("KOTORAN HABIS - MENUNGGU AUTO FEED")
@@ -1119,8 +1130,8 @@ task.spawn(function()
                     feedOne()
                     return
                 end
-                farmCycle = "WAIT_HUNGRY"
-                setStatus("PAKAN TERISI - MENUNGGU 15 DOMBA LAPAR LAGI")
+                farmCycle = "WAIT_HUNGER_RESET"
+                setStatus("PAKAN TERISI - MENUNGGU DOMBA MAKAN")
                 return
             end
         end)
