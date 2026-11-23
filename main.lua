@@ -338,7 +338,7 @@ source = raelReplaceOnce(source,
     "menunggu")
 
 -- AUTO JAM AJAIB: ditambahkan ke source core, bukan loader terpisah.
-source = source .. [==[
+source = source .. [====[
 
 -- ==========================================
 -- AUTO JAM AJAIB - RAEL'S TRICKS
@@ -354,7 +354,7 @@ local jamService
 local jamButton = Instance.new("TextButton")
 jamButton.Name = "AutoJamAjaibButton"
 jamButton.Size = UDim2.fromOffset(180, 29)
-jamButton.Position = UDim2.fromOffset(12, 290)
+jamButton.Position = UDim2.fromOffset(12, 91)
 jamButton.BackgroundColor3 = Color3.fromRGB(127, 29, 29)
 jamButton.BorderSizePixel = 0
 jamButton.Text = "AUTO JAM AJAIB: OFF"
@@ -614,7 +614,7 @@ end)
 
 paintJamButton()
 
-]==]
+]====]
 
 ]==]
 
