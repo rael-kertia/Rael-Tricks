@@ -374,47 +374,80 @@ source = raelReplaceOnce(source,
     "menunggu")
 
 -- ==========================================
--- RAPikan LAYOUT FITUR DAN TOMBOL MINIMIZE
+-- ==========================================
+-- LAYOUT PATCH - STRICT MATCH (WAJIB BERHASIL)
 -- ==========================================
 
--- Tombol minimize core sebelumnya memakai karakter kontrol sehingga
--- tampil sebagai kotak. Ganti dengan tanda minus yang terbaca.
-source = source:gsub('minimizeButton%.Text = "[^"]*"', 'minimizeButton.Text = "-"')
+local function raelReplaceLineStrict(text, prefix, newLine, label)
+    local a = text:find(prefix, 1, true)
+    assert(a, "LAYOUT PATCH GAGAL: baris tidak ditemukan: " .. label)
+    local e = text:find("\n", a, true) or (#text + 1)
+    assert(not text:find(prefix, e + 1, true),
+        "LAYOUT PATCH GAGAL: baris duplikat: " .. label)
+    return text:sub(1, a - 1) .. newLine .. text:sub(e)
+end
 
--- Sediakan baris khusus untuk Auto Jam Ajaib.
--- Geser status dan fitur tambahan agar tidak menimpa Anti-AFK / TP.
-source = source:gsub(
-    "statusPanel.Position = UDim2.fromOffset%(12, 145%)",
-    "statusPanel.Position = UDim2.fromOffset(12, 178)"
-)
-source = source:gsub(
-    "autoAccButton.Position = UDim2.fromOffset%(12, 188%)",
-    "autoAccButton.Position = UDim2.fromOffset(12, 226)"
-)
-source = source:gsub(
-    "gachaButton.Position = UDim2.fromOffset%(12, 222%)",
-    "gachaButton.Position = UDim2.fromOffset(12, 263)"
-)
-source = source:gsub(
-    "gachaPaidButton.Position = UDim2.fromOffset%(12, 256%)",
-    "gachaPaidButton.Position = UDim2.fromOffset(12, 298)"
+-- Perbaiki glyph minimize yang sebelumnya berupa karakter kontrol (kotak).
+source = raelReplaceLineStrict(
+    source, "minimizeButton.Text = ",
+    'minimizeButton.Text = "-"',
+    "MINIMIZE TEXT"
 )
 
--- Tombol minimize/reopen dibuat eksplisit dengan ZIndex di atas panel.
-source = source:gsub(
-    "minimizeButton%.Text = \"-\"",
-    "minimizeButton.Text = \"-\"\nminimizeButton.ZIndex = 20"
+-- Semua posisi diatur eksplisit dan setiap perubahan wajib terkonfirmasi.
+source = raelReplaceLineStrict(
+    source, "statusPanel.Position = ",
+    "statusPanel.Position = UDim2.fromOffset(12, 178)",
+    "STATUS PANEL"
 )
-source = source:gsub(
-    "miniButton%.Text = \"RT\"",
-    "miniButton.Text = \"RT\"\nminiButton.ZIndex = 30"
+source = raelReplaceLineStrict(
+    source, "autoAccButton.Position = ",
+    "autoAccButton.Position = UDim2.fromOffset(12, 226)",
+    "AUTO ACC"
+)
+source = raelReplaceLineStrict(
+    source, "gachaButton.Position = ",
+    "gachaButton.Position = UDim2.fromOffset(12, 263)",
+    "AUTO GACHA"
+)
+source = raelReplaceLineStrict(
+    source, "gachaPaidButton.Position = ",
+    "gachaPaidButton.Position = UDim2.fromOffset(12, 298)",
+    "PAID GACHA"
+)
+source = raelReplaceLineStrict(
+    source, "frame.Size = UDim2.fromOffset(252, 340)",
+    "frame.Size = UDim2.fromOffset(252, 340)",
+    "FRAME HEIGHT"
 )
 
--- Pastikan ukuran panel cukup untuk semua tombol yang telah ditata.
-source = source:gsub(
-    "frame.Size = UDim2.fromOffset%(252, 340%)",
-    "frame.Size = UDim2.fromOffset(252, 340)"
+-- Urutan ZIndex eksplisit agar tombol minimize selalu berada di atas header.
+source = raelReplaceLineStrict(
+    source, "header.Name = \"Header\"",
+    'header.Name = "Header"\nheader.ZIndex = 5',
+    "HEADER ZINDEX"
 )
+source = raelReplaceLineStrict(
+    source, 'title.Text = "RAEL\'S TRICKS"',
+    'title.Text = "RAEL\'S TRICKS"\ntitle.ZIndex = 6',
+    "TITLE ZINDEX"
+)
+source = raelReplaceLineStrict(
+    source, "minimizeButton.Name = \"MinimizeButton\"",
+    'minimizeButton.Name = "MinimizeButton"\nminimizeButton.ZIndex = 20\nminimizeButton.Active = true\nminimizeButton.AutoButtonColor = true',
+    "MINIMIZE ZINDEX"
+)
+source = raelReplaceLineStrict(
+    source, "miniButton.Name = \"RaelMiniButton\"",
+    'miniButton.Name = "RaelMiniButton"\nminiButton.ZIndex = 30\nminiButton.Active = true\nminiButton.AutoButtonColor = true',
+    "REOPEN ZINDEX"
+)
+
+-- Pastikan event minimize dan reopen terpasang tepat satu kali.
+local minimizeEvent = 'connect(minimizeButton.Activated, function() frame.Visible = false miniButton.Visible = true end)'
+local reopenEvent = 'connect(miniButton.Activated, function() miniButton.Visible = false frame.Visible = true end)'
+assert(source:find(minimizeEvent, 1, true), "MINIMIZE EVENT TIDAK DITEMUKAN")
+assert(source:find(reopenEvent, 1, true), "REOPEN EVENT TIDAK DITEMUKAN")
 
 -- AUTO JAM AJAIB: ditambahkan ke source core, bukan loader terpisah.
 source = source .. [====[
