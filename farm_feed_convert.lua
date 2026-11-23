@@ -44,7 +44,7 @@ local emptyScans = 0
 local collectCooldown = setmetatable({}, {__mode="k"})
 local feedCooldown = {}
 local CONVERT_THRESHOLD = 2000
-local MANURE_FARM_LIMIT = 20000 -- Auto Farm berhenti saat jumlah kotoran mencapai batas ini.
+local MANURE_FARM_LIMIT = 2000 -- Batas maksimum kotoran di backpack.
 local SCAN_DELAY = 0.5
 
 -- DYNAMIC KANDANG
@@ -797,6 +797,21 @@ local function findConvertUI()
     return content, findButton(content,"MasukBtn"), findButton(content,"KlaimBtn")
 end
 
+-- Kurs dibaca langsung dari KursStrip.Nilai; koma desimal dinormalisasi.
+-- Warna indikator tidak dipakai sebagai syarat transaksi.
+local MIN_CONVERT_RATE = 0.00150
+local function getConvertRate(content)
+    if not content then return nil end
+    local strip = content:FindFirstChild("KursStrip", true)
+    local label = strip and strip:FindFirstChild("Nilai", true)
+    if not label or not (label:IsA("TextLabel") or label:IsA("TextButton")) then
+        return nil
+    end
+    local raw = (label.Text or ""):match("=%s*([%d]+[,%.]?[%d]*)")
+    if not raw then return nil end
+    return tonumber(raw:gsub(",", "."))
+end
+
 local function waitUntil(fn, seconds)
     local started = os.clock()
     while alive() and os.clock()-started < seconds do
@@ -854,22 +869,17 @@ local function runConvert()
             return
         end
         masuk, klaim = content[2], content[3]
-        setStatus("MENUNGGU RATE CONVERT")
+        setStatus("MENUNGGU KURS MINIMAL 0,00150")
 
-        -- Wait for rate indicator to become green; avoid clicking before the timing cue.
+        -- Tunggu sampai nilai numerik kurs memenuhi ambang, tanpa memedulikan warna merah/hijau.
         local rateReady = waitConvertUntil(function()
-            for _, v in ipairs(content[1]:GetDescendants()) do
-                if v:IsA("TextLabel") or v:IsA("TextButton") then
-                    local txt = (v.Text or ""):lower()
-                    local color = v.TextColor3
-                    if txt:find("rate",1,true) or txt:find("bonus",1,true) or txt:find("%",1,true) then
-                        if color.G > color.R * 1.15 then return true end
-                    end
-                end
+            local rate = getConvertRate(content[1])
+            if rate and rate >= MIN_CONVERT_RATE then
+                return rate
             end
-        end, 300)
+        end, 310)
         if not rateReady then
-            setStatus("RATE HIJAU TIDAK TERDETEKSI")
+            setStatus("KURS BELUM MEMENUHI 0,00150")
             return
         end
         if not autoConvert or not alive() then return end
@@ -880,7 +890,7 @@ local function runConvert()
         local goldBefore
         if gold and (gold:IsA("IntValue") or gold:IsA("NumberValue")) then goldBefore = gold.Value end
 
-        setStatus("RATE HIJAU - MASUK")
+        setStatus(string.format("KURS %.5f - MASUK", rateReady))
         clickButton(masuk)
         task.wait(0.6)
 
@@ -953,9 +963,14 @@ task.spawn(function()
                 return
             end
 
-            -- Hard cap: do not scan or collect more manure once the backpack count reaches 20,000.
+            -- Hard cap: fail closed if count cannot be read; never collect blindly.
             local manureCount = getManureCount()
-            if manureCount and manureCount >= MANURE_FARM_LIMIT then
+            if manureCount == nil then
+                emptyScans = 0
+                setStatus("JUMLAH KOTORAN TIDAK TERBACA - FARM DITAHAN")
+                return
+            end
+            if manureCount >= MANURE_FARM_LIMIT then
                 emptyScans = 0
                 setStatus("BATAS KOTORAN TERCAPAI: " .. manureCount .. "/" .. MANURE_FARM_LIMIT)
                 return
@@ -991,7 +1006,11 @@ task.spawn(function()
 
                 -- Recheck immediately before interacting, in case the count changed during teleport.
                 manureCount = getManureCount()
-                if manureCount and manureCount >= MANURE_FARM_LIMIT then
+                if manureCount == nil then
+                    setStatus("JUMLAH KOTORAN TIDAK TERBACA - PENGAMBILAN DIBATALKAN")
+                    return
+                end
+                if manureCount >= MANURE_FARM_LIMIT then
                     setStatus("BATAS KOTORAN TERCAPAI: " .. manureCount .. "/" .. MANURE_FARM_LIMIT)
                     return
                 end
