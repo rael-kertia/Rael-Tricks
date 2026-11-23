@@ -80,6 +80,36 @@ local function getDroppingFolder()
     return owner and owner:FindFirstChild("Kotoran")
 end
 
+-- SHEEP HUNGER CYCLE
+local REQUIRED_SHEEP = 15
+local function getSheepHungerStatus()
+    local farm = W:FindFirstChild("TernakLokal")
+    if not farm then return nil, 0, "FOLDER TERNAKLOKAL TIDAK ADA" end
+    local total, hungry = 0, 0
+
+    for _, sheep in ipairs(farm:GetChildren()) do
+        if sheep:IsA("Model") and sheep.Name:match("^Domba_") then
+            local domba = sheep:FindFirstChild("Domba", true)
+            local billboard = domba and domba:FindFirstChild("LaparBillboard", true)
+            local label = billboard and billboard:FindFirstChild("Teks", true)
+            if billboard and billboard:IsA("BillboardGui")
+            and label and (label:IsA("TextLabel") or label:IsA("TextButton")) then
+                total = total + 1
+                if billboard.Enabled and (label.Text or ""):lower() == "lapar" then
+                    hungry = hungry + 1
+                end
+            end
+        end
+    end
+
+    if total ~= REQUIRED_SHEEP then
+        return false, hungry, "DATA DOMBA " .. total .. "/" .. REQUIRED_SHEEP
+    end
+    return hungry == REQUIRED_SHEEP, hungry, hungry .. "/" .. REQUIRED_SHEEP .. " DOMBA LAPAR"
+end
+
+local farmCycle = "WAIT_HUNGRY"
+
 -- ==========================================
 
 -- PROMPT FILTER
@@ -957,89 +987,143 @@ connect(convertButton.MouseButton1Click, function()
     setStatus(autoConvert and "AUTO CONVERT AKTIF" or "AUTO CONVERT NONAKTIF")
 end)
 
--- Farm worker. Auto Feed is called only after three confirmed empty scans.
+-- Farm/feed cycle: WAIT_HUNGRY -> COLLECT_ALL -> FEED_EMPTY_TROUGHS -> WAIT_HUNGRY.
 task.spawn(function()
     while alive() and gui.Parent do
         task.wait(SCAN_DELAY)
         if not autoFarm or farmBusy or convertBusy then continue end
         farmBusy = true
+
         local ok, err = pcall(function()
             if not getCurrentKandang() then
+                farmCycle = "WAIT_HUNGRY"
                 setStatus("MEMBACA DATA KANDANG")
-                emptyScans = 0
                 return
             end
 
-            -- Hard cap: fail closed if count cannot be read; never collect blindly.
-            local manureCount = getManureCount()
-            if manureCount == nil then
-                emptyScans = 0
-                setStatus("JUMLAH KOTORAN TIDAK TERBACA - FARM DITAHAN")
-                return
-            end
-            if manureCount >= MANURE_FARM_LIMIT then
-                emptyScans = 0
-                setStatus("BATAS KOTORAN TERCAPAI: " .. manureCount .. "/" .. MANURE_FARM_LIMIT)
-                return
-            end
-
-            local folder = getDroppingFolder()
-            if not folder then
-                emptyScans = emptyScans + 1
-                setStatus("FOLDER KOTORAN TIDAK ADA")
-                if emptyScans >= 3 then
-                    emptyScans = 0
-                    if autoFeed then feedOne() else setStatus("KOTORAN KOSONG - AUTO FEED OFF") end
+            if farmCycle == "WAIT_HUNGRY" then
+                local allHungry, hungry, detail = getSheepHungerStatus()
+                if not allHungry then
+                    setStatus("MENUNGGU 15 DOMBA LAPAR: " .. tostring(detail))
+                    return
                 end
-                return
-            end
-            local p, pos, ready, hasDroppings, waiting = findNextDropping()
-            if not ready then
-                emptyScans = emptyScans + 1
-                setStatus("SCAN KOTORAN")
-                if emptyScans >= 3 then
-                    emptyScans = 0
-                    if autoFeed then feedOne() else setStatus("KOTORAN TIDAK TERDETEKSI") end
-                end
-                return
-            end
-            if hasDroppings then
+                farmCycle = "COLLECT_ALL"
                 emptyScans = 0
-                if waiting then setStatus("KOTORAN MENUNGGU COOLDOWN"); return end
-                if not p or not pos then setStatus("POSISI KOTORAN TIDAK TERBACA"); return end
-                setStatus("MENUJU KOTORAN")
-                if not teleportNear(pos,1.5) then collectCooldown[p]=os.clock(); return end
-                if not autoFarm or not alive() then return end
+                setStatus("15/15 DOMBA LAPAR - MULAI PUNGUT")
+            end
 
-                -- Recheck immediately before interacting, in case the count changed during teleport.
-                manureCount = getManureCount()
+            if farmCycle == "COLLECT_ALL" then
+                local manureCount = getManureCount()
                 if manureCount == nil then
-                    setStatus("JUMLAH KOTORAN TIDAK TERBACA - PENGAMBILAN DIBATALKAN")
+                    setStatus("JUMLAH KOTORAN TIDAK TERBACA - FARM DITAHAN")
                     return
                 end
                 if manureCount >= MANURE_FARM_LIMIT then
-                    setStatus("BATAS KOTORAN TERCAPAI: " .. manureCount .. "/" .. MANURE_FARM_LIMIT)
+                    setStatus("BATAS KOTORAN: " .. manureCount .. "/" .. MANURE_FARM_LIMIT)
                     return
                 end
 
-                local success = activatePrompt(p)
-                if not success then collectCooldown[p]=os.clock(); setStatus("GAGAL AMBIL KOTORAN"); return end
-                local start = os.clock()
-                local got = waitUntil(function()
-                    return not p.Parent or not p:IsDescendantOf(folder) or not p.Enabled
-                end, 4)
-                if got then collectCooldown[p]=nil; setStatus("KOTORAN TERAMBIL")
-                else collectCooldown[p]=os.clock(); setStatus("KOTORAN BELUM TERAMBIL") end
+                local folder = getDroppingFolder()
+                if not folder then
+                    setStatus("FOLDER KOTORAN TIDAK ADA")
+                    return
+                end
+                local prompt, pos, ready, hasDroppings, waiting = findNextDropping()
+                if not ready then
+                    setStatus("MENUNGGU DATA KOTORAN")
+                    return
+                end
+
+                if hasDroppings then
+                    emptyScans = 0
+                    if waiting then
+                        setStatus("KOTORAN MENUNGGU COOLDOWN")
+                        return
+                    end
+                    if not prompt or not pos then
+                        setStatus("POSISI KOTORAN TIDAK TERBACA")
+                        return
+                    end
+                    setStatus("PUNGUT SEMUA KOTORAN")
+                    if not teleportNear(pos, 1.5) then
+                        collectCooldown[prompt] = os.clock()
+                        return
+                    end
+                    if not autoFarm or not alive() then return end
+
+                    manureCount = getManureCount()
+                    if manureCount == nil then
+                        setStatus("JUMLAH KOTORAN TIDAK TERBACA - PENGAMBILAN DIBATALKAN")
+                        return
+                    end
+                    if manureCount >= MANURE_FARM_LIMIT then
+                        setStatus("BATAS KOTORAN: " .. manureCount .. "/" .. MANURE_FARM_LIMIT)
+                        return
+                    end
+
+                    local success = activatePrompt(prompt)
+                    if not success then
+                        collectCooldown[prompt] = os.clock()
+                        setStatus("GAGAL AMBIL KOTORAN")
+                        return
+                    end
+                    local collected = waitUntil(function()
+                        return not prompt.Parent or not prompt:IsDescendantOf(folder) or not prompt.Enabled
+                    end, 4)
+                    if collected then
+                        collectCooldown[prompt] = nil
+                        setStatus("KOTORAN TERAMBIL")
+                    else
+                        collectCooldown[prompt] = os.clock()
+                        setStatus("KOTORAN BELUM TERAMBIL")
+                    end
+                    return
+                end
+
+                emptyScans = emptyScans + 1
+                setStatus("MEMASTIKAN KOTORAN HABIS (" .. emptyScans .. "/3)")
+                if emptyScans >= 3 then
+                    emptyScans = 0
+                    farmCycle = "FEED_EMPTY_TROUGHS"
+                    setStatus("KOTORAN HABIS - SIAP ISI PAKAN")
+                end
                 return
             end
-            emptyScans = emptyScans + 1
-            setStatus("MEMASTIKAN KOTORAN HABIS")
-            if emptyScans >= 3 then
-                emptyScans = 0
-                if autoFeed then feedOne() else setStatus("KOTORAN HABIS - AUTO FEED OFF") end
+
+            if farmCycle == "FEED_EMPTY_TROUGHS" then
+                if not autoFeed then
+                    setStatus("KOTORAN HABIS - MENUNGGU AUTO FEED")
+                    return
+                end
+                local feeders = getFeeders()
+                if #feeders == 0 then
+                    setStatus("PALUNG TIDAK DITEMUKAN")
+                    return
+                end
+                local hasEmpty, unreadable = false, false
+                for _, entry in ipairs(feeders) do
+                    local stock = getStock(entry.object)
+                    if stock == nil then
+                        unreadable = true
+                    elseif stock == 0 then
+                        hasEmpty = true
+                    end
+                end
+                if unreadable then
+                    setStatus("STOK PALUNG TIDAK TERBACA - FEED DITAHAN")
+                    return
+                end
+                if hasEmpty then
+                    feedOne()
+                    return
+                end
+                farmCycle = "WAIT_HUNGRY"
+                setStatus("PAKAN TERISI - MENUNGGU 15 DOMBA LAPAR LAGI")
+                return
             end
         end)
-        if not ok then setStatus("FARM ERROR: "..tostring(err)) end
+
+        if not ok then setStatus("FARM ERROR: " .. tostring(err)) end
         farmBusy = false
     end
 end)
