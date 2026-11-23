@@ -447,7 +447,8 @@ local function findNextDropping()
     local root = character and character:FindFirstChild("HumanoidRootPart")
 
     if not root then
-        return nil, nil, true, false, false
+        -- Character belum siap: jangan salah menganggap kandang sudah bersih.
+        return nil, nil, false, false, true
     end
 
     local now = os.clock()
