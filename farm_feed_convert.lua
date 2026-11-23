@@ -1019,6 +1019,13 @@ task.spawn(function()
                 end
 
                 if hasDroppings then
+                    -- Hard gate before every pickup attempt.
+                    local stillAllHungry, currentHungry, hungerDetail = getSheepHungerStatus()
+                    if stillAllHungry ~= true then
+                        farmCycle = "WAIT_HUNGRY"
+                        setStatus("PICKUP DIKUNCI - MENUNGGU 15 DOMBA LAPAR: " .. tostring(hungerDetail))
+                        return
+                    end
                     emptyScans = 0
                     if waiting then
                         setStatus("KOTORAN MENUNGGU COOLDOWN")
@@ -1034,6 +1041,14 @@ task.spawn(function()
                         return
                     end
                     if not autoFarm or not alive() then return end
+
+                    -- Recheck after teleport, immediately before prompt activation.
+                    stillAllHungry, currentHungry, hungerDetail = getSheepHungerStatus()
+                    if stillAllHungry ~= true then
+                        farmCycle = "WAIT_HUNGRY"
+                        setStatus("PICKUP DIBATALKAN - STATUS DOMBA BERUBAH: " .. tostring(hungerDetail))
+                        return
+                    end
 
                     manureCount = getManureCount()
                     if manureCount == nil then
@@ -1076,12 +1091,12 @@ task.spawn(function()
 
             if farmCycle == "WAIT_HUNGER_RESET" then
                 local allHungry, hungry, detail = getSheepHungerStatus()
-                if allHungry == nil or hungry == REQUIRED_SHEEP then
-                    setStatus("MENUNGGU DOMBA MERESPONS PAKAN: " .. tostring(detail))
+                if allHungry == nil or hungry > 0 then
+                    setStatus("MENUNGGU SEMUA DOMBA MAKAN: " .. tostring(detail))
                     return
                 end
                 farmCycle = "WAIT_HUNGRY"
-                setStatus("DOMBA SUDAH MAKAN - MENUNGGU 15 LAPAR LAGI")
+                setStatus("15 DOMBA SUDAH MAKAN - MENUNGGU 15 LAPAR LAGI")
                 return
             end
 
