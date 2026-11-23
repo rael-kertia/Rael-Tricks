@@ -44,6 +44,7 @@ local emptyScans = 0
 local collectCooldown = setmetatable({}, {__mode="k"})
 local feedCooldown = {}
 local CONVERT_THRESHOLD = 2000
+local MANURE_FARM_LIMIT = 20000 -- Auto Farm berhenti saat jumlah kotoran mencapai batas ini.
 local SCAN_DELAY = 0.5
 
 -- DYNAMIC KANDANG
@@ -951,6 +952,15 @@ task.spawn(function()
                 emptyScans = 0
                 return
             end
+
+            -- Hard cap: do not scan or collect more manure once the backpack count reaches 20,000.
+            local manureCount = getManureCount()
+            if manureCount and manureCount >= MANURE_FARM_LIMIT then
+                emptyScans = 0
+                setStatus("BATAS KOTORAN TERCAPAI: " .. manureCount .. "/" .. MANURE_FARM_LIMIT)
+                return
+            end
+
             local folder = getDroppingFolder()
             if not folder then
                 emptyScans = emptyScans + 1
@@ -978,6 +988,14 @@ task.spawn(function()
                 setStatus("MENUJU KOTORAN")
                 if not teleportNear(pos,1.5) then collectCooldown[p]=os.clock(); return end
                 if not autoFarm or not alive() then return end
+
+                -- Recheck immediately before interacting, in case the count changed during teleport.
+                manureCount = getManureCount()
+                if manureCount and manureCount >= MANURE_FARM_LIMIT then
+                    setStatus("BATAS KOTORAN TERCAPAI: " .. manureCount .. "/" .. MANURE_FARM_LIMIT)
+                    return
+                end
+
                 local success = activatePrompt(p)
                 if not success then collectCooldown[p]=os.clock(); setStatus("GAGAL AMBIL KOTORAN"); return end
                 local start = os.clock()
