@@ -1101,10 +1101,8 @@ task.spawn(function()
             end
 
             if farmCycle == "FEED_EMPTY_TROUGHS" then
-                if not autoFeed then
-                    setStatus("KOTORAN HABIS - MENUNGGU AUTO FEED")
-                    return
-                end
+                -- Feeding is an automatic part of the Auto Farm cycle.
+                -- Do not require the separate Auto Feed toggle to be ON.
                 local feeders = getFeeders()
                 if #feeders == 0 then
                     setStatus("PALUNG TIDAK DITEMUKAN")
