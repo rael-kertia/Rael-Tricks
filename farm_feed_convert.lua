@@ -491,13 +491,19 @@ end
 local function getStock(palung)
     if not palung then return nil end
 
+    local stockGui = palung:FindFirstChild("StokPakan", true)
+    local stockText = stockGui and stockGui:FindFirstChild("Teks", true)
+    if stockText and (stockText:IsA("TextLabel") or stockText:IsA("TextButton")) then
+        local amount = (stockText.Text or ""):match("(%d+)%s*/%s*100")
+        if amount then return tonumber(amount) end
+    end
+
     for _, obj in ipairs(palung:GetDescendants()) do
         if obj:IsA("TextLabel") or obj:IsA("TextButton") then
             local txt = (obj.Text or ""):lower()
             local name = obj.Name:lower()
 
-            if txt:find("pakan", 1, true)
-            or name:find("pakan", 1, true) then
+            if txt:find("pakan", 1, true) or name:find("pakan", 1, true) then
                 local amount = txt:match("(%d+)%s*/%s*100")
                 if amount then return tonumber(amount) end
             end
@@ -551,17 +557,23 @@ end
 
 local function getFeeders()
     local result = {}
-    local kandang = getCurrentKandang()
+    local number = getKandangNumber()
+    local farm = W:FindFirstChild("TernakLokal")
 
-    if not kandang then return result end
+    if not number or not farm then return result end
 
-    local pen = getCurrentPen()
+    -- Use the live replicated feeder parts only.
+    -- Kawasan_Kos.Lahan_Ternak.Kandang_n.Palung_n are decorative/static
+    -- models and do not contain the live stock label or fill prompt.
+    for _, suffix in ipairs({"1", "2"}) do
+        local name = "Palung_Kandang_" .. number .. "_" .. suffix
+        local palung = farm:FindFirstChild(name)
 
-    if pen then
-        for _, name in ipairs({"Palung_1", "Palung_2"}) do
-            local palung = pen:FindFirstChild(name, true)
+        if palung and palung:IsA("BasePart") then
+            local stock = getStock(palung)
+            local prompt = findFeedPrompt(palung)
 
-            if palung then
+            if stock ~= nil and prompt then
                 table.insert(result, {
                     name = name,
                     object = palung
@@ -570,38 +582,8 @@ local function getFeeders()
         end
     end
 
-    local number = getKandangNumber()
-    local farm = W:FindFirstChild("TernakLokal")
-
-    if farm and number then
-        for _, name in ipairs({
-            "Palung_Kandang_" .. number .. "_1",
-            "Palung_Kandang_" .. number .. "_2"
-        }) do
-            local palung = farm:FindFirstChild(name, true)
-
-            if palung then
-                local exists = false
-
-                for _, entry in ipairs(result) do
-                    if entry.object == palung then
-                        exists = true
-                    end
-                end
-
-                if not exists then
-                    table.insert(result, {
-                        name = name,
-                        object = palung
-                    })
-                end
-            end
-        end
-    end
-
     return result
 end
-
 -- ==========================================
 -- AUTO FEED ONLY AT 0/100
 -- ==========================================
