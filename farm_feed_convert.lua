@@ -1062,8 +1062,15 @@ task.spawn(function()
                     return
                 end
                 if not folder then
-                    -- Owner exists but its Kotoran subfolder is absent; require 3
-                    -- consecutive checks before considering collection complete.
+                    -- If the owner folder still contains anything, its manure state
+                    -- is ambiguous: block feeding instead of assuming it is empty.
+                    if #owner:GetDescendants() > 0 then
+                        emptyScans = 0
+                        setStatus("ISI PAKAN DIKUNCI - ISI FOLDER KOTORAN BELUM TERBACA")
+                        return
+                    end
+                    -- Only an existing, completely empty owner folder can pass
+                    -- the 3 consecutive empty checks below.
                     emptyScans = emptyScans + 1
                     setStatus("FOLDER KOTORAN BELUM ADA - VERIFIKASI " .. emptyScans .. "/3")
                     if emptyScans >= 3 then
