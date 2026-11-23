@@ -75,11 +75,12 @@ end
 
 local function getDroppingFolder()
     local kandang = getCurrentKandang()
-    if not kandang then return nil end
+    if not kandang then return nil, nil end
 
     local farm = W:FindFirstChild("TernakLokal")
     local owner = farm and farm:FindFirstChild("KotoranSaya_" .. kandang)
-    return owner and owner:FindFirstChild("Kotoran")
+    -- Return owner separately: missing owner folder is NOT proof that manure is gone.
+    return owner and owner:FindFirstChild("Kotoran"), owner
 end
 
 -- SHEEP HUNGER CYCLE
@@ -435,12 +436,11 @@ end)
 -- ==========================================
 
 local function findNextDropping()
-    local folder = getDroppingFolder()
+    local folder, owner = getDroppingFolder()
 
-    -- Folder ausente berarti tidak ada kotoran yang perlu dipungut.
-    -- Jangan menahan siklus; Auto Farm harus lanjut ke tahap isi pakan.
-    if not folder then
-        return nil, nil, true, false, false
+    -- Never interpret a missing owner/folder as proof that the pen is clean.
+    if not owner or not folder then
+        return nil, nil, false, false, true
     end
 
     local character = player.Character
@@ -461,17 +461,16 @@ local function findNextDropping()
         -- Folder ini sudah spesifik milik player: KotoranSaya_<kandang>.
         -- Ambil prompt di dalam folder ini tanpa bergantung pada teks prompt
         -- yang bisa berbeda/berubah; jangan scan prompt global atau kandang lain.
-        if obj:IsA("ProximityPrompt") and obj.Enabled then
-
+        if obj:IsA("ProximityPrompt") then
+            -- A disabled prompt still means a manure item exists; do not feed past it.
             hasDroppings = true
 
             local pos = getPosition(obj)
+            local last = collectCooldown[obj]
+            local ready = obj.Enabled and (not last or now - last >= DROPPING_RETRY)
 
             if pos then
                 local distance = (root.Position - pos).Magnitude
-                local last = collectCooldown[obj]
-                local ready = not last or now - last >= DROPPING_RETRY
-
                 if ready and distance < nearestReadyDistance then
                     nearestReady = obj
                     nearestReadyPos = pos
@@ -485,6 +484,11 @@ local function findNextDropping()
                 nearestWaiting = obj
             end
         end
+    end
+
+    -- Non-prompt descendants may still be manure objects; fail closed.
+    if not hasDroppings and #folder:GetDescendants() > 0 then
+        return nil, nil, true, true, true
     end
 
     if nearestReady then
@@ -1051,14 +1055,24 @@ task.spawn(function()
             end
 
             if farmCycle == "COLLECT_ALL" then
-                -- Folder kotoran yang memang sudah hilang berarti pickup selesai.
-                -- Langsung pindah ke pengisian, tanpa tertahan oleh batas backpack.
-                local folder = getDroppingFolder()
+                -- Strict priority: confirm the player's own manure folder before feeding.
+                local folder, owner = getDroppingFolder()
+                if not owner then
+                    setStatus("FOLDER KOTORAN MILIK KANDANG TIDAK DITEMUKAN - PAKAN DIKUNCI")
+                    return
+                end
                 if not folder then
-                    emptyScans = 0
-                    farmCycle = "FEED_EMPTY_TROUGHS"
-                    setStatus("FOLDER KOTORAN KOSONG - LANGSUNG ISI PAKAN")
-                else
+                    -- Owner exists but its Kotoran subfolder is absent; require 3
+                    -- consecutive checks before considering collection complete.
+                    emptyScans = emptyScans + 1
+                    setStatus("FOLDER KOTORAN BELUM ADA - VERIFIKASI " .. emptyScans .. "/3")
+                    if emptyScans >= 3 then
+                        emptyScans = 0
+                        farmCycle = "FEED_EMPTY_TROUGHS"
+                        setStatus("KOTORAN TERKONFIRMASI HABIS - SIAP ISI PAKAN")
+                    end
+                    return
+                end
                 local manureCount = getManureCount()
                 if manureCount == nil then
                     setStatus("JUMLAH KOTORAN TIDAK TERBACA - FARM DITAHAN")
@@ -1145,7 +1159,6 @@ task.spawn(function()
                     setStatus("KOTORAN HABIS - SIAP ISI PAKAN")
                 end
                 return
-                end
             end
 
             if farmCycle == "WAIT_HUNGER_RESET" then
