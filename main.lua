@@ -336,6 +336,286 @@ source = raelReplaceOnce(source,
     'setStatus("AUTO ACC: menunggu permintaan")',
     'setAutoAccStatus("AUTO ACC: menunggu permintaan")',
     "menunggu")
+
+-- AUTO JAM AJAIB: ditambahkan ke source core, bukan loader terpisah.
+source = source .. [==[
+
+-- ==========================================
+-- AUTO JAM AJAIB - RAEL'S TRICKS
+-- Loop scan | sekali per rumah per sesi
+-- >20 menit | <=220 stud | posisi pemain tetap
+-- ==========================================
+
+local jamAutoEnabled = false
+local jamBusy = false
+local jamProcessed = setmetatable({}, {__mode = "k"})
+local jamService
+
+local jamButton = Instance.new("TextButton")
+jamButton.Name = "AutoJamAjaibButton"
+jamButton.Size = UDim2.fromOffset(180, 29)
+jamButton.Position = UDim2.fromOffset(12, 290)
+jamButton.BackgroundColor3 = Color3.fromRGB(127, 29, 29)
+jamButton.BorderSizePixel = 0
+jamButton.Text = "AUTO JAM AJAIB: OFF"
+jamButton.TextColor3 = Color3.new(1, 1, 1)
+jamButton.TextSize = 10
+jamButton.Font = Enum.Font.GothamBold
+jamButton.Parent = frame
+Instance.new("UICorner", jamButton).CornerRadius = UDim.new(0, 6)
+
+local function paintJamButton()
+    jamButton.Text = jamAutoEnabled and "AUTO JAM AJAIB: ON" or "AUTO JAM AJAIB: OFF"
+    jamButton.BackgroundColor3 = jamAutoEnabled
+        and Color3.fromRGB(5, 150, 105)
+        or Color3.fromRGB(127, 29, 29)
+end
+
+local function getJamTool()
+    local char = player.Character
+    local bag = player:FindFirstChildOfClass("Backpack")
+    for _, container in ipairs({char, bag}) do
+        if container then
+            for _, obj in ipairs(container:GetChildren()) do
+                if obj:IsA("Tool") and obj:GetAttribute("JamAjaib") then
+                    return obj
+                end
+            end
+        end
+    end
+end
+
+local function jamRentedCount(house)
+    local count = 0
+    if house:GetAttribute("KosanState") == "Disewa" then
+        count += 1
+    end
+    for _, child in ipairs(house:GetChildren()) do
+        if child:IsA("Model")
+        and child:GetAttribute("KosanState") == "Disewa" then
+            count += 1
+        end
+    end
+    return count
+end
+
+local function jamRemaining(house)
+    local endsAt = house:GetAttribute("RentEndsAt")
+    if typeof(endsAt) ~= "number" then return -1 end
+    return endsAt - time()
+end
+
+local function jamDistance(house)
+    local char = player.Character
+    local root = char and char:FindFirstChild("HumanoidRootPart")
+    if not root then return math.huge end
+    local ok, cf = pcall(function()
+        return house:GetBoundingBox()
+    end)
+    if not ok then return math.huge end
+    return (root.Position - cf.Position).Magnitude
+end
+
+local function getJamService()
+    if jamService then return jamService end
+    local rs = game:GetService("ReplicatedStorage")
+    local nk = rs:WaitForChild("NKSystem", 15)
+    if not nk then error("NKSystem tidak ditemukan") end
+    local packages = nk:WaitForChild("Packages", 15)
+    if not packages then error("Packages tidak ditemukan") end
+    local knitFolder = packages:WaitForChild("Knit", 15)
+    if not knitFolder then error("Knit tidak ditemukan") end
+    local knitModule = knitFolder:WaitForChild("KnitClient", 15)
+    if not knitModule then error("KnitClient tidak ditemukan") end
+    local Knit = require(knitModule)
+    jamService = Knit.GetService("JamAjaibService")
+    if not jamService then error("JamAjaibService tidak ditemukan") end
+    return jamService
+end
+
+local function jamFire(house)
+    local completed, response, failure = false, nil, nil
+    local ok, promise = pcall(function()
+        return getJamService():Tembak(house)
+    end)
+    if not ok or not promise then
+        return false, "PEMANGGILAN SERVICE GAGAL: " .. tostring(promise)
+    end
+
+    local chainOK, chainError = pcall(function()
+        promise:andThen(function(result)
+            response = result
+            completed = true
+        end):catch(function(reason)
+            failure = reason
+            completed = true
+        end)
+    end)
+    if not chainOK then
+        return false, "PEMANTAUAN PROMISE GAGAL: " .. tostring(chainError)
+    end
+
+    local deadline = os.clock() + 12
+    repeat
+        task.wait(0.1)
+    until completed or os.clock() >= deadline
+
+    if not completed then return false, "RESPONS SERVER TIMEOUT" end
+    if failure then return false, tostring(failure) end
+    if not response or response.ok ~= true then
+        return false, "DITOLAK SERVER"
+    end
+    return true, response
+end
+
+local function jamWorker()
+    if jamBusy then return end
+    jamBusy = true
+
+    while alive() and jamAutoEnabled do
+        local folder = W:FindFirstChild("KosanSpawned")
+        local tool = getJamTool()
+
+        if not folder then
+            setStatus("JAM AJAIB: KOSANSPAWNED TIDAK DITEMUKAN")
+            task.wait(4)
+            continue
+        end
+
+        if not tool then
+            setStatus("JAM AJAIB: TOOL TIDAK DITEMUKAN")
+            task.wait(4)
+            continue
+        end
+
+        if tool.Parent ~= player.Character then
+            setStatus("JAM AJAIB: EQUIP TOOL TERLEBIH DAHULU")
+            task.wait(3)
+            continue
+        end
+
+        local stock = tool:GetAttribute("Count")
+        if typeof(stock) ~= "number" or stock <= 0 then
+            setStatus("JAM AJAIB: STOK HABIS / TIDAK TERBACA")
+            jamAutoEnabled = false
+            paintJamButton()
+            break
+        end
+
+        local targets = {}
+        for _, house in ipairs(folder:GetChildren()) do
+            if house:IsA("Model")
+            and not jamProcessed[house]
+            and house:GetAttribute("OwnerUserId") == player.UserId
+            and jamRentedCount(house) > 0
+            and jamRemaining(house) > 1200 then
+                targets[#targets + 1] = house
+            end
+        end
+
+        table.sort(targets, function(a, b)
+            return jamRemaining(a) > jamRemaining(b)
+        end)
+
+        local firedThisPass = 0
+
+        for _, house in ipairs(targets) do
+            if not alive() or not jamAutoEnabled then break end
+
+            tool = getJamTool()
+            if not tool or tool.Parent ~= player.Character then
+                setStatus("JAM AJAIB: TOOL TIDAK DIPEGANG")
+                break
+            end
+
+            stock = tool:GetAttribute("Count")
+            if typeof(stock) ~= "number" or stock <= 0 then
+                setStatus("JAM AJAIB: STOK HABIS")
+                jamAutoEnabled = false
+                paintJamButton()
+                break
+            end
+
+            -- Validasi ulang tepat sebelum setiap tembakan.
+            if house.Parent ~= folder
+            or house:GetAttribute("OwnerUserId") ~= player.UserId
+            or jamRentedCount(house) <= 0 then
+                setStatus("JAM AJAIB: TARGET BERUBAH - DILEWATI")
+                continue
+            end
+
+            local seconds = jamRemaining(house)
+            if seconds <= 1200 then
+                setStatus("JAM AJAIB: SISA WAKTU <= 20 MENIT")
+                continue
+            end
+
+            local distance = jamDistance(house)
+            if distance > 220 then
+                setStatus("JAM AJAIB: " .. house.Name .. " TERLALU JAUH")
+                continue
+            end
+
+            setStatus(string.format(
+                "JAM AJAIB: TEMBAK %s | %.1f MENIT",
+                house.Name, seconds / 60
+            ))
+
+            local shotOK, result = jamFire(house)
+            if not shotOK then
+                setStatus("JAM AJAIB BERHENTI: " .. tostring(result))
+                jamAutoEnabled = false
+                paintJamButton()
+                break
+            end
+
+            jamProcessed[house] = true
+            firedThisPass += 1
+            task.wait(0.15)
+
+            local afterTool = getJamTool()
+            local afterStock = afterTool and afterTool:GetAttribute("Count")
+            setStatus(string.format(
+                "JAM AJAIB: BERHASIL %s | STOK %s -> %s",
+                house.Name, tostring(stock), tostring(afterStock)
+            ))
+
+            task.wait(2.7)
+        end
+
+        if jamAutoEnabled and alive() then
+            if firedThisPass == 0 then
+                setStatus("JAM AJAIB: SCAN ULANG | TUNGGU TARGET")
+            else
+                setStatus("JAM AJAIB: PASS SELESAI | " .. firedThisPass .. " RUMAH")
+            end
+            task.wait(5)
+        end
+    end
+
+    jamBusy = false
+    if alive() and not jamAutoEnabled then
+        setStatus("AUTO JAM AJAIB NONAKTIF")
+    end
+end
+
+connect(jamButton.Activated, function()
+    if not alive() then return end
+    jamAutoEnabled = not jamAutoEnabled
+    paintJamButton()
+
+    if jamAutoEnabled then
+        setStatus("AUTO JAM AJAIB DIMULAI")
+        task.spawn(jamWorker)
+    else
+        setStatus("AUTO JAM AJAIB DIMATIKAN")
+    end
+end)
+
+paintJamButton()
+
+]==]
+
 ]==]
 
 wrapper = wrapper:sub(1, at - 1) .. patch .. "\n" .. wrapper:sub(at)
