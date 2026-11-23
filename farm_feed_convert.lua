@@ -999,6 +999,14 @@ task.spawn(function()
             end
 
             if farmCycle == "COLLECT_ALL" then
+                -- Folder kotoran yang memang sudah hilang berarti pickup selesai.
+                -- Langsung pindah ke pengisian, tanpa tertahan oleh batas backpack.
+                local folder = getDroppingFolder()
+                if not folder then
+                    emptyScans = 0
+                    farmCycle = "FEED_EMPTY_TROUGHS"
+                    setStatus("FOLDER KOTORAN KOSONG - LANGSUNG ISI PAKAN")
+                else
                 local manureCount = getManureCount()
                 if manureCount == nil then
                     setStatus("JUMLAH KOTORAN TIDAK TERBACA - FARM DITAHAN")
@@ -1009,9 +1017,7 @@ task.spawn(function()
                     return
                 end
 
-                local folder = getDroppingFolder()
-                -- Folder belum direplikasi / sudah hilang = anggap tidak ada kotoran.
-                -- findNextDropping() akan mengembalikan ready=true, hasDroppings=false.
+                -- Folder tersedia: lanjutkan pemungutan seperti biasa.
                 local prompt, pos, ready, hasDroppings, waiting = findNextDropping()
                 if not ready then
                     setStatus("MENUNGGU DATA KOTORAN")
@@ -1087,6 +1093,7 @@ task.spawn(function()
                     setStatus("KOTORAN HABIS - SIAP ISI PAKAN")
                 end
                 return
+                end
             end
 
             if farmCycle == "WAIT_HUNGER_RESET" then
