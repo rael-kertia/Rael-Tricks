@@ -386,8 +386,10 @@ connect(mini.MouseButton1Click, function() mini.Visible=false; panel.Visible=tru
 local function findNextDropping()
     local folder = getDroppingFolder()
 
+    -- Folder ausente berarti tidak ada kotoran yang perlu dipungut.
+    -- Jangan menahan siklus; Auto Farm harus lanjut ke tahap isi pakan.
     if not folder then
-        return nil, nil, false, false, false
+        return nil, nil, true, false, false
     end
 
     local character = player.Character
@@ -1008,10 +1010,8 @@ task.spawn(function()
                 end
 
                 local folder = getDroppingFolder()
-                if not folder then
-                    setStatus("FOLDER KOTORAN TIDAK ADA")
-                    return
-                end
+                -- Folder belum direplikasi / sudah hilang = anggap tidak ada kotoran.
+                -- findNextDropping() akan mengembalikan ready=true, hasDroppings=false.
                 local prompt, pos, ready, hasDroppings, waiting = findNextDropping()
                 if not ready then
                     setStatus("MENUNGGU DATA KOTORAN")
