@@ -84,16 +84,38 @@ end
 
 -- SHEEP HUNGER CYCLE
 local REQUIRED_SHEEP = 15
+
+-- WHITELIST 15 DOMBA MILIK PLAYER (hasil diagnosis Workspace.TernakLokal).
+-- Jangan pernah menghitung Domba_* milik pemain lain.
+local MY_SHEEP_NAMES = {
+    Domba_87bf75e1 = true,
+    Domba_dd3f2307 = true,
+    Domba_f174e1c0 = true,
+    Domba_e4252dfe = true,
+    Domba_bdf6cea3 = true,
+    Domba_c7f2083a = true,
+    Domba_c11b403a = true,
+    Domba_65d751af = true,
+    Domba_742aeeb4 = true,
+    Domba_8f0c01d1 = true,
+    Domba_51b9805e = true,
+    Domba_4d12871e = true,
+    Domba_8059dc92 = true,
+    Domba_07b7ebe2 = true,
+    Domba_1eae46b0 = true,
+}
+
 local function getSheepHungerStatus()
     local farm = W:FindFirstChild("TernakLokal")
-    if not farm then return nil, 0, "FOLDER TERNAKLOKAL TIDAK ADA" end
+    if not farm then return false, 0, "FOLDER TERNAKLOKAL TIDAK ADA" end
     local total, hungry = 0, 0
 
-    for _, sheep in ipairs(farm:GetChildren()) do
-        if sheep:IsA("Model") and sheep.Name:match("^Domba_") then
-            local domba = sheep:FindFirstChild("Domba", true)
-            local billboard = domba and domba:FindFirstChild("LaparBillboard", true)
-            local label = billboard and billboard:FindFirstChild("Teks", true)
+    for name in pairs(MY_SHEEP_NAMES) do
+        local sheep = farm:FindFirstChild(name)
+        if sheep and sheep:IsA("Model") then
+            local domba = sheep:FindFirstChild("Domba")
+            local billboard = domba and domba:FindFirstChild("LaparBillboard")
+            local label = billboard and billboard:FindFirstChild("Teks")
             if billboard and billboard:IsA("BillboardGui")
             and label and (label:IsA("TextLabel") or label:IsA("TextButton")) then
                 total = total + 1
@@ -104,14 +126,10 @@ local function getSheepHungerStatus()
         end
     end
 
-    if total < REQUIRED_SHEEP then
-        return false, math.min(hungry, REQUIRED_SHEEP), "DATA DOMBA " .. total .. "/" .. REQUIRED_SHEEP
+    if total ~= REQUIRED_SHEEP then
+        return false, hungry, "DOMBA MILIKMU TERDETEKSI " .. total .. "/" .. REQUIRED_SHEEP
     end
-
-    -- TernakLokal boleh memuat model duplikat/lebih dari 15.
-    -- Yang dibutuhkan hanya memastikan minimal 15 domba terdeteksi lapar.
-    local displayHungry = math.min(hungry, REQUIRED_SHEEP)
-    return hungry >= REQUIRED_SHEEP, displayHungry, displayHungry .. "/" .. REQUIRED_SHEEP .. " DOMBA LAPAR"
+    return hungry == REQUIRED_SHEEP, hungry, hungry .. "/" .. REQUIRED_SHEEP .. " DOMBA MILIKMU LAPAR"
 end
 
 local farmCycle = "WAIT_HUNGRY"
@@ -411,9 +429,10 @@ local function findNextDropping()
     local hasDroppings = false
 
     for _, obj in ipairs(folder:GetDescendants()) do
-        if obj:IsA("ProximityPrompt")
-        and isDroppingPrompt(obj)
-        and obj.Enabled then
+        -- Folder ini sudah spesifik milik player: KotoranSaya_<kandang>.
+        -- Ambil prompt di dalam folder ini tanpa bergantung pada teks prompt
+        -- yang bisa berbeda/berubah; jangan scan prompt global atau kandang lain.
+        if obj:IsA("ProximityPrompt") and obj.Enabled then
 
             hasDroppings = true
 
