@@ -807,9 +807,16 @@ local function getConvertRate(content)
     if not label or not (label:IsA("TextLabel") or label:IsA("TextButton")) then
         return nil
     end
-    local raw = (label.Text or ""):match("=%s*([%d]+[,%.]?[%d]*)")
-    if not raw then return nil end
-    return tonumber(raw:gsub(",", "."))
+    local text = label.Text or ""
+    -- Explicitly parse the decimal comma used by the game UI.
+    local whole, fraction = text:match("=%s*(%d+),(%d+)")
+    if whole and fraction then
+        return tonumber(whole .. "." .. fraction)
+    end
+    local decimal = text:match("=%s*(%d+%.%d+)")
+    if decimal then return tonumber(decimal) end
+    local integer = text:match("=%s*(%d+)")
+    return integer and tonumber(integer) or nil
 end
 
 local function waitUntil(fn, seconds)
