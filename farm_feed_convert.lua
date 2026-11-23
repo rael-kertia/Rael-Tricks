@@ -656,8 +656,7 @@ local function feedOne()
     local attempted = false
 
     for _, entry in ipairs(feeders) do
-        if not alive() or not autoFarm
-        or homeworkEnabled or homeworkBusy then
+        if not alive() or not autoFarm then
             return false
         end
 
@@ -711,8 +710,7 @@ local function feedOne()
 
         if not teleportNear(position, 2) then continue end
 
-        if not alive() or not autoFarm
-        or homeworkEnabled or homeworkBusy then
+        if not alive() or not autoFarm then
             continue
         end
 
@@ -728,7 +726,6 @@ local function feedOne()
         local newStock = getStock(entry.object)
 
         while alive() and autoFarm
-        and not homeworkEnabled and not homeworkBusy
         and os.clock() - start < 6 do
             task.wait(0.25)
 
