@@ -303,7 +303,7 @@ stroke.Color = Color3.fromRGB(65, 93, 125)
 stroke.Thickness = 1
 
 local header = Instance.new("TextLabel")
-header.Size = UDim2.new(1, -42, 0, 30)
+header.Size = UDim2.new(1, -70, 0, 30)
 header.Position = UDim2.fromOffset(12, 4)
 header.BackgroundTransparency = 1
 header.Text = "RAEL // FARM SYSTEM"
@@ -323,6 +323,19 @@ minimize.Font = Enum.Font.GothamBold
 minimize.TextSize = 14
 minimize.Parent = panel
 Instance.new("UICorner", minimize).CornerRadius = UDim.new(0, 6)
+
+local exitButton = Instance.new("TextButton")
+exitButton.Name = "ExitButton"
+exitButton.Size = UDim2.fromOffset(26, 24)
+exitButton.Position = UDim2.new(1, -63, 0, 7)
+exitButton.BackgroundColor3 = Color3.fromRGB(150, 42, 42)
+exitButton.Text = "X"
+exitButton.TextColor3 = Color3.new(1, 1, 1)
+exitButton.Font = Enum.Font.GothamBold
+exitButton.TextSize = 13
+exitButton.ZIndex = 5
+exitButton.Parent = panel
+Instance.new("UICorner", exitButton).CornerRadius = UDim.new(0, 6)
 
 local function makeToggle(name, label, y, color)
     local b = Instance.new("TextButton")
@@ -401,6 +414,22 @@ draggable(panel)
 draggable(mini)
 connect(minimize.MouseButton1Click, function() panel.Visible=false; mini.Visible=true end)
 connect(mini.MouseButton1Click, function() mini.Visible=false; panel.Visible=true end)
+
+-- EXIT = hentikan semua loop, putus seluruh event, hapus tool dan GUI.
+connect(exitButton.Activated, function()
+    if not alive() then return end
+    autoFarm, autoFeed, autoConvert = false, false, false
+    env.RFC_Running = false
+    for _, connection in ipairs(env.RFC_Connections or {}) do
+        pcall(function() connection:Disconnect() end)
+    end
+    for _, object in ipairs(env.RFC_Objects or {}) do
+        pcall(function() object:Destroy() end)
+    end
+    env.RFC_Connections = {}
+    env.RFC_Objects = {}
+    gui:Destroy()
+end)
 
 -- DROPPING SCANNER
 -- ==========================================
