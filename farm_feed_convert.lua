@@ -46,6 +46,8 @@ local feedCooldown = {}
 local CONVERT_THRESHOLD = 2000
 local MANURE_FARM_LIMIT = 2000 -- Batas maksimum kotoran di backpack.
 local SCAN_DELAY = 0.5
+local DROPPING_RETRY = 3
+local FEED_RETRY = 5
 
 -- DYNAMIC KANDANG
 -- ==========================================
