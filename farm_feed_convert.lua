@@ -486,11 +486,8 @@ local function findNextDropping()
         end
     end
 
-    -- Non-prompt descendants may still be manure objects; fail closed.
-    if not hasDroppings and #folder:GetDescendants() > 0 then
-        return nil, nil, true, true, true
-    end
-
+    -- Kotoran yang bisa dipungut harus memiliki ProximityPrompt.
+    -- Abaikan sisa objek/dekorasi tanpa prompt agar tidak mengunci tahap pakan.
     if nearestReady then
         return nearestReady, nearestReadyPos, true, true, false
     end
@@ -1062,21 +1059,15 @@ task.spawn(function()
                     return
                 end
                 if not folder then
-                    -- If the owner folder still contains anything, its manure state
-                    -- is ambiguous: block feeding instead of assuming it is empty.
-                    if #owner:GetDescendants() > 0 then
-                        emptyScans = 0
-                        setStatus("ISI PAKAN DIKUNCI - ISI FOLDER KOTORAN BELUM TERBACA")
-                        return
-                    end
-                    -- Only an existing, completely empty owner folder can pass
-                    -- the 3 consecutive empty checks below.
+                    -- Owner kandang ada tetapi folder Kotoran tidak ada:
+                    -- tidak ada prompt kotoran yang dapat dipungut. Verifikasi
+                    -- beberapa kali, lalu lanjut ke pengisian pakan.
                     emptyScans = emptyScans + 1
-                    setStatus("FOLDER KOTORAN BELUM ADA - VERIFIKASI " .. emptyScans .. "/3")
+                    setStatus("FOLDER KOTORAN TIDAK ADA - VERIFIKASI " .. emptyScans .. "/3")
                     if emptyScans >= 3 then
                         emptyScans = 0
                         farmCycle = "FEED_EMPTY_TROUGHS"
-                        setStatus("KOTORAN TERKONFIRMASI HABIS - SIAP ISI PAKAN")
+                        setStatus("KOTORAN HABIS - MULAI ISI PAKAN")
                     end
                     return
                 end
