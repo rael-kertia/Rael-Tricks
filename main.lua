@@ -22,12 +22,12 @@ diagnosticLabel.TextColor3 = Color3.new(1, 1, 1)
 diagnosticLabel.TextSize = 12
 diagnosticLabel.Font = Enum.Font.GothamBold
 diagnosticLabel.TextWrapped = true
-diagnosticLabel.Text = "RAEL LOADER 6A413C0: MEMULAI"
+diagnosticLabel.Text = "RAEL LOADER BUILD C919D5D: MEMULAI"
 diagnosticLabel.Parent = diagnosticGui
 Instance.new("UICorner", diagnosticLabel).CornerRadius = UDim.new(0, 8)
 
 local function diagnosticStatus(message, failed)
-    diagnosticLabel.Text = "RAEL LOADER 6A413C0: " .. tostring(message)
+    diagnosticLabel.Text = "RAEL LOADER BUILD C919D5D: " .. tostring(message)
     diagnosticLabel.BackgroundColor3 = failed
         and Color3.fromRGB(150, 35, 35)
         or Color3.fromRGB(30, 90, 65)
@@ -467,6 +467,8 @@ local jamButton = Instance.new("TextButton")
 jamButton.Name = "AutoJamAjaibButton"
 jamButton.Size = UDim2.fromOffset(180, 29)
 jamButton.Position = UDim2.fromOffset(12, 138)
+jamButton.ZIndex = 10
+jamButton.Active = true
 jamButton.BackgroundColor3 = Color3.fromRGB(127, 29, 29)
 jamButton.BorderSizePixel = 0
 jamButton.Text = "AUTO JAM AJAIB: OFF"
@@ -742,6 +744,11 @@ end
 local bootOK, bootError = pcall(bootRaelTricks)
 if bootOK then
     diagnosticStatus("CORE BERHASIL DIEKSEKUSI", false)
+    task.delay(2, function()
+        if diagnosticGui and diagnosticGui.Parent then
+            diagnosticGui:Destroy()
+        end
+    end)
 else
     diagnosticStatus("GAGAL: " .. tostring(bootError):sub(1, 180), true)
 end
