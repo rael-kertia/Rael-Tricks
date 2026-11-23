@@ -1,5 +1,40 @@
 -- RAEL'S TRICKS - MAIN
--- Jalur produksi: core dengan patch Homework dan Gacha yang telah diuji.
+-- Bootstrap diagnostik: tampilkan status di layar, bukan console Delta.
+
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+local playerGui = localPlayer:WaitForChild("PlayerGui")
+
+local oldDiagnostic = playerGui:FindFirstChild("RaelLoaderDiagnostic")
+if oldDiagnostic then oldDiagnostic:Destroy() end
+
+local diagnosticGui = Instance.new("ScreenGui")
+diagnosticGui.Name = "RaelLoaderDiagnostic"
+diagnosticGui.ResetOnSpawn = false
+diagnosticGui.DisplayOrder = 10000
+diagnosticGui.Parent = playerGui
+
+local diagnosticLabel = Instance.new("TextLabel")
+diagnosticLabel.Size = UDim2.fromOffset(310, 42)
+diagnosticLabel.Position = UDim2.new(0.5, -155, 0, 18)
+diagnosticLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 36)
+diagnosticLabel.TextColor3 = Color3.new(1, 1, 1)
+diagnosticLabel.TextSize = 12
+diagnosticLabel.Font = Enum.Font.GothamBold
+diagnosticLabel.TextWrapped = true
+diagnosticLabel.Text = "RAEL LOADER: MEMULAI"
+diagnosticLabel.Parent = diagnosticGui
+Instance.new("UICorner", diagnosticLabel).CornerRadius = UDim.new(0, 8)
+
+local function diagnosticStatus(message, failed)
+    diagnosticLabel.Text = "RAEL LOADER: " .. tostring(message)
+    diagnosticLabel.BackgroundColor3 = failed
+        and Color3.fromRGB(150, 35, 35)
+        or Color3.fromRGB(30, 90, 65)
+end
+
+local function bootRaelTricks()
+diagnosticStatus("MENGAMBIL CORE...", false)
 
 local url = "https://raw.githubusercontent.com/rael-kertia/Rael-Tricks/3390f91726acc5f4069a7bc8f0b15a89ef09937c/main_obfuscated.lua"
 local response = game:HttpGet(url)
@@ -16,6 +51,7 @@ for i = 1, #encoded, 2 do
     decoded[#decoded + 1] = string.char((byte - 97) % 256)
 end
 local wrapper = table.concat(decoded)
+diagnosticStatus("CORE TERUNDUH - MENYIAPKAN PATCH...", false)
 
 -- Patch dilakukan setelah seluruh patch asli CORE RESTORE,
 -- tepat sebelum core asli di-compile dan dijalankan.
@@ -620,6 +656,16 @@ paintJamButton()
 
 wrapper = wrapper:sub(1, at - 1) .. patch .. "\n" .. wrapper:sub(at)
 
+diagnosticStatus("MENG-COMPILE WRAPPER...", false)
 local chunk, compileError = loadstring(wrapper)
 assert(chunk, "Wrapper compile gagal: " .. tostring(compileError))
+diagnosticStatus("MENJALANKAN CORE...", false)
 chunk()
+end
+
+local bootOK, bootError = pcall(bootRaelTricks)
+if bootOK then
+    diagnosticStatus("CORE BERHASIL DIEKSEKUSI", false)
+else
+    diagnosticStatus("GAGAL: " .. tostring(bootError):sub(1, 180), true)
+end
