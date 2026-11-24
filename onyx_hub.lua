@@ -62,9 +62,9 @@ assert(at, "Titik patch core ONYX tidak ditemukan")
 local patch = [==[
 local function onyxReplaceBetween(text, firstMarker, nextMarker, replacement)
     local a = text:find(firstMarker, 1, true)
-    if not a then error("Rael patch: marker awal tidak ditemukan: " .. firstMarker) end
+    if not a then error("ONYX patch: marker awal tidak ditemukan: " .. firstMarker) end
     local b = text:find(nextMarker, a + #firstMarker, true)
-    if not b then error("Rael patch: marker akhir tidak ditemukan: " .. nextMarker) end
+    if not b then error("ONYX patch: marker akhir tidak ditemukan: " .. nextMarker) end
     return text:sub(1, a - 1) .. replacement .. "\n\n" .. text:sub(b)
 end
 
@@ -428,8 +428,8 @@ source = onyxReplaceLineStrict(
     "HEADER ZINDEX"
 )
 source = onyxReplaceLineStrict(
-    source, 'title.Text = "RAEL\'S TRICKS"',
-    'title.Text = "RAEL\'S TRICKS"\ntitle.ZIndex = 6',
+    source, 'title.Text = "ONYX HUB"',
+    'title.Text = "ONYX HUB"\ntitle.ZIndex = 6',
     "TITLE ZINDEX"
 )
 source = onyxReplaceLineStrict(
@@ -779,7 +779,7 @@ diagnosticStatus("MENJALANKAN CORE...", false)
 chunk()
 end
 
-local bootOK, bootError = pcall(bootRaelTricks)
+local bootOK, bootError = pcall(bootOnyxHub)
 if bootOK then
     diagnosticStatus("CORE BERHASIL DIEKSEKUSI", false)
     task.delay(2, function()
