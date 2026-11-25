@@ -10,6 +10,7 @@
 
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
+local PathfindingService = game:GetService("PathfindingService")
 
 local player = Players.LocalPlayer
 local backpack = player:WaitForChild("Backpack")
@@ -210,6 +211,90 @@ local function teleportNear(position, distance)
     root.CFrame = CFrame.lookAt(target, position)
     task.wait(0.35)
     return alive()
+end
+
+-- FARM berjalan menggunakan pathfinding, bukan teleport.
+local function pathfindTo(position, prompt)
+    if not alive() or not farmEnabled or not position then return false end
+
+    local character = player.Character
+    local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+    local root = getRoot()
+    if not humanoid or not root then return false end
+
+    local activationDistance = prompt and prompt.MaxActivationDistance or 10
+    local arrivalDistance = math.max(2.5, math.min(activationDistance - 1, 8))
+
+    for attempt = 1, 2 do
+        if not alive() or not farmEnabled then return false end
+        root = getRoot()
+        if not root then return false end
+        if (root.Position - position).Magnitude <= arrivalDistance then
+            return true
+        end
+
+        local path = PathfindingService:CreatePath({
+            AgentRadius = 2,
+            AgentHeight = 5,
+            AgentCanJump = true,
+            AgentCanClimb = true,
+            WaypointSpacing = 4
+        })
+
+        local computed = pcall(function()
+            path:ComputeAsync(root.Position, position)
+        end)
+
+        if computed and path.Status == Enum.PathStatus.Success then
+            local waypoints = path:GetWaypoints()
+            local pathFailed = false
+
+            for _, waypoint in ipairs(waypoints) do
+                if not alive() or not farmEnabled then
+                    humanoid:MoveTo(root.Position)
+                    return false
+                end
+
+                root = getRoot()
+                if not root then return false end
+                if (root.Position - position).Magnitude <= arrivalDistance then
+                    return true
+                end
+
+                if waypoint.Action == Enum.PathWaypointAction.Jump then
+                    humanoid.Jump = true
+                end
+
+                humanoid:MoveTo(waypoint.Position)
+                local started = os.clock()
+                while alive() and farmEnabled and os.clock() - started < 8 do
+                    task.wait(0.1)
+                    root = getRoot()
+                    if not root then return false end
+                    if (root.Position - waypoint.Position).Magnitude <= 3 then
+                        break
+                    end
+                end
+
+                root = getRoot()
+                if not root or (root.Position - waypoint.Position).Magnitude > 4 then
+                    pathFailed = true
+                    break
+                end
+            end
+
+            if not pathFailed then
+                root = getRoot()
+                if root and (root.Position - position).Magnitude <= activationDistance then
+                    return true
+                end
+            end
+        end
+
+        task.wait(0.25)
+    end
+
+    return false
 end
 
 -- ==========================================
@@ -696,7 +781,7 @@ task.spawn(function()
             actionBusy = true
             setStatus("FARM: MENUJU KOTORAN TERNAK")
 
-            if teleportNear(position, 1.5) and alive() and farmEnabled then
+            if pathfindTo(position, prompt) and alive() and farmEnabled then
                 local activated = activatePrompt(prompt)
                 if activated then
                     setStatus("FARM: MENGAMBIL KOTORAN")
