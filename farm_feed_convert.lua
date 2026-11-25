@@ -108,22 +108,65 @@ local MY_SHEEP_NAMES = {
 
 local function getSheepHungerStatus()
     local farm = W:FindFirstChild("TernakLokal")
-    if not farm then return false, 0, "FOLDER TERNAKLOKAL TIDAK ADA" end
-    local total, hungry = 0, 0
+    local pen = getCurrentPen()
+    if not farm and not pen then
+        return false, 0, "DATA KANDANG TERNAK TIDAK DITEMUKAN"
+    end
 
-    for name in pairs(MY_SHEEP_NAMES) do
-        local sheep = farm:FindFirstChild(name)
-        if sheep and sheep:IsA("Model") then
-            local domba = sheep:FindFirstChild("Domba")
-            local billboard = domba and domba:FindFirstChild("LaparBillboard")
-            local label = billboard and billboard:FindFirstChild("Teks")
-            if billboard and billboard:IsA("BillboardGui")
-            and label and (label:IsA("TextLabel") or label:IsA("TextButton")) then
-                total = total + 1
-                if billboard.Enabled and (label.Text or ""):lower() == "lapar" then
-                    hungry = hungry + 1
-                end
+    local found, hungry = {}, 0
+    local function addSheep(model, trusted)
+        if not model or not model:IsA("Model")
+        or not model.Name:match("^Domba_") or found[model] then return end
+
+        local ownerId = model:GetAttribute("OwnerUserId")
+            or model:GetAttribute("OwnerId")
+            or model:GetAttribute("PemilikUserId")
+            or model:GetAttribute("UserId")
+        local ownerName = model:GetAttribute("Owner")
+            or model:GetAttribute("Pemilik")
+        local owned = trusted
+            or tonumber(ownerId) == player.UserId
+            or ownerName == player.Name
+            or MY_SHEEP_NAMES[model.Name] == true
+        if not owned then return end
+
+        local domba = model:FindFirstChild("Domba", true)
+        local billboard = domba and domba:FindFirstChild("LaparBillboard", true)
+        local label = billboard and billboard:FindFirstChild("Teks", true)
+        if not billboard or not billboard:IsA("BillboardGui")
+        or not label or not (label:IsA("TextLabel") or label:IsA("TextButton")) then
+            return
+        end
+
+        found[model] = {billboard = billboard, label = label}
+    end
+
+    -- Kandang aktif adalah sumber kepemilikan paling kuat; ID domba bisa
+    -- berubah, jadi jangan bergantung hanya pada daftar nama lama.
+    if pen then
+        for _, obj in ipairs(pen:GetDescendants()) do
+            if obj:IsA("Model") and obj.Name:match("^Domba_") then
+                addSheep(obj, true)
             end
+        end
+    end
+
+    -- Fallback untuk struktur game yang mereplikasi domba langsung di
+    -- TernakLokal, dengan atribut pemilik atau daftar nama lama.
+    if farm then
+        for _, obj in ipairs(farm:GetDescendants()) do
+            if obj:IsA("Model") and obj.Name:match("^Domba_") then
+                addSheep(obj, false)
+            end
+        end
+    end
+
+    local total = 0
+    for _, info in pairs(found) do
+        total += 1
+        local textValue = (info.label.Text or ""):lower():match("^%s*(.-)%s*$")
+        if info.billboard.Enabled and textValue == "lapar" then
+            hungry += 1
         end
     end
 
@@ -613,33 +656,35 @@ end
 
 local function getFeeders()
     local result = {}
+    local seen = {}
     local number = getKandangNumber()
     local farm = W:FindFirstChild("TernakLokal")
-
     if not number or not farm then return result end
 
-    -- Use the live replicated feeder parts only.
-    -- Kawasan_Kos.Lahan_Ternak.Kandang_n.Palung_n are decorative/static
-    -- models and do not contain the live stock label or fill prompt.
-    for _, suffix in ipairs({"1", "2"}) do
-        local name = "Palung_Kandang_" .. number .. "_" .. suffix
-        local palung = farm:FindFirstChild(name)
-
-        if palung and palung:IsA("BasePart") then
-            local stock = getStock(palung)
-            local prompt = findFeedPrompt(palung)
-
-            if stock ~= nil and prompt then
-                table.insert(result, {
-                    name = name,
-                    object = palung
-                })
-            end
-        end
+    local function addFeeder(name, object)
+        if not object or seen[object] then return end
+        -- Hanya palung live yang memiliki pembacaan stok dan prompt isi.
+        if getStock(object) == nil or not findFeedPrompt(object) then return end
+        seen[object] = true
+        table.insert(result, {name = name, object = object})
     end
 
+    for _, name in ipairs({
+        "Palung_Kandang_" .. number .. "_1",
+        "Palung_Kandang_" .. number .. "_2"
+    }) do
+        addFeeder(name, farm:FindFirstChild(name, true))
+    end
+
+    -- Fallback: sebagian build menaruh palung live di dalam model kandang.
+    local pen = getCurrentPen()
+    if pen then
+        addFeeder("Palung_1", pen:FindFirstChild("Palung_1", true))
+        addFeeder("Palung_2", pen:FindFirstChild("Palung_2", true))
+    end
     return result
 end
+
 -- ==========================================
 -- AUTO FEED ONLY AT 0/100
 -- ==========================================
@@ -656,7 +701,7 @@ local function feedOne()
     local attempted = false
 
     for _, entry in ipairs(feeders) do
-        if not alive() or not autoFarm then
+        if not alive() or (not autoFarm and not autoFeed) then
             return false
         end
 
@@ -710,7 +755,7 @@ local function feedOne()
 
         if not teleportNear(position, 2) then continue end
 
-        if not alive() or not autoFarm then
+        if not alive() or (not autoFarm and not autoFeed) then
             continue
         end
 
@@ -725,7 +770,7 @@ local function feedOne()
         local start = os.clock()
         local newStock = getStock(entry.object)
 
-        while alive() and autoFarm
+        while alive() and (autoFarm or autoFeed)
         and os.clock() - start < 6 do
             task.wait(0.25)
 
@@ -1201,6 +1246,20 @@ task.spawn(function()
 
         if not ok then setStatus("FARM ERROR: " .. tostring(err)) end
         farmBusy = false
+    end
+end)
+
+-- Auto Feed mandiri: bekerja meski Auto Farm OFF. farmBusy mencegah
+-- worker ini bertabrakan dengan siklus Auto Farm.
+task.spawn(function()
+    while alive() and gui.Parent do
+        task.wait(0.75)
+        if autoFeed and not autoFarm and not farmBusy and not convertBusy then
+            farmBusy = true
+            local ok, err = pcall(feedOne)
+            if not ok then setStatus("AUTO FEED ERROR: " .. tostring(err)) end
+            farmBusy = false
+        end
     end
 end)
 
