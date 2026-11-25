@@ -58,6 +58,11 @@ local FEED_RETRY = 8
 
 local cleanEnabled = false
 local farmEnabled = false
+local feedEnabled = true
+local convertEnabled = true
+local converting = false
+local CONVERT_LIMIT = 2000
+local lastConvertAttempt = 0
 local cleanBusy = false
 local farmBusy = false
 local actionBusy = false
@@ -205,6 +210,131 @@ local function teleportNear(position, distance)
     root.CFrame = CFrame.lookAt(target, position)
     task.wait(0.35)
     return alive()
+end
+
+-- ==========================================
+-- AUTO CONVERT KOTORAN 2000 + KLAIM GOLD
+-- ==========================================
+local function findManureTool()
+    for _, c in ipairs({backpack, player.Character}) do
+        if c then for _, o in ipairs(c:GetChildren()) do
+            if o:IsA("Tool") and o.Name:lower():find("kotoran",1,true) then return o end
+        end end
+    end
+end
+local function getManureCount()
+    local t=findManureTool(); if not t then return nil end
+    for _, n in ipairs({"Amount","Jumlah","Count","Stack","Quantity","JumlahKotoran"}) do
+        local v=t:GetAttribute(n); if typeof(v)=="number" then return v end
+    end
+    for _, o in ipairs(t:GetDescendants()) do
+        if o:IsA("IntValue") or o:IsA("NumberValue") then
+            local n=o.Name:lower()
+            if n:find("jumlah") or n:find("count") or n:find("amount") or n:find("stack") then return o.Value end
+        end
+    end
+end
+local function isManureFull() local n=getManureCount(); return n~=nil and n>=CONVERT_LIMIT end
+local function getConvertUI()
+    local u=playerGui:FindFirstChild("ConvertUI"); local p=u and u:FindFirstChild("PanelConvert"); local c=p and p:FindFirstChild("Content")
+    if not c then return nil end
+    local pr=c:FindFirstChild("Proses"); local g=pr and pr:FindFirstChild("SlotGold")
+    return {masuk=c:FindFirstChild("MasukBtn"),klaim=c:FindFirstChild("KlaimBtn"),status=c:FindFirstChild("StatusLbl"),gold=g and g:FindFirstChild("Jumlah"),panel=p}
+end
+local function isRateRising()
+    local badges={}
+    local m=playerGui:FindFirstChild("BursaGoldUI"); local p=m and m:FindFirstChild("PanelPasar"); local c=p and p:FindFirstChild("Konten"); local k=c and c:FindFirstChild("KursBox")
+    if k and k:FindFirstChild("Badge") then table.insert(badges,k.Badge) end
+    local u=playerGui:FindFirstChild("ConvertUI"); local cp=u and u:FindFirstChild("PanelConvert"); local cc=cp and cp:FindFirstChild("Content"); local st=cc and cc:FindFirstChild("KursStrip")
+    if st and st:FindFirstChild("Badge") then table.insert(badges,st.Badge) end
+    for _, b in ipairs(badges) do
+        local tx=(b.Text or ""):upper(); local green=false
+        pcall(function() local q=b.BackgroundColor3; green=q.G>q.R and q.G>q.B end)
+        if (tx:find("▲",1,true) or tx:find("NAIK",1,true)) and green then return true end
+    end
+    return false
+end
+local function clickConvertButton(b)
+    if not b or not b.Parent or typeof(firesignal)~="function" then return false end
+    local fired=false
+    pcall(function() firesignal(b.MouseButton1Click); fired=true end)
+    task.wait(0.2)
+    pcall(function() firesignal(b.Activated); fired=true end)
+    return fired
+end
+local function getNearestConvertPrompt()
+    local f=World:FindFirstChild("MsinConvert"); local root=getRoot()
+    if not f or not root then return nil end
+    local best,dist=nil,math.huge
+    for _, p in ipairs(f:GetDescendants()) do
+        if p:IsA("ProximityPrompt") and p.Name=="ConvertPrompt" and p.Enabled then
+            local pos=getPosition(p)
+            if pos then local d=(root.Position-pos).Magnitude; if d<dist then best,dist=p,d end end
+        end
+    end
+    return best
+end
+local function readGold(ui)
+    if not ui or not ui.gold then return 0 end
+    return tonumber((tostring(ui.gold.Text or ""):gsub(",", ".")):match("[%d%.]+")) or 0
+end
+local function closeConvertMachine(panel)
+    if not panel then return end
+    for _, o in ipairs(panel:GetDescendants()) do
+        if o:IsA("GuiButton") then
+            local n=o.Name:lower()
+            if n=="x" or n:find("close",1,true) or n:find("exit",1,true) or n:find("tutup",1,true) then clickConvertButton(o); return end
+        end
+    end
+end
+local function runAutoConvert()
+    if converting or not alive() or not farmEnabled or not convertEnabled or os.clock()-lastConvertAttempt<10 then return false end
+    lastConvertAttempt=os.clock(); converting=true; actionBusy=true
+    local function finish(msg) converting=false; actionBusy=false; if alive() then setStatus(msg) end end
+    setStatus("KOTORAN 2000 - MENUJU MESIN")
+    local prompt=getNearestConvertPrompt()
+    if not prompt then finish("MESIN CONVERT TIDAK DITEMUKAN"); return false end
+    local pos=getPosition(prompt)
+    if not pos or not teleportNear(pos,2) then finish("GAGAL MENUJU MESIN"); return false end
+    if not alive() or not farmEnabled or not convertEnabled then finish("CONVERT DIBATALKAN"); return false end
+    if not activatePrompt(prompt) then finish("GAGAL MEMBUKA MESIN"); return false end
+    local start=os.clock(); local ui
+    repeat
+        task.wait(0.25)
+        if not alive() or not farmEnabled or not convertEnabled then finish("CONVERT DIBATALKAN"); return false end
+        ui=getConvertUI()
+    until (ui and ui.masuk and ui.klaim) or os.clock()-start>12
+    if not ui or not ui.masuk or not ui.klaim then finish("UI CONVERT TIDAK TERDETEKSI"); return false end
+    setStatus("MENUNGGU KURS HIJAU / NAIK"); start=os.clock()
+    while alive() and farmEnabled and convertEnabled and os.clock()-start<300 do task.wait(1); if isRateRising() then break end end
+    if not alive() or not farmEnabled or not convertEnabled then finish("CONVERT DIBATALKAN"); return false end
+    if not isRateRising() then finish("KURS BELUM NAIK - COBA LAGI"); return false end
+    local before=readGold(ui)
+    setStatus("MEMASUKKAN 2000 KOTORAN")
+    if not clickConvertButton(ui.masuk) then finish("TOMBOL MASUK GAGAL"); return false end
+    start=os.clock(); local done=false
+    while alive() and farmEnabled and convertEnabled and os.clock()-start<60 do
+        task.wait(0.5); ui=getConvertUI()
+        if ui then
+            local st=ui.status and (ui.status.Text or ""):lower() or ""
+            if readGold(ui)>before or st:find("selesai",1,true) or st:find("berhasil",1,true) or st:find("klaim",1,true) then done=true; break end
+        end
+    end
+    if not alive() or not farmEnabled or not convertEnabled then finish("CONVERT DIBATALKAN"); return false end
+    if not done then finish("PROSES CONVERT BELUM TERKONFIRMASI"); return false end
+    ui=getConvertUI()
+    if not ui or not ui.klaim then finish("TOMBOL KLAIM TIDAK DITEMUKAN"); return false end
+    setStatus("MENGKLAIM GOLD")
+    if not clickConvertButton(ui.klaim) then finish("KLAIM GOLD GAGAL"); return false end
+    start=os.clock()
+    while alive() and farmEnabled and convertEnabled and os.clock()-start<12 do
+        task.wait(0.5); local count=getManureCount()
+        if count==nil or count<CONVERT_LIMIT then
+            closeConvertMachine(ui.panel); task.wait(0.4)
+            finish("CONVERT BERHASIL - FARM LANJUT"); return true
+        end
+    end
+    finish("KLAIM BELUM TERKONFIRMASI"); return false
 end
 
 -- ==========================================
@@ -439,6 +569,7 @@ local function getFeeders()
 end
 
 local function feedOne()
+    if not feedEnabled then return end
     local feeders = getFeeders()
     if #feeders == 0 then
         setStatus("PALUNG TIDAK DITEMUKAN")
@@ -514,6 +645,11 @@ task.spawn(function()
         task.wait(0.35)
 
         if not farmEnabled or farmBusy or actionBusy then
+            continue
+        end
+
+        if convertEnabled and isManureFull() then
+            runAutoConvert()
             continue
         end
 
@@ -629,7 +765,7 @@ gui.DisplayOrder = 999
 gui.Parent = playerGui
 
 local frame = Instance.new("Frame")
-frame.Size = UDim2.fromOffset(210, 112)
+frame.Size = UDim2.fromOffset(210, 151)
 frame.Position = UDim2.new(1, -225, 0, 110)
 frame.BackgroundColor3 = Color3.fromRGB(25, 25, 30)
 frame.BorderSizePixel = 0
@@ -638,7 +774,7 @@ frame.Parent = gui
 Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
 
 local title = Instance.new("TextLabel")
-title.Size = UDim2.new(1, -34, 0, 22)
+title.Size = UDim2.new(1, -64, 0, 22)
 title.Position = UDim2.fromOffset(7, 0)
 title.BackgroundTransparency = 1
 title.Text = "RAEL FARM + CLEAN"
@@ -658,6 +794,18 @@ minimize.Font = Enum.Font.GothamBold
 minimize.TextSize = 15
 minimize.Parent = frame
 Instance.new("UICorner", minimize).CornerRadius = UDim.new(0, 5)
+
+local stopButton = Instance.new("TextButton")
+stopButton.Name = "StopAllButton"
+stopButton.Size = UDim2.fromOffset(25, 19)
+stopButton.Position = UDim2.new(1, -58, 0, 2)
+stopButton.BackgroundColor3 = Color3.fromRGB(155, 40, 48)
+stopButton.Text = "X"
+stopButton.TextColor3 = Color3.new(1, 1, 1)
+stopButton.Font = Enum.Font.GothamBold
+stopButton.TextSize = 12
+stopButton.Parent = frame
+Instance.new("UICorner", stopButton).CornerRadius = UDim.new(0, 5)
 
 local mini = Instance.new("TextButton")
 mini.Name = "RaelFarmMini"
@@ -690,10 +838,14 @@ end
 
 local cleanButton = makeButton("CleanButton", "CLEAN: OFF", 6, Color3.fromRGB(150, 45, 45))
 local farmButton = makeButton("FarmButton", "FARM: OFF", 108, Color3.fromRGB(35, 100, 65))
+local feedButton = makeButton("FeedButton", "FEED: ON", 6, Color3.fromRGB(35, 145, 70))
+local convertButton = makeButton("ConvertButton", "CONVERT: ON", 108, Color3.fromRGB(35, 145, 70))
+feedButton.Position = UDim2.fromOffset(6, 62)
+convertButton.Position = UDim2.fromOffset(108, 62)
 
 statusLabel = Instance.new("TextLabel")
 statusLabel.Size = UDim2.new(1, -12, 0, 37)
-statusLabel.Position = UDim2.fromOffset(6, 66)
+statusLabel.Position = UDim2.fromOffset(6, 101)
 statusLabel.BackgroundTransparency = 1
 statusLabel.Text = "STATUS: READY"
 statusLabel.TextColor3 = Color3.fromRGB(255, 220, 120)
@@ -712,6 +864,10 @@ local function updateButtons()
     farmButton.Text = farmEnabled and "FARM: ON" or "FARM: OFF"
     farmButton.BackgroundColor3 = farmEnabled
         and Color3.fromRGB(35, 145, 70) or Color3.fromRGB(35, 100, 65)
+    feedButton.Text = feedEnabled and "FEED: ON" or "FEED: OFF"
+    feedButton.BackgroundColor3 = feedEnabled and Color3.fromRGB(35, 145, 70) or Color3.fromRGB(150, 45, 45)
+    convertButton.Text = convertEnabled and "CONVERT: ON" or "CONVERT: OFF"
+    convertButton.BackgroundColor3 = convertEnabled and Color3.fromRGB(35, 145, 70) or Color3.fromRGB(150, 45, 45)
 end
 
 connect(cleanButton.MouseButton1Click, function()
@@ -726,6 +882,31 @@ connect(farmButton.MouseButton1Click, function()
     farmEnabled = not farmEnabled
     updateButtons()
     setStatus(farmEnabled and "AUTO FARM AKTIF" or "AUTO FARM NONAKTIF")
+end)
+
+connect(feedButton.MouseButton1Click, function()
+    if not alive() then return end
+    feedEnabled = not feedEnabled
+    updateButtons()
+    setStatus(feedEnabled and "AUTO FEED AKTIF" or "AUTO FEED NONAKTIF")
+end)
+
+connect(convertButton.MouseButton1Click, function()
+    if not alive() then return end
+    convertEnabled = not convertEnabled
+    updateButtons()
+    setStatus(convertEnabled and "AUTO CONVERT AKTIF" or "AUTO CONVERT NONAKTIF")
+end)
+
+connect(stopButton.MouseButton1Click, function()
+    if not alive() then return end
+    SESSION.running = false
+    cleanEnabled, farmEnabled, feedEnabled, convertEnabled = false, false, false, false
+    converting, actionBusy = false, false
+    for _, connection in ipairs(SESSION.connections) do pcall(function() connection:Disconnect() end) end
+    table.clear(SESSION.connections)
+    for _, object in ipairs(SESSION.objects) do pcall(function() object:Destroy() end) end
+    table.clear(SESSION.objects)
 end)
 
 connect(minimize.MouseButton1Click, function()
