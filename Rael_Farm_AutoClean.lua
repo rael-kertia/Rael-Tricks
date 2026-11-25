@@ -4,13 +4,15 @@
     Fitur:
       - AUTO FARM: ambil kotoran ternak + isi pakan saat stok 0/100
       - AUTO CLEAN: membersihkan prompt "Bersihkan" di area sekitar
+      - Anti-AFK aktif selama sesi script berjalan.
       - Tidak membawa Homework, pengambilan TrashBag, pembuangan sampah,
-        TP Location, Anti-AFK, atau sistem lain dari base.lua.
+        atau sistem lain dari base.lua.
 ]]
 
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 local PathfindingService = game:GetService("PathfindingService")
+local VirtualUser = game:GetService("VirtualUser")
 
 local player = Players.LocalPlayer
 local backpack = player:WaitForChild("Backpack")
@@ -50,6 +52,15 @@ local function track(object)
     table.insert(SESSION.objects, object)
     return object
 end
+
+-- ANTI-AFK: cegah idle kick selama sesi script aktif.
+connect(player.Idled, function()
+    if not alive() then return end
+    pcall(function()
+        VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new(0, 0))
+    end)
+end)
 
 -- Pengaturan inti diambil dari pola base.lua.
 local CLEAN_RANGE = 100
