@@ -625,29 +625,26 @@ end
 
 local function findFeedPrompt(palung)
     if not palung then return nil end
-
-    local direct = palung:FindFirstChild("IsiPakanPrompt", true)
-
-    if direct and direct:IsA("ProximityPrompt") then
-        return direct
-    end
+    local fallback
 
     for _, obj in ipairs(palung:GetDescendants()) do
         if obj:IsA("ProximityPrompt") then
             local action = (obj.ActionText or ""):lower()
             local object = (obj.ObjectText or ""):lower()
-            local name = obj.Name:lower()
+            local name = (obj.Name or ""):lower()
+            local matches = name == "isipakanprompt"
+                or action:find("isi", 1, true)
+                or object:find("pakan", 1, true)
+                or name:find("isi", 1, true)
+                or name:find("pakan", 1, true)
 
-            if action:find("isi", 1, true)
-            or object:find("pakan", 1, true)
-            or name:find("isi", 1, true)
-            or name:find("pakan", 1, true) then
-                return obj
+            if matches then
+                if obj.Enabled then return obj end
+                fallback = fallback or obj
             end
         end
     end
-
-    return nil
+    return fallback
 end
 
 -- ==========================================
@@ -663,24 +660,28 @@ local function getFeeders()
 
     local function addFeeder(name, object)
         if not object or seen[object] then return end
-        -- Hanya palung live yang memiliki pembacaan stok dan prompt isi.
         if getStock(object) == nil or not findFeedPrompt(object) then return end
         seen[object] = true
         table.insert(result, {name = name, object = object})
     end
 
-    for _, name in ipairs({
-        "Palung_Kandang_" .. number .. "_1",
-        "Palung_Kandang_" .. number .. "_2"
-    }) do
-        addFeeder(name, farm:FindFirstChild(name, true))
+    local names = {
+        ["Palung_Kandang_" .. number .. "_1"] = true,
+        ["Palung_Kandang_" .. number .. "_2"] = true
+    }
+    for _, object in ipairs(farm:GetDescendants()) do
+        if names[object.Name] then
+            addFeeder(object.Name, object)
+        end
     end
 
-    -- Fallback: sebagian build menaruh palung live di dalam model kandang.
     local pen = getCurrentPen()
     if pen then
-        addFeeder("Palung_1", pen:FindFirstChild("Palung_1", true))
-        addFeeder("Palung_2", pen:FindFirstChild("Palung_2", true))
+        for _, object in ipairs(pen:GetDescendants()) do
+            if object.Name == "Palung_1" or object.Name == "Palung_2" then
+                addFeeder(object.Name, object)
+            end
+        end
     end
     return result
 end
