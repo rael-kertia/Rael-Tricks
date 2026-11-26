@@ -536,6 +536,7 @@ end)
 local function getNearestClean(root)
     local nearest, nearestDistance
     local now = os.clock()
+    local CLEAN_RETRY = 0.5
 
     local function consider(prompt, isManure)
         if not prompt or not prompt.Parent or not prompt.Enabled then return end
@@ -546,7 +547,7 @@ local function getNearestClean(root)
         end
 
         local last = cleanRetry[prompt]
-        if last and now - last < (isManure and DROPPING_RETRY or 1) then
+        if last and now - last < CLEAN_RETRY then
             return
         end
 
@@ -586,7 +587,9 @@ task.spawn(function()
     while alive() do
         task.wait(SCAN_DELAY)
 
-        if not cleanEnabled or cleanBusy or actionBusy then
+        -- CLEAN boleh berjalan ketika FARM sedang pathfinding.
+        -- Tetapi tetap menghindari proses convert/aksi non-farm yang memakai actionBusy.
+        if not cleanEnabled or cleanBusy or (actionBusy and not farmBusy) or converting then
             continue
         end
 
@@ -594,9 +597,8 @@ task.spawn(function()
         if not root then continue end
 
         local prompt = getNearestClean(root)
-        if prompt and cleanEnabled and not actionBusy then
+        if prompt and cleanEnabled then
             cleanBusy = true
-            actionBusy = true
             cleanRetry[prompt] = os.clock()
 
             local manurePrompt = isDroppingPrompt(prompt)
@@ -609,12 +611,12 @@ task.spawn(function()
 
             if activated then
                 repeat
-                    task.wait(0.15)
+                    task.wait(0.05)
                     if not prompt.Parent or not prompt.Enabled then
                         completed = true
                         break
                     end
-                until not alive() or not cleanEnabled or os.clock() - started >= 3
+                until not alive() or not cleanEnabled or os.clock() - started >= 1.25
             end
 
             if completed then
@@ -622,12 +624,12 @@ task.spawn(function()
                 setStatus(manurePrompt and "AUTO CLEAN: KOTORAN TERAMBIL"
                     or "AUTO CLEAN: DIRT BERSIH")
             else
+                -- Retry cepat bila prompt masih ada, agar CLEAN tidak tertahan lama.
                 cleanRetry[prompt] = os.clock()
                 setStatus(manurePrompt and "AUTO CLEAN: KOTORAN BELUM TERAMBIL"
                     or "AUTO CLEAN: PROMPT BELUM SELESAI")
             end
 
-            actionBusy = false
             cleanBusy = false
         end
     end
@@ -934,8 +936,18 @@ task.spawn(function()
                     teleportNextDropping = false
                 end
             else
-                setStatus("FARM: PATHFINDING KE KOTORAN")
+                setStatus("FARM: PATHFINDING KE KOTORAN TERDEKAT")
                 reachedDropping = pathfindTo(position, prompt)
+            end
+
+            -- Jika CLEAN sudah mengambil target saat FARM bergerak, jangan lanjut
+            -- mengejar posisi lama atau menunggu prompt yang sudah hilang.
+            if reachedDropping and (not prompt.Parent
+                or not prompt:IsDescendantOf(folder)
+                or not prompt.Enabled) then
+                droppingCooldown[prompt] = nil
+                setStatus("FARM: TARGET SUDAH DIAMBIL CLEAN")
+                reachedDropping = false
             end
 
             if reachedDropping and alive() and farmEnabled then
