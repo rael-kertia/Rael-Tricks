@@ -83,7 +83,6 @@ local cleanPrompts = setmetatable({}, {__mode = "k"})
 local cleanRetry = setmetatable({}, {__mode = "k"})
 local droppingCooldown = setmetatable({}, {__mode = "k"})
 local feedCooldown = {}
-local teleportNextDropping = false
 local statusLabel
 
 local function setStatus(message)
@@ -783,14 +782,9 @@ local function feedOne()
                 continue
             end
 
-            setStatus(entry.name .. ": PATHFINDING KE PALUNG")
-            if not pathfindTo(position, prompt) then
-                feedCooldown[entry.name] = os.clock()
-                setStatus(entry.name .. ": JALUR KE PALUNG TERHALANG")
-                continue
-            end
-            if not alive() or not farmEnabled then return end
             setStatus(entry.name .. ": MENGISI PAKAN")
+            if not teleportNear(position, 2) then return end
+            if not alive() or not farmEnabled then return end
 
             if activatePrompt(prompt) then
                 local started = os.clock()
@@ -803,7 +797,6 @@ local function feedOne()
 
                 if newStock ~= nil and newStock > 0 then
                     feedCooldown[entry.name] = nil
-                    teleportNextDropping = true
                     setStatus(entry.name .. ": PAKAN " .. newStock .. "/100")
                 else
                     feedCooldown[entry.name] = os.clock()
@@ -877,19 +870,9 @@ task.spawn(function()
             emptyScans = 0
             farmBusy = true
             actionBusy = true
-            local reachedDropping = false
-            if teleportNextDropping then
-                setStatus("FARM: TP PERTAMA SETELAH ISI PAKAN")
-                reachedDropping = teleportNear(position, 2)
-                if reachedDropping then
-                    teleportNextDropping = false
-                end
-            else
-                setStatus("FARM: PATHFINDING KE KOTORAN")
-                reachedDropping = pathfindTo(position, prompt)
-            end
+            setStatus("FARM: MENUJU KOTORAN TERNAK")
 
-            if reachedDropping and alive() and farmEnabled then
+            if pathfindTo(position, prompt) and alive() and farmEnabled then
                 local activated = activatePrompt(prompt)
                 if activated then
                     setStatus("FARM: MENGAMBIL KOTORAN")
