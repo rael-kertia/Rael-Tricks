@@ -537,19 +537,44 @@ local function getNearestClean(root)
     local nearest, nearestDistance
     local now = os.clock()
 
+    local function consider(prompt, isManure)
+        if not prompt or not prompt.Parent or not prompt.Enabled then return end
+        if isManure then
+            if not isDroppingPrompt(prompt) then return end
+        elseif not isCleanPrompt(prompt) then
+            return
+        end
+
+        local last = cleanRetry[prompt]
+        if last and now - last < (isManure and DROPPING_RETRY or 1) then
+            return
+        end
+
+        local position = getPosition(prompt)
+        if not position then return end
+
+        local distance = (root.Position - position).Magnitude
+        local activationDistance = prompt.MaxActivationDistance or 10
+        -- Sama seperti dirt rumah: prompt hanya diaktifkan ketika karakter
+        -- sudah berada dalam jarak interaksi, bukan sekadar radius scan.
+        if distance <= math.min(CLEAN_RANGE, activationDistance)
+            and (not nearestDistance or distance < nearestDistance) then
+            nearest = prompt
+            nearestDistance = distance
+        end
+    end
+
+    -- Prompt bersihkan dirt rumah.
     for prompt in pairs(cleanPrompts) do
-        if prompt.Parent and prompt.Enabled and isCleanPrompt(prompt) then
-            local last = cleanRetry[prompt]
-            if not last or now - last >= 1 then
-                local position = getPosition(prompt)
-                if position then
-                    local distance = (root.Position - position).Magnitude
-                    if distance <= CLEAN_RANGE
-                        and (not nearestDistance or distance < nearestDistance) then
-                        nearest = prompt
-                        nearestDistance = distance
-                    end
-                end
+        consider(prompt, false)
+    end
+
+    -- Prompt ambil kotoran ternak dari kandang milik pemain saat ini.
+    local droppingFolder = getDroppingFolder()
+    if droppingFolder then
+        for _, object in ipairs(droppingFolder:GetDescendants()) do
+            if object:IsA("ProximityPrompt") then
+                consider(object, true)
             end
         end
     end
@@ -574,10 +599,34 @@ task.spawn(function()
             actionBusy = true
             cleanRetry[prompt] = os.clock()
 
-            setStatus("AUTO CLEAN: MEMBERSIHKAN")
-            activatePrompt(prompt)
+            local manurePrompt = isDroppingPrompt(prompt)
+            setStatus(manurePrompt and "AUTO CLEAN: MENGAMBIL KOTORAN TERNAK"
+                or "AUTO CLEAN: MEMBERSIHKAN DIRT RUMAH")
 
-            task.wait(0.15)
+            local activated = activatePrompt(prompt)
+            local started = os.clock()
+            local completed = false
+
+            if activated then
+                repeat
+                    task.wait(0.15)
+                    if not prompt.Parent or not prompt.Enabled then
+                        completed = true
+                        break
+                    end
+                until not alive() or not cleanEnabled or os.clock() - started >= 3
+            end
+
+            if completed then
+                cleanRetry[prompt] = nil
+                setStatus(manurePrompt and "AUTO CLEAN: KOTORAN TERAMBIL"
+                    or "AUTO CLEAN: DIRT BERSIH")
+            else
+                cleanRetry[prompt] = os.clock()
+                setStatus(manurePrompt and "AUTO CLEAN: KOTORAN BELUM TERAMBIL"
+                    or "AUTO CLEAN: PROMPT BELUM SELESAI")
+            end
+
             actionBusy = false
             cleanBusy = false
         end
