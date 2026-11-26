@@ -78,6 +78,9 @@ local lastConvertAttempt = 0
 local cleanBusy = false
 local farmBusy = false
 local actionBusy = false
+-- Target ini dikunci selama FARM melakukan pathfinding dan mengambil kotoran.
+-- AUTO CLEAN tidak boleh merebut prompt yang sedang dikejar FARM.
+local farmTargetPrompt = nil
 
 local cleanPrompts = setmetatable({}, {__mode = "k"})
 local cleanRetry = setmetatable({}, {__mode = "k"})
@@ -563,6 +566,7 @@ local function getNearbyCleanPrompts(root)
 
     local function consider(prompt, isManure)
         if not prompt or not prompt.Parent or not prompt.Enabled then return end
+        if isManure and prompt == farmTargetPrompt then return end
         if isManure then
             if not isDroppingPrompt(prompt) then return end
         elseif not isCleanPrompt(prompt) then
@@ -938,6 +942,8 @@ task.spawn(function()
             emptyScans = 0
             farmBusy = true
             actionBusy = true
+            farmTargetPrompt = prompt
+
             local reachedDropping = false
             if teleportNextDropping then
                 setStatus("FARM: TP PERTAMA SETELAH ISI PAKAN")
@@ -950,51 +956,50 @@ task.spawn(function()
                 reachedDropping = pathfindTo(position, prompt)
             end
 
-            -- Jika CLEAN sudah mengambil target saat FARM bergerak, jangan lanjut
-            -- mengejar posisi lama atau menunggu prompt yang sudah hilang.
-            if reachedDropping and (not prompt.Parent
-                or not prompt:IsDescendantOf(folder)
-                or not prompt.Enabled) then
-                droppingCooldown[prompt] = nil
-                setStatus("FARM: TARGET SUDAH DIAMBIL CLEAN")
-                reachedDropping = false
-            end
+            local collected = false
+            if reachedDropping and alive() and farmEnabled
+                and prompt.Parent and prompt:IsDescendantOf(folder)
+                and prompt.Enabled then
 
-            if reachedDropping and alive() and farmEnabled then
-                -- FARM hanya mendekati kotoran. CLEAN yang melakukan interaksi.
-                -- Lepaskan actionBusy agar loop AUTO CLEAN bisa mengambil prompt.
-                actionBusy = false
-                setStatus(cleanEnabled
-                    and "FARM: MENUNGGU AUTO CLEAN MENGAMBIL"
-                    or "FARM: MENUNGGU CLEAN DIAKTIFKAN")
-
-                local started = os.clock()
-                local collected = false
-                -- CLEAN dapat mengambil target kapan saja selama FARM berjalan.
-                -- Jika target hilang, hentikan penantian/path lama dan scan ulang.
-                while alive() and farmEnabled and os.clock() - started < 0.6 do
-                    task.wait(0.05)
-                    if not prompt.Parent
-                        or not prompt:IsDescendantOf(folder)
+                -- FARM sendiri mengaktifkan target yang sudah dikejar.
+                -- CLEAN tetap berjalan untuk prompt lain, tetapi target ini dikunci.
+                setStatus("FARM: MENGAMBIL KOTORAN TERDEKAT")
+                for attempt = 1, 3 do
+                    if not alive() or not farmEnabled then break end
+                    if not prompt.Parent or not prompt:IsDescendantOf(folder)
                         or not prompt.Enabled then
                         collected = true
                         break
                     end
-                end
 
-                if collected then
-                    droppingCooldown[prompt] = nil
-                    setStatus("FARM: KOTORAN TERAMBIL OLEH CLEAN")
-                else
-                    droppingCooldown[prompt] = os.clock()
-                    setStatus(cleanEnabled
-                        and "FARM: CLEAN BELUM MENGAMBIL KOTORAN"
-                        or "FARM: CLEAN OFF - KOTORAN MENUNGGU")
+                    activatePrompt(prompt)
+                    local started = os.clock()
+                    while alive() and farmEnabled and os.clock() - started < 0.65 do
+                        task.wait(0.05)
+                        if not prompt.Parent or not prompt:IsDescendantOf(folder)
+                            or not prompt.Enabled then
+                            collected = true
+                            break
+                        end
+                    end
+                    if collected then break end
                 end
-            else
-                droppingCooldown[prompt] = os.clock()
+            elseif not prompt.Parent or not prompt:IsDescendantOf(folder)
+                or not prompt.Enabled then
+                collected = true
             end
 
+            if collected then
+                droppingCooldown[prompt] = nil
+                setStatus("FARM: KOTORAN BERHASIL DIAMBIL")
+            else
+                droppingCooldown[prompt] = os.clock()
+                setStatus(reachedDropping
+                    and "FARM: INTERAKSI BELUM DIKONFIRMASI"
+                    or "FARM: GAGAL MENCAPAI TARGET")
+            end
+
+            farmTargetPrompt = nil
             actionBusy = false
             farmBusy = false
             continue
