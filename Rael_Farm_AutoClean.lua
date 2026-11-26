@@ -78,9 +78,6 @@ local lastConvertAttempt = 0
 local cleanBusy = false
 local farmBusy = false
 local actionBusy = false
--- Target ini dikunci selama FARM melakukan pathfinding dan mengambil kotoran.
--- AUTO CLEAN tidak boleh merebut prompt yang sedang dikejar FARM.
-local farmTargetPrompt = nil
 
 local cleanPrompts = setmetatable({}, {__mode = "k"})
 local cleanRetry = setmetatable({}, {__mode = "k"})
@@ -169,32 +166,24 @@ end
 
 local function getPosition(prompt)
     if not prompt or not prompt.Parent then return nil end
-
-    -- Ambil posisi dari attachment/part yang benar-benar menampung prompt.
-    -- Jangan memakai PrimaryPart model lebih dulu karena bisa jauh dari prompt
-    -- dan membuat urutan "terdekat" salah.
     local parent = prompt.Parent
+
     if parent:IsA("Attachment") then
         return parent.WorldPosition
     elseif parent:IsA("BasePart") then
         return parent.Position
     end
 
-    local attachment = parent:FindFirstChildWhichIsA("Attachment", true)
-    if attachment then return attachment.WorldPosition end
+    local model = parent:IsA("Model") and parent
+        or parent:FindFirstAncestorWhichIsA("Model")
+    if model then
+        local part = model.PrimaryPart
+            or model:FindFirstChildWhichIsA("BasePart", true)
+        if part then return part.Position end
+    end
 
     local part = parent:FindFirstChildWhichIsA("BasePart", true)
-    if part then return part.Position end
-
-    local ancestor = parent:FindFirstAncestorWhichIsA("Model")
-    if ancestor then
-        local ancestorAttachment = ancestor:FindFirstChildWhichIsA("Attachment", true)
-        if ancestorAttachment then return ancestorAttachment.WorldPosition end
-        local ancestorPart = ancestor.PrimaryPart
-            or ancestor:FindFirstChildWhichIsA("BasePart", true)
-        if ancestorPart then return ancestorPart.Position end
-    end
-    return nil
+    return part and part.Position
 end
 
 local function getObjectPosition(object)
@@ -247,11 +236,6 @@ local function pathfindTo(position, prompt)
 
     local activationDistance = prompt and prompt.MaxActivationDistance or 10
     local arrivalDistance = math.max(2.5, math.min(activationDistance - 1, 8))
-    local function targetAvailable()
-        return prompt and prompt.Parent ~= nil and prompt.Enabled
-            and isDroppingPrompt(prompt)
-            and prompt:IsDescendantOf(getDroppingFolder() or World)
-    end
     local offsets = {
         Vector3.new(0, 0, 0),
         Vector3.new(3, 0, 0),
@@ -266,9 +250,6 @@ local function pathfindTo(position, prompt)
 
     -- Maksimal 7 kali hitung ulang rute jika jalur terhalang atau karakter macet.
     for replan = 1, 7 do
-        if not targetAvailable() then
-            return false
-        end
         if not alive() or not farmEnabled then
             humanoid:MoveTo(root.Position)
             return false
@@ -319,10 +300,6 @@ local function pathfindTo(position, prompt)
             end)
 
             for index, waypoint in ipairs(waypoints) do
-                if not targetAvailable() then
-                    blockedConnection:Disconnect()
-                    return false
-                end
                 if not alive() or not farmEnabled then
                     blockedConnection:Disconnect()
                     humanoid:MoveTo(root.Position)
@@ -351,11 +328,7 @@ local function pathfindTo(position, prompt)
                     local reached = false
 
                     while alive() and farmEnabled and os.clock() - lastProgress < 3.5 do
-                        task.wait(0.1)
-                        if not targetAvailable() then
-                            reached = false
-                            break
-                        end
+                        task.wait(0.15)
                         root = getRoot()
                         if not root then break end
 
@@ -560,89 +533,53 @@ connect(World.DescendantAdded, function(object)
     if alive() then registerPrompt(object) end
 end)
 
-local function getNearbyCleanPrompts(root)
+local function getNearestClean(root)
+    local nearest, nearestDistance
     local now = os.clock()
-    local candidates = {}
 
-    local function consider(prompt, isManure)
-        if not prompt or not prompt.Parent or not prompt.Enabled then return end
-        if isManure and prompt == farmTargetPrompt then return end
-        if isManure then
-            if not isDroppingPrompt(prompt) then return end
-        elseif not isCleanPrompt(prompt) then
-            return
-        end
-
-        local last = cleanRetry[prompt]
-        if last and now - last < 0.35 then return end
-
-        local position = getPosition(prompt)
-        if not position then return end
-
-        local distance = (root.Position - position).Magnitude
-        local scanRange = isManure and 30 or CLEAN_RANGE
-        if distance <= scanRange then
-            table.insert(candidates, {
-                prompt = prompt,
-                distance = distance,
-                manure = isManure
-            })
-        end
-    end
-
-    -- Dirt rumah.
     for prompt in pairs(cleanPrompts) do
-        consider(prompt, false)
-    end
-
-    -- Semua kotoran di kandang aktif, bukan hanya satu target terdekat.
-    local droppingFolder = getDroppingFolder()
-    if droppingFolder then
-        for _, object in ipairs(droppingFolder:GetDescendants()) do
-            if object:IsA("ProximityPrompt") then
-                consider(object, true)
+        if prompt.Parent and prompt.Enabled and isCleanPrompt(prompt) then
+            local last = cleanRetry[prompt]
+            if not last or now - last >= 1 then
+                local position = getPosition(prompt)
+                if position then
+                    local distance = (root.Position - position).Magnitude
+                    if distance <= CLEAN_RANGE
+                        and (not nearestDistance or distance < nearestDistance) then
+                        nearest = prompt
+                        nearestDistance = distance
+                    end
+                end
             end
         end
     end
 
-    table.sort(candidates, function(a, b)
-        return a.distance < b.distance
-    end)
-    return candidates
+    return nearest
 end
 
 task.spawn(function()
     while alive() do
-        task.wait(0.05)
+        task.wait(SCAN_DELAY)
 
-        -- Thread ini tidak menunggu FARM mencapai target. Setiap scan menyapu
-        -- seluruh prompt yang sedang berada dalam radius, dari yang terdekat.
-        if not cleanEnabled or converting then
+        if not cleanEnabled or cleanBusy or actionBusy then
             continue
         end
 
         local root = getRoot()
         if not root then continue end
 
-        local candidates = getNearbyCleanPrompts(root)
-        for _, entry in ipairs(candidates) do
-            if not alive() or not cleanEnabled or converting then break end
-            local prompt = entry.prompt
-            if prompt and prompt.Parent and prompt.Enabled then
-                -- Tandai sebelum fire agar prompt yang sama tidak diproses
-                -- berulang pada scan yang sama.
-                cleanRetry[prompt] = os.clock()
-                setStatus(entry.manure
-                    and "AUTO CLEAN: SWEEP KOTORAN TERNAK"
-                    or "AUTO CLEAN: SWEEP DIRT RUMAH")
+        local prompt = getNearestClean(root)
+        if prompt and cleanEnabled and not actionBusy then
+            cleanBusy = true
+            actionBusy = true
+            cleanRetry[prompt] = os.clock()
 
-                activatePrompt(prompt)
-                task.wait(0.035)
+            setStatus("AUTO CLEAN: MEMBERSIHKAN")
+            activatePrompt(prompt)
 
-                if not prompt.Parent or not prompt.Enabled then
-                    cleanRetry[prompt] = nil
-                end
-            end
+            task.wait(0.15)
+            actionBusy = false
+            cleanBusy = false
         end
     end
 end)
@@ -674,9 +611,7 @@ local function findNextDropping()
             if position then
                 local distance = (root.Position - position).Magnitude
                 local last = droppingCooldown[object]
-                -- Prioritas selalu jarak aktual dari posisi karakter saat ini.
-                -- Cooldown hanya dipakai jika CLEAN mati dan FARM gagal sebelumnya.
-                local ready = cleanEnabled or not last or now - last >= DROPPING_RETRY
+                local ready = not last or now - last >= DROPPING_RETRY
                 if ready then
                     hasReady = true
                     if distance < nearestDistance then
@@ -942,8 +877,6 @@ task.spawn(function()
             emptyScans = 0
             farmBusy = true
             actionBusy = true
-            farmTargetPrompt = prompt
-
             local reachedDropping = false
             if teleportNextDropping then
                 setStatus("FARM: TP PERTAMA SETELAH ISI PAKAN")
@@ -952,54 +885,42 @@ task.spawn(function()
                     teleportNextDropping = false
                 end
             else
-                setStatus("FARM: PATHFINDING KE KOTORAN TERDEKAT")
+                setStatus("FARM: PATHFINDING KE KOTORAN")
                 reachedDropping = pathfindTo(position, prompt)
             end
 
-            local collected = false
-            if reachedDropping and alive() and farmEnabled
-                and prompt.Parent and prompt:IsDescendantOf(folder)
-                and prompt.Enabled then
-
-                -- FARM sendiri mengaktifkan target yang sudah dikejar.
-                -- CLEAN tetap berjalan untuk prompt lain, tetapi target ini dikunci.
-                setStatus("FARM: MENGAMBIL KOTORAN TERDEKAT")
-                for attempt = 1, 3 do
-                    if not alive() or not farmEnabled then break end
-                    if not prompt.Parent or not prompt:IsDescendantOf(folder)
-                        or not prompt.Enabled then
-                        collected = true
-                        break
-                    end
-
-                    activatePrompt(prompt)
+            if reachedDropping and alive() and farmEnabled then
+                local activated = activatePrompt(prompt)
+                if activated then
+                    setStatus("FARM: MENGAMBIL KOTORAN")
                     local started = os.clock()
-                    while alive() and farmEnabled and os.clock() - started < 0.65 do
-                        task.wait(0.05)
-                        if not prompt.Parent or not prompt:IsDescendantOf(folder)
+                    local collected = false
+
+                    while alive() and farmEnabled and os.clock() - started < 4 do
+                        task.wait(0.15)
+                        if not prompt.Parent
+                            or not prompt:IsDescendantOf(folder)
                             or not prompt.Enabled then
                             collected = true
                             break
                         end
                     end
-                    if collected then break end
-                end
-            elseif not prompt.Parent or not prompt:IsDescendantOf(folder)
-                or not prompt.Enabled then
-                collected = true
-            end
 
-            if collected then
-                droppingCooldown[prompt] = nil
-                setStatus("FARM: KOTORAN BERHASIL DIAMBIL")
+                    if collected then
+                        droppingCooldown[prompt] = nil
+                        setStatus("FARM: KOTORAN TERAMBIL")
+                    else
+                        droppingCooldown[prompt] = os.clock()
+                        setStatus("FARM: KOTORAN BELUM TERAMBIL")
+                    end
+                else
+                    droppingCooldown[prompt] = os.clock()
+                    setStatus("FARM: INTERAKSI KOTORAN GAGAL")
+                end
             else
                 droppingCooldown[prompt] = os.clock()
-                setStatus(reachedDropping
-                    and "FARM: INTERAKSI BELUM DIKONFIRMASI"
-                    or "FARM: GAGAL MENCAPAI TARGET")
             end
 
-            farmTargetPrompt = nil
             actionBusy = false
             farmBusy = false
             continue
