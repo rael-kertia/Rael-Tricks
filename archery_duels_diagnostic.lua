@@ -228,31 +228,215 @@ else
     add("Workspace.ArcheryTrajectory NOT FOUND")
 end
 
-local report = table.concat(out, "\n")
-local copied = false
-if typeof(setclipboard) == "function" then
-    copied = pcall(setclipboard, report)
+
+-- V4 INTERACTIVE AIM / TRAJECTORY COMPARISON
+-- Capture A while aim is still, move the aim, then capture B.
+local function getAimDot()
+    local gui = pg and pg:FindFirstChild("FireButtonGui")
+    local canvas = gui and gui:FindFirstChild("Canvas")
+    local bar = canvas and canvas:FindFirstChild("AimBar")
+    return bar and bar:FindFirstChild("AimDot", true)
 end
 
-if not copied then
-    local gui = Instance.new("ScreenGui")
-    gui.Name = "ArcheryDiag"
-    gui.ResetOnSpawn = false
-    local parent = (gethui and gethui()) or game:GetService("CoreGui")
-    gui.Parent = parent
-    local box = Instance.new("TextBox")
-    box.Size = UDim2.fromScale(0.9, 0.75)
-    box.Position = UDim2.fromScale(0.05, 0.12)
-    box.BackgroundColor3 = Color3.fromRGB(20,20,25)
-    box.TextColor3 = Color3.new(1,1,1)
-    box.TextSize = 12
-    box.TextXAlignment = Enum.TextXAlignment.Left
-    box.TextYAlignment = Enum.TextYAlignment.Top
-    box.TextWrapped = false
-    box.MultiLine = true
-    box.ClearTextOnFocus = false
-    box.Text = report
-    box.Parent = gui
+local function takeSnapshot()
+    local snap = {dots={}, lastDots={}}
+    local camera = Workspace.CurrentCamera
+    snap.cameraPos = camera and camera.CFrame.Position or Vector3.zero
+    snap.cameraLook = camera and camera.CFrame.LookVector or Vector3.zero
+    local r = LP.Character and LP.Character:FindFirstChild("HumanoidRootPart")
+    snap.playerPos = r and r.Position or Vector3.zero
+
+    local aim = getAimDot()
+    if aim and aim:IsA("GuiObject") then
+        snap.aim = {
+            path=full(aim),
+            pos=aim.AbsolutePosition,
+            size=aim.AbsoluteSize,
+            visible=aim.Visible
+        }
+    end
+
+    local folder = Workspace:FindFirstChild("ArcheryTrajectory")
+    if folder then
+        local trajectory, last = {}, {}
+        for _,obj in ipairs(folder:GetChildren()) do
+            if obj:IsA("BasePart") then
+                if obj.Name == "TrajectoryDot" then
+                    trajectory[#trajectory+1] = obj.Position
+                elseif obj.Name == "LastShotDot" then
+                    last[#last+1] = obj.Position
+                end
+            end
+        end
+        local function sample(source, dest, limit)
+            if #source == 0 then return end
+            local count = math.min(limit, #source)
+            for i=1,count do
+                local index = count == 1 and 1 or math.floor(1 + (i-1)*(#source-1)/(count-1))
+                dest[#dest+1] = source[index]
+            end
+        end
+        snap.trajectoryCount=#trajectory
+        snap.lastShotCount=#last
+        sample(trajectory,snap.dots,16)
+        sample(last,snap.lastDots,8)
+    end
+    return snap
 end
 
-warn("ARCHERY DIAGNOSTIC COMPLETE | clipboard="..tostring(copied).." | chars="..#report)
+local function vec(v)
+    return string.format("%.2f, %.2f, %.2f",v.X,v.Y,v.Z)
+end
+
+local function buildComparison(a,b)
+    local lines={
+        "ARCHERY DUELS AIM / TRAJECTORY COMPARISON - V4",
+        "BUILD: 2026-11-27-V4-AIM-COMPARE",
+        "PlaceId: "..game.PlaceId.." | Player: "..LP.Name,
+        "",
+        "[CAPTURE A - BEFORE AIM MOVEMENT]",
+        "Player="..vec(a.playerPos),
+        "CameraPosition="..vec(a.cameraPos),
+        "CameraLook="..vec(a.cameraLook),
+        "TrajectoryDotCount="..tostring(a.trajectoryCount or 0),
+        "LastShotDotCount="..tostring(a.lastShotCount or 0)
+    }
+    if a.aim then
+        lines[#lines+1]="AimDot="..a.aim.path
+        lines[#lines+1]="AimDotAbsolutePosition="..vec(Vector3.new(a.aim.pos.X,a.aim.pos.Y,0))
+        lines[#lines+1]="AimDotVisible="..tostring(a.aim.visible)
+    else
+        lines[#lines+1]="AimDot=NOT FOUND"
+    end
+    for i,p in ipairs(a.dots) do lines[#lines+1]="Trajectory A["..i.."]="..vec(p) end
+    for i,p in ipairs(a.lastDots) do lines[#lines+1]="LastShot A["..i.."]="..vec(p) end
+
+    lines[#lines+1]=""
+    lines[#lines+1]="[CAPTURE B - AFTER AIM MOVEMENT]"
+    lines[#lines+1]="Player="..vec(b.playerPos)
+    lines[#lines+1]="CameraPosition="..vec(b.cameraPos)
+    lines[#lines+1]="CameraLook="..vec(b.cameraLook)
+    lines[#lines+1]="TrajectoryDotCount="..tostring(b.trajectoryCount or 0)
+    lines[#lines+1]="LastShotDotCount="..tostring(b.lastShotCount or 0)
+    if b.aim then
+        lines[#lines+1]="AimDot="..b.aim.path
+        lines[#lines+1]="AimDotAbsolutePosition="..vec(Vector3.new(b.aim.pos.X,b.aim.pos.Y,0))
+        lines[#lines+1]="AimDotVisible="..tostring(b.aim.visible)
+    else
+        lines[#lines+1]="AimDot=NOT FOUND"
+    end
+    for i,p in ipairs(b.dots) do lines[#lines+1]="Trajectory B["..i.."]="..vec(p) end
+    for i,p in ipairs(b.lastDots) do lines[#lines+1]="LastShot B["..i.."]="..vec(p) end
+
+    lines[#lines+1]=""
+    lines[#lines+1]="[DELTA A TO B]"
+    lines[#lines+1]="CameraLookDelta="..vec(b.cameraLook-a.cameraLook)
+    lines[#lines+1]="PlayerPositionDelta="..vec(b.playerPos-a.playerPos)
+    if a.aim and b.aim then
+        lines[#lines+1]=string.format("AimDotPixelDelta=%.1f, %.1f",b.aim.pos.X-a.aim.pos.X,b.aim.pos.Y-a.aim.pos.Y)
+    end
+    lines[#lines+1]="TrajectorySampleCount A/B="..#a.dots.."/"..#b.dots
+    for i=1,math.min(#a.dots,#b.dots) do
+        lines[#lines+1]="TrajectoryDelta["..i.."]="..vec(b.dots[i]-a.dots[i])
+    end
+    lines[#lines+1]="Note: read-only snapshots; no remotes fired and no gameplay values changed."
+    return table.concat(lines,"\n")
+end
+
+local existing = (gethui and gethui()) or game:GetService("CoreGui")
+local oldGui = existing:FindFirstChild("ArcheryDiagV4")
+if oldGui then oldGui:Destroy() end
+local gui = Instance.new("ScreenGui")
+gui.Name="ArcheryDiagV4"
+gui.ResetOnSpawn=false
+gui.Parent=existing
+
+local frame=Instance.new("Frame")
+frame.Size=UDim2.fromOffset(280,154)
+frame.Position=UDim2.new(0.5,-140,0.18,0)
+frame.BackgroundColor3=Color3.fromRGB(22,24,30)
+frame.BorderSizePixel=0
+frame.Parent=gui
+local corner=Instance.new("UICorner"); corner.CornerRadius=UDim.new(0,10); corner.Parent=frame
+
+local title=Instance.new("TextLabel")
+title.Size=UDim2.new(1,-16,0,28)
+title.Position=UDim2.fromOffset(8,4)
+title.BackgroundTransparency=1
+title.Text="ARCHERY DIAG V4"
+title.TextColor3=Color3.new(1,1,1)
+title.Font=Enum.Font.GothamBold
+title.TextSize=14
+title.Parent=frame
+
+local status=Instance.new("TextLabel")
+status.Size=UDim2.new(1,-16,0,34)
+status.Position=UDim2.fromOffset(8,32)
+status.BackgroundTransparency=1
+status.Text="Tekan A, gerakkan bidikan, lalu tekan B."
+status.TextWrapped=true
+status.TextColor3=Color3.fromRGB(210,215,225)
+status.Font=Enum.Font.Gotham
+status.TextSize=11
+status.Parent=frame
+
+local function makeButton(textValue,y)
+    local button=Instance.new("TextButton")
+    button.Size=UDim2.new(0.44,0,0,30)
+    button.Position=UDim2.new(y and 0.04 or 0.52,0,0,76)
+    button.BackgroundColor3=Color3.fromRGB(55,65,85)
+    button.TextColor3=Color3.new(1,1,1)
+    button.Font=Enum.Font.GothamBold
+    button.TextSize=12
+    button.Text=textValue
+    button.Parent=frame
+    local c=Instance.new("UICorner"); c.CornerRadius=UDim.new(0,7); c.Parent=button
+    return button
+end
+local btnA=makeButton("CAPTURE A",true)
+local btnB=makeButton("CAPTURE B",false)
+local btnClose=Instance.new("TextButton")
+btnClose.Size=UDim2.new(1,-16,0,24)
+btnClose.Position=UDim2.fromOffset(8,118)
+btnClose.BackgroundTransparency=1
+btnClose.Text="TUTUP"
+btnClose.TextColor3=Color3.fromRGB(180,190,205)
+btnClose.Font=Enum.Font.Gotham
+btnClose.TextSize=11
+btnClose.Parent=frame
+
+local captureA
+btnA.MouseButton1Click:Connect(function()
+    captureA=takeSnapshot()
+    status.Text="Capture A tersimpan. Sekarang gerakkan bidikan, lalu tekan B."
+end)
+btnB.MouseButton1Click:Connect(function()
+    if not captureA then
+        status.Text="Ambil Capture A terlebih dahulu."
+        return
+    end
+    local captureB=takeSnapshot()
+    local result=buildComparison(captureA,captureB)
+    local copied=false
+    if typeof(setclipboard)=="function" then copied=pcall(setclipboard,result) end
+    if not copied then
+        local output=Instance.new("TextBox")
+        output.Size=UDim2.new(1,0,1,0)
+        output.BackgroundColor3=Color3.fromRGB(12,14,18)
+        output.TextColor3=Color3.new(1,1,1)
+        output.TextSize=12
+        output.TextXAlignment=Enum.TextXAlignment.Left
+        output.TextYAlignment=Enum.TextYAlignment.Top
+        output.TextWrapped=false
+        output.MultiLine=true
+        output.ClearTextOnFocus=false
+        output.Text=result
+        output.Parent=frame
+        status.Text="Perbandingan tampil di kotak teks. Select all lalu copy."
+    else
+        status.Text="V4 selesai. Hasil perbandingan sudah disalin."
+    end
+end)
+btnClose.MouseButton1Click:Connect(function() gui:Destroy() end)
+
+warn("ARCHERY DIAGNOSTIC V4 READY | Capture A, move aim, Capture B.")
