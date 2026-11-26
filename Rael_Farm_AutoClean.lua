@@ -224,7 +224,7 @@ local function teleportNear(position, distance)
     return alive()
 end
 
--- FARM berjalan menggunakan pathfinding, bukan teleport.
+-- FARM menggunakan pathfinding adaptif: deteksi macet, lalu hitung ulang rute.
 local function pathfindTo(position, prompt)
     if not alive() or not farmEnabled or not position then return false end
 
@@ -235,74 +235,154 @@ local function pathfindTo(position, prompt)
 
     local activationDistance = prompt and prompt.MaxActivationDistance or 10
     local arrivalDistance = math.max(2.5, math.min(activationDistance - 1, 8))
+    local offsets = {
+        Vector3.new(0, 0, 0),
+        Vector3.new(3, 0, 0),
+        Vector3.new(-3, 0, 0),
+        Vector3.new(0, 0, 3),
+        Vector3.new(0, 0, -3),
+        Vector3.new(2.5, 0, 2.5),
+        Vector3.new(-2.5, 0, 2.5),
+        Vector3.new(2.5, 0, -2.5),
+        Vector3.new(-2.5, 0, -2.5)
+    }
 
-    for attempt = 1, 2 do
-        if not alive() or not farmEnabled then return false end
+    -- Maksimal 7 kali hitung ulang rute jika jalur terhalang atau karakter macet.
+    for replan = 1, 7 do
+        if not alive() or not farmEnabled then
+            humanoid:MoveTo(root.Position)
+            return false
+        end
+
         root = getRoot()
         if not root then return false end
         if (root.Position - position).Magnitude <= arrivalDistance then
             return true
         end
 
-        local path = PathfindingService:CreatePath({
-            AgentRadius = 2,
-            AgentHeight = 5,
-            AgentCanJump = true,
-            AgentCanClimb = true,
-            WaypointSpacing = 4
-        })
+        -- Cari titik pendekatan yang bisa dijangkau, bukan selalu titik prompt persis.
+        local bestPath, bestDistance
+        for _, offset in ipairs(offsets) do
+            local goal = position + offset
+            local candidate = PathfindingService:CreatePath({
+                AgentRadius = 2,
+                AgentHeight = 5,
+                AgentCanJump = true,
+                AgentCanClimb = true,
+                WaypointSpacing = 3
+            })
 
-        local computed = pcall(function()
-            path:ComputeAsync(root.Position, position)
-        end)
+            local ok = pcall(function()
+                candidate:ComputeAsync(root.Position, goal)
+            end)
 
-        if computed and path.Status == Enum.PathStatus.Success then
-            local waypoints = path:GetWaypoints()
-            local pathFailed = false
+            if ok and candidate.Status == Enum.PathStatus.Success then
+                local waypoints = candidate:GetWaypoints()
+                local distance = 0
+                for i = 2, #waypoints do
+                    distance = distance + (waypoints[i].Position - waypoints[i - 1].Position).Magnitude
+                end
+                if not bestDistance or distance < bestDistance then
+                    bestPath = candidate
+                    bestDistance = distance
+                end
+            end
+        end
 
-            for _, waypoint in ipairs(waypoints) do
+        if not bestPath then
+            task.wait(0.2)
+        else
+            local waypoints = bestPath:GetWaypoints()
+            local blocked = false
+            local blockedConnection = bestPath.Blocked:Connect(function(blockedIndex)
+                if blockedIndex >= 1 then blocked = true end
+            end)
+
+            for index, waypoint in ipairs(waypoints) do
                 if not alive() or not farmEnabled then
+                    blockedConnection:Disconnect()
                     humanoid:MoveTo(root.Position)
                     return false
                 end
 
                 root = getRoot()
-                if not root then return false end
+                if not root then
+                    blockedConnection:Disconnect()
+                    return false
+                end
                 if (root.Position - position).Magnitude <= arrivalDistance then
+                    blockedConnection:Disconnect()
                     return true
                 end
 
-                if waypoint.Action == Enum.PathWaypointAction.Jump then
-                    humanoid.Jump = true
-                end
+                -- Lewati waypoint yang sudah terlewati agar tidak berputar di tempat.
+                if (root.Position - waypoint.Position).Magnitude > 3 then
+                    if waypoint.Action == Enum.PathWaypointAction.Jump then
+                        humanoid.Jump = true
+                    end
 
-                humanoid:MoveTo(waypoint.Position)
-                local started = os.clock()
-                while alive() and farmEnabled and os.clock() - started < 8 do
-                    task.wait(0.1)
+                    humanoid:MoveTo(waypoint.Position)
+                    local lastPosition = root.Position
+                    local lastProgress = os.clock()
+                    local reached = false
+
+                    while alive() and farmEnabled and os.clock() - lastProgress < 3.5 do
+                        task.wait(0.15)
+                        root = getRoot()
+                        if not root then break end
+
+                        if (root.Position - position).Magnitude <= arrivalDistance then
+                            reached = true
+                            break
+                        end
+                        if (root.Position - waypoint.Position).Magnitude <= 2.5 then
+                            reached = true
+                            break
+                        end
+
+                        -- Jika bergerak kurang dari 0.7 stud selama 1.1 detik, anggap tersangkut.
+                        if (root.Position - lastPosition).Magnitude >= 0.7 then
+                            lastPosition = root.Position
+                            lastProgress = os.clock()
+                        elseif os.clock() - lastProgress >= 1.1 then
+                            break
+                        end
+
+                        if blocked then break end
+                    end
+
+                    if not alive() or not farmEnabled then
+                        blockedConnection:Disconnect()
+                        return false
+                    end
+
                     root = getRoot()
-                    if not root then return false end
-                    if (root.Position - waypoint.Position).Magnitude <= 3 then
+                    if not root then
+                        blockedConnection:Disconnect()
+                        return false
+                    end
+
+                    if (root.Position - position).Magnitude <= arrivalDistance then
+                        blockedConnection:Disconnect()
+                        return true
+                    end
+
+                    if not reached and (root.Position - waypoint.Position).Magnitude > 3 then
+                        blocked = true
                         break
                     end
                 end
-
-                root = getRoot()
-                if not root or (root.Position - waypoint.Position).Magnitude > 4 then
-                    pathFailed = true
-                    break
-                end
             end
 
-            if not pathFailed then
-                root = getRoot()
-                if root and (root.Position - position).Magnitude <= activationDistance then
-                    return true
-                end
+            blockedConnection:Disconnect()
+            root = getRoot()
+            if root and (root.Position - position).Magnitude <= activationDistance then
+                return true
             end
         end
 
-        task.wait(0.25)
+        -- Beri jeda singkat lalu hitung ulang dari posisi karakter saat ini.
+        task.wait(0.15)
     end
 
     return false
