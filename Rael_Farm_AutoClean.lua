@@ -166,24 +166,32 @@ end
 
 local function getPosition(prompt)
     if not prompt or not prompt.Parent then return nil end
-    local parent = prompt.Parent
 
+    -- Ambil posisi dari attachment/part yang benar-benar menampung prompt.
+    -- Jangan memakai PrimaryPart model lebih dulu karena bisa jauh dari prompt
+    -- dan membuat urutan "terdekat" salah.
+    local parent = prompt.Parent
     if parent:IsA("Attachment") then
         return parent.WorldPosition
     elseif parent:IsA("BasePart") then
         return parent.Position
     end
 
-    local model = parent:IsA("Model") and parent
-        or parent:FindFirstAncestorWhichIsA("Model")
-    if model then
-        local part = model.PrimaryPart
-            or model:FindFirstChildWhichIsA("BasePart", true)
-        if part then return part.Position end
-    end
+    local attachment = parent:FindFirstChildWhichIsA("Attachment", true)
+    if attachment then return attachment.WorldPosition end
 
     local part = parent:FindFirstChildWhichIsA("BasePart", true)
-    return part and part.Position
+    if part then return part.Position end
+
+    local ancestor = parent:FindFirstAncestorWhichIsA("Model")
+    if ancestor then
+        local ancestorAttachment = ancestor:FindFirstChildWhichIsA("Attachment", true)
+        if ancestorAttachment then return ancestorAttachment.WorldPosition end
+        local ancestorPart = ancestor.PrimaryPart
+            or ancestor:FindFirstChildWhichIsA("BasePart", true)
+        if ancestorPart then return ancestorPart.Position end
+    end
+    return nil
 end
 
 local function getObjectPosition(object)
@@ -533,10 +541,9 @@ connect(World.DescendantAdded, function(object)
     if alive() then registerPrompt(object) end
 end)
 
-local function getNearestClean(root)
-    local nearest, nearestDistance
+local function getNearbyCleanPrompts(root)
     local now = os.clock()
-    local CLEAN_RETRY = 0.5
+    local candidates = {}
 
     local function consider(prompt, isManure)
         if not prompt or not prompt.Parent or not prompt.Enabled then return end
@@ -547,30 +554,28 @@ local function getNearestClean(root)
         end
 
         local last = cleanRetry[prompt]
-        if last and now - last < CLEAN_RETRY then
-            return
-        end
+        if last and now - last < 0.35 then return end
 
         local position = getPosition(prompt)
         if not position then return end
 
         local distance = (root.Position - position).Magnitude
-        -- Dirt rumah dipindai dalam CLEAN_RANGE. Kotoran ternak memakai
-        -- radius 30 stud seperti scanner Auto Clean Homework.
         local scanRange = isManure and 30 or CLEAN_RANGE
-        if distance <= scanRange
-            and (not nearestDistance or distance < nearestDistance) then
-            nearest = prompt
-            nearestDistance = distance
+        if distance <= scanRange then
+            table.insert(candidates, {
+                prompt = prompt,
+                distance = distance,
+                manure = isManure
+            })
         end
     end
 
-    -- Prompt bersihkan dirt rumah.
+    -- Dirt rumah.
     for prompt in pairs(cleanPrompts) do
         consider(prompt, false)
     end
 
-    -- Prompt ambil kotoran ternak dari kandang milik pemain saat ini.
+    -- Semua kotoran di kandang aktif, bukan hanya satu target terdekat.
     local droppingFolder = getDroppingFolder()
     if droppingFolder then
         for _, object in ipairs(droppingFolder:GetDescendants()) do
@@ -580,49 +585,44 @@ local function getNearestClean(root)
         end
     end
 
-    return nearest
+    table.sort(candidates, function(a, b)
+        return a.distance < b.distance
+    end)
+    return candidates
 end
 
 task.spawn(function()
     while alive() do
-        task.wait(SCAN_DELAY)
+        task.wait(0.05)
 
-        -- CLEAN berdiri sendiri dan tetap berjalan saat FARM bergerak.
-        -- Hanya berhenti ketika convert sedang memakai interaksi.
-        if not cleanEnabled or cleanBusy or converting then
+        -- Thread ini tidak menunggu FARM mencapai target. Setiap scan menyapu
+        -- seluruh prompt yang sedang berada dalam radius, dari yang terdekat.
+        if not cleanEnabled or converting then
             continue
         end
 
         local root = getRoot()
         if not root then continue end
 
-        local prompt = getNearestClean(root)
-        if prompt and cleanEnabled then
-            cleanBusy = true
-            cleanRetry[prompt] = os.clock()
-
-            local manurePrompt = isDroppingPrompt(prompt)
-            setStatus(manurePrompt and "AUTO CLEAN: MENGAMBIL KOTORAN TERNAK"
-                or "AUTO CLEAN: MEMBERSIHKAN DIRT RUMAH")
-
-            -- Pola Homework: aktifkan satu prompt, jeda singkat, lalu langsung
-            -- scan target terdekat berikutnya. Jangan menunggu prompt hilang 1.25 detik.
-            local activated = activatePrompt(prompt)
-            task.wait(0.1)
-
-            if not prompt.Parent or not prompt.Enabled then
-                cleanRetry[prompt] = nil
-                setStatus(manurePrompt and "AUTO CLEAN: KOTORAN TERAMBIL"
-                    or "AUTO CLEAN: DIRT BERSIH")
-            elseif activated then
-                -- Hindari spam prompt yang belum diproses server; prompt lain
-                -- tetap bisa dipilih pada scan berikutnya.
+        local candidates = getNearbyCleanPrompts(root)
+        for _, entry in ipairs(candidates) do
+            if not alive() or not cleanEnabled or converting then break end
+            local prompt = entry.prompt
+            if prompt and prompt.Parent and prompt.Enabled then
+                -- Tandai sebelum fire agar prompt yang sama tidak diproses
+                -- berulang pada scan yang sama.
                 cleanRetry[prompt] = os.clock()
-            else
-                cleanRetry[prompt] = os.clock()
+                setStatus(entry.manure
+                    and "AUTO CLEAN: SWEEP KOTORAN TERNAK"
+                    or "AUTO CLEAN: SWEEP DIRT RUMAH")
+
+                activatePrompt(prompt)
+                task.wait(0.035)
+
+                if not prompt.Parent or not prompt.Enabled then
+                    cleanRetry[prompt] = nil
+                end
             end
-
-            cleanBusy = false
         end
     end
 end)
@@ -654,9 +654,8 @@ local function findNextDropping()
             if position then
                 local distance = (root.Position - position).Magnitude
                 local last = droppingCooldown[object]
-                -- Saat CLEAN ON, jangan lewati prompt terdekat hanya karena
-                -- cooldown FARM; CLEAN yang akan mengambilnya saat sudah dekat.
-                -- Saat CLEAN OFF, cooldown mencegah FARM mengejar target gagal berulang.
+                -- Prioritas selalu jarak aktual dari posisi karakter saat ini.
+                -- Cooldown hanya dipakai jika CLEAN mati dan FARM gagal sebelumnya.
                 local ready = cleanEnabled or not last or now - last >= DROPPING_RETRY
                 if ready then
                     hasReady = true
@@ -955,10 +954,10 @@ task.spawn(function()
 
                 local started = os.clock()
                 local collected = false
-                -- Beri CLEAN kesempatan singkat. Jangan tahan FARM 8 detik
-                -- pada satu titik; setelah itu FARM scan ulang dari posisi terbaru.
-                while alive() and farmEnabled and os.clock() - started < 1.2 do
-                    task.wait(0.1)
+                -- CLEAN dapat mengambil target kapan saja selama FARM berjalan.
+                -- Jika target hilang, hentikan penantian/path lama dan scan ulang.
+                while alive() and farmEnabled and os.clock() - started < 0.6 do
+                    task.wait(0.05)
                     if not prompt.Parent
                         or not prompt:IsDescendantOf(folder)
                         or not prompt.Enabled then
