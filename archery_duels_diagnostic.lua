@@ -9,7 +9,7 @@ local LP = Players.LocalPlayer
 local keys = {"aim","arrow","archer","archery","bow","shoot","fire","projectile","trajectory","power","angle","target","damage","attack","accuracy","duel","hit","velocity","charge"}
 local out, seen = {}, 0
 local function add(s)
-    if seen >= 220 then return end
+    if seen >= 380 then return end
     seen += 1
     out[#out+1] = tostring(s)
 end
@@ -117,6 +117,86 @@ for _, p in ipairs(Players:GetPlayers()) do
         add(p.Name.." | pos="..(r and val(r.Position) or "N/A").." | hp="..(h and (h.Health.."/"..h.MaxHealth) or "N/A"))
     end
 end
+
+
+-- FOCUSED V2 SECTION: AIM UI + BOW STRUCTURE
+add("")
+add("[V2: AIM UI DETAILS]")
+local function detail(o)
+    add(full(o).." ["..o.ClassName.."]")
+    if o:IsA("GuiObject") then
+        add("  Visible="..tostring(o.Visible).." Active="..tostring(o.Active))
+        add("  Position="..tostring(o.Position).." Size="..tostring(o.Size))
+        add("  AbsolutePosition="..tostring(o.AbsolutePosition).." AbsoluteSize="..tostring(o.AbsoluteSize))
+        add("  AnchorPoint="..tostring(o.AnchorPoint).." ZIndex="..o.ZIndex)
+        if o:IsA("ImageLabel") or o:IsA("ImageButton") then
+            add("  Image="..tostring(o.Image))
+        end
+    elseif o:IsA("ValueBase") then
+        add("  Value="..val(o.Value))
+    elseif o:IsA("BasePart") then
+        add("  Position="..val(o.Position).." Size="..val(o.Size))
+    end
+    for k,v in pairs(o:GetAttributes()) do
+        add("  Attribute "..k.."="..val(v))
+    end
+end
+
+local fireGui = pg and pg:FindFirstChild("FireButtonGui")
+if fireGui then
+    local canvas = fireGui:FindFirstChild("Canvas")
+    if canvas then
+        for _,name in ipairs({"AimBar","FireButton","EasyAimHost"}) do
+            local obj = canvas:FindFirstChild(name)
+            if obj then
+                detail(obj)
+                for _,d in ipairs(obj:GetDescendants()) do
+                    if d:IsA("GuiObject") or d:IsA("ValueBase") then detail(d) end
+                end
+            end
+        end
+    else
+        add("FireButtonGui.Canvas NOT FOUND")
+    end
+else
+    add("FireButtonGui NOT FOUND")
+end
+
+add("")
+add("[V2: EQUIPPED BOW DETAILS]")
+local equipped
+if char then
+    for _,obj in ipairs(char:GetChildren()) do
+        if obj:IsA("Tool") then equipped=obj break end
+    end
+end
+if equipped then
+    add("Tool="..full(equipped).." Enabled="..tostring(equipped.Enabled).." RequiresHandle="..tostring(equipped.RequiresHandle))
+    for _,d in ipairs(equipped:GetDescendants()) do
+        if d:IsA("BasePart") or d:IsA("Attachment") or d:IsA("ValueBase")
+        or d:IsA("Motor6D") or d:IsA("Weld") or d:IsA("Constraint")
+        or d:IsA("Animation") then
+            detail(d)
+        end
+    end
+else
+    add("No equipped Tool found")
+end
+
+add("")
+add("[V2: AIM/FIRE LOCAL SCRIPT NAMES]")
+local scriptN=0
+if pg then
+    for _,d in ipairs(pg:GetDescendants()) do
+        local n=d:GetFullName():lower()
+        if (d:IsA("LocalScript") or d:IsA("ModuleScript"))
+        and (n:find("aim",1,true) or n:find("fire",1,true) or n:find("reactarenahud",1,true)) then
+            scriptN=scriptN+1
+            add(d.ClassName.." "..full(d))
+        end
+    end
+end
+add("Script matches="..scriptN)
 
 local report = table.concat(out, "\n")
 local copied = false
