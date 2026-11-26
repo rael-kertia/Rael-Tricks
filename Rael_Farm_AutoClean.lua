@@ -939,32 +939,33 @@ task.spawn(function()
             end
 
             if reachedDropping and alive() and farmEnabled then
-                local activated = activatePrompt(prompt)
-                if activated then
-                    setStatus("FARM: MENGAMBIL KOTORAN")
-                    local started = os.clock()
-                    local collected = false
+                -- FARM hanya mendekati kotoran. CLEAN yang melakukan interaksi.
+                -- Lepaskan actionBusy agar loop AUTO CLEAN bisa mengambil prompt.
+                actionBusy = false
+                setStatus(cleanEnabled
+                    and "FARM: MENUNGGU AUTO CLEAN MENGAMBIL"
+                    or "FARM: MENUNGGU CLEAN DIAKTIFKAN")
 
-                    while alive() and farmEnabled and os.clock() - started < 4 do
-                        task.wait(0.15)
-                        if not prompt.Parent
-                            or not prompt:IsDescendantOf(folder)
-                            or not prompt.Enabled then
-                            collected = true
-                            break
-                        end
+                local started = os.clock()
+                local collected = false
+                while alive() and farmEnabled and os.clock() - started < 8 do
+                    task.wait(0.15)
+                    if not prompt.Parent
+                        or not prompt:IsDescendantOf(folder)
+                        or not prompt.Enabled then
+                        collected = true
+                        break
                     end
+                end
 
-                    if collected then
-                        droppingCooldown[prompt] = nil
-                        setStatus("FARM: KOTORAN TERAMBIL")
-                    else
-                        droppingCooldown[prompt] = os.clock()
-                        setStatus("FARM: KOTORAN BELUM TERAMBIL")
-                    end
+                if collected then
+                    droppingCooldown[prompt] = nil
+                    setStatus("FARM: KOTORAN TERAMBIL OLEH CLEAN")
                 else
                     droppingCooldown[prompt] = os.clock()
-                    setStatus("FARM: INTERAKSI KOTORAN GAGAL")
+                    setStatus(cleanEnabled
+                        and "FARM: CLEAN BELUM MENGAMBIL KOTORAN"
+                        or "FARM: CLEAN OFF - KOTORAN MENUNGGU")
                 end
             else
                 droppingCooldown[prompt] = os.clock()
