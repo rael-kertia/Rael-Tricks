@@ -9,7 +9,7 @@ local LP = Players.LocalPlayer
 local keys = {"aim","arrow","archer","archery","bow","shoot","fire","projectile","trajectory","power","angle","target","damage","attack","accuracy","duel","hit","velocity","charge"}
 local out, seen = {}, 0
 local function add(s)
-    if seen >= 380 then return end
+    if seen >= 900 then return end
     seen += 1
     out[#out+1] = tostring(s)
 end
@@ -31,7 +31,8 @@ local function val(v)
     return tostring(v)
 end
 
-add("ARCHERY DUELS DIAGNOSTIC")
+add("ARCHERY DUELS DIAGNOSTIC - V2")
+add("BUILD: 2026-11-27-V2-FIXED")
 add("PlaceId: "..game.PlaceId)
 add("Player: "..LP.Name.." ("..LP.UserId..")")
 
