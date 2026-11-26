@@ -83,6 +83,7 @@ local cleanPrompts = setmetatable({}, {__mode = "k"})
 local cleanRetry = setmetatable({}, {__mode = "k"})
 local droppingCooldown = setmetatable({}, {__mode = "k"})
 local feedCooldown = {}
+local teleportNextDropping = false
 local statusLabel
 
 local function setStatus(message)
@@ -802,6 +803,7 @@ local function feedOne()
 
                 if newStock ~= nil and newStock > 0 then
                     feedCooldown[entry.name] = nil
+                    teleportNextDropping = true
                     setStatus(entry.name .. ": PAKAN " .. newStock .. "/100")
                 else
                     feedCooldown[entry.name] = os.clock()
@@ -875,9 +877,19 @@ task.spawn(function()
             emptyScans = 0
             farmBusy = true
             actionBusy = true
-            setStatus("FARM: MENUJU KOTORAN TERNAK")
+            local reachedDropping = false
+            if teleportNextDropping then
+                setStatus("FARM: TP PERTAMA SETELAH ISI PAKAN")
+                reachedDropping = teleportNear(position, 2)
+                if reachedDropping then
+                    teleportNextDropping = false
+                end
+            else
+                setStatus("FARM: PATHFINDING KE KOTORAN")
+                reachedDropping = pathfindTo(position, prompt)
+            end
 
-            if pathfindTo(position, prompt) and alive() and farmEnabled then
+            if reachedDropping and alive() and farmEnabled then
                 local activated = activatePrompt(prompt)
                 if activated then
                     setStatus("FARM: MENGAMBIL KOTORAN")
