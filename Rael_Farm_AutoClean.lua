@@ -555,10 +555,10 @@ local function getNearestClean(root)
         if not position then return end
 
         local distance = (root.Position - position).Magnitude
-        local activationDistance = prompt.MaxActivationDistance or 10
-        -- Sama seperti dirt rumah: prompt hanya diaktifkan ketika karakter
-        -- sudah berada dalam jarak interaksi, bukan sekadar radius scan.
-        if distance <= math.min(CLEAN_RANGE, activationDistance)
+        -- Dirt rumah dipindai dalam CLEAN_RANGE. Kotoran ternak memakai
+        -- radius 30 stud seperti scanner Auto Clean Homework.
+        local scanRange = isManure and 30 or CLEAN_RANGE
+        if distance <= scanRange
             and (not nearestDistance or distance < nearestDistance) then
             nearest = prompt
             nearestDistance = distance
@@ -587,9 +587,9 @@ task.spawn(function()
     while alive() do
         task.wait(SCAN_DELAY)
 
-        -- CLEAN boleh berjalan ketika FARM sedang pathfinding.
-        -- Tetapi tetap menghindari proses convert/aksi non-farm yang memakai actionBusy.
-        if not cleanEnabled or cleanBusy or (actionBusy and not farmBusy) or converting then
+        -- CLEAN berdiri sendiri dan tetap berjalan saat FARM bergerak.
+        -- Hanya berhenti ketika convert sedang memakai interaksi.
+        if not cleanEnabled or cleanBusy or converting then
             continue
         end
 
@@ -605,29 +605,21 @@ task.spawn(function()
             setStatus(manurePrompt and "AUTO CLEAN: MENGAMBIL KOTORAN TERNAK"
                 or "AUTO CLEAN: MEMBERSIHKAN DIRT RUMAH")
 
+            -- Pola Homework: aktifkan satu prompt, jeda singkat, lalu langsung
+            -- scan target terdekat berikutnya. Jangan menunggu prompt hilang 1.25 detik.
             local activated = activatePrompt(prompt)
-            local started = os.clock()
-            local completed = false
+            task.wait(0.1)
 
-            if activated then
-                repeat
-                    task.wait(0.05)
-                    if not prompt.Parent or not prompt.Enabled then
-                        completed = true
-                        break
-                    end
-                until not alive() or not cleanEnabled or os.clock() - started >= 1.25
-            end
-
-            if completed then
+            if not prompt.Parent or not prompt.Enabled then
                 cleanRetry[prompt] = nil
                 setStatus(manurePrompt and "AUTO CLEAN: KOTORAN TERAMBIL"
                     or "AUTO CLEAN: DIRT BERSIH")
-            else
-                -- Retry cepat bila prompt masih ada, agar CLEAN tidak tertahan lama.
+            elseif activated then
+                -- Hindari spam prompt yang belum diproses server; prompt lain
+                -- tetap bisa dipilih pada scan berikutnya.
                 cleanRetry[prompt] = os.clock()
-                setStatus(manurePrompt and "AUTO CLEAN: KOTORAN BELUM TERAMBIL"
-                    or "AUTO CLEAN: PROMPT BELUM SELESAI")
+            else
+                cleanRetry[prompt] = os.clock()
             end
 
             cleanBusy = false
@@ -662,7 +654,10 @@ local function findNextDropping()
             if position then
                 local distance = (root.Position - position).Magnitude
                 local last = droppingCooldown[object]
-                local ready = not last or now - last >= DROPPING_RETRY
+                -- Saat CLEAN ON, jangan lewati prompt terdekat hanya karena
+                -- cooldown FARM; CLEAN yang akan mengambilnya saat sudah dekat.
+                -- Saat CLEAN OFF, cooldown mencegah FARM mengejar target gagal berulang.
+                local ready = cleanEnabled or not last or now - last >= DROPPING_RETRY
                 if ready then
                     hasReady = true
                     if distance < nearestDistance then
@@ -960,8 +955,10 @@ task.spawn(function()
 
                 local started = os.clock()
                 local collected = false
-                while alive() and farmEnabled and os.clock() - started < 8 do
-                    task.wait(0.15)
+                -- Beri CLEAN kesempatan singkat. Jangan tahan FARM 8 detik
+                -- pada satu titik; setelah itu FARM scan ulang dari posisi terbaru.
+                while alive() and farmEnabled and os.clock() - started < 1.2 do
+                    task.wait(0.1)
                     if not prompt.Parent
                         or not prompt:IsDescendantOf(folder)
                         or not prompt.Enabled then
