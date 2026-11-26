@@ -244,6 +244,11 @@ local function pathfindTo(position, prompt)
 
     local activationDistance = prompt and prompt.MaxActivationDistance or 10
     local arrivalDistance = math.max(2.5, math.min(activationDistance - 1, 8))
+    local function targetAvailable()
+        return prompt and prompt.Parent ~= nil and prompt.Enabled
+            and isDroppingPrompt(prompt)
+            and prompt:IsDescendantOf(getDroppingFolder() or World)
+    end
     local offsets = {
         Vector3.new(0, 0, 0),
         Vector3.new(3, 0, 0),
@@ -258,6 +263,9 @@ local function pathfindTo(position, prompt)
 
     -- Maksimal 7 kali hitung ulang rute jika jalur terhalang atau karakter macet.
     for replan = 1, 7 do
+        if not targetAvailable() then
+            return false
+        end
         if not alive() or not farmEnabled then
             humanoid:MoveTo(root.Position)
             return false
@@ -308,6 +316,10 @@ local function pathfindTo(position, prompt)
             end)
 
             for index, waypoint in ipairs(waypoints) do
+                if not targetAvailable() then
+                    blockedConnection:Disconnect()
+                    return false
+                end
                 if not alive() or not farmEnabled then
                     blockedConnection:Disconnect()
                     humanoid:MoveTo(root.Position)
@@ -336,7 +348,11 @@ local function pathfindTo(position, prompt)
                     local reached = false
 
                     while alive() and farmEnabled and os.clock() - lastProgress < 3.5 do
-                        task.wait(0.15)
+                        task.wait(0.1)
+                        if not targetAvailable() then
+                            reached = false
+                            break
+                        end
                         root = getRoot()
                         if not root then break end
 
