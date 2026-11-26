@@ -1,4 +1,5 @@
--- ARCHERY DUELS DIAGNOSTIC
+-- ARCHERY DUELS DIAGNOSTIC - V3 CACHE-CHECK
+-- BUILD: 2026-11-27-V3-TRAJECTORY
 -- Read-only inspection. No remote calls, hooks, firing, or value changes.
 
 local Players = game:GetService("Players")
@@ -31,8 +32,9 @@ local function val(v)
     return tostring(v)
 end
 
-add("ARCHERY DUELS DIAGNOSTIC - V2")
-add("BUILD: 2026-11-27-V2-FIXED")
+add("ARCHERY DUELS DIAGNOSTIC - V3")
+add("BUILD: 2026-11-27-V3-TRAJECTORY")
+add("SOURCE CHECK: archery_duels_diagnostic.lua")
 add("PlaceId: "..game.PlaceId)
 add("Player: "..LP.Name.." ("..LP.UserId..")")
 
@@ -198,6 +200,33 @@ if pg then
     end
 end
 add("Script matches="..scriptN)
+
+
+add("")
+add("[V3: ARCHERY TRAJECTORY DETAILS]")
+local trajectoryFolder = Workspace:FindFirstChild("ArcheryTrajectory")
+if trajectoryFolder then
+    add("Folder="..full(trajectoryFolder).." children="..#trajectoryFolder:GetChildren())
+    for _,obj in ipairs(trajectoryFolder:GetDescendants()) do
+        if obj:IsA("BasePart") or obj:IsA("Attachment") or obj:IsA("ValueBase") then
+            add(obj.ClassName.." | "..full(obj))
+            if obj:IsA("BasePart") then
+                add("  Position="..val(obj.Position).." Size="..val(obj.Size))
+                add("  Anchored="..tostring(obj.Anchored).." CanCollide="..tostring(obj.CanCollide).." Transparency="..tostring(obj.Transparency))
+                add("  Material="..tostring(obj.Material).." Color="..tostring(obj.Color))
+            elseif obj:IsA("Attachment") then
+                add("  WorldPosition="..val(obj.WorldPosition).." Position="..val(obj.Position))
+            elseif obj:IsA("ValueBase") then
+                add("  Value="..val(obj.Value))
+            end
+            for k,v in pairs(obj:GetAttributes()) do
+                add("  Attribute "..k.."="..val(v))
+            end
+        end
+    end
+else
+    add("Workspace.ArcheryTrajectory NOT FOUND")
+end
 
 local report = table.concat(out, "\n")
 local copied = false
