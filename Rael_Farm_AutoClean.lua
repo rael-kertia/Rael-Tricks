@@ -782,9 +782,14 @@ local function feedOne()
                 continue
             end
 
-            setStatus(entry.name .. ": MENGISI PAKAN")
-            if not teleportNear(position, 2) then return end
+            setStatus(entry.name .. ": PATHFINDING KE PALUNG")
+            if not pathfindTo(position, prompt) then
+                feedCooldown[entry.name] = os.clock()
+                setStatus(entry.name .. ": JALUR KE PALUNG TERHALANG")
+                continue
+            end
             if not alive() or not farmEnabled then return end
+            setStatus(entry.name .. ": MENGISI PAKAN")
 
             if activatePrompt(prompt) then
                 local started = os.clock()
