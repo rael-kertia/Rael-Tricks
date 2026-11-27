@@ -244,11 +244,15 @@ local function pathfindTo(position, prompt)
         Vector3.new(2.5, 0, 2.5),
         Vector3.new(-2.5, 0, 2.5),
         Vector3.new(2.5, 0, -2.5),
-        Vector3.new(-2.5, 0, -2.5)
+        Vector3.new(-2.5, 0, -2.5),
+        Vector3.new(5, 0, 0),
+        Vector3.new(-5, 0, 0),
+        Vector3.new(0, 0, 5),
+        Vector3.new(0, 0, -5)
     }
 
-    -- Maksimal 7 kali hitung ulang rute jika jalur terhalang atau karakter macet.
-    for replan = 1, 7 do
+    -- Beri lebih banyak kesempatan untuk mencari jalur alternatif saat terhalang.
+    for replan = 1, 10 do
         if not alive() or not farmEnabled then
             humanoid:MoveTo(root.Position)
             return false
@@ -260,7 +264,6 @@ local function pathfindTo(position, prompt)
             return true
         end
 
-        -- Cari titik pendekatan yang bisa dijangkau, bukan selalu titik prompt persis.
         local bestPath, bestDistance
         for _, offset in ipairs(offsets) do
             local goal = position + offset
@@ -269,7 +272,7 @@ local function pathfindTo(position, prompt)
                 AgentHeight = 5,
                 AgentCanJump = true,
                 AgentCanClimb = true,
-                WaypointSpacing = 3
+                WaypointSpacing = 2.5
             })
 
             local ok = pcall(function()
@@ -289,16 +292,18 @@ local function pathfindTo(position, prompt)
             end
         end
 
-        if not bestPath then
-            task.wait(0.2)
-        else
+        if bestPath then
             local waypoints = bestPath:GetWaypoints()
             local blocked = false
+            local activeWaypointIndex = 1
             local blockedConnection = bestPath.Blocked:Connect(function(blockedIndex)
-                if blockedIndex >= 1 then blocked = true end
+                if blockedIndex >= activeWaypointIndex then
+                    blocked = true
+                end
             end)
 
             for index, waypoint in ipairs(waypoints) do
+                activeWaypointIndex = index
                 if not alive() or not farmEnabled then
                     blockedConnection:Disconnect()
                     humanoid:MoveTo(root.Position)
@@ -315,8 +320,7 @@ local function pathfindTo(position, prompt)
                     return true
                 end
 
-                -- Lewati waypoint yang sudah terlewati agar tidak berputar di tempat.
-                if (root.Position - waypoint.Position).Magnitude > 3 then
+                if (root.Position - waypoint.Position).Magnitude > 2.5 then
                     if waypoint.Action == Enum.PathWaypointAction.Jump then
                         humanoid.Jump = true
                     end
@@ -324,28 +328,30 @@ local function pathfindTo(position, prompt)
                     humanoid:MoveTo(waypoint.Position)
                     local lastPosition = root.Position
                     local lastProgress = os.clock()
+                    local waypointStarted = os.clock()
                     local reached = false
+                    local waypointTimeout = math.clamp(
+                        (root.Position - waypoint.Position).Magnitude / 6 + 3,
+                        4,
+                        8
+                    )
 
-                    while alive() and farmEnabled and os.clock() - lastProgress < 3.5 do
+                    while alive() and farmEnabled
+                        and os.clock() - waypointStarted < waypointTimeout
+                        and os.clock() - lastProgress < 2 do
                         task.wait(0.15)
                         root = getRoot()
                         if not root then break end
 
-                        if (root.Position - position).Magnitude <= arrivalDistance then
-                            reached = true
-                            break
-                        end
-                        if (root.Position - waypoint.Position).Magnitude <= 2.5 then
+                        if (root.Position - position).Magnitude <= arrivalDistance
+                            or (root.Position - waypoint.Position).Magnitude <= 2.5 then
                             reached = true
                             break
                         end
 
-                        -- Jika bergerak kurang dari 0.7 stud selama 1.1 detik, anggap tersangkut.
-                        if (root.Position - lastPosition).Magnitude >= 0.7 then
+                        if (root.Position - lastPosition).Magnitude >= 0.6 then
                             lastPosition = root.Position
                             lastProgress = os.clock()
-                        elseif os.clock() - lastProgress >= 1.1 then
-                            break
                         end
 
                         if blocked then break end
@@ -381,13 +387,12 @@ local function pathfindTo(position, prompt)
             end
         end
 
-        -- Beri jeda singkat lalu hitung ulang dari posisi karakter saat ini.
-        task.wait(0.15)
+        -- Hitung ulang dari posisi terbaru; jangan terpaku pada rute yang gagal.
+        task.wait(0.2)
     end
 
     return false
 end
-
 -- ==========================================
 -- AUTO CONVERT KOTORAN 2000 + KLAIM GOLD
 -- ==========================================
@@ -782,10 +787,15 @@ local function feedOne()
                 continue
             end
 
-            setStatus(entry.name .. ": MENGISI PAKAN")
-            if not teleportNear(position, 2) then return end
+            setStatus(entry.name .. ": MENUJU PALUNG")
+            if not pathfindTo(position, prompt) then
+                feedCooldown[entry.name] = os.clock()
+                setStatus(entry.name .. ": JALUR GAGAL - COBA ULANG")
+                continue
+            end
             if not alive() or not farmEnabled then return end
 
+            setStatus(entry.name .. ": MENGISI PAKAN")
             if activatePrompt(prompt) then
                 local started = os.clock()
                 local newStock = getStock(entry.object)
