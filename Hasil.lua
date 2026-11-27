@@ -1,916 +1,240 @@
-=== NGAMEN DIAGNOSTIC 03 ===
-
-=== OSU GUI ===
-ROOT: Players.Kertia911.PlayerGui.NgamenOsuGui
-Players.Kertia911.PlayerGui.NgamenOsuGui.Redup [Frame] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1, 400}, {1, 400}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih [ImageLabel] | Visible=false | Pos={0.5, 0}, {0.5, 0} | Size={0, 780}, {0, 640} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Nada [ImageLabel] | Visible=true | Pos={0, 28}, {0, 20} | Size={0, 58}, {0, 58} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel [TextLabel] | Visible=true | Pos={0, 96}, {0, 20} | Size={0, 420}, {0, 52} | Text=PILIH LAGU
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel [TextLabel] | Visible=true | Pos={0, 98}, {0, 70} | Size={0, 640}, {0, 26} | Text=Ketuk, tahan, dan putar pas irama lagu. Makin pas, makin semangat!
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar [ScrollingFrame] | Visible=true | Pos={0, 20}, {0, 100} | Size={1, -40}, {0, 430}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.UIListLayout [UIListLayout]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1 [ImageButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 76} | Image=
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.KartuN [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.Sampul98600752652280 [ImageLabel] | Visible=true | Pos={0, 10}, {0, 4} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.Sampul98600752652280.Gembok [ImageLabel] | Visible=false | Pos={0.5, 0}, {0.519999981, 0} | Size={0, 36}, {0, 36} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel [TextLabel] | Visible=true | Pos={0, 2}, {0, -6} | Size={0, 24}, {0, 24} | Text=1
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel [TextLabel] | Visible=true | Pos={0, 84}, {0, 6} | Size={1, -300}, {0, 32} | Text=Ubur-Ubur Ikan Lele
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel [TextLabel] | Visible=true | Pos={0, 86}, {0, 40} | Size={0, 130}, {0, 24} | Text=AFRO
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.Bintang [ImageLabel] | Visible=true | Pos={0, 214}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.BintangKosong [ImageLabel] | Visible=true | Pos={0, 240}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.BintangKosong [ImageLabel] | Visible=true | Pos={0, 266}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel [TextLabel] | Visible=true | Pos={0, 296}, {0, 42} | Size={0, 90}, {0, 22} | Text=MUDAH
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.Jam [ImageLabel] | Visible=true | Pos={1, -206}, {0, 8} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 8} | Size={0, 70}, {0, 24} | Text=2:49
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.Mahkota [ImageLabel] | Visible=true | Pos={1, -206}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 40} | Size={0, 112}, {0, 24} | Text=37.358
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu1.HurufS [ImageLabel] | Visible=true | Pos={1, -4}, {0.5, -3} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2 [ImageButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 76} | Image=
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.KartuN [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.Sampul108579401486617 [ImageLabel] | Visible=true | Pos={0, 10}, {0, 4} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.Sampul108579401486617.Gembok [ImageLabel] | Visible=false | Pos={0.5, 0}, {0.519999981, 0} | Size={0, 36}, {0, 36} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel [TextLabel] | Visible=true | Pos={0, 2}, {0, -6} | Size={0, 24}, {0, 24} | Text=2
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel [TextLabel] | Visible=true | Pos={0, 84}, {0, 6} | Size={1, -300}, {0, 32} | Text=Gelang Sipaku Gelang
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel [TextLabel] | Visible=true | Pos={0, 86}, {0, 40} | Size={0, 130}, {0, 24} | Text=FUNKOT
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.Bintang [ImageLabel] | Visible=true | Pos={0, 214}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.BintangKosong [ImageLabel] | Visible=true | Pos={0, 240}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.BintangKosong [ImageLabel] | Visible=true | Pos={0, 266}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel [TextLabel] | Visible=true | Pos={0, 296}, {0, 42} | Size={0, 90}, {0, 22} | Text=MUDAH
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.Jam [ImageLabel] | Visible=true | Pos={1, -206}, {0, 8} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 8} | Size={0, 70}, {0, 24} | Text=3:32
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.Mahkota [ImageLabel] | Visible=true | Pos={1, -206}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 40} | Size={0, 112}, {0, 24} | Text=137.536
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu2.HurufS [ImageLabel] | Visible=true | Pos={1, -4}, {0.5, -3} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3 [ImageButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 76} | Image=
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.KartuN [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.Sampul70688896744983 [ImageLabel] | Visible=true | Pos={0, 10}, {0, 4} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.Sampul70688896744983.Gembok [ImageLabel] | Visible=false | Pos={0.5, 0}, {0.519999981, 0} | Size={0, 36}, {0, 36} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel [TextLabel] | Visible=true | Pos={0, 2}, {0, -6} | Size={0, 24}, {0, 24} | Text=3
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel [TextLabel] | Visible=true | Pos={0, 84}, {0, 6} | Size={1, -300}, {0, 32} | Text=Spontan Uhuy!
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel [TextLabel] | Visible=true | Pos={0, 86}, {0, 40} | Size={0, 130}, {0, 24} | Text=AMAPIANO
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.Bintang [ImageLabel] | Visible=true | Pos={0, 214}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.Bintang [ImageLabel] | Visible=true | Pos={0, 240}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.BintangKosong [ImageLabel] | Visible=true | Pos={0, 266}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel [TextLabel] | Visible=true | Pos={0, 296}, {0, 42} | Size={0, 90}, {0, 22} | Text=SEDANG
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.Jam [ImageLabel] | Visible=true | Pos={1, -206}, {0, 8} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 8} | Size={0, 70}, {0, 24} | Text=2:28
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.Mahkota [ImageLabel] | Visible=true | Pos={1, -206}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 40} | Size={0, 112}, {0, 24} | Text=28.988
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu3.HurufS [ImageLabel] | Visible=true | Pos={1, -4}, {0.5, -3} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4 [ImageButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 76} | Image=
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.KartuN [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.Sampul122924075398424 [ImageLabel] | Visible=true | Pos={0, 10}, {0, 4} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.Sampul122924075398424.Gembok [ImageLabel] | Visible=false | Pos={0.5, 0}, {0.519999981, 0} | Size={0, 36}, {0, 36} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel [TextLabel] | Visible=true | Pos={0, 2}, {0, -6} | Size={0, 24}, {0, 24} | Text=4
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel [TextLabel] | Visible=true | Pos={0, 84}, {0, 6} | Size={1, -300}, {0, 32} | Text=Stecu Stecu
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel [TextLabel] | Visible=true | Pos={0, 86}, {0, 40} | Size={0, 130}, {0, 24} | Text=DJ REMIX
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.Bintang [ImageLabel] | Visible=true | Pos={0, 214}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.Bintang [ImageLabel] | Visible=true | Pos={0, 240}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.BintangKosong [ImageLabel] | Visible=true | Pos={0, 266}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel [TextLabel] | Visible=true | Pos={0, 296}, {0, 42} | Size={0, 90}, {0, 22} | Text=SEDANG
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.Jam [ImageLabel] | Visible=true | Pos={1, -206}, {0, 8} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 8} | Size={0, 70}, {0, 24} | Text=2:57
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.Mahkota [ImageLabel] | Visible=false | Pos={1, -206}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 40} | Size={0, 112}, {0, 24} | Text=BELUM MAIN
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu4.HurufS [ImageLabel] | Visible=false | Pos={1, -4}, {0.5, -3} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5 [ImageButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 76} | Image=
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.KartuN [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.Sampul125955508466572 [ImageLabel] | Visible=true | Pos={0, 10}, {0, 4} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.Sampul125955508466572.Gembok [ImageLabel] | Visible=false | Pos={0.5, 0}, {0.519999981, 0} | Size={0, 36}, {0, 36} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel [TextLabel] | Visible=true | Pos={0, 2}, {0, -6} | Size={0, 24}, {0, 24} | Text=5
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel [TextLabel] | Visible=true | Pos={0, 84}, {0, 6} | Size={1, -300}, {0, 32} | Text=Tabola Bale
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel [TextLabel] | Visible=true | Pos={0, 86}, {0, 40} | Size={0, 130}, {0, 24} | Text=DJ REMIX
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.Bintang [ImageLabel] | Visible=true | Pos={0, 214}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.Bintang [ImageLabel] | Visible=true | Pos={0, 240}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.Bintang [ImageLabel] | Visible=true | Pos={0, 266}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel [TextLabel] | Visible=true | Pos={0, 296}, {0, 42} | Size={0, 90}, {0, 22} | Text=SULIT
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.Jam [ImageLabel] | Visible=true | Pos={1, -206}, {0, 8} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 8} | Size={0, 70}, {0, 24} | Text=2:42
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.Mahkota [ImageLabel] | Visible=false | Pos={1, -206}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 40} | Size={0, 112}, {0, 24} | Text=BELUM MAIN
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu5.HurufS [ImageLabel] | Visible=false | Pos={1, -4}, {0.5, -3} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.JudulBoombox [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 48}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.JudulBoombox.Frame [Frame] | Visible=true | Pos={0, 0}, {0.5, 2} | Size={1, 0}, {0, 3}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.JudulBoombox.Frame [Frame] | Visible=true | Pos={0, 0}, {0, 6} | Size={0, 0}, {0, 38}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.JudulBoombox.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.JudulBoombox.Frame.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.JudulBoombox.Frame.TextLabel [TextLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={0, 0}, {0, 38} | Text=LAGU BOOMBOX • KHUSUS PEMILIK
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.JudulBoombox.Frame.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.JudulBoombox.Frame.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.JudulBoombox.ImageLabel [ImageLabel] | Visible=true | Pos={0, 4}, {0, 2} | Size={0, 60}, {0, 44} | Image=rbxassetid://107790561099622
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6 [ImageButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 76} | Image=
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.KartuN [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.Sampul129307159336570 [ImageLabel] | Visible=true | Pos={0, 10}, {0, 4} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.Sampul129307159336570.Gembok [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.519999981, 0} | Size={0, 36}, {0, 36} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel [TextLabel] | Visible=true | Pos={0, 2}, {0, -6} | Size={0, 24}, {0, 24} | Text=6
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel [TextLabel] | Visible=true | Pos={0, 84}, {0, 6} | Size={1, -300}, {0, 32} | Text=Pica Pica
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel [TextLabel] | Visible=true | Pos={0, 86}, {0, 40} | Size={0, 130}, {0, 24} | Text=AFRO
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.Bintang [ImageLabel] | Visible=true | Pos={0, 214}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.BintangKosong [ImageLabel] | Visible=true | Pos={0, 240}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.BintangKosong [ImageLabel] | Visible=true | Pos={0, 266}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel [TextLabel] | Visible=true | Pos={0, 296}, {0, 42} | Size={0, 90}, {0, 22} | Text=MUDAH
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.Jam [ImageLabel] | Visible=true | Pos={1, -206}, {0, 8} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 8} | Size={0, 70}, {0, 24} | Text=2:35
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.Mahkota [ImageLabel] | Visible=true | Pos={1, -206}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 40} | Size={0, 172}, {0, 24} | Text=KHUSUS BOOMBOX
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu6.HurufS [ImageLabel] | Visible=false | Pos={1, -4}, {0.5, -3} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7 [ImageButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 76} | Image=
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.KartuN [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.Sampul93315551192649 [ImageLabel] | Visible=true | Pos={0, 10}, {0, 4} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.Sampul93315551192649.Gembok [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.519999981, 0} | Size={0, 36}, {0, 36} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel [TextLabel] | Visible=true | Pos={0, 2}, {0, -6} | Size={0, 24}, {0, 24} | Text=7
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel [TextLabel] | Visible=true | Pos={0, 84}, {0, 6} | Size={1, -300}, {0, 32} | Text=Alamak
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel [TextLabel] | Visible=true | Pos={0, 86}, {0, 40} | Size={0, 130}, {0, 24} | Text=AMAPIANO
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.Bintang [ImageLabel] | Visible=true | Pos={0, 214}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.Bintang [ImageLabel] | Visible=true | Pos={0, 240}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.BintangKosong [ImageLabel] | Visible=true | Pos={0, 266}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel [TextLabel] | Visible=true | Pos={0, 296}, {0, 42} | Size={0, 90}, {0, 22} | Text=SEDANG
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.Jam [ImageLabel] | Visible=true | Pos={1, -206}, {0, 8} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 8} | Size={0, 70}, {0, 24} | Text=2:53
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.Mahkota [ImageLabel] | Visible=true | Pos={1, -206}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 40} | Size={0, 172}, {0, 24} | Text=KHUSUS BOOMBOX
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu7.HurufS [ImageLabel] | Visible=false | Pos={1, -4}, {0.5, -3} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8 [ImageButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 76} | Image=
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.KartuN [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.Sampul98591903104740 [ImageLabel] | Visible=true | Pos={0, 10}, {0, 4} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.Sampul98591903104740.Gembok [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.519999981, 0} | Size={0, 36}, {0, 36} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel [TextLabel] | Visible=true | Pos={0, 2}, {0, -6} | Size={0, 24}, {0, 24} | Text=8
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel [TextLabel] | Visible=true | Pos={0, 84}, {0, 6} | Size={1, -300}, {0, 32} | Text=Kasih Aba-Aba
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel [TextLabel] | Visible=true | Pos={0, 86}, {0, 40} | Size={0, 130}, {0, 24} | Text=AMAPIANO
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.Bintang [ImageLabel] | Visible=true | Pos={0, 214}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.Bintang [ImageLabel] | Visible=true | Pos={0, 240}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.BintangKosong [ImageLabel] | Visible=true | Pos={0, 266}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel [TextLabel] | Visible=true | Pos={0, 296}, {0, 42} | Size={0, 90}, {0, 22} | Text=SEDANG
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.Jam [ImageLabel] | Visible=true | Pos={1, -206}, {0, 8} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 8} | Size={0, 70}, {0, 24} | Text=3:03
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.Mahkota [ImageLabel] | Visible=true | Pos={1, -206}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 40} | Size={0, 172}, {0, 24} | Text=KHUSUS BOOMBOX
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu8.HurufS [ImageLabel] | Visible=false | Pos={1, -4}, {0.5, -3} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9 [ImageButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 76} | Image=
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.KartuN [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.Sampul77473580398007 [ImageLabel] | Visible=true | Pos={0, 10}, {0, 4} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.Sampul77473580398007.Gembok [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.519999981, 0} | Size={0, 36}, {0, 36} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel [TextLabel] | Visible=true | Pos={0, 2}, {0, -6} | Size={0, 24}, {0, 24} | Text=9
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel [TextLabel] | Visible=true | Pos={0, 84}, {0, 6} | Size={1, -300}, {0, 32} | Text=Ngapain Repot
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel [TextLabel] | Visible=true | Pos={0, 86}, {0, 40} | Size={0, 130}, {0, 24} | Text=HIPDUT
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.Bintang [ImageLabel] | Visible=true | Pos={0, 214}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.Bintang [ImageLabel] | Visible=true | Pos={0, 240}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.Bintang [ImageLabel] | Visible=true | Pos={0, 266}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel [TextLabel] | Visible=true | Pos={0, 296}, {0, 42} | Size={0, 90}, {0, 22} | Text=SULIT
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.Jam [ImageLabel] | Visible=true | Pos={1, -206}, {0, 8} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 8} | Size={0, 70}, {0, 24} | Text=2:45
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.Mahkota [ImageLabel] | Visible=true | Pos={1, -206}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 40} | Size={0, 172}, {0, 24} | Text=KHUSUS BOOMBOX
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu9.HurufS [ImageLabel] | Visible=false | Pos={1, -4}, {0.5, -3} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10 [ImageButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {0, 76} | Image=
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.KartuN [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.Sampul91299426815935 [ImageLabel] | Visible=true | Pos={0, 10}, {0, 4} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.Sampul91299426815935.Gembok [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.519999981, 0} | Size={0, 36}, {0, 36} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel [TextLabel] | Visible=true | Pos={0, 2}, {0, -6} | Size={0, 24}, {0, 24} | Text=0
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel [TextLabel] | Visible=true | Pos={0, 84}, {0, 6} | Size={1, -300}, {0, 32} | Text=Tor Monitor Ketua
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel [TextLabel] | Visible=true | Pos={0, 86}, {0, 40} | Size={0, 130}, {0, 24} | Text=MINANG POP
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.Bintang [ImageLabel] | Visible=true | Pos={0, 214}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.Bintang [ImageLabel] | Visible=true | Pos={0, 240}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.Bintang [ImageLabel] | Visible=true | Pos={0, 266}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel [TextLabel] | Visible=true | Pos={0, 296}, {0, 42} | Size={0, 90}, {0, 22} | Text=SULIT
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.Jam [ImageLabel] | Visible=true | Pos={1, -206}, {0, 8} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 8} | Size={0, 70}, {0, 24} | Text=3:40
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.Mahkota [ImageLabel] | Visible=true | Pos={1, -206}, {0, 40} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel [TextLabel] | Visible=true | Pos={1, -178}, {0, 40} | Size={0, 172}, {0, 24} | Text=KHUSUS BOOMBOX
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.Daftar.Kartu10.HurufS [ImageLabel] | Visible=false | Pos={1, -4}, {0.5, -3} | Size={0, 62}, {0, 62} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolMain [ImageButton] | Visible=true | Pos={1, -28}, {1, -24} | Size={0, 250}, {0, 74} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolMain.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolMain.TextLabel [TextLabel] | Visible=true | Pos={0, 8}, {0, 2} | Size={1, -16}, {1, -14} | Text=MAIN!
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolMain.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolMain.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolMain.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolBerhenti [ImageButton] | Visible=true | Pos={0, 28}, {1, -24} | Size={0, 250}, {0, 74} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolBerhenti.TextLabel [TextLabel] | Visible=true | Pos={0, 8}, {0, 2} | Size={1, -16}, {1, -14} | Text=BERHENTI
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolBerhenti.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolBerhenti.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolBerhenti.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel [TextLabel] | Visible=false | Pos={0.5, 0}, {1, -3} | Size={0, 520}, {0, 18} | Text=1-9, 0 pilih lagu  •  Enter main  •  Z / X ketuk
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolGampang [ImageButton] | Visible=true | Pos={0.5, 0}, {1, -24} | Size={0, 206}, {0, 74} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolGampang.TextLabel [TextLabel] | Visible=true | Pos={0, 7}, {0, 8} | Size={1, -14}, {0, 30} | Text=MODE GAMPANG
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolGampang.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolGampang.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolGampang.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolGampang.TextLabel [TextLabel] | Visible=true | Pos={0, 7}, {0, 38} | Size={1, -14}, {0, 20} | Text=1 TOMBOL  •  UANG NORMAL
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolGampang.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolGampang.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.TombolGampang.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu [ImageLabel] | Visible=true | Pos={0, 794}, {0, 0} | Size={0, 340}, {0, 640} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.TextLabel [TextLabel] | Visible=true | Pos={0, 22}, {0, 20} | Size={0, 296}, {0, 46} | Text=PAPAN SKOR
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.TextLabel [TextLabel] | Visible=true | Pos={0, 22}, {0, 68} | Size={0, 296}, {0, 30} | Text=Ubur-Ubur Ikan Lele
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame [Frame] | Visible=true | Pos={0, 28}, {0, 104} | Size={0, 294}, {0, 436}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.TextLabel [TextLabel] | Visible=true | Pos={0.0399999991, 0}, {0.00499999989, 0} | Size={0.920000017, 0}, {0.0599999987, 0} | Text=Skor tertinggi lagu ini • semua server
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.KapurGaris [ImageLabel] | Visible=true | Pos={0.100000001, 0}, {0.0700000003, 0} | Size={0.800000012, 0}, {0.0179999992, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.CapSeason [ImageLabel] | Visible=false | Pos={1, 0}, {-0.0120000001, 0} | Size={0.209999993, 0}, {0.0700000003, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1 [Frame] | Visible=true | Pos={0.5, 0}, {0.141000003, 0} | Size={0.980000019, 0}, {0.0820000023, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.PitaEmas [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.Mahkota1 [ImageLabel] | Visible=true | Pos={0.0599999987, 0}, {0.422684729, 0} | Size={1.25, 0}, {1.25, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.Mahkota1.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.Foto [ImageLabel] | Visible=true | Pos={0.155000001, 0}, {0.5, 0} | Size={0.779999971, 0}, {0.779999971, 0} | Image=rbxthumb://type=AvatarHeadShot&id=273715979&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.Foto.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.Foto.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.Foto.CincinEmas [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.29999995, 0}, {1.29999995, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.TextLabel [TextLabel] | Visible=true | Pos={0.234999999, 0}, {0.159999996, 0} | Size={0.439999998, 0}, {0.680000007, 0} | Text=Sakizu
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.KapurBintang [ImageLabel] | Visible=true | Pos={0.714999974, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.800000012, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.KapurBintang.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.TextLabel [TextLabel] | Visible=true | Pos={0.754999995, 0}, {0.159999996, 0} | Size={0.215000004, 0}, {0.680000007, 0} | Text=272.845
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris1.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2 [Frame] | Visible=true | Pos={0.5, 0}, {0.230800003, 0} | Size={0.980000019, 0}, {0.0820000023, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.PitaPerak [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.Mahkota2 [ImageLabel] | Visible=true | Pos={0.0599999987, 0}, {0.419999987, 0} | Size={1.25, 0}, {1.25, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.Mahkota2.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.Foto [ImageLabel] | Visible=true | Pos={0.155000001, 0}, {0.5, 0} | Size={0.779999971, 0}, {0.779999971, 0} | Image=rbxthumb://type=AvatarHeadShot&id=8691934581&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.Foto.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.Foto.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.Foto.CincinPerak [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.29999995, 0}, {1.29999995, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.TextLabel [TextLabel] | Visible=true | Pos={0.234999999, 0}, {0.159999996, 0} | Size={0.439999998, 0}, {0.680000007, 0} | Text=EZZZZZZZ
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.KapurBintang [ImageLabel] | Visible=true | Pos={0.714999974, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.800000012, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.KapurBintang.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.TextLabel [TextLabel] | Visible=true | Pos={0.754999995, 0}, {0.159999996, 0} | Size={0.215000004, 0}, {0.680000007, 0} | Text=272.845
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris2.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3 [Frame] | Visible=true | Pos={0.5, 0}, {0.320600003, 0} | Size={0.980000019, 0}, {0.0820000023, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.PitaPerunggu [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.Mahkota3 [ImageLabel] | Visible=true | Pos={0.0599999987, 0}, {0.419999987, 0} | Size={1.25, 0}, {1.25, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.Mahkota3.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.Foto [ImageLabel] | Visible=true | Pos={0.155000001, 0}, {0.5, 0} | Size={0.779999971, 0}, {0.779999971, 0} | Image=rbxthumb://type=AvatarHeadShot&id=11415023446&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.Foto.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.Foto.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.Foto.CincinPerunggu [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.29999995, 0}, {1.29999995, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.TextLabel [TextLabel] | Visible=true | Pos={0.234999999, 0}, {0.159999996, 0} | Size={0.439999998, 0}, {0.680000007, 0} | Text=Bleezds1
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.KapurBintang [ImageLabel] | Visible=true | Pos={0.714999974, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.800000012, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.KapurBintang.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.TextLabel [TextLabel] | Visible=true | Pos={0.754999995, 0}, {0.159999996, 0} | Size={0.215000004, 0}, {0.680000007, 0} | Text=272.745
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris3.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4 [Frame] | Visible=true | Pos={0.5, 0}, {0.410400003, 0} | Size={0.980000019, 0}, {0.0820000023, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.BarisKapur [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.LencanaKapur [ImageLabel] | Visible=true | Pos={0.0599999987, 0}, {0.5, 0} | Size={0.860000014, 0}, {0.860000014, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.LencanaKapur.TextLabel [TextLabel] | Visible=true | Pos={0.119999997, 0}, {0.140000001, 0} | Size={0.75999999, 0}, {0.699999988, 0} | Text=4
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.LencanaKapur.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.LencanaKapur.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.Foto [ImageLabel] | Visible=true | Pos={0.155000001, 0}, {0.5, 0} | Size={0.779999971, 0}, {0.779999971, 0} | Image=rbxthumb://type=AvatarHeadShot&id=8285822942&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.Foto.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.Foto.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.Foto.CincinKapur [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.29999995, 0}, {1.29999995, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.TextLabel [TextLabel] | Visible=true | Pos={0.234999999, 0}, {0.159999996, 0} | Size={0.439999998, 0}, {0.680000007, 0} | Text=SyL
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.KapurBintang [ImageLabel] | Visible=true | Pos={0.714999974, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.800000012, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.KapurBintang.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.TextLabel [TextLabel] | Visible=true | Pos={0.754999995, 0}, {0.159999996, 0} | Size={0.215000004, 0}, {0.680000007, 0} | Text=272.745
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris4.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5 [Frame] | Visible=true | Pos={0.5, 0}, {0.500199974, 0} | Size={0.980000019, 0}, {0.0820000023, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.BarisKapur [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.LencanaKapur [ImageLabel] | Visible=true | Pos={0.0599999987, 0}, {0.5, 0} | Size={0.860000014, 0}, {0.860000014, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.LencanaKapur.TextLabel [TextLabel] | Visible=true | Pos={0.119999997, 0}, {0.140000001, 0} | Size={0.75999999, 0}, {0.699999988, 0} | Text=5
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.LencanaKapur.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.LencanaKapur.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.Foto [ImageLabel] | Visible=true | Pos={0.155000001, 0}, {0.5, 0} | Size={0.779999971, 0}, {0.779999971, 0} | Image=rbxthumb://type=AvatarHeadShot&id=748532003&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.Foto.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.Foto.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.Foto.CincinKapur [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.29999995, 0}, {1.29999995, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.TextLabel [TextLabel] | Visible=true | Pos={0.234999999, 0}, {0.159999996, 0} | Size={0.439999998, 0}, {0.680000007, 0} | Text=Papuci
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.KapurBintang [ImageLabel] | Visible=true | Pos={0.714999974, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.800000012, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.KapurBintang.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.TextLabel [TextLabel] | Visible=true | Pos={0.754999995, 0}, {0.159999996, 0} | Size={0.215000004, 0}, {0.680000007, 0} | Text=272.745
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris5.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6 [Frame] | Visible=true | Pos={0.5, 0}, {0.589999974, 0} | Size={0.980000019, 0}, {0.0820000023, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.BarisKapur [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.LencanaKapur [ImageLabel] | Visible=true | Pos={0.0599999987, 0}, {0.5, 0} | Size={0.860000014, 0}, {0.860000014, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.LencanaKapur.TextLabel [TextLabel] | Visible=true | Pos={0.119999997, 0}, {0.140000001, 0} | Size={0.75999999, 0}, {0.699999988, 0} | Text=6
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.LencanaKapur.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.LencanaKapur.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.Foto [ImageLabel] | Visible=true | Pos={0.155000001, 0}, {0.5, 0} | Size={0.779999971, 0}, {0.779999971, 0} | Image=rbxthumb://type=AvatarHeadShot&id=2626139814&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.Foto.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.Foto.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.Foto.CincinKapur [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.29999995, 0}, {1.29999995, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.TextLabel [TextLabel] | Visible=true | Pos={0.234999999, 0}, {0.159999996, 0} | Size={0.439999998, 0}, {0.680000007, 0} | Text=dra
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.KapurBintang [ImageLabel] | Visible=true | Pos={0.714999974, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.800000012, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.KapurBintang.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.TextLabel [TextLabel] | Visible=true | Pos={0.754999995, 0}, {0.159999996, 0} | Size={0.215000004, 0}, {0.680000007, 0} | Text=272.745
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris6.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7 [Frame] | Visible=true | Pos={0.5, 0}, {0.679799974, 0} | Size={0.980000019, 0}, {0.0820000023, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.BarisKapur [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.LencanaKapur [ImageLabel] | Visible=true | Pos={0.0599999987, 0}, {0.5, 0} | Size={0.860000014, 0}, {0.860000014, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.LencanaKapur.TextLabel [TextLabel] | Visible=true | Pos={0.119999997, 0}, {0.140000001, 0} | Size={0.75999999, 0}, {0.699999988, 0} | Text=7
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.LencanaKapur.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.LencanaKapur.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.Foto [ImageLabel] | Visible=true | Pos={0.155000001, 0}, {0.5, 0} | Size={0.779999971, 0}, {0.779999971, 0} | Image=rbxthumb://type=AvatarHeadShot&id=12017894151&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.Foto.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.Foto.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.Foto.CincinKapur [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.29999995, 0}, {1.29999995, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.TextLabel [TextLabel] | Visible=true | Pos={0.234999999, 0}, {0.159999996, 0} | Size={0.439999998, 0}, {0.680000007, 0} | Text=izrealchat
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.KapurBintang [ImageLabel] | Visible=true | Pos={0.714999974, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.800000012, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.KapurBintang.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.TextLabel [TextLabel] | Visible=true | Pos={0.754999995, 0}, {0.159999996, 0} | Size={0.215000004, 0}, {0.680000007, 0} | Text=272.345
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris7.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8 [Frame] | Visible=true | Pos={0.5, 0}, {0.769599974, 0} | Size={0.980000019, 0}, {0.0820000023, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.BarisKapur [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.LencanaKapur [ImageLabel] | Visible=true | Pos={0.0599999987, 0}, {0.5, 0} | Size={0.860000014, 0}, {0.860000014, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.LencanaKapur.TextLabel [TextLabel] | Visible=true | Pos={0.119999997, 0}, {0.140000001, 0} | Size={0.75999999, 0}, {0.699999988, 0} | Text=8
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.LencanaKapur.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.LencanaKapur.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.Foto [ImageLabel] | Visible=true | Pos={0.155000001, 0}, {0.5, 0} | Size={0.779999971, 0}, {0.779999971, 0} | Image=rbxthumb://type=AvatarHeadShot&id=9438395685&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.Foto.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.Foto.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.Foto.CincinKapur [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.29999995, 0}, {1.29999995, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.TextLabel [TextLabel] | Visible=true | Pos={0.234999999, 0}, {0.159999996, 0} | Size={0.439999998, 0}, {0.680000007, 0} | Text=Vnzsky
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.KapurBintang [ImageLabel] | Visible=true | Pos={0.714999974, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.800000012, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.KapurBintang.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.TextLabel [TextLabel] | Visible=true | Pos={0.754999995, 0}, {0.159999996, 0} | Size={0.215000004, 0}, {0.680000007, 0} | Text=272.245
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris8.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9 [Frame] | Visible=true | Pos={0.5, 0}, {0.859399974, 0} | Size={0.980000019, 0}, {0.0820000023, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.BarisKapur [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.LencanaKapur [ImageLabel] | Visible=true | Pos={0.0599999987, 0}, {0.5, 0} | Size={0.860000014, 0}, {0.860000014, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.LencanaKapur.TextLabel [TextLabel] | Visible=true | Pos={0.119999997, 0}, {0.140000001, 0} | Size={0.75999999, 0}, {0.699999988, 0} | Text=9
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.LencanaKapur.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.LencanaKapur.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.Foto [ImageLabel] | Visible=true | Pos={0.155000001, 0}, {0.5, 0} | Size={0.779999971, 0}, {0.779999971, 0} | Image=rbxthumb://type=AvatarHeadShot&id=9382162221&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.Foto.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.Foto.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.Foto.CincinKapur [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.29999995, 0}, {1.29999995, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.TextLabel [TextLabel] | Visible=true | Pos={0.234999999, 0}, {0.159999996, 0} | Size={0.439999998, 0}, {0.680000007, 0} | Text=makhlukhytam
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.KapurBintang [ImageLabel] | Visible=true | Pos={0.714999974, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.800000012, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.KapurBintang.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.TextLabel [TextLabel] | Visible=true | Pos={0.754999995, 0}, {0.159999996, 0} | Size={0.215000004, 0}, {0.680000007, 0} | Text=272.245
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris9.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10 [Frame] | Visible=true | Pos={0.5, 0}, {0.949199975, 0} | Size={0.980000019, 0}, {0.0820000023, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.BarisKapur [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.LencanaKapur [ImageLabel] | Visible=true | Pos={0.0599999987, 0}, {0.5, 0} | Size={0.860000014, 0}, {0.860000014, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.LencanaKapur.TextLabel [TextLabel] | Visible=true | Pos={0.119999997, 0}, {0.140000001, 0} | Size={0.75999999, 0}, {0.699999988, 0} | Text=10
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.LencanaKapur.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.LencanaKapur.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.Foto [ImageLabel] | Visible=true | Pos={0.155000001, 0}, {0.5, 0} | Size={0.779999971, 0}, {0.779999971, 0} | Image=rbxthumb://type=AvatarHeadShot&id=3944875275&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.Foto.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.Foto.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.Foto.CincinKapur [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.29999995, 0}, {1.29999995, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.TextLabel [TextLabel] | Visible=true | Pos={0.234999999, 0}, {0.159999996, 0} | Size={0.439999998, 0}, {0.680000007, 0} | Text=jarjar
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.KapurBintang [ImageLabel] | Visible=true | Pos={0.714999974, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.800000012, 0} | Image=rbxassetid://70530606950573
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.KapurBintang.UIAspectRatioConstraint [UIAspectRatioConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.TextLabel [TextLabel] | Visible=true | Pos={0.754999995, 0}, {0.159999996, 0} | Size={0.215000004, 0}, {0.680000007, 0} | Text=272.245
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.Baris10.TextLabel.RapiFont [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.DaftarLagu.TextLabel [TextLabel] | Visible=false | Pos={0.100000001, 0}, {0.5, 0} | Size={0.800000012, 0}, {0.0700000003, 0} | Text=Belum ada skor. Jadilah yang pertama!
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame [Frame] | Visible=true | Pos={0, 18}, {0, 552} | Size={0, 304}, {0, 66}
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.ImageLabel [ImageLabel] | Visible=true | Pos={0, 10}, {0, 9} | Size={0, 48}, {0, 48} | Image=rbxthumb://type=AvatarHeadShot&id=8861459559&w=150&h=150
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.ImageLabel.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.TextLabel [TextLabel] | Visible=true | Pos={0, 68}, {0, 8} | Size={0, 226}, {0, 22} | Text=Rekor kamu • belum masuk 10 besar
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.TextLabel [TextLabel] | Visible=true | Pos={0, 68}, {0, 30} | Size={0, 226}, {0, 30} | Text=37.358
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.PanelPilih.PapanSkorLagu.Frame.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.CuplikLagu [Sound] | SoundId=rbxassetid://98600752652280 | Playing=false
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil [ImageLabel] | Visible=false | Pos={0.5, 0}, {0.5, 0} | Size={0, 820}, {0, 560} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 40}, {0, 20} | Size={0, 560}, {0, 50} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 42}, {0, 68} | Size={0, 160}, {0, 24} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.Bintang [ImageLabel] | Visible=true | Pos={0, 204}, {0, 68} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.Bintang [ImageLabel] | Visible=true | Pos={0, 230}, {0, 68} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.Bintang [ImageLabel] | Visible=true | Pos={0, 256}, {0, 68} | Size={0, 24}, {0, 24} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.Piringan [ImageLabel] | Visible=true | Pos={0, 180}, {0, 270} | Size={0, 250}, {0, 250} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.Piringan.Sampul98600752652280 [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={0, 104}, {0, 104} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.Piringan.Sampul98600752652280.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HurufS [ImageLabel] | Visible=true | Pos={0, 330}, {0, 300} | Size={0, 210}, {0, 210} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HurufS.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.Inset [ImageLabel] | Visible=true | Pos={0, 430}, {0, 108} | Size={0, 360}, {0, 300} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 452}, {0, 120} | Size={0, 140}, {0, 22} | Text=SKOR
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 450}, {0, 140} | Size={0, 320}, {0, 56} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 452}, {0, 204} | Size={0, 150}, {0, 22} | Text=AKURASI
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 452}, {0, 224} | Size={0, 160}, {0, 36} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 622}, {0, 204} | Size={0, 150}, {0, 22} | Text=COMBO MAKS
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 622}, {0, 224} | Size={0, 150}, {0, 36} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 452}, {0, 270} | Size={0, 104}, {0, 20} | Text=PAS
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 452}, {0, 290} | Size={0, 104}, {0, 32} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 562}, {0, 270} | Size={0, 104}, {0, 20} | Text=OKE
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 562}, {0, 290} | Size={0, 104}, {0, 32} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 672}, {0, 270} | Size={0, 104}, {0, 20} | Text=MELESET
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 672}, {0, 290} | Size={0, 104}, {0, 32} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.ImageLabel [ImageLabel] | Visible=true | Pos={0, 450}, {0, 344} | Size={0, 40}, {0, 40} | Image=rbxassetid://120277210503319
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 498}, {0, 346} | Size={0, 280}, {0, 40} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.Mahkota [ImageLabel] | Visible=true | Pos={0, 470}, {0, 438} | Size={0, 46}, {0, 46} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.Mahkota.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 500}, {0, 420} | Size={0, 290}, {0, 38} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 40}, {0, 408} | Size={0, 400}, {0, 24} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0, 40}, {0, 433} | Size={0, 400}, {0, 20} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.Frame [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilMerah [ImageButton] | Visible=true | Pos={0, 36}, {1, -26} | Size={0, 236}, {0, 72} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilMerah.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilMerah.TextLabel [TextLabel] | Visible=true | Pos={0, 8}, {0, 2} | Size={1, -16}, {1, -14} | Text=BERHENTI
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilMerah.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilMerah.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilMerah.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilBiru [ImageButton] | Visible=true | Pos={0, 292}, {1, -26} | Size={0, 236}, {0, 72} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilBiru.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilBiru.TextLabel [TextLabel] | Visible=true | Pos={0, 8}, {0, 2} | Size={1, -16}, {1, -14} | Text=GANTI LAGU
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilBiru.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilBiru.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilBiru.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilHijau [ImageButton] | Visible=true | Pos={0, 548}, {1, -26} | Size={0, 236}, {0, 72} | Image=rbxassetid://87015088529619
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilHijau.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilHijau.TextLabel [TextLabel] | Visible=true | Pos={0, 8}, {0, 2} | Size={1, -16}, {1, -14} | Text=MAIN LAGI
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilHijau.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilHijau.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.HasilHijau.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel [TextLabel] | Visible=true | Pos={0.5, 0}, {1, -4} | Size={0, 420}, {0, 20} | Text=Enter main lagi  •  Backspace ganti lagu
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.KartuHasil.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Sound [Sound] | SoundId=rbxassetid://91697651751806 | Playing=false
-Players.Kertia911.PlayerGui.NgamenOsuGui.Sound [Sound] | SoundId=rbxassetid://9045295141 | Playing=false
-Players.Kertia911.PlayerGui.NgamenOsuGui.Sound [Sound] | SoundId=rbxassetid://95099355609167 | Playing=false
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Lapisan [TextButton] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang [Frame] | Visible=true | Pos={0, 429}, {0, 64} | Size={0, 419}, {0, 349}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.TitikIkut [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.TitikIkut.TitikIkut [ImageLabel] | Visible=true | Pos={0, 337}, {0, 303} | Size={0, 13}, {0, 13} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.TitikIkut.TitikIkut [ImageLabel] | Visible=true | Pos={0, 258}, {0, 290} | Size={0, 13}, {0, 13} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.TitikIkut.TitikIkut [ImageLabel] | Visible=true | Pos={0, 182}, {0, 256} | Size={0, 13}, {0, 13} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1 [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 362}, {0, 242} | Size={0, 78}, {0, 59}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 362}, {0, 242} | Size={0, 71}, {0, 52}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 362}, {0, 242} | Size={0, 63}, {0, 44}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 362}, {0, 242} | Size={0, 38}, {0, 19}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 357}, {0, 260} | Size={0, 78}, {0, 59}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 357}, {0, 260} | Size={0, 71}, {0, 52}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 357}, {0, 260} | Size={0, 63}, {0, 44}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 357}, {0, 260} | Size={0, 38}, {0, 19}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 361}, {0, 278} | Size={0, 78}, {0, 59}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 361}, {0, 278} | Size={0, 71}, {0, 52}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 361}, {0, 278} | Size={0, 63}, {0, 44}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 361}, {0, 278} | Size={0, 38}, {0, 19}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 372}, {0, 293} | Size={0, 78}, {0, 59}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 372}, {0, 293} | Size={0, 71}, {0, 52}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 372}, {0, 293} | Size={0, 63}, {0, 44}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame [Frame] | Visible=false | Pos={0, 372}, {0, 293} | Size={0, 38}, {0, 19}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Bola [Frame] | Visible=true | Pos={0, 376}, {0, 297} | Size={0, 52}, {0, 52}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Bola.NotIsi [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.Bola.NotBingkai [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.SliderIkut [ImageLabel] | Visible=false | Pos={0, 376}, {0, 297} | Size={0, 158}, {0, 158} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.SliderIkut.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.TextLabel [TextLabel] | Visible=true | Pos={0, 306}, {0, 177} | Size={0, 224}, {0, 26} | Text=TAHAN & IKUTI BOLA
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider1.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not2 [Frame] | Visible=true | Pos={0, 296}, {0, 306} | Size={0, 66}, {0, 66}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not2.NotIsi [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not2.NotBingkai [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not2.TextLabel [TextLabel] | Visible=true | Pos={0.5, 0}, {0.519999981, 0} | Size={0.5, 0}, {0.419999987, 0} | Text=2
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not2.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not2.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not2.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not2.CincinPendekat [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={1.71333468, 0}, {1.71333468, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not3 [Frame] | Visible=true | Pos={0, 220}, {0, 273} | Size={0, 66}, {0, 66}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not3.NotIsi [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not3.NotBingkai [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not3.TextLabel [TextLabel] | Visible=true | Pos={0.5, 0}, {0.519999981, 0} | Size={0.5, 0}, {0.419999987, 0} | Text=3
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not3.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not3.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not3.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Not3.CincinPendekat [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={2.44895959, 0}, {2.44895959, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4 [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=true | Pos={0, 136}, {0, 234} | Size={0, 78}, {0, 59}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=true | Pos={0, 136}, {0, 234} | Size={0, 71}, {0, 52}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=true | Pos={0, 136}, {0, 234} | Size={0, 63}, {0, 44}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=true | Pos={0, 136}, {0, 234} | Size={0, 38}, {0, 19}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 120}, {0, 225} | Size={0, 78}, {0, 59}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 120}, {0, 225} | Size={0, 71}, {0, 52}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 120}, {0, 225} | Size={0, 63}, {0, 44}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 120}, {0, 225} | Size={0, 38}, {0, 19}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 103}, {0, 215} | Size={0, 78}, {0, 59}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 103}, {0, 215} | Size={0, 71}, {0, 52}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 103}, {0, 215} | Size={0, 63}, {0, 44}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 103}, {0, 215} | Size={0, 38}, {0, 19}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 87}, {0, 206} | Size={0, 78}, {0, 59}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 87}, {0, 206} | Size={0, 71}, {0, 52}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 87}, {0, 206} | Size={0, 63}, {0, 44}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame [Frame] | Visible=false | Pos={0, 87}, {0, 206} | Size={0, 38}, {0, 19}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Frame.UICorner [UICorner]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Not4 [Frame] | Visible=true | Pos={0, 145}, {0, 239} | Size={0, 66}, {0, 66}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Not4.NotIsi [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Not4.NotBingkai [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Not4.TextLabel [TextLabel] | Visible=true | Pos={0.5, 0}, {0.519999981, 0} | Size={0.5, 0}, {0.419999987, 0} | Text=4
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Not4.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Not4.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Not4.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Not4.CincinPendekat [ImageLabel] | Visible=true | Pos={0.5, 0}, {0.5, 0} | Size={3.18595958, 0}, {3.18595958, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Bola [Frame] | Visible=false | Pos={0, 0}, {0, 0} | Size={0, 52}, {0, 52}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Bola.NotIsi [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.Bola.NotBingkai [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.SliderIkut [ImageLabel] | Visible=false | Pos={0, 0}, {0, 0} | Size={0, 158}, {0, 158} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.SliderIkut.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.TextLabel [TextLabel] | Visible=true | Pos={0, 145}, {0, 183} | Size={0, 224}, {0, 26} | Text=TAHAN & IKUTI BOLA
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Not.Slider4.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Efek [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Efek.Meleset [ImageLabel] | Visible=true | Pos={0, 366}, {0, 244} | Size={0, 19}, {0, 19} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Efek.Meleset.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Efek.Meleset [ImageLabel] | Visible=true | Pos={0, 379}, {0, 301} | Size={0, 36}, {0, 36} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Bidang.Efek.Meleset.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1, 0}, {1, 0}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas [Frame] | Visible=true | Pos={0, 0}, {0, 0} | Size={1.70138884, 0}, {0, 70}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.KeluarN [ImageButton] | Visible=true | Pos={1, -10}, {0, 8} | Size={0, 56}, {0, 56} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.PapanAtas [ImageLabel] | Visible=true | Pos={1, -74}, {0, 4} | Size={0, 230}, {0, 66} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.PapanAtas.TextLabel [TextLabel] | Visible=true | Pos={0, 12}, {0, 6} | Size={1, -24}, {0, 32} | Text=00000000
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.PapanAtas.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.PapanAtas.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.PapanAtas.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.PapanAtas.TextLabel [TextLabel] | Visible=true | Pos={0, 12}, {0, 38} | Size={1, -24}, {0, 22} | Text=0,00%
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.PapanAtas.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.PapanAtas.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.PapanAtas.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.BarBingkai [ImageLabel] | Visible=true | Pos={0.5, 0}, {0, 12} | Size={0, 300}, {0, 28} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.BarBingkai.Klip [Frame] | Visible=true | Pos={0, 5}, {0, 5} | Size={0.0218713284, 0}, {1, -10}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.BarBingkai.Klip.BarIsi [ImageLabel] | Visible=true | Pos={0, 0}, {0, 0} | Size={0, 290}, {0, 18} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.TextLabel [TextLabel] | Visible=true | Pos={0.5, 0}, {0, 42} | Size={0, 360}, {0, 24} | Text=Ubur-Ubur Ikan Lele
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.TextLabel.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.TextLabel.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Atas.TextLabel.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Combo [TextLabel] | Visible=true | Pos={0, 16}, {1, -10} | Size={0, 220}, {0, 74} | Text=
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Combo.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Combo.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Combo.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Combo.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Tengah [TextLabel] | Visible=true | Pos={0.5, 0}, {0.300000012, 0} | Size={0, 520}, {0, 104} | Text=MULAI!
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Tengah.UITextSizeConstraint [UITextSizeConstraint]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Tengah.UIPadding [UIPadding]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Tengah.UIStroke [UIStroke]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.Tengah.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.GarisError [ImageLabel] | Visible=true | Pos={0.5, 0}, {1, -6} | Size={0, 320}, {0, 28} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.GarisError.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Main.Hud.GarisError.ErrorPanah [ImageLabel] | Visible=false | Pos={0.5, 0}, {0, -1} | Size={0, 18}, {0, 14} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.Beri [Frame] | Visible=true | Pos={0, 14}, {1, -96} | Size={0, 260}, {0, 200}
-Players.Kertia911.PlayerGui.NgamenOsuGui.Beri.UIScale [UIScale]
-Players.Kertia911.PlayerGui.NgamenOsuGui.Kursor [ImageLabel] | Visible=false | Pos={0, 0}, {0, 0} | Size={0, 46}, {0, 46} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.KursorEkor [ImageLabel] | Visible=false | Pos={0, 0}, {0, 0} | Size={0, 22}, {0, 22} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.KursorEkor [ImageLabel] | Visible=false | Pos={0, 0}, {0, 0} | Size={0, 22}, {0, 22} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.KursorEkor [ImageLabel] | Visible=false | Pos={0, 0}, {0, 0} | Size={0, 22}, {0, 22} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.KursorEkor [ImageLabel] | Visible=false | Pos={0, 0}, {0, 0} | Size={0, 22}, {0, 22} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.KursorEkor [ImageLabel] | Visible=false | Pos={0, 0}, {0, 0} | Size={0, 22}, {0, 22} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.KursorEkor [ImageLabel] | Visible=false | Pos={0, 0}, {0, 0} | Size={0, 22}, {0, 22} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.KursorEkor [ImageLabel] | Visible=false | Pos={0, 0}, {0, 0} | Size={0, 22}, {0, 22} | Image=rbxassetid://122158847293409
-Players.Kertia911.PlayerGui.NgamenOsuGui.LaguOsu [Sound] | SoundId=rbxassetid://98600752652280 | Playing=true
-Players.Kertia911.PlayerGui.NgamenOsuGui.KetukOsu1 [Sound] | SoundId=rbxassetid://112204095216646 | Playing=false
-Players.Kertia911.PlayerGui.NgamenOsuGui.KetukOsu2 [Sound] | SoundId=rbxassetid://112204095216646 | Playing=false
-Players.Kertia911.PlayerGui.NgamenOsuGui.KetukOsu3 [Sound] | SoundId=rbxassetid://112204095216646 | Playing=false
-
-=== PETA 1 ===
-ROOT: ReplicatedStorage.NgamenOsuPeta
-
-=== PETA 2 ===
-ROOT: ReplicatedStorage.NgamenOsuPeta2
-ReplicatedStorage.NgamenOsuPeta2.L108579401486617 [ModuleScript]
-ReplicatedStorage.NgamenOsuPeta2.L122924075398424 [ModuleScript]
-ReplicatedStorage.NgamenOsuPeta2.L125955508466572 [ModuleScript]
-ReplicatedStorage.NgamenOsuPeta2.L129307159336570 [ModuleScript]
-ReplicatedStorage.NgamenOsuPeta2.L70688896744983 [ModuleScript]
-ReplicatedStorage.NgamenOsuPeta2.L77473580398007 [ModuleScript]
-ReplicatedStorage.NgamenOsuPeta2.L91299426815935 [ModuleScript]
-ReplicatedStorage.NgamenOsuPeta2.L93315551192649 [ModuleScript]
-ReplicatedStorage.NgamenOsuPeta2.L98591903104740 [ModuleScript]
-ReplicatedStorage.NgamenOsuPeta2.L98600752652280 [ModuleScript]
-
-=== OSU DATA ===
-ROOT: ReplicatedStorage.NgamenOsuData
-
-=== OSU UI DATA ===
-ROOT: ReplicatedStorage.NgamenOsuUIData
+=== ARCHERY DUELS DIAGNOSTIC V13 ===
+READ-ONLY | PlaceId=71529003702706 | Player=Kertia911/8861459559
+-- CURRENT FIRING ORIGIN CONTEXT --
+CharacterRoot=(-1499.59, 28.10, 5968.85)
+Tool=Tool_Stone_Bow
+BowHandle=(-1499.63, 28.99, 5967.29)
+AimDotY=151.50924682617188
+-- EXISTING STUCK ARROWS --
+01) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.87, 14.58, 6435.80)
+    ATTRS ArenaSlot=Game19 | BaseDamage=966 | ImpactPos=(-1999.87, 13.26, 6438.50) | ImpactT=2.2337477912199653 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.87, 51.09, 6277.15) | LaunchTime=1795801191.555408 | LaunchVel=(0.00, 1.91, 71.02) | SpinSlot=Spear
+    Size=(0.48, 6.00, 0.66) | Anchored=true | CanQuery=false
+02) Workspace.StuckArrow | Class=MeshPart | Pos=(-1499.59, 24.59, 6466.57)
+    ATTRS ArenaSlot=Game20 | BaseDamage=43 | ImpactPos=(-1499.59, 24.13, 6467.72) | ImpactT=2.112950736645586 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1499.59, 39.31, 6339.13) | LaunchTime=1795790593.629663 | LaunchVel=(0.00, 10.31, 60.32) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+03) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.05, 37.05, 6780.72)
+    ATTRS ArenaSlot=Game29 | BaseDamage=95 | ImpactPos=(-1999.05, 36.64, 6779.55) | ImpactT=2.902226512163457 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.17, 30.78, 6958.21) | LaunchTime=1795721084.875747 | LaunchVel=(0.04, 25.89, -61.16) | OwnerUserId=12054324306 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+04) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 28.35, 6997.87)
+    ATTRS ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 27.86, 6999.00) | ImpactT=2.5984886280904167 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.49, 6845.09) | LaunchTime=1795721057.694496 | LaunchVel=(0.00, 16.96, 58.79) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+05) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.87, 46.59, 6276.97)
+    ATTRS ArenaSlot=Game19 | BaseDamage=1077 | ImpactPos=(-1999.87, 46.08, 6274.01) | ImpactT=2.4995383786976553 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.87, 23.31, 6438.26) | LaunchTime=1795801169.038869 | LaunchVel=(0.00, 29.74, -64.53) | OwnerUserId=1434658829 | SpinSlot=Spear
+    Size=(0.48, 6.00, 0.66) | Anchored=true | CanQuery=false
+06) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.87, 43.65, 6284.67)
+    ATTRS ArenaSlot=Game19 | BaseDamage=1077 | ImpactPos=(-1999.87, 43.17, 6281.71) | ImpactT=2.350126760389661 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.87, 23.27, 6438.24) | LaunchTime=1795801154.956532 | LaunchVel=(0.00, 27.89, -65.35) | OwnerUserId=1434658829 | SpinSlot=Spear
+    Size=(0.48, 6.00, 0.66) | Anchored=true | CanQuery=false
+07) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.87, 19.27, 6473.86)
+    ATTRS ArenaSlot=Game19 | BaseDamage=966 | ImpactPos=(-1999.87, 17.96, 6476.56) | ImpactT=2.713587560063513 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.87, 51.28, 6283.14) | LaunchTime=1795801162.906937 | LaunchVel=(0.00, 10.39, 70.29) | SpinSlot=Spear
+    Size=(0.48, 6.00, 0.66) | Anchored=true | CanQuery=false
+08) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 28.60, 6997.87)
+    ATTRS ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 28.09, 6999.00) | ImpactT=2.718212973464702 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.52, 6839.08) | LaunchTime=1795721101.426252 | LaunchVel=(0.00, 18.21, 58.42) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+09) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.17, 23.04, 6951.17)
+    ATTRS ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.17, 22.56, 6952.31) | ImpactT=2.046140220697113 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.07, 45.62, 6815.79) | LaunchTime=1795721121.57478 | LaunchVel=(-0.05, 5.69, 66.17) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+10) Workspace.StuckArrow | Class=MeshPart | Pos=(-1499.59, 25.11, 6489.02)
+    ATTRS ArenaSlot=Game20 | BaseDamage=43 | ImpactPos=(-1499.59, 24.62, 6490.16) | ImpactT=2.414316780872568 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1499.59, 39.40, 6345.11) | LaunchTime=1795790574.13009 | LaunchVel=(0.00, 13.82, 59.61) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+11) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.20, 30.46, 6998.54)
+    ATTRS ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.20, 29.93, 6999.66) | ImpactT=3.0363643325926892 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.06, 45.96, 6805.99) | LaunchTime=1795721151.756459 | LaunchVel=(-0.04, 19.72, 63.42) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+12) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 30.99, 6798.52)
+    ATTRS ArenaSlot=Game28 | BaseDamage=48 | ImpactPos=(-2499.59, 30.47, 6797.39) | ImpactT=3.1353937464093264 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.27, 6972.40) | LaunchTime=1795721122.256997 | LaunchVel=(0.00, 25.86, -55.46) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+13) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 26.49, 6480.27)
+    ATTRS ArenaSlot=Game18 | BaseDamage=1212 | ImpactPos=(-2499.59, 25.34, 6483.04) | ImpactT=2.3690839744673977 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.41, 6339.11) | LaunchTime=1795801164.023306 | LaunchVel=(0.00, 13.92, 59.59) | OwnerUserId=11254622679 | SpinSlot=Spear
+    Size=(0.31, 6.00, 0.66) | Anchored=true | CanQuery=false
+14) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.17, 22.68, 6951.07)
+    ATTRS ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.17, 22.20, 6952.21) | ImpactT=1.9506919452352276 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.08, 45.59, 6821.79) | LaunchTime=1795721077.776968 | LaunchVel=(-0.05, 4.21, 66.28) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+15) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.07, 41.28, 6814.48)
+    ATTRS ArenaSlot=Game29 | BaseDamage=95 | ImpactPos=(-1999.07, 41.00, 6813.27) | ImpactT=2.313276128982831 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.17, 30.72, 6958.18) | LaunchTime=1795721069.04312 | LaunchVel=(0.04, 23.48, -62.12) | OwnerUserId=12054324306 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+16) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.59, 34.44, 6339.37)
+    ATTRS ArenaSlot=Game22 | BaseDamage=127 | ImpactPos=(-499.59, 34.10, 6338.22) | ImpactT=2.3099929749931816 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.14, 6472.34) | LaunchTime=1795721317.282631 | LaunchVel=(0.00, 20.75, -57.56) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.34, 2.40, 0.33) | Anchored=true | CanQuery=false
+17) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 28.26, 6798.51)
+    ATTRS ArenaSlot=Game28 | BaseDamage=48 | ImpactPos=(-2499.59, 27.76, 6797.38) | ImpactT=2.9747190290914953 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.21, 6966.37) | LaunchTime=1795721052.67732 | LaunchVel=(0.00, 23.66, -56.43) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+18) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.17, 24.34, 6952.82)
+    ATTRS ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.17, 23.87, 6953.96) | ImpactT=2.1693481796325877 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.07, 45.67, 6809.78) | LaunchTime=1795721136.390542 | LaunchVel=(-0.05, 7.90, 65.94) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+19) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.59, 28.01, 6497.87)
+    ATTRS ArenaSlot=Game22 | BaseDamage=198 | ImpactPos=(-499.59, 27.52, 6499.00) | ImpactT=2.5966307025865194 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 39.48, 6345.09) | LaunchTime=1795721307.403384 | LaunchVel=(0.00, 16.81, 58.84) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+20) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 26.29, 6997.87)
+    ATTRS ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 25.79, 6999.00) | ImpactT=2.587446249542226 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.46, 6845.10) | LaunchTime=1795721034.796672 | LaunchVel=(0.00, 16.06, 59.04) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+21) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.59, 26.46, 5995.52)
+    ATTRS ArenaSlot=Game9 | BaseDamage=978 | ImpactPos=(-1999.59, 26.00, 5996.61) | ImpactT=2.4295464856452993 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 39.42, 5851.11) | LaunchTime=1795801274.070689 | LaunchVel=(0.00, 14.53, 59.44) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.21, 2.38, 0.33) | Anchored=true | CanQuery=false
+22) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 31.14, 6850.18)
+    ATTRS ArenaSlot=Game28 | BaseDamage=48 | ImpactPos=(-2499.59, 30.81, 6849.00) | ImpactT=2.083465190982852 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.05, 6972.31) | LaunchTime=1795721096.908141 | LaunchVel=(0.00, 17.56, -58.62) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+23) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.59, 33.91, 6350.56)
+    ATTRS ArenaSlot=Game22 | BaseDamage=127 | ImpactPos=(-499.59, 33.61, 6349.40) | ImpactT=2.09262362037904 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.09, 6472.32) | LaunchTime=1795721302.884119 | LaunchVel=(0.00, 18.93, -58.19) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.34, 2.40, 0.33) | Anchored=true | CanQuery=false
+24) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.20, 30.82, 6998.53)
+    ATTRS ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.20, 30.33, 6999.66) | ImpactT=2.754427203738649 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.08, 45.90, 6821.74) | LaunchTime=1795721106.945881 | LaunchVel=(-0.05, 17.05, 64.18) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+25) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.59, 29.68, 5851.39)
+    ATTRS ArenaSlot=Game12 | BaseDamage=79 | ImpactPos=(-499.59, 28.86, 5848.53) | ImpactT=2.0533990663826125 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.03, 5972.31) | LaunchTime=1795801284.902697 | LaunchVel=(0.00, 16.63, -58.89) | SpinSlot=Spear
+    Size=(0.58, 5.96, 0.55) | Anchored=true | CanQuery=false
+26) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.59, 25.92, 5991.65)
+    ATTRS ArenaSlot=Game12 | BaseDamage=76 | ImpactPos=(-499.59, 24.74, 5994.39) | ImpactT=2.467217861104488 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 39.43, 5845.10) | LaunchTime=1795801292.900857 | LaunchVel=(0.00, 14.70, 59.40) | OwnerUserId=10241113531 | SpinSlot=Spear
+    Size=(0.58, 5.96, 0.55) | Anchored=true | CanQuery=false
+27) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.05, 38.35, 6780.72)
+    ATTRS ArenaSlot=Game29 | BaseDamage=95 | ImpactPos=(-1999.05, 37.92, 6779.56) | ImpactT=3.0302534103001086 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.18, 30.81, 6964.22) | LaunchTime=1795721101.008797 | LaunchVel=(0.04, 27.26, -60.56) | OwnerUserId=12054324306 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+28) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.59, 25.78, 5989.31)
+    ATTRS ArenaSlot=Game12 | BaseDamage=76 | ImpactPos=(-499.59, 24.61, 5992.05) | ImpactT=2.4226178351548873 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 39.41, 5845.11) | LaunchTime=1795801307.666865 | LaunchVel=(0.00, 14.18, 59.52) | OwnerUserId=10241113531 | SpinSlot=Spear
+    Size=(0.58, 5.96, 0.55) | Anchored=true | CanQuery=false
+29) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.87, 41.58, 6232.83)
+    ATTRS ArenaSlot=Game19 | BaseDamage=1077 | ImpactPos=(-1999.87, 40.59, 6230.00) | ImpactT=3.35722488060214 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.87, 23.38, 6444.29) | LaunchTime=1795801198.771282 | LaunchVel=(0.00, 32.87, -62.99) | OwnerUserId=1434658829 | SpinSlot=Spear
+    Size=(0.48, 6.00, 0.66) | Anchored=true | CanQuery=false
+30) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 31.64, 6351.88)
+    ATTRS ArenaSlot=Game18 | BaseDamage=1023 | ImpactPos=(-2499.59, 30.80, 6348.99) | ImpactT=2.167231616540124 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.08, 6478.32) | LaunchTime=1795801171.791993 | LaunchVel=(0.00, 18.44, -58.34) | SpinSlot=Spear
+    Size=(0.48, 6.00, 0.66) | Anchored=true | CanQuery=false
+31) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.58, 28.59, 5973.20)
+    ATTRS ArenaSlot=Game9 | BaseDamage=978 | HitCharacter=true | ImpactHead=false | ImpactPos=(-1999.59, 28.19, 5968.33) | ImpactT=2.0301401141135225 | ImpactVictim=ClarySeraphGriffin | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 39.34, 5845.12) | LaunchTime=1795801303.134185 | LaunchVel=(0.00, 11.31, 60.14) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.21, 2.38, 0.33) | Anchored=false | CanQuery=false
+32) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.59, 28.55, 5851.62)
+    ATTRS ArenaSlot=Game12 | BaseDamage=79 | ImpactPos=(-499.59, 27.75, 5848.75) | ImpactT=1.9335745900052077 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 29.99, 5966.30) | LaunchTime=1795801270.585585 | LaunchVel=(0.00, 15.06, -59.31) | SpinSlot=Spear
+    Size=(0.58, 5.96, 0.55) | Anchored=true | CanQuery=false
+33) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 29.91, 6997.87)
+    ATTRS ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 29.41, 6999.00) | ImpactT=2.72645874751063 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.53, 6839.07) | LaunchTime=1795721087.110402 | LaunchVel=(0.00, 18.76, 58.24) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+34) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.20, 26.67, 6998.55)
+    ATTRS ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.20, 26.13, 6999.66) | ImpactT=3.0157999377928095 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.06, 45.92, 6806.00) | LaunchTime=1795721167.841143 | LaunchVel=(-0.05, 18.27, 63.85) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+35) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 31.47, 6997.88)
+    ATTRS ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 30.96, 6999.00) | ImpactT=2.8595459996199097 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.58, 6833.06) | LaunchTime=1795721127.443571 | LaunchVel=(0.00, 20.54, 57.64) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+36) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.58, 38.72, 5844.28)
+    ATTRS ArenaSlot=Game9 | BaseDamage=1077 | HitCharacter=true | ImpactHead=true | ImpactPos=(-1999.59, 38.49, 5849.08) | ImpactT=2.016779839381704 | ImpactVictim=PlayerClone_ClarySeraphGriffin | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 30.14, 5966.34) | LaunchTime=1795801294.883719 | LaunchVel=(0.00, 20.75, -57.56) | OwnerUserId=1434658829 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.21, 2.38, 0.33) | Anchored=false | CanQuery=false
+37) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 21.31, 6964.05)
+    ATTRS ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 20.83, 6965.18) | ImpactT=2.165188950411396 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.29, 6833.13) | LaunchTime=1795721116.858529 | LaunchVel=(0.00, 9.40, 60.46) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+38) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 28.25, 6798.50)
+    ATTRS ArenaSlot=Game28 | BaseDamage=48 | ImpactPos=(-2499.59, 27.73, 6797.38) | ImpactT=3.1076806111465993 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.24, 6972.38) | LaunchTime=1795721136.189704 | LaunchVel=(0.00, 24.77, -55.95) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+39) Workspace.StuckArrow | Class=MeshPart | Pos=(-2499.59, 34.81, 6850.58)
+    ATTRS ArenaSlot=Game28 | BaseDamage=48 | ImpactPos=(-2499.59, 34.50, 6849.38) | ImpactT=2.097736256736812 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.10, 6972.33) | LaunchTime=1795721082.592125 | LaunchVel=(0.00, 19.39, -58.04) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.29, 2.47, 0.42) | Anchored=true | CanQuery=false
+40) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.58, 29.11, 5971.54)
+    ATTRS ArenaSlot=Game12 | BaseDamage=76 | HitCharacter=true | ImpactHead=false | ImpactPos=(-499.59, 28.09, 5968.34) | ImpactT=2.0020539260799874 | ImpactVictim=PlayerClone_Emilevolt5 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 39.34, 5845.12) | LaunchTime=1795801277.701458 | LaunchVel=(0.00, 11.26, 60.15) | OwnerUserId=10241113531 | SpinSlot=Spear
+    Size=(0.58, 5.96, 0.55) | Anchored=false | CanQuery=false
+41) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.59, 26.47, 5996.27)
+    ATTRS ArenaSlot=Game12 | BaseDamage=76 | ImpactPos=(-499.59, 25.27, 5999.00) | ImpactT=2.5578238572161003 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 39.46, 5845.10) | LaunchTime=1795801264.169657 | LaunchVel=(0.00, 15.84, 59.10) | OwnerUserId=10241113531 | SpinSlot=Spear
+    Size=(0.58, 5.96, 0.55) | Anchored=true | CanQuery=false
+42) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.59, 26.52, 5997.91)
+    ATTRS ArenaSlot=Game9 | BaseDamage=978 | ImpactPos=(-1999.59, 26.05, 5999.00) | ImpactT=2.474810662012539 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 39.44, 5851.10) | LaunchTime=1795801287.535198 | LaunchVel=(0.00, 15.01, 59.32) | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.21, 2.38, 0.33) | Anchored=true | CanQuery=false
+43) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.60, 38.17, 5846.00)
+    ATTRS ArenaSlot=Game12 | BaseDamage=79 | HitCharacter=true | ImpactHead=false | ImpactPos=(-499.59, 37.58, 5849.07) | ImpactT=1.9805309547758205 | ImpactVictim=Emilevolt5 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.13, 5966.34) | LaunchTime=1795801256.838703 | LaunchVel=(0.00, 20.26, -57.74) | SpinSlot=Spear
+    Size=(0.58, 5.96, 0.55) | Anchored=false | CanQuery=false
+44) Workspace.StuckArrow | Class=MeshPart | Pos=(-499.59, 33.16, 5800.13)
+    ATTRS ArenaSlot=Game12 | BaseDamage=79 | ImpactPos=(-499.59, 31.95, 5797.40) | ImpactT=3.1221145089848417 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.29, 5972.40) | LaunchTime=1795801300.084654 | LaunchVel=(0.00, 26.45, -55.18) | SpinSlot=Spear
+    Size=(0.58, 5.96, 0.55) | Anchored=true | CanQuery=false
+45) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.59, 34.75, 5827.49)
+    ATTRS ArenaSlot=Game9 | BaseDamage=1077 | ImpactPos=(-1999.59, 34.40, 5826.36) | ImpactT=2.4276419474378326 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 30.16, 5966.35) | LaunchTime=1795801281.351044 | LaunchVel=(0.00, 21.74, -57.20) | OwnerUserId=1434658829 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.21, 2.38, 0.33) | Anchored=true | CanQuery=false
+46) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.59, 35.90, 5824.72)
+    ATTRS ArenaSlot=Game9 | BaseDamage=1077 | ImpactPos=(-1999.59, 35.54, 5823.58) | ImpactT=2.4919778812073266 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 30.19, 5966.36) | LaunchTime=1795801263.968496 | LaunchVel=(0.00, 22.66, -56.84) | OwnerUserId=1434658829 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.21, 2.38, 0.33) | Anchored=true | CanQuery=false
+47) Workspace.StuckArrow | Class=MeshPart | Pos=(-1999.59, 34.90, 5846.92)
+    ATTRS ArenaSlot=Game9 | BaseDamage=1077 | ImpactPos=(-1999.59, 34.59, 5845.77) | ImpactT=2.167789067867728 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 30.12, 5972.33) | LaunchTime=1795801311.833325 | LaunchVel=(0.00, 19.93, -57.85) | OwnerUserId=1434658829 | SpinSlot=Bow | TipAtMinusY=true
+    Size=(0.21, 2.38, 0.33) | Anchored=true | CanQuery=false
+StuckArrowCount=47
+-- LIVE PROJECTILE CANDIDATES --
+CandidateCount=57
+01) WedgePart | Workspace.PvpGuideBeam.GuideArrow1_1 | Pos=(-7.82, 80.51, -83.96) | Attrs=none
+02) WedgePart | Workspace.PvpGuideBeam.GuideArrow1_2 | Pos=(-8.75, 80.51, -84.63) | Attrs=none
+03) WedgePart | Workspace.PvpGuideBeam.GuideArrow2_1 | Pos=(-11.17, 80.63, -79.27) | Attrs=none
+04) WedgePart | Workspace.PvpGuideBeam.GuideArrow2_2 | Pos=(-12.13, 80.63, -79.96) | Attrs=none
+05) WedgePart | Workspace.PvpGuideBeam.GuideArrow3_1 | Pos=(-14.52, 80.75, -74.58) | Attrs=none
+06) WedgePart | Workspace.PvpGuideBeam.GuideArrow3_2 | Pos=(-15.51, 80.75, -75.30) | Attrs=none
+07) WedgePart | Workspace.PvpGuideBeam.GuideArrow4_1 | Pos=(-17.87, 80.87, -69.90) | Attrs=none
+08) WedgePart | Workspace.PvpGuideBeam.GuideArrow4_2 | Pos=(-18.90, 80.87, -70.64) | Attrs=none
+09) WedgePart | Workspace.PvpGuideBeam.GuideArrow5_1 | Pos=(-21.22, 81.00, -65.21) | Attrs=none
+10) WedgePart | Workspace.PvpGuideBeam.GuideArrow5_2 | Pos=(-22.28, 81.00, -65.97) | Attrs=none
+11) WedgePart | Workspace.PvpGuideBeam.GuideArrow6_1 | Pos=(-24.57, 81.12, -60.52) | Attrs=none
+12) WedgePart | Workspace.PvpGuideBeam.GuideArrow6_2 | Pos=(-25.67, 81.12, -61.31) | Attrs=none
+13) WedgePart | Workspace.PvpGuideBeam.GuideArrow7_1 | Pos=(-27.92, 81.24, -55.83) | Attrs=none
+14) WedgePart | Workspace.PvpGuideBeam.GuideArrow7_2 | Pos=(-29.05, 81.24, -56.65) | Attrs=none
+15) WedgePart | Workspace.PvpGuideBeam.GuideArrow8_1 | Pos=(-31.27, 81.36, -51.14) | Attrs=none
+16) WedgePart | Workspace.PvpGuideBeam.GuideArrow8_2 | Pos=(-32.43, 81.36, -51.98) | Attrs=none
+17) WedgePart | Workspace.PvpGuideBeam.GuideArrow9_1 | Pos=(-34.62, 81.49, -46.46) | Attrs=none
+18) WedgePart | Workspace.PvpGuideBeam.GuideArrow9_2 | Pos=(-35.82, 81.49, -47.32) | Attrs=none
+19) WedgePart | Workspace.PvpGuideBeam.GuideArrow10_1 | Pos=(-37.97, 81.61, -41.77) | Attrs=none
+20) WedgePart | Workspace.PvpGuideBeam.GuideArrow10_2 | Pos=(-39.20, 81.61, -42.66) | Attrs=none
+21) WedgePart | Workspace.PvpGuideBeam.GuideArrow11_1 | Pos=(-41.32, 81.73, -37.08) | Attrs=none
+22) WedgePart | Workspace.PvpGuideBeam.GuideArrow11_2 | Pos=(-42.59, 81.73, -37.99) | Attrs=none
+23) WedgePart | Workspace.PvpGuideBeam.GuideArrow12_1 | Pos=(-44.67, 81.85, -32.39) | Attrs=none
+24) WedgePart | Workspace.PvpGuideBeam.GuideArrow12_2 | Pos=(-45.97, 81.85, -33.33) | Attrs=none
+25) WedgePart | Workspace.PvpGuideBeam.GuideArrow13_1 | Pos=(-48.01, 81.98, -27.70) | Attrs=none
+26) WedgePart | Workspace.PvpGuideBeam.GuideArrow13_2 | Pos=(-49.36, 81.98, -28.67) | Attrs=none
+27) WedgePart | Workspace.PvpGuideBeam.GuideArrow14_1 | Pos=(-51.36, 82.10, -23.01) | Attrs=none
+28) WedgePart | Workspace.PvpGuideBeam.GuideArrow14_2 | Pos=(-52.74, 82.10, -24.01) | Attrs=none
+29) WedgePart | Workspace.BotZoneGuideBeam.GuideArrow1_1 | Pos=(-1.76, 80.56, -75.87) | Attrs=none
+30) WedgePart | Workspace.BotZoneGuideBeam.GuideArrow1_2 | Pos=(-0.62, 80.56, -76.10) | Attrs=none
+31) WedgePart | Workspace.BotZoneGuideBeam.GuideArrow2_1 | Pos=(-2.69, 81.05, -79.93) | Attrs=none
+32) WedgePart | Workspace.BotZoneGuideBeam.GuideArrow2_2 | Pos=(-1.39, 81.05, -80.21) | Attrs=none
+33) WedgePart | Workspace.BotZoneGuideBeam.GuideArrow3_1 | Pos=(-3.63, 81.53, -84.00) | Attrs=none
+34) WedgePart | Workspace.BotZoneGuideBeam.GuideArrow3_2 | Pos=(-2.15, 81.53, -84.31) | Attrs=none
+35) WedgePart | Workspace.BotZoneGuideBeam.GuideArrow4_1 | Pos=(-4.56, 82.02, -88.07) | Attrs=none
+-- SAMPLE NEW/CHANGING STUCK ARROWS FOR 8 SECONDS --
+NEW #1 t=0.00 | Workspace.StuckArrow | Pos=(-1999.87, 14.58, 6435.80) | Attrs=ArenaSlot=Game19 | BaseDamage=966 | ImpactPos=(-1999.87, 13.26, 6438.50) | ImpactT=2.2337477912199653 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.87, 51.09, 6277.15) | LaunchTime=1795801191.555408 | LaunchVel=(0.00, 1.91, 71.02) | SpinSlot=Spear
+NEW #2 t=0.00 | Workspace.StuckArrow | Pos=(-1499.59, 24.59, 6466.57) | Attrs=ArenaSlot=Game20 | BaseDamage=43 | ImpactPos=(-1499.59, 24.13, 6467.72) | ImpactT=2.112950736645586 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1499.59, 39.31, 6339.13) | LaunchTime=1795790593.629663 | LaunchVel=(0.00, 10.31, 60.32) | SpinSlot=Bow | TipAtMinusY=true
+NEW #3 t=0.00 | Workspace.StuckArrow | Pos=(-1999.05, 37.05, 6780.72) | Attrs=ArenaSlot=Game29 | BaseDamage=95 | ImpactPos=(-1999.05, 36.64, 6779.55) | ImpactT=2.902226512163457 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.17, 30.78, 6958.21) | LaunchTime=1795721084.875747 | LaunchVel=(0.04, 25.89, -61.16) | OwnerUserId=12054324306 | SpinSlot=Bow | TipAtMinusY=true
+NEW #4 t=0.00 | Workspace.StuckArrow | Pos=(-2499.59, 28.35, 6997.87) | Attrs=ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 27.86, 6999.00) | ImpactT=2.5984886280904167 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.49, 6845.09) | LaunchTime=1795721057.694496 | LaunchVel=(0.00, 16.96, 58.79) | SpinSlot=Bow | TipAtMinusY=true
+NEW #5 t=0.00 | Workspace.StuckArrow | Pos=(-1999.87, 46.59, 6276.97) | Attrs=ArenaSlot=Game19 | BaseDamage=1077 | ImpactPos=(-1999.87, 46.08, 6274.01) | ImpactT=2.4995383786976553 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.87, 23.31, 6438.26) | LaunchTime=1795801169.038869 | LaunchVel=(0.00, 29.74, -64.53) | OwnerUserId=1434658829 | SpinSlot=Spear
+NEW #6 t=0.00 | Workspace.StuckArrow | Pos=(-1999.87, 43.65, 6284.67) | Attrs=ArenaSlot=Game19 | BaseDamage=1077 | ImpactPos=(-1999.87, 43.17, 6281.71) | ImpactT=2.350126760389661 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.87, 23.27, 6438.24) | LaunchTime=1795801154.956532 | LaunchVel=(0.00, 27.89, -65.35) | OwnerUserId=1434658829 | SpinSlot=Spear
+NEW #7 t=0.01 | Workspace.StuckArrow | Pos=(-1999.87, 19.27, 6473.86) | Attrs=ArenaSlot=Game19 | BaseDamage=966 | ImpactPos=(-1999.87, 17.96, 6476.56) | ImpactT=2.713587560063513 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.87, 51.28, 6283.14) | LaunchTime=1795801162.906937 | LaunchVel=(0.00, 10.39, 70.29) | SpinSlot=Spear
+NEW #8 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 28.60, 6997.87) | Attrs=ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 28.09, 6999.00) | ImpactT=2.718212973464702 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.52, 6839.08) | LaunchTime=1795721101.426252 | LaunchVel=(0.00, 18.21, 58.42) | SpinSlot=Bow | TipAtMinusY=true
+NEW #9 t=0.01 | Workspace.StuckArrow | Pos=(-1999.17, 23.04, 6951.17) | Attrs=ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.17, 22.56, 6952.31) | ImpactT=2.046140220697113 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.07, 45.62, 6815.79) | LaunchTime=1795721121.57478 | LaunchVel=(-0.05, 5.69, 66.17) | SpinSlot=Bow | TipAtMinusY=true
+NEW #10 t=0.01 | Workspace.StuckArrow | Pos=(-1499.59, 25.11, 6489.02) | Attrs=ArenaSlot=Game20 | BaseDamage=43 | ImpactPos=(-1499.59, 24.62, 6490.16) | ImpactT=2.414316780872568 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1499.59, 39.40, 6345.11) | LaunchTime=1795790574.13009 | LaunchVel=(0.00, 13.82, 59.61) | SpinSlot=Bow | TipAtMinusY=true
+NEW #11 t=0.01 | Workspace.StuckArrow | Pos=(-1999.20, 30.46, 6998.54) | Attrs=ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.20, 29.93, 6999.66) | ImpactT=3.0363643325926892 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.06, 45.96, 6805.99) | LaunchTime=1795721151.756459 | LaunchVel=(-0.04, 19.72, 63.42) | SpinSlot=Bow | TipAtMinusY=true
+NEW #12 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 30.99, 6798.52) | Attrs=ArenaSlot=Game28 | BaseDamage=48 | ImpactPos=(-2499.59, 30.47, 6797.39) | ImpactT=3.1353937464093264 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.27, 6972.40) | LaunchTime=1795721122.256997 | LaunchVel=(0.00, 25.86, -55.46) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+NEW #13 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 26.49, 6480.27) | Attrs=ArenaSlot=Game18 | BaseDamage=1212 | ImpactPos=(-2499.59, 25.34, 6483.04) | ImpactT=2.3690839744673977 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.41, 6339.11) | LaunchTime=1795801164.023306 | LaunchVel=(0.00, 13.92, 59.59) | OwnerUserId=11254622679 | SpinSlot=Spear
+NEW #14 t=0.01 | Workspace.StuckArrow | Pos=(-1999.17, 22.68, 6951.07) | Attrs=ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.17, 22.20, 6952.21) | ImpactT=1.9506919452352276 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.08, 45.59, 6821.79) | LaunchTime=1795721077.776968 | LaunchVel=(-0.05, 4.21, 66.28) | SpinSlot=Bow | TipAtMinusY=true
+NEW #15 t=0.01 | Workspace.StuckArrow | Pos=(-1999.07, 41.28, 6814.48) | Attrs=ArenaSlot=Game29 | BaseDamage=95 | ImpactPos=(-1999.07, 41.00, 6813.27) | ImpactT=2.313276128982831 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.17, 30.72, 6958.18) | LaunchTime=1795721069.04312 | LaunchVel=(0.04, 23.48, -62.12) | OwnerUserId=12054324306 | SpinSlot=Bow | TipAtMinusY=true
+NEW #16 t=0.01 | Workspace.StuckArrow | Pos=(-499.59, 34.44, 6339.37) | Attrs=ArenaSlot=Game22 | BaseDamage=127 | ImpactPos=(-499.59, 34.10, 6338.22) | ImpactT=2.3099929749931816 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.14, 6472.34) | LaunchTime=1795721317.282631 | LaunchVel=(0.00, 20.75, -57.56) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+NEW #17 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 28.26, 6798.51) | Attrs=ArenaSlot=Game28 | BaseDamage=48 | ImpactPos=(-2499.59, 27.76, 6797.38) | ImpactT=2.9747190290914953 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.21, 6966.37) | LaunchTime=1795721052.67732 | LaunchVel=(0.00, 23.66, -56.43) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+NEW #18 t=0.01 | Workspace.StuckArrow | Pos=(-1999.17, 24.34, 6952.82) | Attrs=ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.17, 23.87, 6953.96) | ImpactT=2.1693481796325877 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.07, 45.67, 6809.78) | LaunchTime=1795721136.390542 | LaunchVel=(-0.05, 7.90, 65.94) | SpinSlot=Bow | TipAtMinusY=true
+NEW #19 t=0.01 | Workspace.StuckArrow | Pos=(-499.59, 28.01, 6497.87) | Attrs=ArenaSlot=Game22 | BaseDamage=198 | ImpactPos=(-499.59, 27.52, 6499.00) | ImpactT=2.5966307025865194 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 39.48, 6345.09) | LaunchTime=1795721307.403384 | LaunchVel=(0.00, 16.81, 58.84) | SpinSlot=Bow | TipAtMinusY=true
+NEW #20 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 26.29, 6997.87) | Attrs=ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 25.79, 6999.00) | ImpactT=2.587446249542226 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.46, 6845.10) | LaunchTime=1795721034.796672 | LaunchVel=(0.00, 16.06, 59.04) | SpinSlot=Bow | TipAtMinusY=true
+NEW #21 t=0.01 | Workspace.StuckArrow | Pos=(-1999.59, 26.46, 5995.52) | Attrs=ArenaSlot=Game9 | BaseDamage=978 | ImpactPos=(-1999.59, 26.00, 5996.61) | ImpactT=2.4295464856452993 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 39.42, 5851.11) | LaunchTime=1795801274.070689 | LaunchVel=(0.00, 14.53, 59.44) | SpinSlot=Bow | TipAtMinusY=true
+NEW #22 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 31.14, 6850.18) | Attrs=ArenaSlot=Game28 | BaseDamage=48 | ImpactPos=(-2499.59, 30.81, 6849.00) | ImpactT=2.083465190982852 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.05, 6972.31) | LaunchTime=1795721096.908141 | LaunchVel=(0.00, 17.56, -58.62) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+NEW #23 t=0.01 | Workspace.StuckArrow | Pos=(-499.59, 33.91, 6350.56) | Attrs=ArenaSlot=Game22 | BaseDamage=127 | ImpactPos=(-499.59, 33.61, 6349.40) | ImpactT=2.09262362037904 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.09, 6472.32) | LaunchTime=1795721302.884119 | LaunchVel=(0.00, 18.93, -58.19) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+NEW #24 t=0.01 | Workspace.StuckArrow | Pos=(-1999.20, 30.82, 6998.53) | Attrs=ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.20, 30.33, 6999.66) | ImpactT=2.754427203738649 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.08, 45.90, 6821.74) | LaunchTime=1795721106.945881 | LaunchVel=(-0.05, 17.05, 64.18) | SpinSlot=Bow | TipAtMinusY=true
+NEW #25 t=0.01 | Workspace.StuckArrow | Pos=(-499.59, 29.68, 5851.39) | Attrs=ArenaSlot=Game12 | BaseDamage=79 | ImpactPos=(-499.59, 28.86, 5848.53) | ImpactT=2.0533990663826125 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.03, 5972.31) | LaunchTime=1795801284.902697 | LaunchVel=(0.00, 16.63, -58.89) | SpinSlot=Spear
+NEW #26 t=0.01 | Workspace.StuckArrow | Pos=(-499.59, 25.92, 5991.65) | Attrs=ArenaSlot=Game12 | BaseDamage=76 | ImpactPos=(-499.59, 24.74, 5994.39) | ImpactT=2.467217861104488 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 39.43, 5845.10) | LaunchTime=1795801292.900857 | LaunchVel=(0.00, 14.70, 59.40) | OwnerUserId=10241113531 | SpinSlot=Spear
+NEW #27 t=0.01 | Workspace.StuckArrow | Pos=(-1999.05, 38.35, 6780.72) | Attrs=ArenaSlot=Game29 | BaseDamage=95 | ImpactPos=(-1999.05, 37.92, 6779.56) | ImpactT=3.0302534103001086 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.18, 30.81, 6964.22) | LaunchTime=1795721101.008797 | LaunchVel=(0.04, 27.26, -60.56) | OwnerUserId=12054324306 | SpinSlot=Bow | TipAtMinusY=true
+NEW #28 t=0.01 | Workspace.StuckArrow | Pos=(-499.59, 25.78, 5989.31) | Attrs=ArenaSlot=Game12 | BaseDamage=76 | ImpactPos=(-499.59, 24.61, 5992.05) | ImpactT=2.4226178351548873 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 39.41, 5845.11) | LaunchTime=1795801307.666865 | LaunchVel=(0.00, 14.18, 59.52) | OwnerUserId=10241113531 | SpinSlot=Spear
+NEW #29 t=0.01 | Workspace.StuckArrow | Pos=(-1999.87, 41.58, 6232.83) | Attrs=ArenaSlot=Game19 | BaseDamage=1077 | ImpactPos=(-1999.87, 40.59, 6230.00) | ImpactT=3.35722488060214 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.87, 23.38, 6444.29) | LaunchTime=1795801198.771282 | LaunchVel=(0.00, 32.87, -62.99) | OwnerUserId=1434658829 | SpinSlot=Spear
+NEW #30 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 31.64, 6351.88) | Attrs=ArenaSlot=Game18 | BaseDamage=1023 | ImpactPos=(-2499.59, 30.80, 6348.99) | ImpactT=2.167231616540124 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.08, 6478.32) | LaunchTime=1795801171.791993 | LaunchVel=(0.00, 18.44, -58.34) | SpinSlot=Spear
+NEW #31 t=0.01 | Workspace.StuckArrow | Pos=(-1999.58, 28.59, 5973.20) | Attrs=ArenaSlot=Game9 | BaseDamage=978 | HitCharacter=true | ImpactHead=false | ImpactPos=(-1999.59, 28.19, 5968.33) | ImpactT=2.0301401141135225 | ImpactVictim=ClarySeraphGriffin | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 39.34, 5845.12) | LaunchTime=1795801303.134185 | LaunchVel=(0.00, 11.31, 60.14) | SpinSlot=Bow | TipAtMinusY=true
+NEW #32 t=0.01 | Workspace.StuckArrow | Pos=(-499.59, 28.55, 5851.62) | Attrs=ArenaSlot=Game12 | BaseDamage=79 | ImpactPos=(-499.59, 27.75, 5848.75) | ImpactT=1.9335745900052077 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 29.99, 5966.30) | LaunchTime=1795801270.585585 | LaunchVel=(0.00, 15.06, -59.31) | SpinSlot=Spear
+NEW #33 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 29.91, 6997.87) | Attrs=ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 29.41, 6999.00) | ImpactT=2.72645874751063 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.53, 6839.07) | LaunchTime=1795721087.110402 | LaunchVel=(0.00, 18.76, 58.24) | SpinSlot=Bow | TipAtMinusY=true
+NEW #34 t=0.01 | Workspace.StuckArrow | Pos=(-1999.20, 26.67, 6998.55) | Attrs=ArenaSlot=Game29 | BaseDamage=115 | ImpactPos=(-1999.20, 26.13, 6999.66) | ImpactT=3.0157999377928095 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.06, 45.92, 6806.00) | LaunchTime=1795721167.841143 | LaunchVel=(-0.05, 18.27, 63.85) | SpinSlot=Bow | TipAtMinusY=true
+NEW #35 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 31.47, 6997.88) | Attrs=ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 30.96, 6999.00) | ImpactT=2.8595459996199097 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.58, 6833.06) | LaunchTime=1795721127.443571 | LaunchVel=(0.00, 20.54, 57.64) | SpinSlot=Bow | TipAtMinusY=true
+NEW #36 t=0.01 | Workspace.StuckArrow | Pos=(-1999.58, 38.72, 5844.28) | Attrs=ArenaSlot=Game9 | BaseDamage=1077 | HitCharacter=true | ImpactHead=true | ImpactPos=(-1999.59, 38.49, 5849.08) | ImpactT=2.016779839381704 | ImpactVictim=PlayerClone_ClarySeraphGriffin | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 30.14, 5966.34) | LaunchTime=1795801294.883719 | LaunchVel=(0.00, 20.75, -57.56) | OwnerUserId=1434658829 | SpinSlot=Bow | TipAtMinusY=true
+NEW #37 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 21.31, 6964.05) | Attrs=ArenaSlot=Game28 | BaseDamage=198 | ImpactPos=(-2499.59, 20.83, 6965.18) | ImpactT=2.165188950411396 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 39.29, 6833.13) | LaunchTime=1795721116.858529 | LaunchVel=(0.00, 9.40, 60.46) | SpinSlot=Bow | TipAtMinusY=true
+NEW #38 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 28.25, 6798.50) | Attrs=ArenaSlot=Game28 | BaseDamage=48 | ImpactPos=(-2499.59, 27.73, 6797.38) | ImpactT=3.1076806111465993 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.24, 6972.38) | LaunchTime=1795721136.189704 | LaunchVel=(0.00, 24.77, -55.95) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+NEW #39 t=0.01 | Workspace.StuckArrow | Pos=(-2499.59, 34.81, 6850.58) | Attrs=ArenaSlot=Game28 | BaseDamage=48 | ImpactPos=(-2499.59, 34.50, 6849.38) | ImpactT=2.097736256736812 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.59, 30.10, 6972.33) | LaunchTime=1795721082.592125 | LaunchVel=(0.00, 19.39, -58.04) | OwnerUserId=11273773185 | SpinSlot=Bow | TipAtMinusY=true
+NEW #40 t=0.01 | Workspace.StuckArrow | Pos=(-499.58, 29.11, 5971.54) | Attrs=ArenaSlot=Game12 | BaseDamage=76 | HitCharacter=true | ImpactHead=false | ImpactPos=(-499.59, 28.09, 5968.34) | ImpactT=2.0020539260799874 | ImpactVictim=PlayerClone_Emilevolt5 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 39.34, 5845.12) | LaunchTime=1795801277.701458 | LaunchVel=(0.00, 11.26, 60.15) | OwnerUserId=10241113531 | SpinSlot=Spear
+NEW #41 t=0.01 | Workspace.StuckArrow | Pos=(-499.59, 26.47, 5996.27) | Attrs=ArenaSlot=Game12 | BaseDamage=76 | ImpactPos=(-499.59, 25.27, 5999.00) | ImpactT=2.5578238572161003 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 39.46, 5845.10) | LaunchTime=1795801264.169657 | LaunchVel=(0.00, 15.84, 59.10) | OwnerUserId=10241113531 | SpinSlot=Spear
+NEW #42 t=0.01 | Workspace.StuckArrow | Pos=(-1999.59, 26.52, 5997.91) | Attrs=ArenaSlot=Game9 | BaseDamage=978 | ImpactPos=(-1999.59, 26.05, 5999.00) | ImpactT=2.474810662012539 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 39.44, 5851.10) | LaunchTime=1795801287.535198 | LaunchVel=(0.00, 15.01, 59.32) | SpinSlot=Bow | TipAtMinusY=true
+NEW #43 t=0.01 | Workspace.StuckArrow | Pos=(-499.60, 38.17, 5846.00) | Attrs=ArenaSlot=Game12 | BaseDamage=79 | HitCharacter=true | ImpactHead=false | ImpactPos=(-499.59, 37.58, 5849.07) | ImpactT=1.9805309547758205 | ImpactVictim=Emilevolt5 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.13, 5966.34) | LaunchTime=1795801256.838703 | LaunchVel=(0.00, 20.26, -57.74) | SpinSlot=Spear
+NEW #44 t=0.01 | Workspace.StuckArrow | Pos=(-499.59, 33.16, 5800.13) | Attrs=ArenaSlot=Game12 | BaseDamage=79 | ImpactPos=(-499.59, 31.95, 5797.40) | ImpactT=3.1221145089848417 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.29, 5972.40) | LaunchTime=1795801300.084654 | LaunchVel=(0.00, 26.45, -55.18) | SpinSlot=Spear
+NEW #45 t=0.01 | Workspace.StuckArrow | Pos=(-1999.59, 34.75, 5827.49) | Attrs=ArenaSlot=Game9 | BaseDamage=1077 | ImpactPos=(-1999.59, 34.40, 5826.36) | ImpactT=2.4276419474378326 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 30.16, 5966.35) | LaunchTime=1795801281.351044 | LaunchVel=(0.00, 21.74, -57.20) | OwnerUserId=1434658829 | SpinSlot=Bow | TipAtMinusY=true
+NEW #46 t=0.01 | Workspace.StuckArrow | Pos=(-1999.59, 35.90, 5824.72) | Attrs=ArenaSlot=Game9 | BaseDamage=1077 | ImpactPos=(-1999.59, 35.54, 5823.58) | ImpactT=2.4919778812073266 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 30.19, 5966.36) | LaunchTime=1795801263.968496 | LaunchVel=(0.00, 22.66, -56.84) | OwnerUserId=1434658829 | SpinSlot=Bow | TipAtMinusY=true
+NEW #47 t=0.01 | Workspace.StuckArrow | Pos=(-1999.59, 34.90, 5846.92) | Attrs=ArenaSlot=Game9 | BaseDamage=1077 | ImpactPos=(-1999.59, 34.59, 5845.77) | ImpactT=2.167789067867728 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 30.12, 5972.33) | LaunchTime=1795801311.833325 | LaunchVel=(0.00, 19.93, -57.85) | OwnerUserId=1434658829 | SpinSlot=Bow | TipAtMinusY=true
+NEW #48 t=0.81 | Workspace.StuckArrow | Pos=(-499.59, 30.12, 5851.48) | Attrs=ArenaSlot=Game12 | BaseDamage=79 | ImpactPos=(-499.59, 29.31, 5848.61) | ImpactT=2.0540575830876318 | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-499.59, 30.04, 5972.31) | LaunchTime=1795801312.851724 | LaunchVel=(0.00, 16.84, -58.83) | SpinSlot=Spear
+NEW #49 t=6.50 | Workspace.StuckArrow | Pos=(-2499.26, 44.01, 5815.40) | Attrs=ArenaSlot=Game8 | BaseDamage=1023 | HitCharacter=true | ImpactHead=false | ImpactPos=(-2499.07, 44.02, 5819.71) | ImpactT=2.1918271600686983 | ImpactVictim=jagungaja | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-2499.17, 30.74, 5958.19) | LaunchTime=1795801318.385911 | LaunchVel=(0.04, 24.22, -61.83) | SpinSlot=Spear
+NEW #50 t=7.86 | Workspace.StuckArrow | Pos=(-1999.51, 27.82, 5981.17) | Attrs=ArenaSlot=Game9 | BaseDamage=978 | HitCharacter=true | ImpactHead=false | ImpactPos=(-1999.59, 28.19, 5974.34) | ImpactT=2.138329271025316 | ImpactVictim=ClarySeraphGriffin | KinematicVelocity=(0.00, 0.00, 0.00) | LaunchOrigin=(-1999.59, 39.37, 5845.12) | LaunchTime=1795801319.717204 | LaunchVel=(0.00, 12.45, 59.91) | SpinSlot=Bow | TipAtMinusY=true
+NewStuckArrowsDuringSample=50
+-- END --
