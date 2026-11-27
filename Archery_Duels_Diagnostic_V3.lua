@@ -51,9 +51,11 @@ end
 put("-- TRAJECTORY DOTS --")
 local folder = Workspace:FindFirstChild("ArcheryTrajectory")
 local dots = {}
+local totalTrajectoryDots = 0
 if folder then
     for _,obj in ipairs(folder:GetDescendants()) do
         if obj:IsA("BasePart") and obj.Name=="TrajectoryDot" then
+            totalTrajectoryDots = totalTrajectoryDots + 1
             local pos=obj.Position
             if pos.Magnitude > 0.01 then
                 dots[#dots+1]={pos=pos,dist=root and (pos-root.Position).Magnitude or 0}
@@ -62,14 +64,14 @@ if folder then
     end
 end
 table.sort(dots,function(a,b) return a.dist<b.dist end)
-put("ValidDotCount: "..#dots.." | InvalidZeroDotsExcluded: "..tostring(folder and #folder:GetDescendants() or 0 - #dots))
+put("ValidDotCount: "..#dots.." | TotalTrajectoryDots: "..totalTrajectoryDots.." | InvalidExcluded: "..(totalTrajectoryDots-#dots))
 if #dots>0 then
     local picks={1, math.max(1,math.floor(#dots*.25)), math.max(1,math.floor(#dots*.5)), math.max(1,math.floor(#dots*.75)), #dots}
     local seen={}
     for _,idx in ipairs(picks) do
         if not seen[idx] then
             seen[idx]=true
-            put(string.format("Path%02d (index %d/%d, dist %.2f): %s",#out,idx,#dots,dots[idx].dist,v3(dots[idx].pos)))
+            put(string.format("PathSample (index %d/%d, dist %.2f): %s",idx,#dots,dots[idx].dist,v3(dots[idx].pos)))
         end
     end
     local first,last=dots[1].pos,dots[#dots].pos
