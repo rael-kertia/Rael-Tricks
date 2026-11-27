@@ -83,6 +83,7 @@ local cleanPrompts = setmetatable({}, {__mode = "k"})
 local cleanRetry = setmetatable({}, {__mode = "k"})
 local droppingCooldown = setmetatable({}, {__mode = "k"})
 local feedCooldown = {}
+local teleportToFirstDropping = false
 local statusLabel
 
 local function setStatus(message)
@@ -787,10 +788,10 @@ local function feedOne()
                 continue
             end
 
-            setStatus(entry.name .. ": MENUJU PALUNG")
-            if not pathfindTo(position, prompt) then
+            setStatus(entry.name .. ": TELEPORT KE PALUNG")
+            if not teleportNear(position, 2) then
                 feedCooldown[entry.name] = os.clock()
-                setStatus(entry.name .. ": JALUR GAGAL - COBA ULANG")
+                setStatus(entry.name .. ": TELEPORT KE PALUNG GAGAL")
                 continue
             end
             if not alive() or not farmEnabled then return end
@@ -807,6 +808,7 @@ local function feedOne()
 
                 if newStock ~= nil and newStock > 0 then
                     feedCooldown[entry.name] = nil
+                    teleportToFirstDropping = true
                     setStatus(entry.name .. ": PAKAN " .. newStock .. "/100")
                 else
                     feedCooldown[entry.name] = os.clock()
@@ -882,7 +884,17 @@ task.spawn(function()
             actionBusy = true
             setStatus("FARM: MENUJU KOTORAN TERNAK")
 
-            if pathfindTo(position, prompt) and alive() and farmEnabled then
+            local reachedDropping = false
+            if teleportToFirstDropping then
+                -- Satu kali teleport setelah pakan berhasil; kotoran berikutnya tetap pathfinding.
+                teleportToFirstDropping = false
+                setStatus("FARM: TELEPORT PERTAMA KE KOTORAN")
+                reachedDropping = teleportNear(position, 2)
+            else
+                reachedDropping = pathfindTo(position, prompt)
+            end
+
+            if reachedDropping and alive() and farmEnabled then
                 local activated = activatePrompt(prompt)
                 if activated then
                     setStatus("FARM: MENGAMBIL KOTORAN")
